@@ -1,6 +1,6 @@
 filetype plugin indent on
 syntax on
-colorscheme gruvbox 
+colorscheme gruvbox
 set background=dark
 set number
 set backspace=indent,eol,start
