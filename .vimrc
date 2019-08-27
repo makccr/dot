@@ -2,7 +2,8 @@ filetype plugin indent on
 syntax on
 colorscheme gruvbox
 set background=dark
-set number
+set number relativenumber
+set nu rnu
 set backspace=indent,eol,start
 set noruler
 set confirm
