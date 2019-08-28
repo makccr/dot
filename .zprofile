@@ -1,3 +1,11 @@
-fortune ~/quotes | cowsay -f dragon
-uptime
+fortune greetings
+fortune name
+echo " "
+echo "The current date & time is:"
 date
+echo " "
+echo "Your uptime statement is:"
+uptime
+echo " "
+fortune quotes
+echo " "
