@@ -1,3 +1,3 @@
-fortune quotes | cowsay -f dragon
+fortune ~/quotes | cowsay -f dragon
 uptime
 date
