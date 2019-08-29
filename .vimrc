@@ -4,6 +4,7 @@ colorscheme gruvbox
 set background=dark
 set number relativenumber
 set nu rnu
+set spell
 set backspace=indent,eol,start
 set noruler
 set confirm
@@ -26,38 +27,18 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-augroup markdownSpell
-    autocmd!
-    autocmd FileType markdown setlocal spell
-    autocmd FileType markdown setlocal nonumber
-    autocmd FileType markdown colorscheme onedark
-    autocmd BufRead,BufNewFile *.md setlocal spell
-    autocmd BufRead,BufNewFile *.md setlocal nonumber
-    autocmd BufRead,BufNewFile *.md colorscheme onedark
-augroup END
-
-augroup txtSpell
-    autocmd!
-    autocmd FileType text setlocal spell
-    autocmd FileType text setlocal nonumber
-    autocmd FileType text colorscheme onedark
-    autocmd BufRead,BufNewFile *.txt setlocal spell
-    autocmd BufRead,BufNewFile *.txt setlocal nonumber
-    autocmd BufRead,BufNewFile *.txt colorscheme onedark
-augroup END
-
-let g:lightline = {
-    \ 'colorscheme': 'seoul256',
-    \ }
+let g:airline_theme='gruvbox'
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'https://github.com/scrooloose/nerdtree.git'
-Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'ap/vim-css-color'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
