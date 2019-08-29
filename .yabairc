@@ -1,0 +1,15 @@
+yabai -m config layout bsp
+yabai -m config --space 2 layout float
+yabai -m config window_placement second_child
+
+yabai -m config top_padding    20
+yabai -m config bottom_padding 20
+yabai -m config left_padding   20
+yabai -m config right_padding  20
+yabai -m config window_gap     20
+
+yabai -m config window_border on
+yabai -m config window_border_width 1
+yabai -m config active_window_border_color 0xff775759
+yabai -m config normal_window_border_color 0xff505050
+yabai -m config insert_window_border_color 0xffd75f5f
