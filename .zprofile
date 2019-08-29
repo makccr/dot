@@ -1,11 +1,10 @@
-fortune greetings
-fortune name
-echo " "
-echo "The current date & time is:"
+echo 'Good Morning Mack,'
+echo ' '
+echo 'The current date & time is:'
 date
-echo " "
-echo "Your uptime statement is:"
+echo ' '
+echo 'Your uptime statement is:'
 uptime
-echo " "
+echo ' '
 fortune quotes
-echo " "
+echo ' '
