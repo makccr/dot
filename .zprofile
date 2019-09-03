@@ -6,5 +6,5 @@ echo ' '
 echo 'Your uptime statement is:'
 uptime
 echo ' '
-fortune ~/quotes
+fortune ~/repo/dotProfiles/quotes
 echo ' '
