@@ -3,7 +3,6 @@ Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
 Plug 'airblade/vim-gitgutter'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
