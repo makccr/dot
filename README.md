@@ -6,4 +6,6 @@ In case your interested, I'll try to keep screenshots down here to show off the 
 ### .vimrc
 ![](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vimConfig.jpg)
 
-
+### Zsh & my .zprofile
+I use the [Powerlevel 10k theme](https://github.com/romkatv/powerlevel10k) for zsh, and I also have made a few, admittedly simple customizations to my .zprofile
+![](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/zConfig.jpg)
