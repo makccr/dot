@@ -1,10 +1,14 @@
-echo 'Good Morning Mack,'
-echo ' '
-echo 'The current date & time is:'
+cat << "EOF"
+|\  /|     /\     _______  ||//
+||\/||    //\\    | _____| |//
+||  ||   /____\   | |      |\\
+||  ||  //    \\  | |____  ||\\
+||  || //      \\ |______| || \\
+EOF
+echo 'Good Morning, the current date & time is:'
 date
 echo ' '
-echo 'Your uptime statement is:'
+echo 'And your current uptime is:'
 uptime
 echo ' '
 fortune ~/repo/dotProfiles/quotes
-echo ' '
