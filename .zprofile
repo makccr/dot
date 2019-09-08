@@ -1,4 +1,11 @@
-echo 'Good Morning Mack,'
+cat << "EOF"
+|\  /|     /\     _______  ||//
+||\/||    //\\    | _____| |//
+||  ||   /____\   | |      |\\
+||  ||  //    \\  | |____  ||\\
+||  || //      \\ |______| || \\
+EOF
+echo 'Good Morning!'
 echo ' '
 echo 'The current date & time is:'
 date
