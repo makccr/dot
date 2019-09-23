@@ -9,6 +9,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 filetype plugin indent on  "Enabling Plugin & Indent
