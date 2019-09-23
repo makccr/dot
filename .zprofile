@@ -11,4 +11,4 @@ echo ' '
 echo 'And your current uptime is:'
 uptime
 echo ' '
-fortune ~/repo/dotProfiles/quotes
+fortune /root/dotProfiles/quotes
