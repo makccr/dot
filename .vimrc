@@ -11,9 +11,15 @@ Plug 'ap/vim-css-color'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
+
 filetype plugin indent on  "Enabling Plugin & Indent
 syntax on  "Turning Syntax on
-colorscheme onedark  "Setting up Vim's theme
+colorscheme gruvbox  "Setting up Vim's theme
 set background=dark
 let g:airline_theme='gruvbox' 
 set number relativenumber  "Setting line numbers 
