@@ -13,7 +13,7 @@ call plug#end()
 
 filetype plugin indent on  "Enabling Plugin & Indent
 syntax on  "Turning Syntax on
-colorscheme gruvbox  "Setting up Vim's theme
+colorscheme onedark  "Setting up Vim's theme
 set background=dark
 let g:airline_theme='gruvbox' 
 set number relativenumber  "Setting line numbers 
