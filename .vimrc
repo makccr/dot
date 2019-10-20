@@ -1,14 +1,14 @@
 call plug#begin('~/.vim/plugged')  "Installing vim plugins
 Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
 Plug 'https://github.com/scrooloose/nerdtree.git'
-Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'NLKNguyen/papercolor-theme' "Color-schemes and color customization
+Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'ap/vim-css-color'
-Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 if &term =~ '256color'
@@ -17,6 +17,7 @@ if &term =~ '256color'
     set t_ut=
 endif
 
+set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
 syntax on  "Turning Syntax on
 colorscheme gruvbox  "Setting up Vim's theme
@@ -30,6 +31,7 @@ set noruler  "Setting up rulers & spacing, tabs
 set confirm
 set shiftwidth=4
 set autoindent
+Plug 'junegunn/fzf.vim'
 set smartindent
 set tabstop=4
 set softtabstop=4
