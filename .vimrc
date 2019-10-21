@@ -17,6 +17,10 @@ endif
 set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
 syntax on  "Turning Syntax on
+filetype plugin on
+filetype indent on 
+set autoread
+set wildmenu
 colorscheme gruvbox  "Setting up Vim's theme
 set background=dark
 let g:airline_theme='gruvbox' 
