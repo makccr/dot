@@ -1,0 +1,12 @@
+set folder = "imaps://mackenziegcriswell@gmail.com@imap.gmail.com:993"
+set smtp_url = "smtps://mackenziegcriswell@gmail.com@smtp.gmail.com:465"
+set smtp_pass = "cdmzfirdmhckhbcy"
+set imap_pass = "cdmzfirdmhckhbcy"
+
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+mailboxes =INBOX =Sent =Drafts =Spam =Junk =Archive
+set from = "mackenziegcriswell@gmail.com"
+set realname = "Mackenzie Criswell"
