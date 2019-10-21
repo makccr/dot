@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')  "Installing vim plugins
 Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
-Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -12,8 +11,6 @@ Plug 'ap/vim-css-color'
 call plug#end()
 
 if &term =~ '256color'
-    " Disable Background Color Erase (BCE) so that color schemes
-    " work properly when Vim is used inside tmux and GNU screen.
     set t_ut=
 endif
 
@@ -43,5 +40,10 @@ set cmdheight=2
 let g:indent_guides_guide_size = 1  "Enabling indent guides
 let g:indent_guides_color_change_percent = 3
 let g:indent_guides_enable_on_vim_startup = 1
-map <C-n> :NERDTreeToggle<CR>
-"^^^^Mapping Nerd tree keybinding^^^^
+
+"Key re-maps
+map <C-n> :Sex<CR> 
+map <C-g> :Goyo<CR>
+map <C-y> :colorscheme gruvbox<CR>
+map <C-u> :colorscheme onedark<CR>
+map <C-i> :colorscheme PaperColor<CR>
