@@ -1,5 +1,3 @@
-source gmail
-source colors
 
 set sort = 'reverse-date
 set editor = vim
