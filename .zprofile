@@ -4,4 +4,5 @@ echo ' '
 echo 'And your current uptime is:'
 uptime
 echo ' ' 
-fortune ~/dotProfiles/quotes 
+fortune ~/dot/quotes 
+echo ' ' 
