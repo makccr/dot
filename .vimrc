@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')  "Installing vim plugins
 Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
