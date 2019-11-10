@@ -1,9 +1,9 @@
 call plug#begin('~/.vim/plugged')  "Installing vim plugins
 Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'NLKNguyen/papercolor-theme' "Color-schemes and color customization
+Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'ap/vim-css-color'
@@ -25,7 +25,7 @@ set background=dark
 let g:airline_theme='gruvbox' 
 set number relativenumber  "Setting line numbers 
 set nu rnu
-set spell  "Turning spell check on
+set spell  
 set backspace=indent,eol,start  "Making sure backspace works
 set noruler  "Setting up rulers & spacing, tabs 
 set confirm
@@ -43,6 +43,8 @@ set cmdheight=2
 let g:indent_guides_guide_size = 1  "Enabling indent guides
 let g:indent_guides_color_change_percent = 3
 let g:indent_guides_enable_on_vim_startup = 1
+
+au BufRead,BufNewFile *.fountain set filetype=fountain
 
 "Key re-maps
 map <C-n> :Sex<CR> 
