@@ -22,8 +22,11 @@ colorscheme gruvbox  "Setting up Gruvbox and airline, (colors)
 set background=dark "duh
     let g:airline_theme='gruvbox'
     let g:gruvbox_underline = '1'
+    let g:gruvbox_italic = '1'
+    let g:gruvbox_bold = '1'
     let g:gruvbox_contrast_dark = 'hard' 
     let g:gruvbox_contrast_light = 'hard' 
+    let g:gruvbox_termcolors = '256'
 set number relativenumber  "Setting line numbers
 set nu rnu
 set spell  
@@ -48,4 +51,4 @@ map <C-n> :Sex<CR>
 map <C-g> :Goyo<CR>
 map <C-u> :source ~/.vimrc<CR>
 map <C-i> :set background=dark<CR>
-map <C-o> :set background=light<CR>
+map <C-o> :set background=light<CR> 
