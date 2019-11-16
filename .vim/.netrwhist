@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/root/.oh-my-zsh'
 let g:netrw_dirhist_2='/mnt/c/Users/Mack/projects/makc-site-v2'
 let g:netrw_dirhist_3='/mnt/c/Users/Mack/projects/makc-site-v2/css'
 let g:netrw_dirhist_4='/root/dot/.vim'
+let g:netrw_dirhist_5='/mnt/c/Users/Mack/Dropbox/writing/journal/volume-4'
+let g:netrw_dirhist_6='/root'
+let g:netrw_dirhist_7='/'
