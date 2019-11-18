@@ -14,9 +14,6 @@ filetype plugin on
 filetype indent on
 set autoread
 set wildmenu "Tab completion everywhere, it's awesome
-colorscheme gruvbox  "Setting up Gruvbox and airline, (colors)
-set background=dark 
-    let g:airline_theme='gruvbox'
     let g:gruvbox_underline = '1'
     let g:gruvbox_italic = '1'
     let g:gruvbox_bold = '1'
@@ -87,3 +84,9 @@ augroup SpellUnderline " Force to use underline for spell check results and appl
 if &term =~ '256color'
     set t_ut=
 endif "Fixing issues with terminal colors
+
+"Color schemes need to be below everything else that effects color apparently.
+"If no things will load out of order and not work properly. 
+colorscheme gruvbox  "Setting up Gruvbox and airline, (colors)
+set background=dark 
+let g:airline_theme='gruvbox'
