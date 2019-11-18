@@ -1,15 +1,11 @@
 call plug#begin('~/.vim/plugged')  "Installing vim plugins
+    Plug 'vim-airline/vim-airline' "Setting up my status bar
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'airblade/vim-gitgutter' "Shows changes if you're working with git
+    Plug 'ap/vim-css-color' "Displays a preview of colors with CSS (like VS Code)
+    Plug 'morhetz/gruvbox' "My favorite theme
     Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
-    Plug 'vim-airline/vim-airline'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'vim-airline/vim-airline-themes' "Making Vim look sexier than Emacs
-    Plug 'morhetz/gruvbox'
-    Plug 'ap/vim-css-color'
 call plug#end()
-
-if &term =~ '256color'
-    set t_ut=
-endif "This is necessary when using with the Ubuntu subsystem on Windows 10
 
 set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
@@ -17,16 +13,14 @@ syntax on  "Turning Syntax on
 filetype plugin on
 filetype indent on
 set autoread
-set wildmenu "Tab completion everywhere, why this isn't default we will never know
+set wildmenu "Tab completion everywhere, it's awesome
 colorscheme gruvbox  "Setting up Gruvbox and airline, (colors)
-set background=dark "duh
+set background=dark 
     let g:airline_theme='gruvbox'
     let g:gruvbox_underline = '1'
     let g:gruvbox_italic = '1'
     let g:gruvbox_bold = '1'
     let g:gruvbox_contrast_dark = 'hard' 
-    let g:gruvbox_contrast_light = 'hard' 
-    let g:gruvbox_termcolors = '256'
 set number relativenumber  "Setting line numbers
 set nu rnu
 set spell  
@@ -41,8 +35,8 @@ set softtabstop=4
 set expandtab  
 set hls is  "Making sure search highlights words as we type them
 set ic
-set laststatus=2  "Set command height to 2 so nothing gets cut off
-set cmdheight=1
+set laststatus=2 "Setting the size for the command area, and airline status bar
+set cmdheight=1 
 
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
@@ -50,5 +44,46 @@ au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 map <C-n> :Sex<CR>
 map <C-g> :Goyo<CR>
 map <C-u> :source ~/.vimrc<CR>
-map <C-i> :set background=dark<CR>
-map <C-o> :set background=light<CR> 
+
+"I occasionally use a Ubuntu subsystem on Windows 10, which requires some
+"additional configuration to fix terminal colors & enable underlining for my
+"default theme, Gruvbox. 
+augroup SpellUnderline " Force to use underline for spell check results and apply gruvbox theme
+  autocmd!
+  autocmd ColorScheme *
+    \ highlight SpellBad
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    " \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellCap
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    " \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellLocal
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    " \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellRare
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    " \   guisp=Red
+  augroup END
+
+if &term =~ '256color'
+    set t_ut=
+endif "Fixing issues with terminal colors
