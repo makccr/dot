@@ -2,9 +2,12 @@ call plug#begin('~/.vim/plugged')  "Installing vim plugins
     Plug 'vim-airline/vim-airline' "Setting up my status bar
     Plug 'vim-airline/vim-airline-themes'
     Plug 'airblade/vim-gitgutter' "Shows changes if you're working with git
+    Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
+
+    "Color-schemes, some additional color schemes just live in .vim/colors
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS (like VS Code)
     Plug 'morhetz/gruvbox' "My favorite theme
-    Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
+    Plug 'davidosomething/vim-colors-meh' 
 call plug#end()
 
 set encoding=UTF-8
