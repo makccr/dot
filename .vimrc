@@ -41,7 +41,8 @@ set cmdheight=1
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
 "Key re-maps
-map <C-n> :Sex<CR>
+map <C-n> :Lex!<CR>
+map <C-b> :vertical resize 30<CR>
 map <C-g> :Goyo<CR>
 map <C-u> :source ~/.vimrc<CR>
 
