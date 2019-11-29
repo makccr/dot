@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')  "Installing vim plugins
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS (like VS Code)
     Plug 'morhetz/gruvbox' "My favorite theme
     Plug 'davidosomething/vim-colors-meh' 
-call plug#end()
+call plug#end() 
 
 set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
@@ -26,8 +26,8 @@ set nu rnu
 set spell  
 "set backspace=indent,eol,start  "Making sure backspace works
 ""turning off because I want to disable backspace for a bit
-inoremap <BS> FUCK YOU. STOP IT.
-inoremap <Del> FUCK YOU. STOP IT.
+inoremap <BS> _
+inoremap <Del> _
 set noruler  "Setting up rulers & spacing, tabs
 set confirm
 set shiftwidth=4
