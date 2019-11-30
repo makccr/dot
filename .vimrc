@@ -24,10 +24,7 @@ set wildmenu "Tab completion everywhere, it's awesome
 set number relativenumber  "Setting line numbers
 set nu rnu
 set spell  
-"set backspace=indent,eol,start  "Making sure backspace works
-""turning off because I want to disable backspace for a bit
-inoremap <BS> _
-inoremap <Del> _
+set backspace=indent,eol,start  "Making sure backspace works
 set noruler  "Setting up rulers & spacing, tabs
 set confirm
 set shiftwidth=4
