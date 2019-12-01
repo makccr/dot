@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/root/dot/.vim/colors'
 let g:netrw_dirhist_2='/root/dot'
 let g:netrw_dirhist_3='/root/dot/.vim'
 let g:netrw_dirhist_4='/root/dot/.vim/colors'
+let g:netrw_dirhist_5='/root/dot'
+let g:netrw_dirhist_6='/root/dot/.vim'
+let g:netrw_dirhist_7='/root/dot/.vim/colors'
+let g:netrw_dirhist_8='/root/dot/.vim'
+let g:netrw_dirhist_9='/root/dot'
