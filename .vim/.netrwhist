@@ -1,7 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/mnt/c/$GetCurrent'
-let g:netrw_dirhist_2='/mnt/c'
-let g:netrw_dirhist_3='/mnt/c/AvidDownloads'
-let g:netrw_dirhist_4='/mnt/c'
-let g:netrw_dirhist_5='/mnt/c/Users/Mack/Dropbox/writing/recepies'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/root/dot/.vim/colors'
+let g:netrw_dirhist_2='/root/dot'
+let g:netrw_dirhist_3='/root/dot/.vim'
+let g:netrw_dirhist_4='/root/dot/.vim/colors'
