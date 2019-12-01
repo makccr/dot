@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')  "Installing vim plugins
     "Color-schemes, some additional color schemes just live in .vim/colors
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS (like VS Code)
     Plug 'morhetz/gruvbox' "My favorite theme
-    Plug 'davidosomething/vim-colors-meh' 
 call plug#end() 
 
 set encoding=UTF-8
@@ -36,7 +35,7 @@ set expandtab
 set hls is  "Making sure search highlights words as we type them
 set ic
 set laststatus=2 "Setting the size for the command area, and airline status bar
-set cmdheight=1 
+set cmdheight=1
 
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
