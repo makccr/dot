@@ -44,6 +44,10 @@ map <C-n> :Lex!<CR>
 map <C-b> :vertical resize 30<CR>
 map <C-g> :Goyo<CR>
 map <C-u> :source ~/.vimrc<CR>
+nnoremap <Up>    :resize +2<CR> 
+nnoremap <Down>  :resize -2<CR>
+nnoremap <Left>  :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
 
 "I occasionally use a Ubuntu subsystem on Windows 10, which requires some
 "additional configuration to fix terminal colors & enable underlining for my
