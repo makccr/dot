@@ -49,49 +49,6 @@ nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
-"I occasionally use a Ubuntu subsystem on Windows 10, which requires some
-"additional configuration to fix terminal colors & enable underlining for my
-"default theme, Gruvbox. 
-augroup SpellUnderline " Force to use underline for spell check results and apply gruvbox theme
-  autocmd!
-  autocmd ColorScheme *
-    \ highlight SpellBad
-    \   cterm=Underline
-    \   ctermfg=NONE
-    \   ctermbg=NONE
-    \   term=Reverse
-    \   gui=Undercurl
-    " \   guisp=Red
-  autocmd ColorScheme *
-    \ highlight SpellCap
-    \   cterm=Underline
-    \   ctermfg=NONE
-    \   ctermbg=NONE
-    \   term=Reverse
-    \   gui=Undercurl
-    " \   guisp=Red
-  autocmd ColorScheme *
-    \ highlight SpellLocal
-    \   cterm=Underline
-    \   ctermfg=NONE
-    \   ctermbg=NONE
-    \   term=Reverse
-    \   gui=Undercurl
-    " \   guisp=Red
-  autocmd ColorScheme *
-    \ highlight SpellRare
-    \   cterm=Underline
-    \   ctermfg=NONE
-    \   ctermbg=NONE
-    \   term=Reverse
-    \   gui=Undercurl
-    " \   guisp=Red
-  augroup END
-
-if &term =~ '256color'
-    set t_ut=
-endif "Fixing issues with terminal colors
-
 "Color schemes need to be below everything else that effects color apparently.
 "If no things will load out of order and not work properly. 
 colorscheme gruvbox  "Setting up Gruvbox and airline, (colors)
