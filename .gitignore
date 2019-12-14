@@ -1,3 +1,5 @@
 .gitconfig
 gmail
 .vim/.netrwhist
+.DS_Store
+.vim/.DS_Store
