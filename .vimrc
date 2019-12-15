@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')  "Installing vim plugins
     Plug 'vim-airline/vim-airline-themes'
     Plug 'airblade/vim-gitgutter' "Shows changes if you're working with git
     Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
+    Plug 'tpope/vim-markdown'
 
     "Color-schemes, some additional color schemes just live in .vim/colors
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS (like VS Code)
@@ -16,10 +17,6 @@ filetype plugin on
 filetype indent on
 set autoread
 set wildmenu "Tab completion everywhere, it's awesome
-    let g:gruvbox_underline = '1'
-    let g:gruvbox_italic = '1'
-    let g:gruvbox_bold = '1'
-    let g:gruvbox_contrast_dark = 'hard' 
 set number relativenumber  "Setting line numbers
 set nu rnu
 set spell  
