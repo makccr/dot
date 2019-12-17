@@ -3,11 +3,15 @@ call plug#begin('~/.vim/plugged')  "Installing vim plugins
     Plug 'vim-airline/vim-airline-themes'
     Plug 'airblade/vim-gitgutter' "Shows changes if you're working with git
     Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
-    Plug 'tpope/vim-markdown'
 
-    "Color-schemes, some additional color schemes just live in .vim/colors
+    "Syntax
+    Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS (like VS Code)
+
+    "Color-schemes
     Plug 'morhetz/gruvbox' "My favorite theme
+    Plug 'jacoborus/tender.vim'
+    Plug 'joshdick/onedark.vim'
 call plug#end() 
 
 set encoding=UTF-8
@@ -49,5 +53,6 @@ nnoremap <Right> :vertical resize -2<CR>
 "Color schemes need to be below everything else that effects color apparently.
 "If no things will load out of order and not work properly. 
 colorscheme gruvbox  "Setting up Gruvbox and airline, (colors)
-set background=dark 
 let g:airline_theme='gruvbox'
+let g:solarized_termcolors=256
+set background=dark 
