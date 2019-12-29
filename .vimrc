@@ -44,6 +44,7 @@ au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 map <C-n> :Lex!<CR>
 map <C-b> :vertical resize 30<CR>
 map <C-g> :Goyo<CR>
+map <C-h> :Goyo 120<CR>
 map <C-u> :source ~/.vimrc<CR>
 nnoremap <Up>    :resize +2<CR> 
 nnoremap <Down>  :resize -2<CR>
