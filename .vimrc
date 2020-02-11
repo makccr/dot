@@ -23,7 +23,7 @@ set autoread
 set wildmenu "Tab completion everywhere, it's awesome
 set number relativenumber  "Setting line numbers
 set nu rnu
-set spell  
+set spelllang=en_us,de_de
 set backspace=indent,eol,start  "Making sure backspace works
 set noruler  "Setting up rulers & spacing, tabs
 set confirm
