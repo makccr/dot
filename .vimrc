@@ -24,6 +24,7 @@ set wildmenu "Tab completion everywhere, it's awesome
 set number relativenumber  "Setting line numbers
 set nu rnu
 set spelllang=en_us,de_de
+set spell
 set backspace=indent,eol,start  "Making sure backspace works
 set noruler  "Setting up rulers & spacing, tabs
 set confirm
