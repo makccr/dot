@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')  "Installing vim plugins
     "Syntax
     Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS (like VS Code)
+    Plug 'vim-scripts/fountain.vim'
 
     "Color-schemes
     Plug 'morhetz/gruvbox' "My favorite theme
