@@ -14,14 +14,12 @@ call plug#begin('~/.vim/plugged')  "Installing vim plugins
     Plug 'jacoborus/tender.vim'
     Plug 'joshdick/onedark.vim'
 call plug#end() 
-
+ 
 set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
 syntax on  "Turning Syntax on
-filetype plugin on
-filetype indent on
 set autoread
-set wildmenu "Tab completion everywhere, it's awesome
+set wildmenu
 set number relativenumber  "Setting line numbers
 set nu rnu
 set spelllang=en_us,de_de
@@ -58,4 +56,4 @@ nnoremap <Right> :vertical resize -2<CR>
 colorscheme gruvbox  "Setting up Gruvbox and airline, (colors)
 let g:airline_theme='gruvbox'
 let g:solarized_termcolors=256
-set background=dark 
+set background=dark
