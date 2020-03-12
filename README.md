@@ -1,7 +1,7 @@
-# dotFiles
-These are the preferences that I set for a lot of the apps that I use that support it. Mostly it's vim and zsh. Honestly, I have another repository called MacSetup that attempts to automatically install and set up all of these files, along with other MacOS preferences; and installs all of the applications that I use on my system; which I have to figure most people might find more interesting. That repository can be accessed [here](https://github.com/makccr/macSetup) at any time. 
+# Dot Files
+These are most of the preferences that I use for command line applications. My preferences are set-up to work primarily on MacOS, but I do occasionally use the same set-up on Manjaro Linux, or a Linux Subsystem on Windows 10. 
 
-In case your interested, I'll try to keep screenshots down here to show off the current implementation of all of my dot files. 
+Mostly it's preferences for Vim & Zsh, but there are a few other things as well. 
 
 ### .vimrc
 ![](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vimConfig.jpg)
