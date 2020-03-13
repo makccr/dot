@@ -1,22 +1,23 @@
-call plug#begin('~/.vim/plugged')  "Installing vim plugins
-    Plug 'vim-airline/vim-airline' "Setting up my status bar
+" -------------------------------- Plugins (VimPlug) --------------------------
+call plug#begin('~/.vim/plugged')  
+" Tools
+    Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'airblade/vim-gitgutter' "Shows changes if you're working with git
-    Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
+    Plug 'airblade/vim-gitgutter' 
+    Plug 'junegunn/goyo.vim'  
     Plug 'preservim/nerdtree'
     Plug 'ryanoasis/vim-devicons'
-
-    "Syntax
+" Syntax
     Plug 'tpope/vim-markdown'
-    Plug 'ap/vim-css-color' "Displays a preview of colors with CSS (like VS Code)
+    Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
     Plug 'vim-scripts/fountain.vim'
-
-    "Color-schemes
+" Color-schemes
     Plug 'morhetz/gruvbox' "My favorite theme
     Plug 'jacoborus/tender.vim'
     Plug 'joshdick/onedark.vim'
 call plug#end() 
  
+" ---------------------------- General Settings ------------------------------
 set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
 syntax on  "Turning Syntax on
@@ -40,9 +41,10 @@ set ic
 set laststatus=2 "Setting the size for the command area, and airline status bar
 set cmdheight=1
 
+" --------------------------- Syntax Mappings --------------------------------
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
-"Key re-maps
+" ---------------------------- Key Remapping ---------------------------------
 map <C-n> :NERDTreeToggle<CR>
 map <C-b> :vertical resize 30<CR>
 map <C-g> :Goyo<CR>
@@ -53,9 +55,12 @@ nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
-"Color schemes need to be below everything else that effects color apparently.
-"If no things will load out of order and not work properly. 
-colorscheme gruvbox  "Setting up Gruvbox and airline, (colors)
+" ----------------------------- Color Settings -------------------------------
+colorscheme gruvbox  
 let g:airline_theme='gruvbox'
 let g:solarized_termcolors=256
 set background=dark
+
+" -------------------------------- Connect -----------------------------------
+" https://makc.co
+" https://github.com/makccr
