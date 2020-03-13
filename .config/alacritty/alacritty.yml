@@ -6,12 +6,12 @@ window:
   padding:
     x: 10
     y: 10
-  decorations: buttonless
+  decorations: none 
 scrolling:
   history: 10000
   multiplier: 3
 tabspaces: 4
-background_opacity: 0.8
+background_opacity: 0.7
 dynamic_title: true
 
 # --------------------------- Font Customization ------------------------------
