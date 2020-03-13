@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')  "Installing vim plugins
     Plug 'vim-airline/vim-airline-themes'
     Plug 'airblade/vim-gitgutter' "Shows changes if you're working with git
     Plug 'junegunn/goyo.vim'  "Simple writing theme that looks nice with markdown
+    Plug 'preservim/nerdtree'
+    Plug 'ryanoasis/vim-devicons'
 
     "Syntax
     Plug 'tpope/vim-markdown'
@@ -41,7 +43,7 @@ set cmdheight=1
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
 "Key re-maps
-map <C-n> :Lex!<CR>
+map <C-n> :NERDTreeToggle<CR>
 map <C-b> :vertical resize 30<CR>
 map <C-g> :Goyo<CR>
 map <C-h> :Goyo 120<CR>
