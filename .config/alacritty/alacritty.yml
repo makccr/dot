@@ -1,0 +1,57 @@
+# ------------------------- Window Customization ------------------------------
+window:
+  dimensions:
+    columns: 155
+    lines: 38
+  padding:
+    x: 5
+    y: 5
+  decorations: buttonless
+scrolling:
+  history: 10000
+  multiplier: 3
+tabspaces: 4
+background_opacity: 0.8
+dynamic_title: true
+
+# --------------------------- Font Customization ------------------------------
+font:
+  normal:
+    family: Source Code Pro
+    style: Regular
+  bold:
+    family: Source Code Pro
+    style: Bold
+  italic:
+    family: Source Code Pro
+    style: Italic
+  size: 13 
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+  use_thin_strokes: false
+  debug: 
+    persistent_logging: false
+draw_bold_text_with_bright_colors: true
+
+# ------------------------ Color Settings (Gruvbox) ---------------------------
+colors:
+  primary:
+    background: '0x282828'
+    foreground: '0xfbf1c7'
+  cursor:
+    text: '0xfbf1c7'
+    cursor: '0xdc3232'
+  selection:
+    text: '0xffffff'
+    background: '0xdc3232'
+    white:   '0xffffff'
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+## ----------------------------------------------------------------------------
+## https://makc.co
