@@ -1,6 +1,0 @@
-
-set sort = 'reverse-date
-set editor = vim
-set timeout = "5"
-set mail_check = "10"
-set date_format = "%m/%d %I:%M
