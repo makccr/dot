@@ -13,8 +13,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-scripts/fountain.vim'
 " Color-schemes
     Plug 'morhetz/gruvbox' "My favorite theme
-    Plug 'jacoborus/tender.vim'
-    Plug 'joshdick/onedark.vim'
 call plug#end() 
  
 " ---------------------------- General Settings ------------------------------
@@ -57,7 +55,6 @@ nnoremap <Right> :vertical resize -2<CR>
 " ----------------------------- Color Settings -------------------------------
 colorscheme gruvbox  
 let g:airline_theme='gruvbox'
-let g:solarized_termcolors=256
 set background=dark
 
 " -------------------------------- Connect -----------------------------------
