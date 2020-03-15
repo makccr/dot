@@ -25,7 +25,7 @@ set autoread
 set wildmenu
 set number relativenumber  "Setting line numbers
 set nu rnu
-set spelllang=en_us,de_de
+set spelllang=en_us
 set spell
 set backspace=indent,eol,start  "Making sure backspace works
 set noruler  "Setting up rulers & spacing, tabs
@@ -46,10 +46,9 @@ au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
 " ---------------------------- Key Remapping ---------------------------------
 map <C-n> :NERDTreeToggle<CR>
-map <C-b> :vertical resize 30<CR>
 map <C-g> :Goyo<CR>
-map <C-h> :Goyo 120<CR>
 map <C-u> :source ~/.vimrc<CR>
+map <C-b> :set spelllang=de_de<CR>
 nnoremap <Up>    :resize +2<CR> 
 nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
