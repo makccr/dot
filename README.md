@@ -1,15 +1,31 @@
 ![Header SVG](https://makccr.github.io/images/github-header.svg)
 
-These are my dot files. I'm primarily a MacOS user, but I occasionally use [Manjaro](https://manjaro.org/), or another Arch base Linux distribution; so that's where I take my cue. The main things here are: 
+These are my dot files. I'm primarily a [MacOS](https://www.apple.com/macos/) user, but I occasionally use [Manjaro](https://manjaro.org/), or another Arch based Linux distribution; so that's where I take my cue. The main things here are: 
 
 1. My [Vim](https://www.vim.org/) configuration. 
 2. [Z-Shell](http://zsh.sourceforge.net/)
     * [Oh-my-zsh](https://ohmyz.sh/)
     * [Powerline 10k](https://github.com/romkatv/powerlevel10k) 
-3. [iTerm](https://www.iterm2.com/) (MacOS)
-4. [Alacritty](https://github.com/alacritty/alacritty) (Linux)
+3. My [iTerm](https://www.iterm2.com/) configuration (MacOS)
+4. My [Alacritty](https://github.com/alacritty/alacritty) configuration (Linux)
 
-I have also added configurations for [Atom](https://atom.io/), [hTop](https://hisham.hm/htop/), and a few other things. 
+I mainly use these apps: Vim, Atom, and the Shell for standard writing; normally in the [Markdown](https://www.markdownguide.org/) or [Fountain](https://fountain.io/) format. I'm not a programmer, so I haven't customized these apps to make those kinds of tasks easier, the way that many users do. 
+
+I have also added configurations for [Atom](https://atom.io/), [hTop](https://hisham.hm/htop/), and a few other things. I also occasionally go through some pieces of these configurations on my [YouTube channel](https://www.youtube.com/c/makccr), most recently, my [.vimrc & .vim directory](https://www.youtube.com/watch?v=Igfm59WL3NE).
 
 ###### My Vim Configuration & My Default Shell
 ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/configuration.jpg)
+
+### Config Guide
+App Name        | Path in Repository      
+ -------------- | ----------------------- 
+Vim | [~/.vim/](https://github.com/makccr/dot/blob/master/.vimrc) & [~/.vimrc](https://github.com/makccr/dot/tree/master/.vim) 
+zsh | [~/.zshrc](https://github.com/makccr/dot/blob/master/.zshrc) & [~/.zprofile](https://github.com/makccr/dot/blob/master/.zprofile) 
+iTerm | [~/com.googlecode.iterm2.plist](https://github.com/makccr/dot/blob/master/com.googlecode.iterm2.plist) & [~/gruvbox.iterm.json](https://github.com/makccr/dot/blob/master/gruvbox.iterm.json)
+Alacritty | [~/.config/alacritty/alacritty.yml](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml)
+Atom | [~/.atom/](https://github.com/makccr/dot/tree/master/.atom)
+Git | [~/.gitconfig](https://github.com/makccr/dot/blob/master/.gitconfig) 
+Powerline 10K | [~/.p10k.zsh](https://github.com/makccr/dot/blob/master/.p10k.zsh) 
+OhMyZsh | [~/.zshrc](https://github.com/makccr/dot/blob/master/.zshrc)
+My Custom Fortune Database | [~/quotes.dat](https://github.com/makccr/dot/blob/master/quotes)
+Htop | [~/.config/htop/htoprc](https://github.com/makccr/dot/blob/master/.config/htop/htoprc)
