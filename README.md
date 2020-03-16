@@ -1,13 +1,15 @@
 ![Header SVG](https://makccr.github.io/images/github-header.svg)
 
-# Dot Files
-These are most of the preferences that I use for command line applications. My preferences are set-up to work primarily on MacOS, but I do occasionally use the same set-up on Manjaro Linux, or a Linux Subsystem on Windows 10. 
+These are my dot files. I'm primarily a MacOS user, but I occasionally use [Manjaro](https://manjaro.org/), or another Arch base Linux distribution; so that's where I take my cue. The main things here are: 
 
-Mostly it's preferences for Vim & Zsh, but there are a few other things as well. 
+1. My [Vim](https://www.vim.org/) configuration. 
+2. [Z-Shell](http://zsh.sourceforge.net/)
+    * [Oh-my-zsh](https://ohmyz.sh/)
+    * [Powerline 10k](https://github.com/romkatv/powerlevel10k) 
+3. [iTerm](https://www.iterm2.com/) (MacOS)
+4. [Alacritty](https://github.com/alacritty/alacritty) (Linux)
 
-### .vimrc
-![VIMRC](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vimConfig.jpg)
+I have also added configurations for [Atom](https://atom.io/), [hTop](https://hisham.hm/htop/), and a few other things. 
 
-### Zsh & my .zprofile
-I use the [Powerlevel 10k theme](https://github.com/romkatv/powerlevel10k) for zsh, and I also have made a few, admittedly simple customizations to my .zprofile
-![ZSH Configuration](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/zConfig.jpg)
+###### My Vim Configuration & My Default Shell
+![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/configuration.jpg)
