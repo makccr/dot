@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[makccr]
+	name = Mackenzie Criswell
+	email = mackenziegcriswell@gmail.com
+[user]
+	name = Mackenzie Criswell
+	email = mackenziegcriswell@gmail.com
+[core]
+	editor = vim
