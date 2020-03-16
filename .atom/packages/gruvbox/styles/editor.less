@@ -1,0 +1,86 @@
+// Editor styles (background, gutter, guides)
+
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .line.cursor-line {
+    background-color: @syntax-cursor-line;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-left: 2px solid @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .bracket-matcher .region {
+    border-bottom: 2px solid @syntax-cursor-color;
+    box-sizing: border-box;
+    background-color: @syntax-bracket-matcher-background-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+  .indent-guide:nth-child(2n) {
+    box-shadow: inset 1px 0 @syntax-guide-alt;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    .line-number {
+      color: @syntax-gutter-text-color;
+      -webkit-font-smoothing: antialiased;
+
+      &.git-line-removed:before {
+        bottom: -3px;
+      }
+      &.git-line-removed:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 25px;
+        border-bottom: 1px dotted fade(@syntax-color-removed, 50%);
+        pointer-events: none;
+      }
+
+      &.cursor-line {
+        color: @syntax-gutter-text-color-selected;
+        background-color: @syntax-gutter-background-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        background-color: @syntax-gutter-background-color-selected;
+      }
+
+      .icon-right {
+        color: @syntax-text-color;
+      }
+
+      .icon-right {
+        color: @syntax-text-color;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @syntax-gutter-text-color-selected;
+  }
+}

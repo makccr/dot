@@ -1,0 +1,22 @@
+.syntax--source.syntax--diff {
+  color: @gruvbox-light4;
+
+  .syntax--meta {
+    color: @gruvbox-bright-blue;
+
+    &.syntax--header.syntax--from-file { color: @gruvbox-bright-aqua; }
+    &.syntax--header.syntax--to-file { color: @gruvbox-bright-aqua; }
+    &.syntax--diff.syntax--range { color: @gruvbox-bright-yellow; }
+    &.syntax--diff.syntax--line-number { color: @gruvbox-bright-yellow; opacity: 1; }
+  }
+
+  .syntax--markup {
+    &.syntax--deleted { color: @gruvbox-bright-red; }
+    &.syntax--inserted { color: @gruvbox-bright-green; }
+  }
+  .syntax--punctuation {
+    &.syntax--deleted { color: @gruvbox-bright-red; }
+    &.syntax--inserted { color: @gruvbox-bright-green; }
+    &.syntax--range { color: @gruvbox-bright-yellow; }
+  }
+}

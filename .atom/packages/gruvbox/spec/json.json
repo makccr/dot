@@ -1,0 +1,24 @@
+[
+  {
+    "title": "apples",
+    "count": [12000, 20000],
+    "description": {"text": "...", "sensitive": false}
+  },
+  {
+    "title": "oranges",
+    "count": [17500, null, "String"],
+    "description": {"text": "She said, \"Hello\"", "sensitive": false}
+  },
+  {
+    "deeply_nested": {
+      "key": {
+        "key": {
+          "key": {
+            "array": [1, "two", null],
+            "string": "hello"
+          }
+        }
+      }
+    }
+  }
+]

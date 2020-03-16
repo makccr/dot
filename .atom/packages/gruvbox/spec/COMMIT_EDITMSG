@@ -1,0 +1,45 @@
+This is the summary line. It can't be too long.
+After I can write a much more detailed description without quite the same restrictions on length.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	deleted:    README.md
+#	modified:   index.less
+#	new file:   spec/COMMIT_EDITMSG
+#
+# ------------------------ >8 ------------------------
+# Do not touch the line above.
+# Everything below will be removed.
+diff --git c/README.md i/README.md
+deleted file mode 100644
+index 039c78e..0000000
+--- c/README.md
++++ /dev/null
+@@ -1,11 +0,0 @@
+-## One Dark Syntax theme
+-
+-![one-dark-syntax](https://cloud.githubusercontent.com/assets/378023/7783203/49271ef6-0174-11e5-8eb1-d80b8d34a0e3.png)
+-
+-> The font used in the screenshot is [Fira Mono](https://github.com/mozilla/Fira).
+-
+-There is also a matching [UI theme](https://atom.io/themes/one-dark-ui).
+-
+-### Install
+-
+-This theme is installed by default with Atom and can be activated by going to the __Settings > Themes__ section and selecting it from the __Syntax Themes__ drop-down menu.
+diff --git c/index.less i/index.less
+index 64f6ac9..29dc35d 100644
+--- c/index.less
++++ i/index.less
+@@ -1,4 +1,4 @@
+-
++// hello
+ // Atom Syntax Theme: One
+
+ @import (reference) "styles/syntax-variables";
+diff --git c/spec/COMMIT_EDITMSG i/spec/COMMIT_EDITMSG
+new file mode 100644
+index 0000000..e69de29

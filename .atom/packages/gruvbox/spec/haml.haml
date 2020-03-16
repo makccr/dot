@@ -1,0 +1,28 @@
+!!! XML
+!!!
+%html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en")
+  %head
+    %title= article.title
+  %body
+    - parameter = "value"
+    /[if IE]
+      %a{ :href => 'http://www.mozilla.com/en-US/firefox/' }
+        %h1 Get Firefox
+    -# Example comment
+    -#
+      This is a...
+      multi-line comment
+
+    %section.container
+      - articles.each do |article|
+        %article
+          %h1= "Article: #{article.title}"
+          %a{ :href => article.url } More Info...
+          .content
+            = article.content
+      #copyright
+        %p#copyright_statement Copyright 2015
+:javascript
+  $(document).ready(function() {
+    alert("Hello!");
+  });

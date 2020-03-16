@@ -1,0 +1,51 @@
+@import "colors";
+
+// Custom Syntax Variables -----------------------------------
+
+@syntax-cursor-line: fade(@gruvbox-light0-hard, 4%); // needs to be semi-transparent to show serach results
+@syntax-bracket-matcher-background-color: lighten(@syntax-background-color, 6%);
+
+
+// Official Syntax Variables -----------------------------------
+
+// General colors
+@syntax-text-color:            @syntax-fg;
+@syntax-cursor-color:          @gruvbox-light4;
+@syntax-selection-color:       lighten(@syntax-background-color, 10%);
+@syntax-selection-flash-color: @syntax-accent;
+@syntax-background-color:      @syntax-bg;
+
+// Guide colors
+@syntax-wrap-guide-color:          @syntax-guide;
+@syntax-indent-guide-color:        @syntax-guide;
+@syntax-invisible-character-color: @syntax-guide;
+
+// For find and replace markers
+@syntax-result-marker-color:          @syntax-fg;
+@syntax-result-marker-color-selected: @syntax-accent;
+
+// Gutter colors
+@syntax-gutter-text-color:                @gruvbox-medium;
+@syntax-gutter-text-color-selected:       @gruvbox-light0-hard;
+@syntax-gutter-background-color:          @syntax-bg; // unused
+@syntax-gutter-background-color-selected: @syntax-cursor-line;
+
+// Git colors - For git diff info. i.e. in the gutter
+@syntax-color-renamed:  @gruvbox-bright-blue;
+@syntax-color-added:    @gruvbox-bright-green;
+@syntax-color-modified: @gruvbox-bright-orange;
+@syntax-color-removed:  @gruvbox-bright-red;
+
+// For language entity colors
+@syntax-color-variable:   @gruvbox-bright-blue;
+@syntax-color-constant:   @gruvbox-bright-purple;
+@syntax-color-property:   @syntax-fg;
+@syntax-color-value:      @syntax-fg;
+@syntax-color-function:   @gruvbox-bright-green;
+@syntax-color-method:     @gruvbox-bright-green;
+@syntax-color-class:      @gruvbox-bright-yellow;
+@syntax-color-keyword:    @gruvbox-bright-red;
+@syntax-color-tag:        @gruvbox-bright-blue;
+@syntax-color-attribute:  @gruvbox-bright-purple;
+@syntax-color-import:     @gruvbox-bright-red;
+@syntax-color-snippet:    @gruvbox-bright-yellow;

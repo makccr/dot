@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a comment -->
+<e:employees xmlns:e="http://schemas.somewhere.com/employees">
+  <employee id="123">
+    <name><![CDATA[John Doe]]></name>
+    <title lang='en'>King</title>
+    <active/>
+    <salary>100000</salary>
+    <department key="R&amp;D">R&amp;D</department>
+  </employee>
+</e:employees>

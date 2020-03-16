@@ -1,0 +1,15 @@
+root:
+  unquoted_string: lorem ipsem
+  quotwed_string: "lorem ipsum"
+  integer: 123
+  float: 3.14
+  boolean: true
+  null: null
+  list:
+    - one
+    - two
+    - three
+  map_list:
+    - one: 1
+    - two: "two"
+    - three: 3.0

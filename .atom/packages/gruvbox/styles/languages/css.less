@@ -1,0 +1,16 @@
+.syntax--source.syntax--css {
+  // highlight properties/values if they are supported
+  .syntax--property-name {
+    color: @gruvbox-light2;
+  }
+
+  .syntax--property-value {
+    color: @gruvbox-light2;
+    &.syntax--support {
+      color: @syntax-fg;
+    }
+    &.syntax--constant {
+      color: @gruvbox-bright-blue;
+    }
+  }
+}

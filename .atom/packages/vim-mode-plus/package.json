@@ -1,0 +1,96 @@
+{
+  "_from": "https://www.atom.io/api/packages/vim-mode-plus/versions/1.36.4/tarball",
+  "_id": "vim-mode-plus@1.36.4",
+  "_inBundle": false,
+  "_integrity": "sha512-d7H7LzNCyPLzoI/Yg1Taz6I0vn0F3NJoSyTjJ87f8NxPQ9lQBchmri0By5JxzcHiTMTyA8ORp4C/yglZgpr7ow==",
+  "_location": "/vim-mode-plus",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/vim-mode-plus/versions/1.36.4/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/vim-mode-plus/versions/1.36.4/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/vim-mode-plus/versions/1.36.4/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/vim-mode-plus/versions/1.36.4/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/vim-mode-plus/versions/1.36.4/tarball",
+  "_shasum": "251a4982f3c5d13bf17363e959e660b5a7dcef9a",
+  "_spec": "https://www.atom.io/api/packages/vim-mode-plus/versions/1.36.4/tarball",
+  "_where": "/private/var/folders/17/0n1s76yx0m93869jhvbc_5hh0000gn/T/apm-install-dir-120216-20565-vah6wg.rpdqp",
+  "bugs": {
+    "url": "https://github.com/t9md/atom-vim-mode-plus/issues"
+  },
+  "bundleDependencies": false,
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    },
+    "demo-mode": {
+      "versions": {
+        "^1.0.0": "consumeDemoMode"
+      }
+    }
+  },
+  "dependencies": {
+    "atom-select-list": "^0.7.0",
+    "change-case": "^3.0.1",
+    "diff": "^3.4.0",
+    "fs-plus": "^2.8.1",
+    "fuzzaldrin-plus": "^0.6.0",
+    "grim": "^2.0.2",
+    "semver": "^5.4.1",
+    "underscore-plus": "1.x"
+  },
+  "deprecated": false,
+  "description": "vim-mode improved",
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "coffeelint": "^1.10.1",
+    "prettier": "^1.10.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "atom": "^1.31.0-beta1"
+  },
+  "homepage": "https://github.com/t9md/atom-vim-mode-plus#readme",
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "vim-mode-plus",
+  "private": true,
+  "providedServices": {
+    "vim-mode-plus": {
+      "description": "",
+      "versions": {
+        "0.1.0": "provideVimModePlus"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t9md/atom-vim-mode-plus.git"
+  },
+  "scripts": {
+    "lint": "standard lib/*.js spec/*.js",
+    "prettier": "prettier --write --no-semi --print-width=120 --no-bracket-spacing --trailing-comma=es5 'lib/**/*.js' 'spec/*.js'",
+    "test": "apm test",
+    "watch": "fswatch -0 spec lib | xargs -0 -n1 -I{} apm test"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "atom",
+      "describe",
+      "jasmine",
+      "expect"
+    ],
+    "ignore": [
+      "spec/fixtures/*"
+    ]
+  },
+  "version": "1.36.4"
+}
