@@ -1,4 +1,4 @@
-![Header SVG](https://https://makccr.github.io/images/github-header.svg)
+![Header SVG](https://makccr.github.io/images/github-header.svg)
 
 # Dot Files
 These are most of the preferences that I use for command line applications. My preferences are set-up to work primarily on MacOS, but I do occasionally use the same set-up on Manjaro Linux, or a Linux Subsystem on Windows 10. 
