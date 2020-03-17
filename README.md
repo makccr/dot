@@ -33,4 +33,4 @@ Htop | [~/.config/htop/htoprc](https://github.com/makccr/dot/blob/master/.config
 ---
 
 ###### /snip
-If you're interested in this repository, you may also be interested in another one: I have a repo called, [snip](https://gitub.com/makccr/snip), where I store snippets from Keyboard Maestro and Auto Hot Key, as well as Alfred Workflows, Apple-scripts, and Bitbar plug-ins. 
+If you're interested in this repository, you may also be interested in another one: I have a repo called, [snip](https://github.com/makccr/snip), where I store snippets from Keyboard Maestro and Auto Hot Key, as well as Alfred Workflows, Apple-scripts, and Bitbar plug-ins. 
