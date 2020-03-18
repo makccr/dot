@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+mkdir assets project render script
+cd script
+git init
+cd ../assets
+mkdir aRoll bRoll thumb branding
+cd aRoll
+mkdir image motion audio
+cd ../bRoll
+mkdir image motion audio
+cd ../thumb
+mkdir image motion audio
+cd ../branding
+mkdir image motion audio
