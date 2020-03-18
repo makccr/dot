@@ -15,7 +15,7 @@ cd ../branding
 mkdir image motion audio
 
 case "$1" in 
-    intro) cd motion; cp ~/Movies/graphicsPackage/branding/intro.mov .; cp ~/Movies/graphicsPackage/branding/endCard.mov . ;;
+    -i) cd motion; cp ~/Movies/graphicsPackage/branding/intro.mov .; cp ~/Movies/graphicsPackage/branding/endCard.mov . ;;
     -p) cd ../../project; cp ~/Movies/premiereTemplate/project/Template.prproj . ;;
 esac
 
