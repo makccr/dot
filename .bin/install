@@ -1,0 +1,301 @@
+#!/usr/bin/env bash
+
+echo Are the Xcode command line tools installed?
+echo If not please exti using CMD+C, and install with:
+echo xcode-select —install
+read answer
+
+echo ' ' 
+echo Also, what did you set your username as?
+read uname
+echo ' ' 
+echo $uname
+echo ' ' 
+
+sudo -v #Give sudo privileges ahead of time, so that we hopefully only have to enter a password once
+cd ~ #Moving to home directory at the beginning of the process
+
+#<----------------Changing MacOS Specific Preferences-------------------->
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES #Show a path bar in the finder that shows the exact location
+defaults write com.apple.finder ShowPathbar -bool true #Adds the path bar to the bottom of the finder
+defaults write com.apple.finder FXEnableRemoveFromICloudDriveWarning -bool false #Stop the automatic save to iCloud thing
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false #Remove the Warning Before Changing a File Extension in OSX
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv" #Changes Default Finder View to List
+defaults write com.apple.finder WarnOnEmptyTrash -bool false #Removes Warning Before Emptying Trash
+defaults write com.apple.finder DisableAllAnimations -bool true #Disable Finder Animations
+defaults write com.apple.finder NewWindowTargetPath -string "file:///$uname/makc/" #Changes default finder location to ~
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false #Removes External Drives on Desktop
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false #Removes Internal Drives on Desktop
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false #Removes Mounted Servers on Desktop
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false #Removes Removable Media on Desktop
+defaults write com.apple.finder _FXSortFoldersFirst -bool true #Moves Folders to top When Sorting Alphabetically in Finder 
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf" #Changes Default Finder Search to Current Folder Only
+defaults write com.apple.finder FXICloudDriveDesktop -bool NO #Doesn't Sync Desktop to iCloud
+defaults write com.apple.finder SidebarShowingiCloudDesktop -bool NO #Removes iCloud Desktop from Finder Sidebar
+defaults write com.apple.finder ShowStatusBar -bool YES #Shows Status Bar in Finder
+defaults write com.apple.finder SidebariCloudDriveSectionDisclosedState -bool NO #Makes Sure iCloud Drive is Showing in Finder Sidebar
+defaults write com.apple.finder FXArrangeGroupViewBy -string "Name" #Arranges Finder by Name By Default
+
+defaults write com.apple.dock autohide-time-modifier -int 0 #Sets Dock Autohide Time to O Seconds
+defaults write com.apple.dock autohide -bool true #Turns Dock Autohide ON
+defaults write com.apple.dock magnification -bool  NO #Turns of Dock Magnification
+defaults write com.apple.dock orientation -string  left #Moving the Dock to the left Side of the Screen
+defaults write com.apple.dock minimize-to-application -bool YES #Minimizing Applications to Their Respective Application Icon
+defaults write com.apple.dock showhidden -string  YES #Shows Hidden Applications in Dock
+defaults write com.apple.dock expose-animation-duration -string 0 #Setting Expose Animation to 0 Seconds
+defaults write com.apple.dock tilesize -int 36 #Setting Icon Size to 36 Pixels
+defaults write com.apple.dock mineffect -string "genie" #Changes Minimize to Dock Animation to "Genie" (Seems to be the fastest by my eye)
+defaults write com.apple.dock launchanim -bool false #Setting Launch Animation to False
+
+defaults write com.apple.NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool FALSE #Remove Save to iCloud Functionality
+defaults write com.apple.NSGlobalDomain AppleHighlightColor -string "1.000000 0.733333 0.721569 Red" #Setting Highlight Color to Red
+defaults write com.apple.NSGlobalDomain AppleShowAllExtensions -bool YES #Shows All File Extensions Always
+defaults write com.apple.NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool NO #Disables Double Space Bar- to Period 
+defaults write com.apple.NSGlobalDomain AppleMiniaturizeOnDoubleClick -bool NO #Disables Miniaturize on Double Click
+defaults write com.apple.NSGlobalDomain AppleActionOnDoubleClick -string "Minimize" #Setting Double Click Action to Minimize
+defaults write com.apple.NSGlobalDomain AppleAccentColor -int 0 #Setting Apple Accent Color to Red
+defaults write com.apple.NSGlobalDomain NSUseAnimatedFocusRing -bool NO #Disabling Animated Focus Ring (The Blue Halo Around Input Fields & Stuff)
+defaults write com.apple.NSGlobalDomain AppleShowScrollBars -string "WhenScrolling" #Showing Scroll Bars Only When Scrolling
+defaults write com.apple.NSGlobalDomain NSTableViewDefaultSizeMode -int 1 #Sets Default Finder View Size to 1
+defaults write com.apple.NSGlobalDomain NSAutomaticCapitalizationEnabled -bool NO #Disabling Automatic Capitalization
+defaults write com.apple.NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true #Automatically Expanding Printer Dialog Box & NSNav Panel
+defaults write com.apple.NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write com.apple.NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write com.apple.NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+defaults write com.apple.NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false #Disabling Automatic Dash & Quote Substitution, Spell Correct
+defaults write com.apple.NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write com.apple.NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write com.apple.NSGlobalDomain NSWindowResizeTime -float 0.001 #Sets Windows Resize Time to the Minimize Possible
+defaults write com.apple.NSGlobalDomain com.apple.springing.enabled -bool false #Disabling App Springing Animation
+defaults write com.apple.NSGlobalDomain com.apple.springing.delay -float 0 
+
+defaults write com.apple.appstore WebKitDeveloperExtras -bool true #Enabling Developer Stuff in App Store
+defaults write com.apple.appstore ShowDebugMenu -bool true
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true #Fixing Automatic Software Updates
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
+defaults write com.apple.commerce AutoUpdate -bool true
+defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app #Enabling powerchime
+defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool FALSE #Delete Preview Window History On Close
+defaults delete com.apple.mail DisableReplyAnimations -bool true #Disables Mail Reply & Send Animation
+defaults write com.apple.mail DisableSendAnimations -bool true
+defaults write com.apple.screencapture disable-shadow -bool TRUE #Disable Screen Capture Shadow
+defaults write com.apple.screencapture type JPG #Change Screenshot File Format to JPG
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true #Closes Print Dialog Box After Printing is Complete
+sudo nvram SystemAudioVolume=" " #Removes Startup Sound
+defaults write com.apple.TextEdit RichText -int 0 #Sets Texedit to Automatically Open in Plain Text
+defaults write com.apple.TextEdit PlainTextEncoding -int 4
+defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true #Automatically Play Movies When Opened in QuickTime
+
+killall dock
+killall Finder
+killall SystemUIServer
+killall Mail
+killall TextEdit
+killall QuickTimePlayerX
+killall Photos
+
+#<----------------Installing MacOS Apps, via Homebrew, Caks, & The App Store-------------------->
+brew=(
+    aom
+    cairo
+    curl
+    emacs
+    ffmpeg
+    flac
+    fontconfig
+    fortune
+    freetype
+    frei0r
+    fribidi
+    fzf
+    gdbm
+    gettext
+    giflib
+    git
+    glib
+    gmp
+    gnutls
+    go
+    graphite2
+    harfbuzz
+    htop
+    icu4c
+    ilmbase
+    imagemagick
+    jpeg
+    lame
+    leptonica
+    libass
+    libbluray
+    libde265
+    libevent
+    libffi
+    libheif
+    libidn2
+    libogg
+    libomp
+    libpng
+    libsamplerate
+    libsndfile
+    libsoxr
+    libtasn1
+    libtermkey
+    libtiff
+    libtool
+    libunistring
+    libuv
+    libvidstab
+    libvorbis
+    libvpx
+    libvterm
+    libyaml
+    little-cms2
+    lua
+    luajit
+    lzo
+    mas
+    msgpack
+    ncurses
+    neofetch
+    neovim
+    nettle
+    node
+    opencore-amr
+    openexr
+    openjpeg
+    opus
+    p11-kit
+    pcre
+    pcre2
+    perl
+    pixman
+    python
+    ranger
+    readline
+    rtmpdump
+    rubberband
+    ruby
+    screenresolution
+    sdl2
+    shared-mime-info
+    snappy
+    speex
+    sqlite
+    tesseract
+    theora
+    transmission-cli
+    unbound
+    unibilium
+    unrar
+    vifm
+    vim
+    webp
+    wget
+    x264
+    x265
+    xvid
+    xz
+    youtube-dl
+    zsh
+)
+cask=(
+    alacritty
+    alfred
+    atom
+    balenaetcher
+    bitbar
+    brave-browser
+    calibre
+    day-o
+    dozer
+    dropbox
+    firefox
+    gimp
+    handbrake
+    iterm2
+    java
+    keepingyouawake
+    keycastr
+    lastpass
+    macmediakeyforwarder
+    meteorologist
+    minecraft
+    nvalt
+    obs
+    plex-media-player
+    pocket-casts
+    protonvpn
+    rectangle
+    simplenote
+    spotify
+    sublime-text
+    switchresx
+    tor-browser
+    typora
+    virtualbox
+    vlc
+) #GUI apps that install with cask
+mas=(
+    1054607607 #Helium 
+    1287239339 #ColorSlurp 
+    1438841416 #Rename X 
+    553754186 #Slugline 
+    1171820258 #Highland 2 
+    409201541 #Pages 
+    409203825 #Numbers 
+    409183694 #Keynote 
+    497799835 #Xcode 
+) #Mac App Store apps I install
+npm=(
+    spotify-cli-mac -g
+)
+
+mkdir ~/repo
+cd ~/repo
+git clone https://github.com/makccr/dot
+
+ln -s ~/repo/dot/.atom ~/.atom
+ln -s ~/repo/dot/.bin ~/.bin
+ln -s ~/repo/dot/.config ~/.config
+ln -s ~/repo/dot/.gitconfig ~/.gitconfig
+ln -s ~/repo/dot/.p10k.zsh ~/.p10k
+ln -s ~/repo/dot/.vim ~/.vim
+ln -s ~/repo/dot/.vimrc ~/.vimrc
+ln -s ~/repo/dot/.zprofile ~/.zprofile
+ln -s ~/repo/dot/.zshrc ~/.zshrc
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" #Installing homebrew
+
+brew update
+brew upgrade
+
+brew install ${brew[@]} #Homebrew App Installer
+brew cask install ${cask[@]} #Casks Installer
+mas install ${mas[@]} #Mac App Store Installer
+npm install ${npm[@]} #Install npm apps
+
+#<----------------Adding customizations to cli apps, should work on all UNIX-------------------->
+touch ~/.hushlogin #Getting rid of the Last Login Crap that displays in the terminal by default
+
+#Installing Vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo 'Run ":PlugInstall" to install Vim Plugins, and then exit' >> ~/vimPlug
+vim ~/vimPlug #Opening Vim
+rm ~/vimPlug #Removing vimPlug
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" #Making zsh default, OhMyZsh
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k #Install Powerline 10k theme for Zsh
+p10k configure #Making sure p10k is properly configured
+
+echo Installation Complete!
+echo Now you can make a quick SSH key if you want. 
+echo Just press CONTROl+C, if you dont want one.
+
+ssh-keygen -t ecdsa -b 521
