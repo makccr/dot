@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 echo 'Updating Applications...'
-    brew update #Updating home-brew apps & formulas
     brew upgrade         
+    brew update #Updating home-brew apps & formulas
     brew cask upgrade #Updating apps installed as Casks
     mas upgrade #Updating Mac App Store Apps
     npm update #You know...
@@ -11,6 +11,6 @@ echo 'Cleaning caches & directories...'
     brew cleanup -s #Clearing home-brew cache
 echo 'Updating app configurations'
     cd ~/repo/dot/ #Moving to my dot directory
-    git pull #One git pull update everything
+    git pull #One git pull to update everything
     cd ~/ 
 echo 'Updating Complete!'
