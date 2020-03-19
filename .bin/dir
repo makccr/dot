@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mkdir $1
+cd $1
 mkdir assets project render script
 cd script
 git init
@@ -14,11 +16,13 @@ mkdir image motion audio
 cd ../branding
 mkdir image motion audio
 
-case "$1" in 
+case "$2" in 
     -i) cd motion; cp ~/Movies/graphicsPackage/branding/intro.mov .; cp ~/Movies/graphicsPackage/branding/endCard.mov . ;;
-    -p) cd ../../project; cp ~/Movies/premiereTemplate/project/Template.prproj . ;;
+    -p) cd ../../project; cp ~/Movies/premiereTemplate/project/Template.prproj .; mv Template.prproj $1.prproj ;;
+    -f) cd ../../project; cp -r ~/Movies/youtubeTemplate.fcpbundle .; mv youtubeTemplate.fcpbundle $1.fcpbundle ;;
 esac
 
-case "$2" in
-    -p) cd ../../../; cd project; cp ~/Movies/premiereTemplate/project/Template.prproj . ;;
+case "$3" in
+    -p) cd ../../../; cd project; cp ~/Movies/premiereTemplate/project/Template.prproj .; mv Template.prproj $1.prproj ;;
+    -f) cd ../../../; cd project; cp -r ~/Movies/youtubeTemplate.fcpbundle .; mv youtubeTemplate.fcpbundle $1.fcpbundle ;;
 esac
