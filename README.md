@@ -19,7 +19,8 @@ I have also added configurations for [Atom](https://atom.io/), [hTop](https://hi
 ### Config Guide
 App Name        | Path in Repository      
  -------------- | ----------------------- 
-Vim | [~/.vim/](https://github.com/makccr/dot/blob/master/.vimrc) & [~/.vimrc](https://github.com/makccr/dot/tree/master/.vim) 
+Vim | [~/.vim/](https://github.com/makccr/dot/blob/master/.vimrc) & [~/.vimrc](https://github.com/makccr/dot/tree/master/.vim)
+Neo Vim | [~/.config/nvim/init.vim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim)
 zsh | [~/.zshrc](https://github.com/makccr/dot/blob/master/.zshrc) & [~/.zprofile](https://github.com/makccr/dot/blob/master/.zprofile) 
 iTerm | [~/com.googlecode.iterm2.plist](https://github.com/makccr/dot/blob/master/com.googlecode.iterm2.plist) & [~/gruvbox.iterm.json](https://github.com/makccr/dot/blob/master/gruvbox.iterm.json)
 Alacritty | [~/.config/alacritty/alacritty.yml](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml)
