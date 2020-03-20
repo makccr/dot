@@ -19,17 +19,18 @@ I have also added configurations for [Atom](https://atom.io/), [hTop](https://hi
 ### Config Guide
 App Name        | Path in Repository      
  -------------- | ----------------------- 
-Vim | [~/.vim/](https://github.com/makccr/dot/blob/master/.vimrc) & [~/.vimrc](https://github.com/makccr/dot/tree/master/.vim)
-Neo Vim | [~/.config/nvim/init.vim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim)
-zsh | [~/.zshrc](https://github.com/makccr/dot/blob/master/.zshrc) & [~/.zprofile](https://github.com/makccr/dot/blob/master/.zprofile) 
-iTerm | [~/com.googlecode.iterm2.plist](https://github.com/makccr/dot/blob/master/com.googlecode.iterm2.plist) & [~/gruvbox.iterm.json](https://github.com/makccr/dot/blob/master/gruvbox.iterm.json)
 Alacritty | [~/.config/alacritty/alacritty.yml](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml)
 Atom | [~/.atom/](https://github.com/makccr/dot/tree/master/.atom)
 Git | [~/.gitconfig](https://github.com/makccr/dot/blob/master/.gitconfig) 
-Powerline 10K | [~/.p10k.zsh](https://github.com/makccr/dot/blob/master/.p10k.zsh) 
-OhMyZsh | [~/.zshrc](https://github.com/makccr/dot/blob/master/.zshrc)
-My Custom Fortune Database | [~/quotes.dat](https://github.com/makccr/dot/blob/master/quotes)
 Htop | [~/.config/htop/htoprc](https://github.com/makccr/dot/blob/master/.config/htop/htoprc)
+iTerm | [~/com.googlecode.iterm2.plist](https://github.com/makccr/dot/blob/master/com.googlecode.iterm2.plist) & [~/gruvbox.iterm.json](https://github.com/makccr/dot/blob/master/gruvbox.iterm.json)
+My Custom Bash Scripts | [~/.bin/](https://github.com/makccr/dot/tree/master/.bin)
+My Custom Fortune Database | [~/quotes.dat](https://github.com/makccr/dot/blob/master/quotes)
+Neo Vim | [~/.config/nvim/init.vim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim)
+OhMyZsh | [~/.zshrc](https://github.com/makccr/dot/blob/master/.zshrc)
+Powerline 10K | [~/.p10k.zsh](https://github.com/makccr/dot/blob/master/.p10k.zsh) 
+Vim | [~/.vim/](https://github.com/makccr/dot/blob/master/.vimrc) & [~/.vimrc](https://github.com/makccr/dot/tree/master/.vim)
+zsh | [~/.zshrc](https://github.com/makccr/dot/blob/master/.zshrc) & [~/.zprofile](https://github.com/makccr/dot/blob/master/.zprofile) 
 
 ---
 
