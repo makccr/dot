@@ -24,5 +24,4 @@ esac
 
 case "$3" in
     -p) cd ../../../; cd project; cp ~/Movies/premiereTemplate/project/Template.prproj .; mv Template.prproj $1.prproj ;;
-    -f) cd ../../../; cd project; cp -r ~/Movies/youtubeTemplate.fcpbundle .; mv youtubeTemplate.fcpbundle $1.fcpbundle ;;
 esac
