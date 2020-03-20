@@ -17,15 +17,15 @@ dynamic_title: true
 # --------------------------- Font Customization ------------------------------
 font:
   normal:
-    family: Source Code Pro
+    family: SauceCodeProNerdFontCo
     style: Regular
   bold:
-    family: Source Code Pro
+    family: SauceCodeProNerdFontCo
     style: Bold
   italic:
-    family: Source Code Pro
+    family: SauceCodeProNerdFontCo
     style: Italic
-  size: 13
+  size: 13.5
   offset:
     x: 0
     y: 0
@@ -38,13 +38,37 @@ font:
 draw_bold_text_with_bright_colors: true
 
 # ------------------------ Color Settings (Gruvbox) ---------------------------
+# Colors (Gruvbox dark)
 colors:
+  # Default colors
   primary:
-    background: '0x282828'
-    foreground: '0xfbf1c7'
-  cursor:
-    text: '0xfbf1c7'
-    cursor: '0xdc3232'
+    # hard contrast: background = '#1d2021'
+    background: '#282828'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
+
+  # Normal colors
+  normal:
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+
+  # Bright colors
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
+
   selection:
     text: '0xffffff'
     background: '0xdc3232'
