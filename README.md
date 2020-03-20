@@ -11,7 +11,7 @@ These are my dot files. I'm primarily a [MacOS](https://www.apple.com/macos/) us
 5. Snippets for [Auto Hot Key](https://www.autohotkey.com/) & [Keyboard Maestro](https://www.keyboardmaestro.com/main/). 
 6. Miscellaneous other things, [BitBar Plug-ins](https://getbitbar.com/) and Apple Scripts. 
 
-I mainly use these apps: Vim, Atom, and the Shell for standard writing; normally in the [Markdown](https://www.markdownguide.org/) or [Fountain](https://fountain.io/) format. I'm not a programmer, so I haven't customized these apps to make those kinds of tasks easier, the way that many users do. 
+I mainly use these apps: Vim, Alacritty, and the Shell for standard writing; normally in the [Markdown](https://www.markdownguide.org/) or [Fountain](https://fountain.io/) format. I'm not a programmer, so I haven't customized these apps to make those kinds of tasks easier, the way that many users do. 
 
 I have also added configurations for [Atom](https://atom.io/), [hTop](https://hisham.hm/htop/), and a few other things. I also occasionally go through some pieces of these configurations on my [YouTube channel](https://www.youtube.com/c/makccr), most recently, my [.vimrc & .vim directory](https://www.youtube.com/watch?v=Igfm59WL3NE).
 
