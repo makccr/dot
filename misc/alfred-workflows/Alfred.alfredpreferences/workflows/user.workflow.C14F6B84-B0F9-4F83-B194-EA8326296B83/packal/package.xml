@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>Symbols Search</name>
+  <version>2.0</version>
+  <bundle>pw.symbols-search</bundle>
+  <updated>1430043854</updated>
+  <file>symbols_search.alfredworkflow</file>
+</workflow>

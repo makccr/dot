@@ -1,0 +1,26 @@
+language: php
+
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+
+matrix:
+  allow_failures:
+    - php: hhvm
+
+install:
+  - composer install
+
+before_script:
+  - mkdir -p build/logs
+  - cd tests
+
+script:
+  - phpunit --colors --coverage-clover /home/travis/build/joshtronic/php-loremipsum/build/logs/clover.xml .
+
+after_success:
+  - php ../vendor/bin/coveralls --config ../.coveralls.yml -v

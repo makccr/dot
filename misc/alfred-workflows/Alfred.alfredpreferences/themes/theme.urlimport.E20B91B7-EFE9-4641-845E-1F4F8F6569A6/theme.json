@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#FFFFFFCB",
+        "font" : "System",
+        "color" : "#FFFFFF66"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#F5F4FFFF",
+        "font" : "System",
+        "color" : "#FFFFFF7E"
+      },
+      "backgroundSelected" : "#0000001A",
+      "text" : {
+        "size" : 14,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "System",
+        "color" : "#FFFFFF99"
+      },
+      "iconPaddingHorizontal" : 7,
+      "paddingVertical" : 6,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 10,
+      "background" : "#00000000",
+      "spacing" : 0,
+      "text" : {
+        "size" : 24,
+        "colorSelected" : "#000000FF",
+        "font" : "System",
+        "color" : "#FFFFFFFF"
+      },
+      "backgroundSelected" : "#F5C3C5FF"
+    },
+    "window" : {
+      "color" : "#00000033",
+      "paddingHorizontal" : 0,
+      "width" : 400,
+      "borderPadding" : 0,
+      "borderColor" : "#00000000",
+      "blur" : 40,
+      "roundness" : 3,
+      "paddingVertical" : 0
+    },
+    "credit" : "Mack",
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#DC3232FF",
+      "thickness" : 5
+    },
+    "name" : "Transparent Dark"
+  }
+}

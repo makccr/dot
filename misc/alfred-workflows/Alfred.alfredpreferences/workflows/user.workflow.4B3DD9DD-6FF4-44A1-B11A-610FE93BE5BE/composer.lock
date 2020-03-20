@@ -1,0 +1,104 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "3e70f888f88dd04a1c63a41c8c3171b1",
+    "content-hash": "94eaea9999268cb92d3a82f1de43ee34",
+    "packages": [
+        {
+            "name": "joetannenbaum/alfred-workflow",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joetannenbaum/alfred-workflow.git",
+                "reference": "2fef46b2f5368b8fb9793712b1b438163b2851bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joetannenbaum/alfred-workflow/zipball/2fef46b2f5368b8fb9793712b1b438163b2851bf",
+                "reference": "2fef46b2f5368b8fb9793712b1b438163b2851bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.3|~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Alfred\\Workflows\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Tannenbaum",
+                    "email": "joe@joe.codes"
+                }
+            ],
+            "description": "PHP helper for creating Alfred Workflows.",
+            "time": "2016-05-19 20:46:01"
+        },
+        {
+            "name": "joshtronic/php-loremipsum",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joshtronic/php-loremipsum.git",
+                "reference": "5ad1e4e9f75392f51b4ee9a1b9d0ac6b082dfe2f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joshtronic/php-loremipsum/zipball/5ad1e4e9f75392f51b4ee9a1b9d0ac6b082dfe2f",
+                "reference": "5ad1e4e9f75392f51b4ee9a1b9d0ac6b082dfe2f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "joshtronic\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Sherman",
+                    "email": "josh@gravityblvd.com",
+                    "homepage": "http://joshtronic.com"
+                }
+            ],
+            "description": "Lorem ipsum generator in PHP without dependencies",
+            "homepage": "https://github.com/joshtronic/php-loremipsum",
+            "keywords": [
+                "generator",
+                "ipsum",
+                "lorem"
+            ],
+            "time": "2016-06-09 03:04:41"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
