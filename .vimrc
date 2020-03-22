@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox' "My favorite theme
 call plug#end() 
  
-" ---------------------------- General Settings ------------------------------
+" ----------------------------- General Settings ------------------------------
 set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
 syntax on  "Turning Syntax on
@@ -38,11 +38,12 @@ set hls is  "Making sure search highlights words as we type them
 set ic
 set laststatus=2 "Setting the size for the command area, and airline status bar
 set cmdheight=1
+set colorcolumn=81
 
-" --------------------------- Syntax Mappings --------------------------------
+" --------------------------- Syntax Mappings ---------------------------------
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
-" ---------------------------- Key Remapping ---------------------------------
+" ---------------------------- Key Remapping ----------------------------------
 map <C-n> :NERDTreeToggle<CR>
 map <C-g> :Goyo<CR>
 map <C-u> :source ~/.vimrc<CR>
@@ -52,11 +53,11 @@ nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
-" ----------------------------- Color Settings -------------------------------
+" ----------------------------- Color Settings --------------------------------
 colorscheme gruvbox  
 let g:airline_theme='gruvbox'
 set background=dark
 
-" -------------------------------- Connect -----------------------------------
+" -------------------------------- Connect ------------------------------------
 " https://makc.co
 " https://github.com/makccr
