@@ -2,10 +2,10 @@
 
 curl -s https://corona-stats.online/us > ~/.bin/assets/corona
 
-echo Texas COVID-19 updates:
+echo ${bold}Texas COVID-19 updates:
 grep "Texas" ~/.bin/assets/corona | 
     sed "s/ //g ; s/║//g ; s/│/:/g ; s/▲//g" | 
-    awk -F ':' '{print $3 " Confirmed cases, resulting in " $5 " deaths. " "\n" $8 "% Recovered. Up " $9 " since yesterday."}'
+    awk -F ':' '{print $3 " Confirmed cases, resulting in " $5 " deaths. " "\n" "Up " $9 " since yesterday. " $8 "% recovered."}'
 
 # This script was shamelessly ripped off from Luke Smith: https://lukesmith.xyz
 # Feel free to copy script, and update it to provide info on your state by 
