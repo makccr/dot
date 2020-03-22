@@ -1,5 +1,5 @@
 echo " " 
 neofetch
-covid
+~/.bin/covid
 echo ' '
 fortune ~/repo/dot/quotes 
