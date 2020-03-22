@@ -15,9 +15,6 @@ I mainly use these apps: Vim & the Shell for standard writing; normally in the [
 
 I have also added configurations for [Atom](https://atom.io/), [hTop](https://hisham.hm/htop/), and a few other things. I also occasionally go through some pieces of these configurations on my [YouTube channel](https://www.youtube.com/c/makccr), most recently, my [.vimrc & .vim directory](https://www.youtube.com/watch?v=Igfm59WL3NE).
 
-###### My Vim Configuration & My Default Shell
-![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/configuration.jpg)
-
 ### Config Guide
 Apps | Path in Repository      
  -------------- | ----------------------- 
@@ -44,3 +41,20 @@ Bitbar Plug-ins | [/misc/bitbar](https://github.com/makccr/dot/tree/master/misc/
 Fortune Database | [quotes.dat](https://github.com/makccr/dot/blob/master/quotes)
 Keyboard Maestro | [/misc/snippets/keyboardMaestro.kmsync](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync)
 Screen-savers | [misc/macOS/screensavers/](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers)
+
+###### My Default Shell 
+![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/profile.jpg)
+
+```bash
+echo " "  #creating a blank line
+neofetch
+covid #custom bash script at .bin/covid
+echo ' ' #creating a blank line
+fortune ~/repo/dot/quotes
+```
+
+###### My Vim configuration while editing code
+![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vimText.jpg)
+
+###### My Vim configuration while editing Markdown, Fountain, or other plain txt
+![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vimCode.jpg)
