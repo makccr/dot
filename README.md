@@ -54,7 +54,7 @@ fortune ~/repo/dot/quotes
 ```
 
 ###### My Vim configuration while editing code
-![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vimText.jpg)
+![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vimCode.jpg)
 
 ###### My Vim configuration while editing Markdown, Fountain, or other plain txt
-![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vimCode.jpg)
+![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vimText.jpg)
