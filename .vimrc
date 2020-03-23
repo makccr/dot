@@ -39,6 +39,7 @@ set ic
 set laststatus=2 "Setting the size for the command area, and airline status bar
 set cmdheight=1
 set colorcolumn=81
+set noemoji
 
 " --------------------------- Syntax Mappings ---------------------------------
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
