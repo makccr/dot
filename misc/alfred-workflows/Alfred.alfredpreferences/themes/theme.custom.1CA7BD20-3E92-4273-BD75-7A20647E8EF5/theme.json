@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#D4C4A0FF",
+        "font" : "System",
+        "color" : "#A69882FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#F5F4FFFF",
+        "font" : "Gill Sans",
+        "color" : "#FFFFFF7E"
+      },
+      "backgroundSelected" : "#3B383569",
+      "text" : {
+        "size" : 14,
+        "colorSelected" : "#FBF1C6FF",
+        "font" : "System",
+        "color" : "#BCAE93FF"
+      },
+      "iconPaddingHorizontal" : 7,
+      "paddingVertical" : 3,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 8,
+      "background" : "#27282700",
+      "spacing" : 0,
+      "text" : {
+        "size" : 24,
+        "colorSelected" : "#000000FF",
+        "font" : "System",
+        "color" : "#FBF1C6FF"
+      },
+      "backgroundSelected" : "#F5C3C5FF"
+    },
+    "window" : {
+      "color" : "#27282759",
+      "paddingHorizontal" : 4,
+      "width" : 400,
+      "borderPadding" : 56,
+      "borderColor" : "#00000000",
+      "blur" : 0,
+      "roundness" : -64,
+      "paddingVertical" : 0
+    },
+    "credit" : "Mack",
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#AF3902FF",
+      "thickness" : 5
+    },
+    "name" : "Gruvbox Transparent"
+  }
+}
