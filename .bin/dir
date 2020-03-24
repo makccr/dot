@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
+echo Making directory: $1...
 mkdir $1
 cd $1
+echo Succesful. && echo ' '
+
+echo Setting up folder strcuture...
 mkdir assets project render script
 cd script
 git init
@@ -15,7 +19,9 @@ cd ../thumb
 mkdir image motion audio
 cd ../branding
 mkdir image motion audio
+echo Succesful. && echo ' ' 
 
+echo Copying neccisary assets...
 case "$2" in 
     -i) cd motion && cp ~/Movies/graphicsPackage/branding/intro.mov . && cp ~/Movies/graphicsPackage/branding/endCard.mov . ;;
     -p) cd ../../project && cp ~/Movies/premiereTemplate/project/Template.prproj . && mv Template.prproj $1.prproj ;;
@@ -25,3 +31,5 @@ esac
 case "$3" in
     -p) cd ../../../project && cp ~/Movies/premiereTemplate/project/Template.prproj . && mv Template.prproj $1.prproj ;;
 esac
+echo Succesful. && echo ' '
+echo Done. 
