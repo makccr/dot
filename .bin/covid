@@ -8,6 +8,8 @@ grep "Texas" ~/.bin/assets/corona |
     awk -F ':' '{print $3 " Confirmed cases, resulting in " $5 " deaths. " "\n" "Up " $9 " since yesterday. " $8 "% recovered."}'
 
 # This script was shamelessly ripped off from Luke Smith: https://lukesmith.xyz
-# Feel free to copy script, and update it to provide info on your state by 
+# Feel free to copy script, and update it to provide info on your state by
+# changing 'Texas' to: 'yourState', assuming you live in the US. 
+
 # If you like the script, please send any thanks to Luke Smith, here is a link 
 # to the original video: https://www.youtube.com/watch?v=cQ03v4d3QEo
