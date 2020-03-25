@@ -25,7 +25,7 @@ font:
   italic:
     family: SauceCodeProNerdFontCo
     style: Italic
-  size: 13.5
+  size: 13
   offset:
     x: 0
     y: 0
