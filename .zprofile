@@ -1,5 +1,7 @@
-echo " " 
-neofetch
-~/.bin/covid
+#neofetch
+#covid
+#echo ' ' 
+echo 'Torrent Status'
+tsm
 echo ' '
 fortune ~/repo/dot/quotes 
