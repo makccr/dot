@@ -1,6 +1,6 @@
 #neofetch
 #covid
 #echo ' ' 
-tsm
+transmission-remote -l
 echo ' '
 fortune ~/repo/dot/quotes 
