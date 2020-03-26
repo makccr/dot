@@ -9,6 +9,8 @@ source $ZSH/oh-my-zsh.sh
 PATH=$PATH:$HOME/.bin
 
 # -------------------------------- Aliases -----------------------------------
+alias tsm='transmission-remote -l'
+alias vim='nvim'
 
 # -------------------------------- Connect -----------------------------------
 # https://makc.co
