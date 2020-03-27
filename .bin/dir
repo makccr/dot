@@ -40,22 +40,22 @@ case "$2" in
         cp ~/Movies/graphicsPackage/branding/intro.mov . && 
         cp ~/Movies/graphicsPackage/branding/endCard.mov . 
         cd ../../../
-        ;;
+        ;; #Copying over Intro, Endcard, & Music
     -p) cd project && 
         cp ~/Movies/premiereTemplate/project/Template.prproj . && 
         mv Template.prproj $1.prproj &&
         cd ../
-        ;;
+        ;; #Copying over the Premiere Pro Template, renaming
     -f) cd project && 
         cp -r ~/Movies/youtubeTemplate.fcpbundle . && 
         mv youtubeTemplate.fcpbundle $1.fcpbundle 
         cd ../
-        ;;
+        ;; #Copying over the Final Cut Template, renaming
     -n) rm -rf script &&
         cd assets &&
         rm -rf branding && 
         cd ../
-        ;;
+        ;; #Removing script & branding folder, not necessary for non YouTube
 esac
 
 case "$3" in
@@ -63,7 +63,7 @@ case "$3" in
         cp ~/Movies/premiereTemplate/project/Template.prproj . && 
         mv Template.prproj $1.prproj &&
         cd ../
-        ;;
+        ;; #Copying over the Premiere Pro Template, renaming
 esac
 
 echo Succesful. && echo ' '
