@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+case "$1" in
+    -help) less ~/.bin/assets/dir.txt ;;
+esac
+
 echo Making directory: $1...
 mkdir $1
 cd $1
