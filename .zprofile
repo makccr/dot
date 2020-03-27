@@ -1,5 +1,5 @@
 echo ' ' 
-#neofetch
+neofetch
 #covid
 #echo ' ' 
 #transmission-remote -l

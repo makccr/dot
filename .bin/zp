@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-case "$1" in 
-    a) rm -f ~/.zprofile ; cp ~/repo/dot/zprofiles/.zprofie-quote-only ~/.zprofile ;;
-    b) rm -f ~/.zprofile ; cp ~/repo/dot/zprofiles/.zprofile-full ~/.zprofile ;;
-    c) rm -f ~/.zprofile ; cp ~/repo/dot/zprofiles/.zprofile-no-covid ~/.zprofile ;;
-    d) rm -f ~/.zprofile ; cp ~/repo/dot/zprofiles/.zprofile-quote-tsm ~/.zprofile ;;
-    e) rm -f ~/.zprofile ;;
-esac
