@@ -4,11 +4,16 @@ echo Making directory: $1...
 mkdir $1
 cd $1
 echo Succesful. && echo ' '
+#Making base directory, and naming it with first argument
 
 echo Setting up folder strcuture...
-mkdir assets project render script
+mkdir assets project render script #Setting up basic folder structure
+
 cd script
 git init -q
+cp ~/Movies/graphicsPackage/script.fountain .
+mv script.fountain $1.fountain #Setting up a git controlled fountain script
+
 cd ../assets
 mkdir aRoll bRoll thumb branding
 cd aRoll
@@ -18,18 +23,48 @@ mkdir image motion audio
 cd ../thumb
 mkdir image motion audio
 cd ../branding
-mkdir image motion audio
+mkdir image motion 
+#Setting up the rest of the folder structure
+
+cd ../../ #Backing out to base level directory
+
 echo Succesful. && echo ' ' 
 
 echo Copying neccisary assets...
+
 case "$2" in 
-    -i) cd motion && cp ~/Movies/graphicsPackage/branding/intro.mov . && cp ~/Movies/graphicsPackage/branding/endCard.mov . ;;
-    -p) cd ../../project && cp ~/Movies/premiereTemplate/project/Template.prproj . && mv Template.prproj $1.prproj ;;
-    -f) cd ../../project && cp -r ~/Movies/youtubeTemplate.fcpbundle . && mv youtubeTemplate.fcpbundle $1.fcpbundle ;;
+    -i) cd assets/branding
+        cp -r ~/Movies/graphicsPackage/music . && 
+        mv music audio &&
+        cd motion && 
+        cp ~/Movies/graphicsPackage/branding/intro.mov . && 
+        cp ~/Movies/graphicsPackage/branding/endCard.mov . 
+        cd ../../../
+        ;;
+    -p) cd project && 
+        cp ~/Movies/premiereTemplate/project/Template.prproj . && 
+        mv Template.prproj $1.prproj &&
+        cd ../
+        ;;
+    -f) cd project && 
+        cp -r ~/Movies/youtubeTemplate.fcpbundle . && 
+        mv youtubeTemplate.fcpbundle $1.fcpbundle 
+        cd ../
+        ;;
+    -n) rm -rf script &&
+        cd assets &&
+        rm -rf branding && 
+        cd ../
+        ;;
 esac
 
 case "$3" in
-    -p) cd ../../../project && cp ~/Movies/premiereTemplate/project/Template.prproj . && mv Template.prproj $1.prproj ;;
+    -p) cd project && 
+        cp ~/Movies/premiereTemplate/project/Template.prproj . && 
+        mv Template.prproj $1.prproj &&
+        cd ../
+        ;;
 esac
+
 echo Succesful. && echo ' '
 echo Done. 
