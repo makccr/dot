@@ -1,0 +1,23 @@
+                                 DIR
+                     Directory creation script
+
+This script was created to make the creation of project directories easy for 
+a variety of different types of project. 
+
+The script works thusly: 
+
+dir $NameOFile $2 $3
+(Leaving $2 or $3 blank will not cause the script to fail)
+
+$NameOFile = A string that will be used to name the base directory, as well 
+as the filename of any scripts or project files that will be copied over. 
+
+$2 = second input, four options: 
+(-i) Will copy over branding assets (intro, endcard, music)
+(-p) Will copy over Premiere Pro template, and rename it $NameOFile
+(-f) Will copy over Final Cut template, and rename it $NameOFile
+(-n) Will remove script & branding directories (used for freelance projects)
+
+$3 = third input, one option: 
+(-p) Will copy over Premiere Pro template, and rename it $NameOFile
+for use if also copying intro, or a final cut project
