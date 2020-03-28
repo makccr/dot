@@ -10,7 +10,7 @@ PATH=$PATH:$HOME/.bin
 
 # -------------------------------- Aliases -----------------------------------
 alias tsm='transmission-remote -l'
-alias vim='nvim'
+alias v='nvim'
 
 # -------------------------------- Connect -----------------------------------
 # https://makc.co
