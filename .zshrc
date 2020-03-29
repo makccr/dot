@@ -16,7 +16,7 @@ alias tsm='transmission-remote -l'
 alias v='nvim'
 alias vim='nvim'
 alias ls='ls -la'
-alias tty='tty-clock -C1'
+alias tty='tty-clock -C4 -c'
 
 # -------------------------------- Connect -----------------------------------
 # https://makc.co
