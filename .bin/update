@@ -8,8 +8,4 @@ echo 'Updating Applications...'
     npm update #You know...
 echo 'Cleaning caches & directories...'
     brew cleanup -s #Clearing home-brew cache
-echo 'Updating app configurations'
-    cd ~/repo/dot/ #Moving to my dot directory
-    git pull #One git pull to update everything
-    cd ~/ 
 echo 'Updating Complete!'
