@@ -59,6 +59,9 @@ colorscheme gruvbox
 let g:airline_theme='gruvbox'
 set background=dark
 
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+
 " -------------------------------- Connect ------------------------------------
 " https://makc.co
 " https://github.com/makccr
