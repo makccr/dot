@@ -5,6 +5,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# -------------------------- Setting up Defaults -----------------------------
+export EDITOR=/usr/local/bin/nvim
+
 # ------------------------ Adding $PATH Directory ----------------------------
 PATH=$PATH:$HOME/.bin
 
