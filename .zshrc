@@ -17,6 +17,7 @@ alias v='nvim'
 alias vim='nvim'
 alias ls='ls -la'
 alias tty='tty-clock -C4 -c'
+alias t='tty -t'
 
 # -------------------------------- Connect -----------------------------------
 # https://makc.co
