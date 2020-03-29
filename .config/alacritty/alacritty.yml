@@ -17,15 +17,15 @@ dynamic_title: true
 # --------------------------- Font Customization ------------------------------
 font:
   normal:
-    family: SauceCodeProNerdFontCo
+    family: Fira Code
     style: Regular
   bold:
-    family: SauceCodeProNerdFontCo
+    family: Fira Code
     style: Bold
   italic:
-    family: SauceCodeProNerdFontCo
+    family: Fira Code
     style: Italic
-  size: 13
+  size: 13.25
   offset:
     x: 0
     y: 0
