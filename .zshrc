@@ -14,6 +14,9 @@ PATH=$PATH:$HOME/.bin
 # -------------------------------- Aliases -----------------------------------
 alias tsm='transmission-remote -l'
 alias v='nvim'
+alias vim='nvim'
+alias ls='ls -la'
+alias tty='tty-clock -C1'
 
 # -------------------------------- Connect -----------------------------------
 # https://makc.co
