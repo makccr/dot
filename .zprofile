@@ -1,4 +1,3 @@
-echo ' ' 
 #neofetch
 #covid
 #echo ' ' 
