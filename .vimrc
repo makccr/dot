@@ -1,8 +1,6 @@
 " -------------------------------- Plugins (VimPlug) --------------------------
 call plug#begin('~/.vim/plugged')  
 " Tools
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'airblade/vim-gitgutter' 
     Plug 'junegunn/goyo.vim'  
     Plug 'preservim/nerdtree'
@@ -40,6 +38,8 @@ set laststatus=2 "Setting the size for the command area, and airline status bar
 set cmdheight=1
 set colorcolumn=81
 set noemoji
+
+:set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " --------------------------- Syntax Mappings ---------------------------------
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
