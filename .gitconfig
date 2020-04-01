@@ -6,4 +6,4 @@
 	name = Mackenzie Criswell
 	email = mackenziegcriswell@gmail.com
 [core]
-	editor = vim
+	editor = nvim
