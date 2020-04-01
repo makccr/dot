@@ -1,7 +1,7 @@
 # ------------------------- Window Customization ------------------------------
 window:
   dimensions:
-    columns: 155
+    columns: 140
     lines: 38
   padding:
     x: 10
