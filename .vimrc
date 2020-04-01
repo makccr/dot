@@ -3,8 +3,7 @@ call plug#begin('~/.vim/plugged')
 " Tools
     Plug 'airblade/vim-gitgutter' 
     Plug 'junegunn/goyo.vim'  
-    Plug 'preservim/nerdtree'
-    Plug 'ryanoasis/vim-devicons'
+    Plug 'vifm/vifm.vim' "using the vifm file manager rather than NERD Tree
 " Syntax
     Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
@@ -39,28 +38,30 @@ set cmdheight=1
 set colorcolumn=81
 set noemoji
 
-:set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " --------------------------- Syntax Mappings ---------------------------------
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
 " ---------------------------- Key Remapping ----------------------------------
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :EditVifm<CR>
 map <C-g> :Goyo<CR>
 map <C-u> :source ~/.vimrc<CR>
 map <C-b> :set spelllang=de_de<CR>
-nnoremap <Up>    :resize +2<CR> 
-nnoremap <Down>  :resize -2<CR>
-nnoremap <Left>  :vertical resize +2<CR>
+map <C-m> :Lex <bar> vertical resize 30<CR>
+map <C-l> :set background=light <CR>
+nnoremap <Up> :resize +2<CR> 
+nnoremap <Down> :resize -2<CR>
+nnoremap <Left> :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
 " ----------------------------- Color Settings --------------------------------
 colorscheme gruvbox  
-let g:airline_theme='gruvbox'
 set background=dark
 
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
+"Making background transparent in Alacritty by default
 
 " -------------------------------- Connect ------------------------------------
 " https://makc.co
