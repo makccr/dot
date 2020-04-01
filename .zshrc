@@ -17,7 +17,7 @@ PATH=$PATH:$HOME/.bin
 # -------------------------------- Aliases -----------------------------------
 alias tsm='transmission-remote -l'
 alias v='nvim'
-alias vim='nvim'
+alias vf='vifm ~/'
 alias ls='ls -la'
 alias tty='tty-clock -C4 -c'
 alias t='tty -t'
