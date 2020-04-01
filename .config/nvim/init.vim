@@ -50,7 +50,7 @@ au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 nmap <Space> :EditVifm<CR>
 nmap <ENTER> :Lex <bar> vertical resize 30<CR>
 map <C-g> :Goyo<CR>
-map <C-u> :source ~/.vimrc<CR>
+map <C-u> :source ~/.config/nvim/init.vim<CR>
 map <C-b> :set spelllang=de_de<CR>
 map <C-l> :set background=light <CR>
 nmap <C-c> :colorscheme 
