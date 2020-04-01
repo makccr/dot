@@ -1,11 +1,16 @@
 " -------------------------------- Plugins (VimPlug) --------------------------
 call plug#begin()  
+    "Adding some plug-ins that add functionality
     Plug 'airblade/vim-gitgutter' 
     Plug 'junegunn/goyo.vim'
     Plug 'vifm/vifm.vim' "using the vifm file manager rather than NERD Tree
+
+    "Syntax
     Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
     Plug 'vim-scripts/fountain.vim'
+
+    "Color schemes 
     Plug 'morhetz/gruvbox' "My favorite theme
     Plug 'kristijanhusak/vim-hybrid-material'
     Plug 'NLKNguyen/papercolor-theme'
