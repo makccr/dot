@@ -21,6 +21,7 @@ alias vf='vifm ~/'
 alias ls='ls -la'
 alias tty='tty-clock -C4 -c'
 alias t='tty -t'
+alias s='spotify'
 
 # -------------------------------- Connect -----------------------------------
 # https://makc.co
