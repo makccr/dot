@@ -23,6 +23,7 @@ alias tty='tty-clock -C4 -c'
 alias t='tty -t'
 alias s='spotify'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
+alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 
 # -------------------------------- Connect -----------------------------------
 # https://makc.co
