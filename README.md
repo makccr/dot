@@ -2,14 +2,13 @@
 
 These are my dot files. I'm primarily a [MacOS](https://www.apple.com/macos/) user, but I occasionally use [Manjaro](https://manjaro.org/), or another Arch based Linux distribution; so that's where I take my cue. The main things here are: 
 
-1. My [Vim](https://www.vim.org/) configuration. 
+1. My [Neovim](https://neovim.io/) configuration. 
 2. [Z-Shell](http://zsh.sourceforge.net/)
     * [Oh-my-zsh](https://ohmyz.sh/)
     * [Powerline 10k](https://github.com/romkatv/powerlevel10k) 
-3. My [iTerm](https://www.iterm2.com/) configuration (MacOS)
-4. My [Alacritty](https://github.com/alacritty/alacritty) configuration (Linux)
-5. Snippets for [Auto Hot Key](https://www.autohotkey.com/) & [Keyboard Maestro](https://www.keyboardmaestro.com/main/). 
-6. Miscellaneous other things, [BitBar Plug-ins](https://getbitbar.com/) and Apple Scripts. 
+3. My [Alacritty](https://github.com/alacritty/alacritty) configuration
+4. Snippets for [Auto Hot Key](https://www.autohotkey.com/) & [Keyboard Maestro](https://www.keyboardmaestro.com/main/). 
+5. Miscellaneous other things: [BitBar Plug-ins](https://getbitbar.com/) and Apple Scripts. 
 
 I mainly use these apps: Vim & the Shell for standard writing; normally in the [Markdown](https://www.markdownguide.org/) or [Fountain](https://fountain.io/) format. I'm not a programmer, so I haven't customized these apps to make those kinds of tasks easier, the way that many users do. 
 
