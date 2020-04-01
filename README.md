@@ -55,8 +55,6 @@ Screen-savers      | [misc/macOS/screensavers/](https://github.com/makccr/dot/tr
 fortune ~/repo/dot/quotes #Displaying a quote for me look at 
 ```
 
-###### My Vim configuration (I've been using [Neovim](https://github.com/neovim/neovim), but I still just link to the original .vimrc).
-![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vim.jpg)
-
-###### My file browser. I use [VIFM](https://github.com/vifm/vifm), and highly recommend it for Vim or Neovim users because it just carries over most of the command we're already used to using. 
-![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vifm.jpg)
+**My Vim configuration (I've been using [Neovim](https://github.com/neovim/neovim), but I still just link to the original .vimrc).** | **My file browser. I use [VIFM](https://github.com/vifm/vifm), and highly recommend it for Vim or Neovim users because it just carries over most of the command we're already used to using.**
+---------- | -------------------
+![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vim.jpg) | ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vifm.jpg)
