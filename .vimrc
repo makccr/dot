@@ -10,6 +10,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-scripts/fountain.vim'
 " Color-schemes
     Plug 'morhetz/gruvbox' "My favorite theme
+    Plug 'kristijanhusak/vim-hybrid-material'
+    Plug 'NLKNguyen/papercolor-theme'
+    Plug 'jacoborus/tender.vim'
+    Plug 'romainl/Apprentice'
+    Plug 'nanotech/jellybeans.vim'
 call plug#end() 
  
 " ----------------------------- General Settings ------------------------------
@@ -44,12 +49,13 @@ set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
 " ---------------------------- Key Remapping ----------------------------------
-map <C-n> :EditVifm<CR>
+nmap <Space> :EditVifm<CR>
+nmap <ENTER> :Lex <bar> vertical resize 30<CR>
 map <C-g> :Goyo<CR>
 map <C-u> :source ~/.vimrc<CR>
 map <C-b> :set spelllang=de_de<CR>
-map <C-m> :Lex <bar> vertical resize 30<CR>
 map <C-l> :set background=light <CR>
+nmap <C-c> :colorscheme 
 nnoremap <Up> :resize +2<CR> 
 nnoremap <Down> :resize -2<CR>
 nnoremap <Left> :vertical resize +2<CR>
