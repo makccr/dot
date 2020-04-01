@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')  
 " Tools
     Plug 'airblade/vim-gitgutter' 
-    Plug 'junegunn/goyo.vim'  
+    Plug 'junegunn/goyo.vim'
     Plug 'vifm/vifm.vim' "using the vifm file manager rather than NERD Tree
 " Syntax
     Plug 'tpope/vim-markdown'
@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'jacoborus/tender.vim'
     Plug 'romainl/Apprentice'
     Plug 'nanotech/jellybeans.vim'
+    Plug 'ajh17/Spacegray.vim'
 call plug#end() 
  
 " ----------------------------- General Settings ------------------------------
