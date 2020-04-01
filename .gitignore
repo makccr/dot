@@ -5,3 +5,4 @@ gmail
 .bin/assets/corona
 .config/vifm/vifminfo
 .vim/plugged/
+.config/nvim/plugged/
