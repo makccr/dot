@@ -18,7 +18,7 @@ I have also added configurations for [Atom](https://atom.io/), [hTop](https://hi
 ### Config Guide
 Apps | Other stuff | Dot Files Archive       
  :-- | :---------- | :----------- 
-[Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences) | [Atom](https://github.com/makccr/dot/tree/master/.atom) 
+[Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences) | [Atom](https://github.com/makccr/dot/tree/master/misc/archives/.atom) 
 [Bash Scripts](https://github.com/makccr/dot/tree/master/.bin) | [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows) | [iTerm](https://github.com/makccr/dot/blob/master/misc/archives/com.googlecode.iterm2.plist)
 [Git](https://github.com/makccr/dot/blob/master/.gitconfig) | [Apple Scripts](https://github.com/makccr/dot/tree/master/misc/apple-scripts) | [vim](https://github.com/makccr/dot/blob/master/misc/archives/.vimrc) 
 [Htop](https://github.com/makccr/dot/blob/master/.config/htop/htoprc) | [Apple Terminal](https://github.com/makccr/dot/blob/master/misc/macOS/terminals/Gruvbox.terminal) |  
