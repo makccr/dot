@@ -4,3 +4,4 @@ gmail
 .vim/.DS_Store
 .bin/assets/corona
 .config/vifm/vifminfo
+.vim/plugged/
