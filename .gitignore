@@ -6,3 +6,4 @@ gmail
 .config/vifm/vifminfo
 .vim/plugged/
 .config/nvim/plugged/
+.config/nvim/.netrwhist
