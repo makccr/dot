@@ -74,8 +74,8 @@ set statusline+=\ %l:%c
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
 " ---------------------------- Key Remapping ----------------------------------
-nmap <Space> :EditVifm<CR>
-nmap <ENTER> :Lex <bar> vertical resize 30<CR>
+nmap <Space> :w <bar> EditVifm ~<CR>
+nmap <ENTER> :w <bar> Lex <bar> vertical resize 30<CR>
 map <C-g> :Goyo<CR>
 map <C-u> :source ~/.config/nvim/init.vim<CR>
 map <C-b> :set spelllang=de_de<CR>
