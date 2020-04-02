@@ -6,7 +6,7 @@ window:
   padding:
     x: 10
     y: 10
-  decorations: none 
+  decorations: none
 scrolling:
   history: 10000
   multiplier: 3

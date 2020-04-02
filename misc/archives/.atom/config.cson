@@ -8,7 +8,7 @@
     ]
     titleBar: "hidden"
   editor:
-    fontFamily: "Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace"
+    fontFamily: "Fira Code, monospace"
     fontSize: 13
     lineHeight: 1.25
     softWrap: true
