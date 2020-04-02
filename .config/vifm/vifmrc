@@ -11,7 +11,7 @@
 " If you would like to use another vi clone such as Elvis or Vile
 " you will need to change this setting.
 
-set vicmd=vim
+set vicmd=vifm
 " set vicmd=elvis\ -G\ termcap
 " set vicmd=vile
 
@@ -216,9 +216,12 @@ filetype *.html,*.htm
        \ open -a Firefox.app,
        \ {Open in Chrome}
        \ open -a Google\ Chrome.app,
-       \ {Open in vim}
-       \ vim,
+       \ {Open in nvim}
+       \ nvim,
 fileviewer *.html,*.htm w3m -dump -T text/html
+
+" Markdown
+filetype *.md nvim
 
 " Object
 filetype *.o nm %f | less
