@@ -7,3 +7,4 @@ gmail
 .vim/plugged/
 .config/nvim/plugged/
 .config/nvim/.netrwhist
+.config/configstore/update-notifier-npm.json
