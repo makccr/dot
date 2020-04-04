@@ -3,6 +3,7 @@ call plug#begin()
     "Adding some plug-ins that add functionality
     Plug 'airblade/vim-gitgutter' 
     Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim' 
     Plug 'vifm/vifm.vim' "using the vifm file manager rather than NERD Tree
 
     "Syntax
@@ -73,10 +74,13 @@ set statusline+=\ %l:%c
 " --------------------------- Syntax Mappings ---------------------------------
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
 
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
 " ---------------------------- Key Remapping ----------------------------------
 nmap <Space> :w <bar> EditVifm ~<CR>
 nmap <ENTER> :w <bar> Lex <bar> vertical resize 30<CR>
-map <C-g> :Goyo<CR>
+map <C-g> :set noshowmode <bar> Goyo<CR>
 map <C-u> :source ~/.config/nvim/init.vim<CR>
 map <C-b> :set spelllang=de_de<CR>
 map <C-l> :set background=light <CR>
@@ -93,6 +97,10 @@ set background=dark
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
 "Making background transparent in Alacritty by default
+
+let g:limelight_conceal_ctermfg = 240
+let g:limelight_default_coefficient = 0.7
+let g:limelight_paragraph_span = 0
 
 " -------------------------------- Connect ------------------------------------
 " https://makc.co
