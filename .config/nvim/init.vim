@@ -27,8 +27,6 @@ filetype plugin indent on
 syntax on
 set autoread
 set wildmenu
-set nocompatible 
-set showcmd
 set spell                       "Setting up spelling language. 
 set spelllang=en_us
 set backspace=indent,eol,start  "Easy of access: backspace & mouse support
@@ -46,7 +44,8 @@ set ic
 set cmdheight=1                 "Guides & command height
 set colorcolumn=80
 set cursorline
-set number
+set number relativenumber
+set nu rnu
 
 " -------------------------------- Status Bar ---------------------------------
 function! GitBranch()
