@@ -135,10 +135,8 @@ map <F6> :colorscheme jellybeans<CR>
 map <F7> :colorscheme spacegray<CR>
 map <F8> :colorscheme tender<CR>
 
-" ------------------------------- Edit Mode -----------------------------------
-"Comment out when not editing init.vim
-"autocmd BufWritePost init.vim source %
 
-" -------------------------------- Connect ------------------------------------
-" https://makc.co
-" https://github.com/makccr
+" ||\\ //|| 
+" || \// || Mackenzie Criswell
+" || //\ || https://makc.co
+" ||   \\|| https://github.com/makccr
