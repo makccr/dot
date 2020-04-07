@@ -15,17 +15,17 @@ I mainly use these apps: Vim & the Shell for standard writing; normally in the [
 I have also added configurations for [Atom](https://atom.io/), [hTop](https://hisham.hm/htop/), and a few other things. I also occasionally go through some pieces of these configurations on my [YouTube channel](https://www.youtube.com/c/makccr), most recently, my [.vimrc & .vim directory](https://www.youtube.com/watch?v=Igfm59WL3NE).
 
 ### Config Guide
-Apps | Other stuff | Dot Files Archive       
- :-- | :---------- | :----------- 
-[Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences) | [Atom](https://github.com/makccr/dot/tree/master/misc/archives/.atom) 
-[Bash Scripts](https://github.com/makccr/dot/tree/master/.bin) | [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows) | [iTerm](https://github.com/makccr/dot/blob/master/misc/archives/com.googlecode.iterm2.plist)
-[Git](https://github.com/makccr/dot/blob/master/.gitconfig) | [Apple Scripts](https://github.com/makccr/dot/tree/master/misc/apple-scripts) | [vim](https://github.com/makccr/dot/blob/master/misc/archives/.vimrc) 
-[Htop](https://github.com/makccr/dot/blob/master/.config/htop/htoprc) | [Apple Terminal](https://github.com/makccr/dot/blob/master/misc/macOS/terminals/Gruvbox.terminal) |  
-[Neovim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim) | [Auto Hot Key](https://github.com/makccr/dot/blob/master/misc/snippets/ahk/ahk.ahk) |
-[OhMyZsh](https://github.com/makccr/dot/blob/master/.zshrc) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar) |
-[Powerline 10K](https://github.com/makccr/dot/blob/master/.p10k.zsh) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes) |
-[Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync) |
-[zsh](https://github.com/makccr/dot/blob/master/.zshrc) | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers) |
+Apps | Other stuff
+ :-- | :---------- 
+[Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences)
+[Bash Scripts](https://github.com/makccr/dot/tree/master/.bin) | [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows)
+[Git](https://github.com/makccr/dot/blob/master/.gitconfig) | [Apple Scripts](https://github.com/makccr/dot/tree/master/misc/apple-scripts)
+[Htop](https://github.com/makccr/dot/blob/master/.config/htop/htoprc) | [Apple Terminal](https://github.com/makccr/dot/blob/master/misc/macOS/terminals/Gruvbox.terminal)
+[Neovim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim) | [Auto Hot Key](https://github.com/makccr/dot/blob/master/misc/snippets/ahk/ahk.ahk)
+[OhMyZsh](https://github.com/makccr/dot/blob/master/.zshrc) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar)
+[Powerline 10K](https://github.com/makccr/dot/blob/master/.p10k.zsh) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes)
+[Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync)
+[zsh](https://github.com/makccr/dot/blob/master/.zshrc) | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers)
 
 
 ###### My Default Shell (It's usually running in Alacritty these days, you can't beat that GPU acceleration) 
