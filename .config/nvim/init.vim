@@ -29,8 +29,7 @@ set autoread
 set wildmenu
 set spell                       "Setting up spelling language. 
 set spelllang=en_us
-set backspace=indent,eol,start  "Easy of access: backspace & mouse support
-set mouse=a
+set backspace=indent,eol,start  "Easy of access: backspace
 set noruler                     "Setting up rulers, spacing & tabs.
 set confirm
 set shiftwidth=4
