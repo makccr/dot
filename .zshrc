@@ -23,7 +23,13 @@ alias t='tty -t'
 alias s='spotify'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
+# Snippet type aliases 
+alias commit='git add -A; git commit -m'
+alias reset='clear; source ~/.zprofile'
+alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
 
-# -------------------------------- Connect -----------------------------------
-# https://makc.co
-# https://github.com/makccr
+
+# ||\\ //|| 
+# || \// || Mackenzie Criswell
+# || //\ || https://makc.co
+# ||   \\|| https://github.com/makccr
