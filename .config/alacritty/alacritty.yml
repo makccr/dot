@@ -1,4 +1,4 @@
-# ------------------------- Window Customization ------------------------------
+# Window Customization
 window:
   dimensions:
     columns: 140
@@ -13,7 +13,7 @@ scrolling:
 background_opacity: 0.95
 dynamic_title: true
 
-# --------------------------- Font Customization ------------------------------
+# Font Customization 
 font:
   normal:
     family: Fira Code
@@ -36,17 +36,12 @@ font:
     persistent_logging: false
 draw_bold_text_with_bright_colors: true
 
-# ------------------------ Color Settings (Gruvbox) ---------------------------
-# Colors (Gruvbox dark)
+# Color Settings (Gruvbox)
 colors:
-  # Default colors
   primary:
-    # hard contrast: background = '#1d2021'
-    background: '#282828'
-    # soft contrast: background = '#32302f'
+    background: '#1d2021'
     foreground: '#ebdbb2'
 
-  # Normal colors
   normal:
     black:   '#282828'
     red:     '#cc241d'
@@ -57,7 +52,6 @@ colors:
     cyan:    '#689d6a'
     white:   '#a89984'
 
-  # Bright colors
   bright:
     black:   '#928374'
     red:     '#fb4934'
