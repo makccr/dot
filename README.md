@@ -6,9 +6,10 @@ These are my dot files. I'm primarily a [MacOS](https://www.apple.com/macos/) us
 2. [Z-Shell](http://zsh.sourceforge.net/)
     * [Oh-my-zsh](https://ohmyz.sh/)
     * [Powerline 10k](https://github.com/romkatv/powerlevel10k) 
-3. My [Alacritty](https://github.com/alacritty/alacritty) configuration
-4. Snippets for [Auto Hot Key](https://www.autohotkey.com/) & [Keyboard Maestro](https://www.keyboardmaestro.com/main/). 
-5. Miscellaneous other things: [BitBar Plug-ins](https://getbitbar.com/) and Apple Scripts. 
+3. My [Alacritty](https://github.com/alacritty/alacritty) configuration.
+4. My [Qutebroswer](https://qutebrowser.org/) configuration.
+5. Snippets for [Auto Hot Key](https://www.autohotkey.com/) & [Keyboard Maestro](https://www.keyboardmaestro.com/main/). 
+6. Miscellaneous other things: [BitBar Plug-ins](https://getbitbar.com/) and Apple Scripts. 
 
 I mainly use these apps: Vim & the Shell for standard writing; normally in the [Markdown](https://www.markdownguide.org/) or [Fountain](https://fountain.io/) format. I'm not a programmer, so I haven't customized these apps to make those kinds of tasks easier, the way that many users do. 
 
@@ -24,22 +25,21 @@ Apps | Other stuff
 [Neovim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim) | [Auto Hot Key](https://github.com/makccr/dot/blob/master/misc/snippets/ahk/ahk.ahk)
 [OhMyZsh](https://github.com/makccr/dot/blob/master/.zshrc) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar)
 [Powerline 10K](https://github.com/makccr/dot/blob/master/.p10k.zsh) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes)
-[Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync)
-[zsh](https://github.com/makccr/dot/blob/master/.zshrc) | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers)
-
+[Qutebroswer](https://github.com/makccr/dot/tree/master/.qutebrowser) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync)
+[Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers)
+[Zshrc](https://github.com/makccr/dot/blob/master/.zshrc) | 
 
 ###### My Default Shell (It's usually running in Alacritty these days, you can't beat that GPU acceleration) 
 ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/profile.jpg)
 
 ```bash
-#neofetch #Running a customized neofetch 
-#covid #A script I built to keep my updated on COVID-19 effects
-#echo ' ' #I keep most lines commented out, and uncomment when I want to see more
-#transmission-remote -l #The command to display any currently downloading torrents
-#echo ' ' #blank lines
-fortune ~/repo/dot/quotes #Displaying a quote for me look at 
+#neofetch
+#transmission-remote -l
+#echo ' '
+fortune ~/repo/dot/quotes 
+#echo ' ' 
+#covid
 ```
-
-**My [Neovim](https://github.com/neovim/neovim) Configuration.** | **My file browser. I use [VIFM](https://github.com/vifm/vifm), and highly recommend it for Vim or Neovim users because it just carries over most of the command we're already used to using.**
+**My [Neovim](https://github.com/neovim/neovim) Configuration.** | **My [VIFM](https://github.com/vifm/vifm) config.**
 ---------- | -------------------
 ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vim.jpg) | ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vifm.jpg)
