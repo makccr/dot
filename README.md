@@ -40,6 +40,6 @@ fortune ~/repo/dot/quotes
 #echo ' ' 
 #covid
 ```
-**My [Neovim](https://github.com/neovim/neovim) Configuration.** | **My [VIFM](https://github.com/vifm/vifm) config.**
+**My [nvim](https://github.com/neovim/neovim) Configuration.** | **My [vifm](https://github.com/vifm/vifm) Configuration.**
 ---------- | -------------------
 ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vim.jpg) | ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vifm.jpg)
