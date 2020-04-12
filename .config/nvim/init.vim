@@ -1,9 +1,9 @@
 " Plugins (VimPlug)
-call plug#begin()  
+call plug#begin()
     "functionality
-    Plug 'airblade/vim-gitgutter' 
+    Plug 'airblade/vim-gitgutter'
     Plug 'junegunn/goyo.vim'
-    Plug 'junegunn/limelight.vim' 
+    Plug 'junegunn/limelight.vim'
     Plug 'vifm/vifm.vim'
 
     "Syntax
@@ -11,7 +11,7 @@ call plug#begin()
     Plug 'ap/vim-css-color'
     Plug 'vim-scripts/fountain.vim'
 
-    "Color schemes 
+    "Color schemes
     Plug 'morhetz/gruvbox'
     Plug 'kristijanhusak/vim-hybrid-material'
     Plug 'NLKNguyen/papercolor-theme'
@@ -19,15 +19,15 @@ call plug#begin()
     Plug 'romainl/Apprentice'
     Plug 'nanotech/jellybeans.vim'
     Plug 'ajh17/Spacegray.vim'
-call plug#end() 
- 
+call plug#end()
+
 " General Settings
 set encoding=UTF-8              "Stuff that should have been on by default
 filetype plugin indent on
 syntax on
 set autoread
 set wildmenu
-set spell                       "Setting up spelling language. 
+set spell                       "Setting up spelling language.
 set spelllang=en_us
 set backspace=indent,eol,start  "Easy of access: backspace
 set noruler                     "Setting up rulers, spacing & tabs.
@@ -37,7 +37,7 @@ set autoindent
 set smartindent
 set tabstop=4
 set softtabstop=4
-set expandtab  
+set expandtab
 set hls is                      "Setting up highlight for search
 set ic
 set cmdheight=1                 "Guides & command height
@@ -69,8 +69,10 @@ set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
 
-" Syntax Mappings
+" Fixing a few little issues
 au BufRead,BufNewFile *.fountain set filetype=fountain
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
 " Goyo Customization
 function! s:goyo_enter()
@@ -94,8 +96,8 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 colorscheme gruvbox
 set background=dark
 
-hi! Normal ctermbg=NONE guibg=NONE 
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 "Making background transparent in Alacritty by default
 
 let g:limelight_conceal_ctermfg = 240
@@ -109,7 +111,7 @@ map <C-s> :source ~/.config/nvim/init.vim<CR>
 map <C-d> :set spelllang=de_de<CR>
 map <C-l> :set background=light <CR>
 
-nnoremap <Up> :resize +2<CR> 
+nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>
 nnoremap <Left> :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
@@ -133,7 +135,7 @@ map <F6> :colorscheme jellybeans<CR>
 map <F7> :colorscheme spacegray<CR>
 map <F8> :colorscheme tender<CR>
 
-" ||\\ //|| 
+" ||\\ //||
 " || \// || Mackenzie Criswell
 " || //\ || https://makc.co
 " ||   \\|| https://github.com/makccr
