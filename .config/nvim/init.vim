@@ -108,7 +108,7 @@ let g:limelight_paragraph_span = 0
 nmap <Space> :w <bar> EditVifm .<CR>
 nmap <ENTER> :Goyo<CR>
 map <C-s> :source ~/.config/nvim/init.vim<CR>
-map <C-d> :set spelllang=de_de<CR>
+map <C-g> :set spelllang=de_de<CR>
 map <C-l> :set background=light <CR>
 
 nnoremap <Up> :resize +2<CR>
