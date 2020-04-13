@@ -28,7 +28,7 @@ alias commit='git add -A; git commit -m'
 alias reset='cd ~; clear; source ~/.zprofile'
 alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
 
-# ||\\ //|| 
+# ||\\ //||
 # || \// || Mackenzie Criswell
 # || //\ || https://makc.co
 # ||   \\|| https://github.com/makccr

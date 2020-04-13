@@ -133,7 +133,7 @@ fileviewer *.docx docx2txt.pl %f -
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
     \phistory,fhistory,dirstack,registers,bookmarks,bmarks
 
-"Key-mappings 
+"Key-mappings
 nnoremap s :shell<cr>
 nnoremap S :sort<cr>
 nnoremap w :view<cr>
@@ -161,7 +161,7 @@ nnoremap <f6> :move<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
 
-" ||\\ //|| 
+" ||\\ //||
 " || \// || Mackenzie Criswell
 " || //\ || https://makc.co
 " ||   \\|| https://github.com/makccr

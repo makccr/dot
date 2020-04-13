@@ -13,7 +13,7 @@ scrolling:
 background_opacity: 0.95
 dynamic_title: true
 
-# Font Customization 
+# Font Customization
 font:
   normal:
     family: Fira Code
@@ -32,7 +32,7 @@ font:
     x: 0
     y: 0
   use_thin_strokes: false
-  debug: 
+  debug:
     persistent_logging: false
 draw_bold_text_with_bright_colors: true
 
@@ -71,7 +71,7 @@ cursor:
   unfocused_hollow: true
 
 
-# ||\\ //|| 
+# ||\\ //||
 # || \// || Mackenzie Criswell
 # || //\ || https://makc.co
 # ||   \\|| https://github.com/makccr
