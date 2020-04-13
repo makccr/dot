@@ -51,8 +51,8 @@ set statusline=
 set statusline+=%#PmenuSel#
 set statusline+=\ %M
 set statusline+=\ %y
-set statusline+=\ %F
 set statusline+=\ %r
+set statusline+=\ %F
 set statusline+=%= "Shift the rest to the left side
 set statusline+=%#DiffChange#
 set statusline+=\ %c:%l/%L
@@ -95,9 +95,8 @@ let g:limelight_default_coefficient = 0.7
 let g:limelight_paragraph_span = 0
 
 " Key Remapping
-nmap <Space> :w <bar> EditVifm .<CR>
+nmap <Space> :EditVifm .<CR>
 nmap <ENTER> :Goyo<CR>
-map <C-s> :source ~/.config/nvim/init.vim<CR>
 map <C-g> :set spelllang=de_de<CR>
 map <C-l> :set background=light <CR>
 
