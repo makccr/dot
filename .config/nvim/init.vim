@@ -44,13 +44,14 @@ set cursorline
 
 " Status-line
 set statusline=
-set statusline+=%#PmenuSel#
+set statusline+=%#IncSearch#
 set statusline+=\ %M
 set statusline+=\ %y
 set statusline+=\ %r
+set statusline+=%#CursorLineNr#
 set statusline+=\ %F
 set statusline+=%= "Right side settings
-set statusline+=%#DiffChange#
+set statusline+=%#Search#
 set statusline+=\ %c:%l/%L
 set statusline+=\ %p%%
 set statusline+=\ [%n]
