@@ -1,19 +1,18 @@
-# Basic zsh setting & themes
-bindkey -v #Enables Vim Mode in z-shell
-#export PS1="> "
-autoload -Uz promptinit
-promptinit
-prompt adam2
+# Basic Settings
+PATH=$PATH:$HOME/.bin
+export PS1="\[\e[1;30m\]\W\[\e[m\] \\$ "
+if [[ -z "$SSH_CLIENT" ]]; then
+    export PS1="\[\e[1;30m\]\W\[\e[m\] \\$ "
+else
+    echo "Welcome to $(scutil --get ComputerName) ($(sw_vers -productVersion))"
+fi
 
-# Setting up Defaults
+# Defaults Apps
 export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='firefox'
 
-# Adding $PATH Directory
-PATH=$PATH:$HOME/.bin
-
-# Aliases
+# Alias
 alias tsm='transmission-remote -l'
 alias v='nvim'
 alias vim='nvim'
@@ -24,12 +23,10 @@ alias s='spotify'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias commit='git add -A; git commit -m'
-alias reset='cd ~; clear; source ~/.zprofile'
+alias reset='cd ~; clear; source ~/.profile'
 alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
 
 # ||\\ //||
 # || \// || Mackenzie Criswell
 # || //\ || https://makc.co
 # ||   \\|| https://github.com/makccr
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

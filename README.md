@@ -3,9 +3,7 @@
 These are my dot files. I'm primarily a [MacOS](https://www.apple.com/macos/) user, but I occasionally use [Manjaro](https://manjaro.org/), or another Arch based Linux distribution; so that's where I take my cue. The main things here are: 
 
 1. My [Neovim](https://neovim.io/) configuration. 
-2. [Z-Shell](http://zsh.sourceforge.net/)
-    * [Oh-my-zsh](https://ohmyz.sh/)
-    * [Powerline 10k](https://github.com/romkatv/powerlevel10k) 
+2. [My Bash](https://www.gnu.org/software/bash/) configuration.
 3. My [Alacritty](https://github.com/alacritty/alacritty) configuration.
 4. My [Qutebroswer](https://qutebrowser.org/) configuration.
 5. Snippets for [Auto Hot Key](https://www.autohotkey.com/) & [Keyboard Maestro](https://www.keyboardmaestro.com/main/). 
@@ -19,24 +17,33 @@ I have also added configurations for [Atom](https://atom.io/), [hTop](https://hi
 Apps | Other stuff
  :-- | :---------- 
 [Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences)
-[Bash Scripts](https://github.com/makccr/dot/tree/master/.bin) | [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows)
-[Git](https://github.com/makccr/dot/blob/master/.gitconfig) | [Apple Scripts](https://github.com/makccr/dot/tree/master/misc/apple-scripts)
-[Htop](https://github.com/makccr/dot/blob/master/.config/htop/htoprc) | [Apple Terminal](https://github.com/makccr/dot/blob/master/misc/macOS/terminals/Gruvbox.terminal)
-[Neovim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim) | [Auto Hot Key](https://github.com/makccr/dot/blob/master/misc/snippets/ahk/ahk.ahk)
-[Qutebroswer](https://github.com/makccr/dot/tree/master/.qutebrowser) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar)
-[Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes)
-[Zshrc](https://github.com/makccr/dot/blob/master/.zshrc) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync)
- | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers)
+[Bash Settings](https://github.com/makccr/dot/tree/master/.bashrc) | [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows)
+[Bash Scripts](https://github.com/makccr/dot/tree/master/.bin) | [Apple Scripts](https://github.com/makccr/dot/tree/master/misc/apple-scripts)
+[Git](https://github.com/makccr/dot/blob/master/.gitconfig) | [Apple Terminal](https://github.com/makccr/dot/blob/master/misc/macOS/terminals/Gruvbox.terminal)
+[Htop](https://github.com/makccr/dot/blob/master/.config/htop/htoprc) | [Auto Hot Key](https://github.com/makccr/dot/blob/master/misc/snippets/ahk/ahk.ahk)
+[Neovim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar)
+[Profile](https://github.com/makccr/dot/tree/master/.profile) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes)
+[Qutebroswer](https://github.com/makccr/dot/tree/master/.qutebrowser) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync)
+ [Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers)
 
-###### My Default Shell (It's usually running in Alacritty these days, you can't beat that GPU acceleration) 
+###### My Shell
 ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/profile.jpg)
 
 ```bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
 #neofetch
 #transmission-remote -l
 #echo ' '
-fortune ~/repo/dot/quotes 
-#echo ' ' 
+fortune ~/repo/dot/quotes
+#echo ' '
+#cat ~/Dropbox/writing/notes/To-do.md
+#echo ' '
 #covid
 ```
 **My [nvim](https://github.com/neovim/neovim) Configuration.** | **My [vifm](https://github.com/vifm/vifm) Configuration.**
