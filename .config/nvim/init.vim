@@ -58,12 +58,15 @@ set statusline+=\ [%n]
 
 " Some little fixes
 au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
+setlocal foldmethod=indent
+set foldlevel=5
 
 " Key-bindings
-map <Space> :EditVifm .<CR>
-map <ENTER> :Goyo<CR>
-map <C-g> :set spelllang=de_de<CR>
-map <C-l> :set background=light<CR>
+let mapleader=" "
+map <leader><Space> :EditVifm .<CR>
+map <leader><ENTER> :Goyo<CR>
+map <C-g>g :set spelllang=de_de<CR>
+map <C-l>l :set background=light<CR>
 map <C-s> :source ~/.config/nvim/init.vim<CR>
 
 nnoremap <Up> :resize +2<CR> 
@@ -76,10 +79,10 @@ xnoremap J :move '>+1<CR>gv-gv
 
 nnoremap Q <nop>
 
-nnoremap <C-h> <C-W>h
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
+nnoremap <leader>h <C-W>h
+nnoremap <leader>j <C-W>j
+nnoremap <leader>k <C-W>k
+nnoremap <leader>l <C-W>l
 
 map <F1> :colorscheme gruvbox<CR>
 map <F2> :colorscheme PaperColor<CR>
@@ -105,17 +108,17 @@ let g:limelight_conceal_guifg = '#777777'
 
 " Goyo settings
 function! s:goyo_enter()
-  set noshowmode
-  set noshowcmd
-  set nocursorline
-  Limelight
+    set noshowmode
+    set noshowcmd
+    set nocursorline
+    Limelight
 endfunction
 
 function! s:goyo_leave()
-  set showmode
-  set showcmd
-  set cursorline
-  Limelight!
+    set showmode
+    set showcmd
+    set cursorline
+    Limelight!
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
