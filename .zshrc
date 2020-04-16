@@ -1,10 +1,9 @@
 # Basic zsh setting & themes
-export ZSH="/Users/makc/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 bindkey -v #Enables Vim Mode in z-shell
+#export PS1="> "
+autoload -Uz promptinit
+promptinit
+prompt adam2
 
 # Setting up Defaults
 export EDITOR='nvim'
@@ -32,3 +31,5 @@ alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
 # || \// || Mackenzie Criswell
 # || //\ || https://makc.co
 # ||   \\|| https://github.com/makccr
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

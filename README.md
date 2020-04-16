@@ -23,11 +23,10 @@ Apps | Other stuff
 [Git](https://github.com/makccr/dot/blob/master/.gitconfig) | [Apple Scripts](https://github.com/makccr/dot/tree/master/misc/apple-scripts)
 [Htop](https://github.com/makccr/dot/blob/master/.config/htop/htoprc) | [Apple Terminal](https://github.com/makccr/dot/blob/master/misc/macOS/terminals/Gruvbox.terminal)
 [Neovim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim) | [Auto Hot Key](https://github.com/makccr/dot/blob/master/misc/snippets/ahk/ahk.ahk)
-[OhMyZsh](https://github.com/makccr/dot/blob/master/.zshrc) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar)
-[Powerline 10K](https://github.com/makccr/dot/blob/master/.p10k.zsh) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes)
-[Qutebroswer](https://github.com/makccr/dot/tree/master/.qutebrowser) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync)
-[Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers)
-[Zshrc](https://github.com/makccr/dot/blob/master/.zshrc) | 
+[Qutebroswer](https://github.com/makccr/dot/tree/master/.qutebrowser) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar)
+[Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes)
+[Zshrc](https://github.com/makccr/dot/blob/master/.zshrc) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync)
+ | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers)
 
 ###### My Default Shell (It's usually running in Alacritty these days, you can't beat that GPU acceleration) 
 ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/profile.jpg)
