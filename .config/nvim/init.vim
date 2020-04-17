@@ -37,16 +37,15 @@ set foldlevel=5
 " Status-line
 set statusline=
 set statusline+=%#IncSearch#
-set statusline+=\ %M
 set statusline+=\ %y
 set statusline+=\ %r
 set statusline+=%#CursorLineNr#
 set statusline+=\ %F
 set statusline+=%= "Right side settings
 set statusline+=%#Search#
-set statusline+=\ %c:%l/%L
-set statusline+=\ %p%%
-set statusline+=\ [%n]
+set statusline+=\ %c
+set statusline+=\ %l/%L
+set statusline+=\ [%p%%]
 
 " Key-bindings
 let mapleader=" "
