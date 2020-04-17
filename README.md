@@ -14,19 +14,20 @@ I mainly use these apps: Vim & the Shell for standard writing; normally in the [
 I have also added configurations for [Atom](https://atom.io/), [hTop](https://hisham.hm/htop/), and a few other things. I also occasionally go through some pieces of these configurations on my [YouTube channel](https://www.youtube.com/c/makccr), most recently, my [.vimrc & .vim directory](https://www.youtube.com/watch?v=Igfm59WL3NE).
 
 ### Config Guide
-Apps | Other stuff
+App Configs| Other stuff
  :-- | :---------- 
-[Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences)
-[Bash Settings](https://github.com/makccr/dot/tree/master/.bashrc) | [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows)
-[Bash Scripts](https://github.com/makccr/dot/tree/master/.bin) | [Apple Scripts](https://github.com/makccr/dot/tree/master/misc/apple-scripts)
-[Git](https://github.com/makccr/dot/blob/master/.gitconfig) | [Apple Terminal](https://github.com/makccr/dot/blob/master/misc/macOS/terminals/Gruvbox.terminal)
-[Htop](https://github.com/makccr/dot/blob/master/.config/htop/htoprc) | [Auto Hot Key](https://github.com/makccr/dot/blob/master/misc/snippets/ahk/ahk.ahk)
-[Neovim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar)
-[Profile](https://github.com/makccr/dot/tree/master/.profile) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes)
-[Qutebroswer](https://github.com/makccr/dot/tree/master/.qutebrowser) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync)
- [Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers)
+[Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences) & [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows) 
+[Bash Settings](https://github.com/makccr/dot/tree/master/.bashrc) | [Apple Scripts](https://github.com/makccr/dot/tree/master/misc/apple-scripts) 
+[Bash Scripts](https://github.com/makccr/dot/tree/master/.bin) | [Auto Hot Key](https://github.com/makccr/dot/blob/master/misc/snippets/ahk/ahk.ahk) 
+[Git](https://github.com/makccr/dot/blob/master/.gitconfig) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar) 
+[Htop](https://github.com/makccr/dot/blob/master/.config/htop/htoprc) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes) 
+[Neovim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync) 
+[Profile](https://github.com/makccr/dot/tree/master/.profile) | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers) 
+[Qutebroswer](https://github.com/makccr/dot/tree/master/.qutebrowser) |  
+ [Tmux](https://github.com/makccr/dot/tree/master/.tmux.conf) |  
+ [Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | 
 
-###### My Shell
+###### My Shell (Yes it is running tmux in the screenshot, I just hate the statusbar)
 ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/profile.jpg)
 
 ```bash
