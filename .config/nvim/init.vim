@@ -23,24 +23,16 @@ call plug#end()
 set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
 syntax on  "Turning Syntax on
-set autoread
-set wildmenu
-set spelllang=en_us
-set spell
-set backspace=indent,eol,start  "Making sure backspace works
-set noruler  "Setting up rulers & spacing, tabs
-set confirm
-set shiftwidth=4
-set autoindent
-set smartindent
-set tabstop=4
-set softtabstop=4
-set expandtab  
-set hls is  "Making sure search highlights words as we type them
-set ic
-set laststatus=2 "Setting the size for the command area, and airline status bar
-set cmdheight=1
-set cursorline
+set autoread wildmode=longest,list,full
+set spell spelllang=en_us
+set backspace=indent,eol,start confirm
+set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab  
+set hls is ic
+set laststatus=2 cmdheight=1
+au BufRead,BufNewFile *.fountain set filetype=fountain
+set splitbelow splitright 
+setlocal foldmethod=indent
+set foldlevel=5
 
 " Status-line
 set statusline=
@@ -56,15 +48,11 @@ set statusline+=\ %c:%l/%L
 set statusline+=\ %p%%
 set statusline+=\ [%n]
 
-" Some little fixes
-au BufRead,BufNewFile *.fountain set filetype=fountain "Enabling fountain syntax
-setlocal foldmethod=indent
-set foldlevel=5
-
 " Key-bindings
 let mapleader=" "
 map <leader><Space> :EditVifm .<CR>
 map <leader><ENTER> :Goyo<CR>
+map <leader>, :vsplit ~/.config/nvim/init.vim<CR>
 map <C-g>g :set spelllang=de_de<CR>
 map <C-l>l :set background=light<CR>
 map <C-s> :source ~/.config/nvim/init.vim<CR>
@@ -94,12 +82,11 @@ map <F7> :colorscheme spacegray<CR>
 map <F8> :colorscheme tender<CR>
 
 " Color Settings
-colorscheme gruvbox  
-set background=dark
+colorscheme apprentice
+set background=dark termguicolors cursorline
 
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
-"Making background transparent in Alacritty by default
 
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
