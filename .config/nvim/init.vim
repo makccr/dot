@@ -43,9 +43,8 @@ set statusline+=%#CursorLineNr#
 set statusline+=\ %F
 set statusline+=%= "Right side settings
 set statusline+=%#Search#
-set statusline+=\ %c
 set statusline+=\ %l/%L
-set statusline+=\ [%p%%]
+set statusline+=\ [%c]
 
 " Key-bindings
 let mapleader=" "
