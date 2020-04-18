@@ -70,6 +70,8 @@ cursor:
   style: Block
   unfocused_hollow: true
 
+key_bindings:
+  - { key: N,        mods: Control|Shift,    action: SpawnNewInstance    }
 
 # ||\\ //||
 # || \// || Mackenzie Criswell
