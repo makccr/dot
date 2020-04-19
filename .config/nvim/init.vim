@@ -80,7 +80,7 @@ map <F7> :colorscheme spacegray<CR>
 map <F8> :colorscheme tender<CR>
 
 " Color Settings
-colorscheme apprentice
+colorscheme gruvbox
 set background=dark termguicolors cursorline
 
 hi! Normal ctermbg=NONE guibg=NONE 
