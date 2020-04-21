@@ -26,7 +26,7 @@ App Configs| Other stuff
  [Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | 
 
 ###### My Shell (Yes it is running tmux in the screenshot, I just hate the statusbar)
-![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/profile.jpg)
+![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/profile.jpg)
 
 ```bash
 #Profile settings                               #Bash prompt settings
@@ -46,4 +46,4 @@ fortune ~/repo/dot/quotes
 **My [nvim](https://github.com/neovim/neovim) Configuration.** | **My [vifm](https://github.com/vifm/vifm) Configuration.**
 ---------- | -------------------
 
-![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vim.jpg) | ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vifm.jpg)
+![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/vim.jpg) | ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/vifm.jpg)
