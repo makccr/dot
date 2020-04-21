@@ -45,5 +45,4 @@ fortune ~/repo/dot/quotes
 ```
 **My [nvim](https://github.com/neovim/neovim) Configuration.** | **My [vifm](https://github.com/vifm/vifm) Configuration.**
 ---------- | -------------------
-
 ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/vim.jpg) | ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/vifm.jpg)
