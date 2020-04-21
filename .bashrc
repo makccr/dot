@@ -1,11 +1,13 @@
 # Basic Settings
 PATH=$PATH:$HOME/.bin
-export PS1="\[\e[1;30m\]\W\[\e[m\] \\$ "
-if [[ -z "$SSH_CLIENT" ]]; then
-    export PS1="\[\e[1;30m\]\W\[\e[m\] \\$ "
-else
-    echo "Welcome to $(scutil --get ComputerName) ($(sw_vers -productVersion))"
-fi
+bind 'set completion-ignore-case on'
+set -o vi
+shopt -s cdspell
+complete -d cd
+
+# Prompt Settings
+PS1="\w ";
+export PS1;
 
 # Defaults Apps
 export EDITOR='nvim'

@@ -1,5 +1,5 @@
-" Plug-ins
-call plug#begin('~/.vim/plugged')
+"Plug-ins
+call plug#begin('~/.config/nvim/plugged')
 " Tools
     Plug 'airblade/vim-gitgutter'
     Plug 'junegunn/goyo.vim'
@@ -51,6 +51,7 @@ let mapleader=" "
 map <leader><Space> :EditVifm .<CR>
 map <leader><ENTER> :Goyo<CR>
 map <leader>, :vsplit ~/.config/nvim/init.vim<CR>
+map <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
 map <C-g>g :set spelllang=de_de<CR>
 map <C-l>l :set background=light<CR>
 map <C-s> :source ~/.config/nvim/init.vim<CR>
