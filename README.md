@@ -29,22 +29,21 @@ App Configs| Other stuff
 ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/profile.jpg)
 
 ```bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-        . "$HOME/.bashrc"
-    fi
-fi
-
-#neofetch
-#transmission-remote -l
+#Profile settings                               #Bash prompt settings
+if [ -f ~/.bashrc ]; then                       PS1="\e[0;34m";
+    . ~/.bashrc                                 PS1+="\W ";
+fi                                              PS1+="\e[0;32m";
+                                                PS1+="> ";
+#neofetch                                       PS1+="\e[0m";
+#transmission-remote -l                         export PS1;
 #echo ' '
 fortune ~/repo/dot/quotes
 #echo ' '
-#cat ~/Dropbox/writing/notes/To-do.md
+#cat ~/Dropbox/writing/notes/To-do.md       
 #echo ' '
 #covid
 ```
 **My [nvim](https://github.com/neovim/neovim) Configuration.** | **My [vifm](https://github.com/vifm/vifm) Configuration.**
 ---------- | -------------------
+
 ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vim.jpg) | ![Screenshot](https://raw.githubusercontent.com/makccr/dotProfiles/master/images/vifm.jpg)
