@@ -1,21 +1,249 @@
 #!/usr/bin/env bash
 
-echo Are the Xcode command line tools installed?
-echo If not please exti using CMD+C, and install with:
-echo xcode-select —install
+echo 'Are the Xcode command line tools installed?'
+echo 'If not exit using CMD+C, and install with:'
+echo 'xcode-select -install'
+
 read answer
 
 echo ' ' 
-echo Also, what did you set your username as?
+echo 'What is your username on this system?'
 read uname
-echo ' ' 
-echo $uname
-echo ' ' 
 
 sudo -v #Give sudo privileges ahead of time, so that we hopefully only have to enter a password once
 cd ~ #Moving to home directory at the beginning of the process
 
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" #Installing homebrew
+
+#<----------------Installing MacOS Apps, via Homebrew, Caks, & The App Store-------------------->
+brew=(
+    adns
+    aom
+    bash
+    bdw-gc
+    cairo
+    cfitsio
+    cliclick
+    curl
+    emacs
+    ffmpeg
+    flac
+    fontconfig
+    fortune
+    freetype
+    frei0r
+    fribidi
+    fzf
+    gdbm
+    gdk-pixbuf
+    gettext
+    ghostscript
+    giflib
+    git
+    glib
+    gmime
+    gmp
+    gnu-getopt
+    gnupg
+    gnutls
+    go
+    gotop
+    gpgme
+    graphite2
+    grep
+    harfbuzz
+    htop
+    icu4c
+    ilmbase
+    imagemagick
+    isl
+    jpeg
+    lame
+    leptonica
+    libass
+    libassuan
+    libbluray
+    libcroco
+    libde265
+    libevent
+    libffi
+    libgcrypt
+    libgpg-error
+    libheif
+    libidn
+    libidn2
+    libksba
+    libmpc
+    libogg
+    libomp
+    libpng
+    librsvg
+    libsamplerate
+    libsndfile
+    libsoxr
+    libtasn1
+    libtermkey
+    libtiff
+    libtool
+    libunistring
+    libusb
+    libuv
+    libvidstab
+    libvorbis
+    libvpx
+    libvterm
+    libyaml
+    little-cms2
+    lmdb
+    lolcat
+    lua
+    luajit
+    lzo
+    mas
+    mpfr
+    msgpack
+    ncurses
+    neofetch
+    neomutt
+    neovim
+    nettle
+    node
+    notmuch
+    npth
+    opencore-amr
+    openexr
+    openjpeg
+    openssl@1.1
+    opus
+    p11-kit
+    pango
+    pass
+    pcre
+    pcre2
+    perl
+    pinentry
+    pixman
+    pkg-config
+    python
+    python@3.8
+    qrencode
+    readline
+    ripgrep
+    rtmpdump
+    rtv
+    rubberband
+    ruby
+    screenresolution
+    sdl2
+    shared-mime-info
+    snappy
+    speedtest-cli
+    speex
+    sqlite
+    talloc
+    tesseract
+    theora
+    tmux
+    tokyo-cabinet
+    transmission-cli
+    tree
+    tty-clock
+    typespeed
+    unbound
+    unibilium
+    unrar
+    utf8proc
+    vifm
+    webp
+    wget
+    x264
+    x265
+    xapian
+    xvid
+    xz
+    youtube-dl
+    zlib
+)
+cask=(
+    alacritty
+    alfred
+    balenaetcher
+    bitbar
+    calibre
+    day-o
+    dozer
+    dropbox
+    edex-ui
+    fantastical
+    firefox
+    handbrake
+    java
+    keka
+    keycastr
+    lastpass
+    macmediakeyforwarder
+    meteorologist
+    minecraft
+    nvalt
+    obs
+    plex-media-player
+    pocket-casts
+    qutebrowser
+    rectangle
+    spotify
+    switchresx
+    tor-browser
+    typora
+    virtualbox
+    vlc
+) #GUI apps that install with cask
+mas=(
+    1287239339 #ColorSlurp 
+    1438841416 #Rename X 
+    553754186 #Slugline 
+    1171820258 #Highland 2 
+    409201541 #Pages 
+    409203825 #Numbers 
+    409183694 #Keynote 
+    497799835 #Xcode 
+) #Mac App Store apps I install
+npm=(
+    spotify-cli-mac -g
+)
+
+brew update
+brew upgrade
+
+brew install ${brew[@]} #Homebrew App Installer
+brew cask install ${cask[@]} #Casks Installer
+mas install ${mas[@]} #Mac App Store Installer
+npm install ${npm[@]} #Install npm apps
+
+cd ~
+mkdir Repo
+cd Repo
+git clone https://github.com/makccr/dot
+
+ln -s ~/Repo/dot/.config/ ~/.config
+ln -s ~/Repo/dot/.tmux.conf ~/.tmux.conf
+ln -s ~/Repo/dot/.bashrc ~/.bashrc
+ln -s ~/Repo/dot/.profile ~/.profile
+ln -s ~/Repo/dot/.bin/ ~/.bin
+ln -s ~/Repo/dot/.gitconfig ~/.gitconfig
+
+#Installing Vim-plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo 'Run ":PlugInstall" to install Vim Plugins, and then exit' >> ~/vimPlug
+vim ~/vimPlug #Opening Vim
+rm ~/vimPlug #Removing vimPlug
+
 #<----------------Changing MacOS Specific Preferences-------------------->
+defaults write com.knollsoft.Rectangle gapSize -float 10
+defaults write com.knollsoft.Rectangle almostMaximizeHeight -float .98
+defaults write com.knollsoft.Rectangle almostMaximizeWidth -float .98
+
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES #Show a path bar in the finder that shows the exact location
 defaults write com.apple.finder ShowPathbar -bool true #Adds the path bar to the bottom of the finder
 defaults write com.apple.finder FXEnableRemoveFromICloudDriveWarning -bool false #Stop the automatic save to iCloud thing
@@ -23,7 +251,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false #Remo
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv" #Changes Default Finder View to List
 defaults write com.apple.finder WarnOnEmptyTrash -bool false #Removes Warning Before Emptying Trash
 defaults write com.apple.finder DisableAllAnimations -bool true #Disable Finder Animations
-defaults write com.apple.finder NewWindowTargetPath -string "file:///$uname/makc/" #Changes default finder location to ~
+defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/$uname/" #Changes default finder location to ~
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false #Removes External Drives on Desktop
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false #Removes Internal Drives on Desktop
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool false #Removes Mounted Servers on Desktop
@@ -99,202 +327,8 @@ killall TextEdit
 killall QuickTimePlayerX
 killall Photos
 
-#<----------------Installing MacOS Apps, via Homebrew, Caks, & The App Store-------------------->
-brew=(
-    aom
-    cairo
-    curl
-    emacs
-    ffmpeg
-    flac
-    fontconfig
-    fortune
-    freetype
-    frei0r
-    fribidi
-    fzf
-    gdbm
-    gettext
-    giflib
-    git
-    glib
-    gmp
-    gnutls
-    go
-    graphite2
-    harfbuzz
-    htop
-    icu4c
-    ilmbase
-    imagemagick
-    jpeg
-    lame
-    leptonica
-    libass
-    libbluray
-    libde265
-    libevent
-    libffi
-    libheif
-    libidn2
-    libogg
-    libomp
-    libpng
-    libsamplerate
-    libsndfile
-    libsoxr
-    libtasn1
-    libtermkey
-    libtiff
-    libtool
-    libunistring
-    libuv
-    libvidstab
-    libvorbis
-    libvpx
-    libvterm
-    libyaml
-    little-cms2
-    lua
-    luajit
-    lzo
-    mas
-    msgpack
-    ncurses
-    neofetch
-    neovim
-    nettle
-    node
-    opencore-amr
-    openexr
-    openjpeg
-    opus
-    p11-kit
-    pcre
-    pcre2
-    perl
-    pixman
-    python
-    ranger
-    readline
-    rtmpdump
-    rubberband
-    ruby
-    screenresolution
-    sdl2
-    shared-mime-info
-    snappy
-    speex
-    sqlite
-    tesseract
-    theora
-    transmission-cli
-    unbound
-    unibilium
-    unrar
-    vifm
-    vim
-    webp
-    wget
-    x264
-    x265
-    xvid
-    xz
-    youtube-dl
-    zsh
-)
-cask=(
-    alacritty
-    alfred
-    atom
-    balenaetcher
-    bitbar
-    brave-browser
-    calibre
-    day-o
-    dozer
-    dropbox
-    firefox
-    handbrake
-    iterm2
-    java
-    keepingyouawake
-    keycastr
-    lastpass
-    macmediakeyforwarder
-    meteorologist
-    minecraft
-    nvalt
-    obs
-    plex-media-player
-    pocket-casts
-    protonvpn
-    rectangle
-    simplenote
-    spotify
-    sublime-text
-    switchresx
-    tor-browser
-    typora
-    virtualbox
-    vlc
-) #GUI apps that install with cask
-mas=(
-    1054607607 #Helium 
-    1287239339 #ColorSlurp 
-    1438841416 #Rename X 
-    553754186 #Slugline 
-    1171820258 #Highland 2 
-    409201541 #Pages 
-    409203825 #Numbers 
-    409183694 #Keynote 
-    497799835 #Xcode 
-) #Mac App Store apps I install
-npm=(
-    spotify-cli-mac -g
-)
+echo 'Installation Complete'
+echo 'Now you can make an SSH key:'
+echo 'Press CONTROL+C, if you don't wnat to'
 
-mkdir ~/repo
-cd ~/repo
-git clone https://github.com/makccr/dot
-
-ln -s ~/repo/dot/.atom ~/.atom
-ln -s ~/repo/dot/.bin ~/.bin
-ln -s ~/repo/dot/.config ~/.config
-ln -s ~/repo/dot/.gitconfig ~/.gitconfig
-ln -s ~/repo/dot/.p10k.zsh ~/.p10k
-ln -s ~/repo/dot/.vim ~/.vim
-ln -s ~/repo/dot/.vimrc ~/.vimrc
-ln -s ~/repo/dot/.zprofile ~/.zprofile
-ln -s ~/repo/dot/.zshrc ~/.zshrc
-
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" #Installing homebrew
-
-brew update
-brew upgrade
-
-brew install ${brew[@]} #Homebrew App Installer
-brew cask install ${cask[@]} #Casks Installer
-mas install ${mas[@]} #Mac App Store Installer
-npm install ${npm[@]} #Install npm apps
-
-#<----------------Adding customizations to cli apps, should work on all UNIX-------------------->
-touch ~/.hushlogin #Getting rid of the Last Login Crap that displays in the terminal by default
-
-#Installing Vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-echo 'Run ":PlugInstall" to install Vim Plugins, and then exit' >> ~/vimPlug
-vim ~/vimPlug #Opening Vim
-rm ~/vimPlug #Removing vimPlug
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" #Making zsh default, OhMyZsh
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k #Install Powerline 10k theme for Zsh
-p10k configure #Making sure p10k is properly configured
-
-echo Installation Complete!
-echo Now you can make a quick SSH key if you want. 
-echo Just press CONTROl+C, if you dont want one.
-
-ssh-keygen -t ecdsa -b 521
+ssh-keygen -t  ecdsa -b 521
