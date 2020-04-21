@@ -1,20 +1,24 @@
-# Basic Settings
+# Basic bash setting & themes
 PATH=$PATH:$HOME/.bin
-bind 'set completion-ignore-case on'
 set -o vi
+bind 'set completion-ignore-case on'
 shopt -s cdspell
 complete -d cd
 
 # Prompt Settings
-PS1="\w ";
+PS1="\e[0;34m";
+PS1+="\W ";
+PS1+="\e[0;32m";
+PS1+="> ";
+PS1+="\e[0m";
 export PS1;
 
-# Defaults Apps
+# Setting up Defaults
 export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='firefox'
 
-# Alias
+# Aliases
 alias tsm='transmission-remote -l'
 alias v='nvim'
 alias vim='nvim'
