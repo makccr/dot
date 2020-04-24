@@ -13,10 +13,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'morhetz/gruvbox' "My favorite theme
     Plug 'kristijanhusak/vim-hybrid-material'
     Plug 'NLKNguyen/papercolor-theme'
-    Plug 'jacoborus/tender.vim'
-    Plug 'romainl/Apprentice'
-    Plug 'nanotech/jellybeans.vim'
     Plug 'ajh17/Spacegray.vim'
+    Plug 'chriskempson/base16-vim'
 call plug#end() 
  
 " General Settings
@@ -72,13 +70,10 @@ nnoremap <leader>k <C-W>k
 nnoremap <leader>l <C-W>l
 
 map <F1> :colorscheme gruvbox<CR>
-map <F2> :colorscheme PaperColor<CR>
-map <F3> :colorscheme apprentice<CR>
-map <F4> :colorscheme hybrid_material<CR>
-map <F5> :colorscheme hybrid_reverse<CR>
-map <F6> :colorscheme jellybeans<CR>
-map <F7> :colorscheme spacegray<CR>
-map <F8> :colorscheme tender<CR>
+map <F2> :colorscheme base16-default-dark<CR>
+map <F3> :colorscheme hybrid_reverse<CR>
+map <F4> :colorscheme PaperColor<CR>
+map <F5> :colorscheme spacegray<CR>
 
 " Color Settings
 colorscheme gruvbox

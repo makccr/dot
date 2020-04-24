@@ -10,7 +10,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: 0.95
+background_opacity: .9
 dynamic_title: true
 
 # Font Customization
@@ -71,7 +71,7 @@ cursor:
   unfocused_hollow: true
 
 key_bindings:
-  - { key: N,        mods: Control|Shift,    action: SpawnNewInstance    }
+  - { key: N, mods: Control, action: SpawnNewInstance }
 
 # ||\\ //||
 # || \// || Mackenzie Criswell
