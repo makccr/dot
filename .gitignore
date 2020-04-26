@@ -1,10 +1,6 @@
-gmail
-.vim/.netrwhist
 .DS_Store
-.vim/.DS_Store
 .bin/assets/corona
 .config/vifm/vifminfo
 .vim/plugged/
 .config/nvim/plugged/
 .config/nvim/.netrwhist
-.config/configstore/update-notifier-npm.json
