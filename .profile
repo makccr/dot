@@ -5,7 +5,7 @@ fi
 #neofetch
 #transmission-remote -l
 #echo ' '
-fortune ~/repo/dot/quotes
+fortune ~/repo/dot/.bin/quotes/quotes
 #echo ' '
 #cat ~/Dropbox/writing/notes/To-do.md
 #echo ' '
