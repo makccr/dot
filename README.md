@@ -11,40 +11,10 @@ These are my dot files. I'm primarily a [MacOS](https://www.apple.com/macos/) us
 
 I mainly use these apps: Vim & the Shell for standard writing; normally in the [Markdown](https://www.markdownguide.org/) or [Fountain](https://fountain.io/) format. I'm not a programmer, so I haven't customized these apps to make those kinds of tasks easier, the way that many users do. 
 
-### Config Guide
-###### **Note**: These are not all the apps that I have configurations for in this repository, just the apps that I would consider to be my *defaults*.
-App Configs| Other stuff
- :-- | :---------- 
-[Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences) & [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows) 
-[Bash Settings](https://github.com/makccr/dot/tree/master/.bashrc) | [Apple Scripts](https://github.com/makccr/dot/tree/master/misc/apple-scripts) 
-[Bash Scripts](https://github.com/makccr/dot/tree/master/.bin) | [Auto Hot Key](https://github.com/makccr/dot/blob/master/misc/snippets/ahk/ahk.ahk) 
-[Git](https://github.com/makccr/dot/blob/master/.gitconfig) | [Bitbar Plug-ins](https://github.com/makccr/dot/tree/master/misc/bitbar) 
-[Htop](https://github.com/makccr/dot/blob/master/.config/htop/htoprc) | [Fortune Database](https://github.com/makccr/dot/blob/master/quotes) 
-[Neovim](https://github.com/makccr/dot/blob/master/.config/nvim/init.vim) | [Keyboard Maestro](https://github.com/makccr/dot/blob/master/misc/snippets/keyboardMaestro.kmsync) 
-[Profile](https://github.com/makccr/dot/tree/master/.profile) | [Screen-savers](https://github.com/makccr/dot/tree/master/misc/macOS/screensavers) 
-[Qutebroswer](https://github.com/makccr/dot/tree/master/.qutebrowser) |  
- [Tmux](https://github.com/makccr/dot/tree/master/.tmux.conf) |  
- [Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | 
-
-## My Shell
+# My Shell
 ###### (Yes it is running tmux in the screenshot, I just hate the statusbar)
 ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/profile.jpg)
 
-```bash
-#Profile settings                               #Bash prompt settings
-if [ -f ~/.bashrc ]; then                       PS1="\e[0;34m";
-    . ~/.bashrc                                 PS1+="\W ";
-fi                                              PS1+="\e[0;32m";
-                                                PS1+="∳ ";
-#neofetch                                       PS1+="\e[0m";
-#transmission-remote -l                         export PS1;
-#echo ' '
-fortune ~/repo/dot/quotes
-#echo ' '
-#cat ~/Dropbox/writing/notes/To-do.md       
-#echo ' '
-#covid
-```
 **My [nvim](https://github.com/neovim/neovim) Configuration.** | **My [vifm](https://github.com/vifm/vifm) Configuration.**
 ---------- | -------------------
 ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/vim.jpg) | ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/vifm.jpg)
