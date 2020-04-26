@@ -35,7 +35,7 @@ App Configs| Other stuff
 if [ -f ~/.bashrc ]; then                       PS1="\e[0;34m";
     . ~/.bashrc                                 PS1+="\W ";
 fi                                              PS1+="\e[0;32m";
-                                                PS1+="> ";
+                                                PS1+="∳ ";
 #neofetch                                       PS1+="\e[0m";
 #transmission-remote -l                         export PS1;
 #echo ' '
