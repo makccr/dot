@@ -329,6 +329,6 @@ killall Photos
 
 echo 'Installation Complete'
 echo 'Now you can make an SSH key:'
-echo 'Press CONTROL+C, if you don't wnat to'
+echo "Press CONTROL+C, if you don't want to"
 
 ssh-keygen -t  ecdsa -b 521

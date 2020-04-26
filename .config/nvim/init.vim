@@ -17,7 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'chriskempson/base16-vim'
 call plug#end() 
  
-" General Settings
+"General Settings
 set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
 syntax on  "Turning Syntax on
@@ -32,7 +32,7 @@ set splitbelow splitright
 setlocal foldmethod=indent
 set foldlevel=5
 
-" Status-line
+"Status-line
 set statusline=
 set statusline+=%#IncSearch#
 set statusline+=\ %y
@@ -44,7 +44,7 @@ set statusline+=%#Search#
 set statusline+=\ %l/%L
 set statusline+=\ [%c]
 
-" Key-bindings
+"Key-bindings
 let mapleader=" "
 map <leader><Space> :EditVifm .<CR>
 map <leader><ENTER> :Goyo<CR>
@@ -75,7 +75,7 @@ map <F3> :colorscheme hybrid_reverse<CR>
 map <F4> :colorscheme PaperColor<CR>
 map <F5> :colorscheme spacegray<CR>
 
-" Color Settings
+"Color Settings
 colorscheme gruvbox
 set background=dark termguicolors cursorline
 
@@ -87,7 +87,7 @@ let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
 
-" Goyo settings
+"Goyo settings
 function! s:goyo_enter()
     set noshowmode
     set noshowcmd
@@ -105,7 +105,7 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
-" ||\\ //||
-" || \// || Mackenzie Criswell
-" || //\ || https://makc.co
-" ||   \\|| https://github.com/makccr
+"||\\ //||
+"|| \// || Mackenzie Criswell
+"|| //\ || https://makc.co
+"||   \\|| https://github.com/makccr
