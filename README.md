@@ -12,6 +12,7 @@ These are my dot files. I'm primarily a [MacOS](https://www.apple.com/macos/) us
 I mainly use these apps: Vim & the Shell for standard writing; normally in the [Markdown](https://www.markdownguide.org/) or [Fountain](https://fountain.io/) format. I'm not a programmer, so I haven't customized these apps to make those kinds of tasks easier, the way that many users do. 
 
 ### Config Guide
+###### **Note**: These are not all the apps that I have configurations for in this repository, just the apps that I would consider to be my *defaults*.
 App Configs| Other stuff
  :-- | :---------- 
 [Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences) & [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows) 
