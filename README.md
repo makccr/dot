@@ -26,7 +26,8 @@ App Configs| Other stuff
  [Tmux](https://github.com/makccr/dot/tree/master/.tmux.conf) |  
  [Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | 
 
-###### My Shell (Yes it is running tmux in the screenshot, I just hate the statusbar)
+## My Shell
+###### (Yes it is running tmux in the screenshot, I just hate the statusbar)
 ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/profile.jpg)
 
 ```bash
