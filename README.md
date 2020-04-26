@@ -12,6 +12,7 @@ These are my dot files. I'm primarily a [MacOS](https://www.apple.com/macos/) us
 I mainly use these apps: Vim & the Shell for standard writing; normally in the [Markdown](https://www.markdownguide.org/) or [Fountain](https://fountain.io/) format. I'm not a programmer, so I haven't customized these apps to make those kinds of tasks easier, the way that many users do. 
 
 ### Config Guide
+###### **Note**: These are not all the apps that I have configurations for in this repository, just the apps that I would consider to be my *defaults*.
 App Configs| Other stuff
  :-- | :---------- 
 [Alacritty](https://github.com/makccr/dot/blob/master/.config/alacritty/alacritty.yml) | [Alfred Preferences](https://github.com/makccr/dot/tree/master/misc/alfred-workflows/Alfred.alfredpreferences) & [Alfred Work-flows](https://github.com/makccr/dot/tree/master/misc/alfred-workflows) 
@@ -25,7 +26,8 @@ App Configs| Other stuff
  [Tmux](https://github.com/makccr/dot/tree/master/.tmux.conf) |  
  [Vifm](https://github.com/makccr/dot/tree/master/.config/vifm) | 
 
-###### My Shell (Yes it is running tmux in the screenshot, I just hate the statusbar)
+## My Shell
+###### (Yes it is running tmux in the screenshot, I just hate the statusbar)
 ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/profile.jpg)
 
 ```bash
@@ -33,7 +35,7 @@ App Configs| Other stuff
 if [ -f ~/.bashrc ]; then                       PS1="\e[0;34m";
     . ~/.bashrc                                 PS1+="\W ";
 fi                                              PS1+="\e[0;32m";
-                                                PS1+="> ";
+                                                PS1+="∳ ";
 #neofetch                                       PS1+="\e[0m";
 #transmission-remote -l                         export PS1;
 #echo ' '
