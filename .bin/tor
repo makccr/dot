@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+clear
+for (( ; ; ))
+do 
+    echo Currently Downloading:
+    transmission-remote -l
+    sleep 5
+    clear
+done

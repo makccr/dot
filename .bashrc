@@ -19,7 +19,7 @@ export TERMINAL='alacritty'
 export BROWSER='firefox'
 
 # Aliases
-alias tsm='transmission-remote -l'
+alias tsm='transmission-remote'
 alias v='nvim'
 alias vim='nvim'
 alias vf='vifm .'
