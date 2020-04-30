@@ -17,5 +17,8 @@ echo ' '
 echo 'Cleaning caches & directories...'
     brew cleanup -s #Clearing home-brew cache
 
+echo 'Updating COVID-19 data'
+curl -s https://corona-stats.online/ > ~/.bin/assets/corona
+
 echo ' ' 
 echo 'Updating Complete!'

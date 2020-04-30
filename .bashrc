@@ -8,7 +8,7 @@ complete -d cd
 # Prompt Settings
 PS1="\e[1;34m";
 PS1+="\W ";
-PS1+="\e[1;32m";
+PS1+="\e[1;36m";
 PS1+="∳ ";
 PS1+="\e[0m";
 export PS1;

@@ -8,5 +8,5 @@ fi
 fortune ~/repo/dot/.bin/quotes/quotes
 #echo ' '
 #cat ~/Dropbox/writing/notes/To-do.md
-#echo ' '
-#covid
+echo ' '
+covid
