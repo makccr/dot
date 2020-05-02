@@ -308,7 +308,7 @@ defaults write com.apple.commerce AutoUpdate -bool true
 defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app #Enabling powerchime
 defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool FALSE #Delete Preview Window History On Close
-defaults delete com.apple.mail DisableReplyAnimations -bool true #Disables Mail Reply & Send Animation
+defaults write com.apple.mail DisableReplyAnimations -bool true #Disables Mail Reply & Send Animation
 defaults write com.apple.mail DisableSendAnimations -bool true
 defaults write com.apple.screencapture disable-shadow -bool TRUE #Disable Screen Capture Shadow
 defaults write com.apple.screencapture type JPG #Change Screenshot File Format to JPG
