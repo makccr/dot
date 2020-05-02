@@ -2,9 +2,9 @@
 
 clear
 for (( ; ; ))
-do 
-    echo Currently Downloading:
+do
+    echo "Currently Downloading:"
     transmission-remote -l
-    sleep 5
+    sleep $1
     clear
 done
