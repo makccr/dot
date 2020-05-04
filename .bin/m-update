@@ -2,14 +2,14 @@
 
 echo 'Apps to update:'
 brew outdated
-brew cask outdated
+brew cask outdated --greedy
 mas outdated
 
 echo ' ' 
 echo 'Updating Applications...'
     brew upgrade         
     brew update #Updating home-brew apps & formulas
-    brew cask upgrade #Updating apps installed as Casks
+    brew cask upgrade --greedy #Updating apps installed as Casks
     mas upgrade #Updating Mac App Store Apps
     npm update #You know...
 
