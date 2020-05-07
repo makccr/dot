@@ -5,6 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/goyo.vim'
     Plug 'vifm/vifm.vim'
     Plug 'junegunn/limelight.vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Syntax
     Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
@@ -29,6 +30,7 @@ set hls is ic
 set laststatus=2 cmdheight=1
 au BufRead,BufNewFile *.fountain set filetype=fountain
 set splitbelow splitright 
+set nobackup nowritebackup
 setlocal foldmethod=indent
 set foldlevel=5
 
@@ -103,7 +105,9 @@ function! s:goyo_leave()
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
+autocmd! User GoyoLeave nested call <SID>goyo_leave() 
+
+"COC.NVIM settings
 
 "||\\ //||
 "|| \// || Mackenzie Criswell

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "coc-css": ">=1.2.3",
+    "coc-html": ">=1.2.4",
+    "coc-pairs": ">=1.2.21"
+  }
+}

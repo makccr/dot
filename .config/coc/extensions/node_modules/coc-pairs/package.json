@@ -1,0 +1,82 @@
+{
+  "name": "coc-pairs",
+  "version": "1.2.21",
+  "description": "Auto pair extension for coc.nvim",
+  "main": "lib/index.js",
+  "publisher": "chemzqm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neoclide/coc-pairs.git"
+  },
+  "keywords": [
+    "coc.nvim",
+    "autopair"
+  ],
+  "engines": {
+    "coc": "^0.0.46"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npx npm-run-all clean build"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "pairs.disableLanguages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "A list of languages IDs to disable this extension on"
+        },
+        "pairs.enableCharacters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "(",
+            "[",
+            "{",
+            "<",
+            "'",
+            "\"",
+            "`"
+          ],
+          "description": "Enabled character list for keymap."
+        },
+        "pairs.alwaysPairCharacters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Characters that should be paired without check for next character."
+        },
+        "pairs.enableBackspace": {
+          "type": "boolean",
+          "description": "Remap your backspce to delete paired characters when necessary, won't work when <bs> already mapped.",
+          "default": true
+        }
+      }
+    }
+  },
+  "author": "chemzqm@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@chemzqm/tsconfig": "^0.0.3",
+    "@chemzqm/tslint-config": "^1.0.18",
+    "@types/node": "^11.11.7",
+    "coc.nvim": "^0.0.71",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {}
+}

@@ -4,3 +4,4 @@
 .vim/plugged/
 .config/nvim/plugged/
 .config/nvim/.netrwhist
+.config/configstore/
