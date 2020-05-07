@@ -1,3 +1,4 @@
 {
-  "suggest.noselect": false
+  "suggest.noselect": false,
+  "coc.preferences.extensionUpdateCheck": "daily"
 }

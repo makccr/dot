@@ -1,1 +1,7 @@
-{}
+{
+  "commands": {
+    "%2FUsers%2Fmakc": [
+      "extensions.toggle"
+    ]
+  }
+}

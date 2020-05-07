@@ -1,0 +1,62 @@
+{
+  "name": "coc-cmake",
+  "version": "0.0.1",
+  "description": "coc.nvim extension for cmake language",
+  "main": "lib/index.js",
+  "publisher": "voldikss",
+  "keywords": [
+    "coc.nvim",
+    "cmake"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github/voldikss/coc-cmake"
+  },
+  "homepage": "https://github/voldikss/coc-cmake#readme",
+  "engines": {
+    "coc": "^0.0.74"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "prepare": "npx npm-run-all clean build"
+  },
+  "activationEvents": [
+    "onLanguage:cmake"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "cmake.cmakePath": {
+          "type": "string",
+          "default": "cmake",
+          "description": "The path to CMake generator executable"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "cmake.onlineHelp",
+        "title": "CMake: Online Help"
+      }
+    ]
+  },
+  "author": "dyzplus@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.12.17",
+    "@voldikss/tsconfig": "^1.0.0",
+    "@voldikss/tslint-config": "^1.0.6",
+    "coc.nvim": "^0.0.75",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^6.2.1",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "opener": "^1.5.1"
+  },
+  "dependencies": {}
+}

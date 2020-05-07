@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "coc-clangd": ">=0.4.1",
+    "coc-cmake": ">=0.0.1",
     "coc-css": ">=1.2.3",
+    "coc-git": ">=1.7.11",
     "coc-html": ">=1.2.4",
     "coc-pairs": ">=1.2.21"
   }
