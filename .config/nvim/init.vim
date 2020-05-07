@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vifm/vifm.vim'
     Plug 'junegunn/limelight.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'ctrlpvim/ctrlp.vim'
 " Syntax
     Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
@@ -48,13 +49,14 @@ set statusline+=\ [%c]
 
 "Key-bindings
 let mapleader=" "
-map <leader><Space> :EditVifm .<CR>
-map <leader><ENTER> :Goyo<CR>
-map <leader>, :vsplit ~/.config/nvim/init.vim<CR>
-map <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
-map <C-g>g :set spelllang=de_de<CR>
-map <C-l>l :set background=light<CR>
-map <C-s> :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader><Space> :EditVifm .<CR>
+nnoremap <leader>n :CtrlP<CR>
+nnoremap <leader><ENTER> :Goyo<CR>
+nnoremap <leader>, :vsplit ~/.config/nvim/init.vim<CR>
+nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
+nnoremap <C-g> :set spelllang=de_de<CR>
+nnoremap <C-l> :set background=light<CR>
+nnoremap <C-s> :source ~/.config/nvim/init.vim<CR>
 
 nnoremap <Up> :resize +2<CR> 
 nnoremap <Down> :resize -2<CR>
