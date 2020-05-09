@@ -63,6 +63,7 @@ In your vim/neovim, run command:
 - `git.changeRemovedSign.text`: Text of change removed sign., default: `"≃"`.
 - `git.changeRemovedSign.hlGroup`: Highlight group for change removed sign., default: `"DiffDelete"`.
 - `git.splitWindowCommand`: Command used when split new window for show commit, default: `above sp`
+- `git.showCommitInFloating`: Show commit in floating or popup window, default: `false`
 - `git.virtualTextPrefix`: Prefix of git blame information to virtual text, require virtual text feature of neovim. default: `5 <Space>`.
 - `git.addGBlameToVirtualText`: Add git blame information to virtual text, require virtual text feature of neovim. default: `false`.
 - `git.addGBlameToBufferVar`: Add git blame information to b:coc_git_blame. default: `false`.
