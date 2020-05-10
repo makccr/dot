@@ -1,7 +1,6 @@
 "Plug-ins
 call plug#begin('~/.config/nvim/plugged')
 " Tools
-    Plug 'airblade/vim-gitgutter'
     Plug 'junegunn/goyo.vim'
     Plug 'vifm/vifm.vim'
     Plug 'junegunn/limelight.vim'
