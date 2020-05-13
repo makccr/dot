@@ -6,3 +6,4 @@
 .config/nvim/.netrwhist
 .config/configstore/
 .config/coc/
+.config/zsh/.zsh_history
