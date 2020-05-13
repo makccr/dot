@@ -3,7 +3,7 @@
 These are my dot files. I'm primarily a [MacOS](https://www.apple.com/macos/) user, but I occasionally use [Manjaro](https://manjaro.org/), or another Arch based Linux distribution; so that's where I take my cue. The main things here are: 
 
 1. My [Neovim](https://neovim.io/) configuration. 
-2. [My Bash](https://www.gnu.org/software/bash/) configuration.
+2. [My Zsh](https://www.zsh.org/) configuration.
 3. My [Alacritty](https://github.com/alacritty/alacritty) configuration.
 4. My [Qutebroswer](https://qutebrowser.org/) configuration.
 5. Snippets for [Auto Hot Key](https://www.autohotkey.com/) & [Keyboard Maestro](https://www.keyboardmaestro.com/main/). 
