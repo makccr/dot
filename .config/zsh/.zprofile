@@ -3,4 +3,4 @@ cat ~/Dropbox/writing/notes/To-do.md
 echo ' '
 fortune ~/repo/dot/.bin/quotes/quotes
 echo ' '
-covid
+~/.bin/covid

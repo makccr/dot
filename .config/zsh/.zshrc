@@ -19,7 +19,7 @@ alias s='spotify'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias commit='git add -A; git commit -m'
-alias reset='cd ~; clear; source ~/.zprofile'
+alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
 alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
 
 # Prompt Settings
