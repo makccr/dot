@@ -22,6 +22,15 @@ alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
 # Prompt Settings
 PROMPT='%F{blue}%2~%f %B%F{cyan}∳%f%b '
 
+# Git Prompt Settings
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
+zstyle ':vcs_info:*' enable git
+
 #||\\ //||
 #|| \// || Mackenzie Criswell
 #|| //\ || https://makc.co
