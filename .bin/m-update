@@ -18,9 +18,5 @@ echo 'Cleaning caches & directories...'
     brew cleanup -s #Clearing home-brew cache
      rm -rf /private/var/folders/17/0n1s76yx0m93869jhvbc_5hh0000gn/C/com.apple.appstoreagent
 
-echo ' '
-echo 'Updating COVID-19 data'
-curl -s https://corona-stats.online/ > ~/.bin/assets/corona
-
 echo ' ' 
 echo 'Updating Complete!'
