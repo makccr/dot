@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+sudo -v
+
+echo ' ' 
+echo 'Cleaning caches & directories...'
+    pacman -Sc
+    yay -Sc
+
+echo ' ' 
+echo 'Updating Complete!'
