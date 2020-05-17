@@ -18,6 +18,7 @@ alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias commit='git add -A; git commit -m'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
 alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
+alias pac='sudo pacman'
 
 # Prompt Settings
 PROMPT='%F{blue}%2~%f %B%F{cyan}∳%f%b '

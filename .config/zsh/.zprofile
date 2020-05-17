@@ -1,1 +1,1 @@
-fortune ~/repo/dot/.bin/quotes/quotes
+fortune ~/Repo/dot/.bin/quotes/quotes
