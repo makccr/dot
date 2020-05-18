@@ -4,8 +4,6 @@
 
 <img src="https://raw.githubusercontent.com/makccr/dot/master/images/shell.jpg" width="40%" align="right">
 
-<p>These are my dot files. I'm primarily a <a href='https://www.apple.com/macos/'>MacOS</a> user, but I occasionally use <a href='https://manjaro.org/'>Manjaro</a>, or another Arch based Linux distribution; so that's where I take my cue.</p>
-
 <p>These are my dot files. I've primarily been a <a href='https://apple.com/macos/'>MacOS</a> user for most of the time I've been collecting dotfiles, but I've recently switched to Linux. I primarily use <a href='https://www.archlinux.org/'>Arch</a>, <a href='https://arcolinux.com/'>Arco</a>, <a href='https://manjaro.org'>Manjaro</a>, or some other Arch based distro; so that's where I take my que. I also run Debian or Ubuntu on any server type systems I have (just for stability), so I also make sure my dotfiles work there as well.</p>
 
 **The main things here are:**
