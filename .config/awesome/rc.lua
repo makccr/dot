@@ -229,6 +229,7 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
+    awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/Media/ 2>/dev/null'", false) end),
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
@@ -526,7 +527,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Adding gaps
 beautiful.useless_gap = 5
 
---Autostart
+-- Autostart
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore")
 
