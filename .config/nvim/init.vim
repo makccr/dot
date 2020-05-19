@@ -31,8 +31,6 @@ set laststatus=2 cmdheight=1
 au BufRead,BufNewFile *.fountain set filetype=fountain
 set splitbelow splitright 
 set nobackup nowritebackup
-setlocal foldmethod=indent
-set foldlevel=5
 
 "Status-line
 set statusline=
