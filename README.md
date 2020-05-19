@@ -1,6 +1,6 @@
 ![Header SVG](https://makccr.github.io/images/github-header.svg)
 
-<h1 align="center">Dotfiles</h1>
+# Dotfiles
 
 <img src="https://raw.githubusercontent.com/makccr/dot/master/images/shell.jpg" width="40%" align="right">
 
