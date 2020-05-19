@@ -24,7 +24,7 @@ font:
   italic:
     family: Fira Code
     style: Italic
-  size: 13.25
+  size: 8
   offset:
     x: 0
     y: 0
