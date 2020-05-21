@@ -19,6 +19,8 @@ alias commit='git add -A; git commit -m'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
 alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
 alias pac='sudo pacman'
+alias s='startx'
+alias wall='nitrogen --set-zoom-fill --random ~/Media/wallpapers/backgrounds'
 
 # Prompt Settings
 PROMPT='%F{blue}%2~%f %B%F{cyan}∳%f%b '
