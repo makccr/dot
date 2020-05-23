@@ -21,3 +21,6 @@
 .config/Typora__cly_event.json
 .config/Typora__cly_id.json
 .config/Typora__cly_queue.json
+.config/goa-1.0
+.config/gtk-2.0
+.config/gtk-3.0
