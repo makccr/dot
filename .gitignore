@@ -16,6 +16,8 @@
 .config/autostart/
 .config/pulse/
 .config/dconf/
+.config/autokey/
+.config/evolution/
 .config/Typora__cly_event.json
 .config/Typora__cly_id.json
 .config/Typora__cly_queue.json

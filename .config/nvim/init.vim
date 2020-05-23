@@ -46,8 +46,8 @@ set statusline+=\ [%c]
 
 "Key-bindings
 let mapleader=" "
-nnoremap <leader><Space> :EditVifm .<CR>
-nnoremap <leader>n :CtrlP<CR>
+nnoremap <leader>n :Explore<CR>
+nnoremap <leader><Space> :CtrlP<CR>
 nnoremap <leader><ENTER> :Goyo<CR>
 nnoremap <leader>, :vsplit ~/.config/nvim/init.vim<CR>
 nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
