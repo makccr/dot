@@ -105,10 +105,8 @@ local tasklist_buttons = gears.table.join(
                                           end))
 
 local function set_wallpaper(s)
-    -- Wallpaper
     if beautiful.wallpaper then
         local wallpaper = beautiful.wallpaper
-        -- If wallpaper is a function, call it with the screen
         if type(wallpaper) == "function" then
             wallpaper = wallpaper(s)
         end
@@ -397,7 +395,7 @@ awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
       properties = { border_width = beautiful.border_width,
-                     border_color = beautiful.border_normal,
+                     border_color = beautiful.border_normal, 
                      focus = awful.client.focus.filter,
                      raise = true,
                      keys = clientkeys,
