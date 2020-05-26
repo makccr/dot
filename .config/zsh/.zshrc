@@ -10,8 +10,8 @@ export BROWSER='firefox'
 
 # Aliases
 alias tsm='transmission-remote'
-alias vi='nvim'
-alias vf='ranger'
+alias v='nvim'
+alias f='ranger'
 alias tty='tty-clock -C4 -c'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
@@ -20,7 +20,7 @@ alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
 alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
 alias pac='sudo pacman'
 alias s='startx'
-alias wall='nitrogen --set-zoom-fill --random ~/Media/wallpapers/backgrounds'
+alias w='nitrogen --set-zoom-fill --random ~/Media/wallpapers/backgrounds'
 alias ddate='date +"%R - %a, %B %d, %Y"'
 
 # Prompt Settings
