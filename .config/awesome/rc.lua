@@ -229,7 +229,7 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
-              {description = "open a terminal", group = "launcher"}),
+              {description = "open a terminal", group = "makc"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -255,12 +255,12 @@ globalkeys = gears.table.join(
     -- Prompt
     awful.key({ modkey },            "space",     function () 
     awful.util.spawn("dmenu_run") end,
-      {description = "run dmenu", group = "launcher"}),
+      {description = "run dmenu", group = "makc"}),
 
     -- Launch Browser
     awful.key({ modkey },            "b",     function () 
     awful.util.spawn("firefox") end,
-      {description = "launch browser (firefox)", group = "apps"}),
+      {description = "launch browser (firefox)", group = "makc"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -285,7 +285,7 @@ clientkeys = gears.table.join(
         end,
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
-              {description = "close", group = "client"}),
+              {description = "close", group = "makc"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
