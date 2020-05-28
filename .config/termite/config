@@ -1,0 +1,93 @@
+[options]
+allow_bold = true
+audible_bell = false
+bold_is_bright = true
+#cell_height_scale = 1.0
+#cell_width_scale = 1.0
+clickable_url = t
+#dynamic_title = true
+font = Fira Code 10
+#fullscreen = true
+#icon_name = terminal
+#mouse_autohide = false
+#scroll_on_output = false
+#scroll_on_keystroke = true
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 10000
+#search_wrap = true
+#urgent_on_bell = true
+#hyperlinks = false
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+#browser = xdg-open
+
+# "system", "on" or "off"
+cursor_blink = on
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+# set size hints for the window
+#size_hints = false
+
+# "off", "left" or "right"
+#scrollbar = off
+
+[colors]
+# If both of these are unset, cursor falls back to the foreground color,
+# and cursor_foreground falls back to the background color.
+#cursor = #dcdccc
+#cursor_foreground = #dcdccc
+
+#foreground = #dcdccc
+#foreground_bold = #ffffff
+#background = #3f3f3f
+
+# 20% background transparency (requires a compositor)
+background = rgba(29, 32, 33, 0.8)
+
+# If unset, will reverse foreground and background
+highlight = #dc3232
+
+# Colors from color0 to color254 can be set
+color0 = #665c54
+color1 = #ea6962
+color2 = #a9b665
+color3 = #e78a4e
+color4 = #7daea3
+color5 = #d3869b
+color6 = #89b482
+color7 = #d4be98
+color8 = #928374
+color9 = #ea6962
+color10 = #a9b665
+color11 = #d8a657
+color12 = #7daea3
+color13 = #d3869b
+color14 = #89b482
+color15 = #d4be98
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+border = #ffffff
+#border_width = 0.5
+#roundness = 2.0
+
+# vim: ft=dosini cms=#%s
+
+#||\\ //||
+#|| \// || Mackenzie Criswell
+#|| //\ || https://makc.co
+#||   \\|| https://github.com/makccr
+
