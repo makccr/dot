@@ -3,6 +3,7 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
+require("collision")()
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local naughty = require("naughty")
@@ -477,7 +478,6 @@ beautiful.useless_gap = 5
 -- Autostart
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --set-zoom-fill --random ~/Media/wallpapers/backgrounds")
-
 
 --||\\ //||
 --|| \// || Mackenzie Criswell
