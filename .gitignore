@@ -31,3 +31,16 @@
 .config/obs-studio/
 .config/QtProject.conf
 .config/vlc/
+.config/Trolltech.conf
+.config/akregatorrc
+.config/baloofileinformationrc
+.config/dolphinrc
+.config/kateschemarc
+.config/kconf_updaterc
+.config/kdeglobals
+.config/kiorc
+.config/kscreenlockerrc
+.config/kservicemenurc
+.config/ksmserverrc
+.config/kwinrc
+.config/trashrc
