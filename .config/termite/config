@@ -80,7 +80,7 @@ color15 = #d4be98
 #background = #3f3f3f
 #active_foreground = #e68080
 #active_background = #3f3f3f
-border = #ffffff
+#border = #ffffff
 #border_width = 0.5
 #roundness = 2.0
 
@@ -90,4 +90,3 @@ border = #ffffff
 #|| \// || Mackenzie Criswell
 #|| //\ || https://makc.co
 #||   \\|| https://github.com/makccr
-
