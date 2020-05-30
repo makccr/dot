@@ -27,7 +27,7 @@ alias w='nitrogen --set-zoom-fill --random ~/Media/wallpapers/backgrounds'
 alias ddate='date +"%R - %a, %B %d, %Y"'
 
 # Prompt Settings
-PROMPT='%F{blue}%2~%f %B%F{cyan}∳%f%b '
+PROMPT='%F{blue}%2~%f %F{cyan}∳%f '
 
 # Git Prompt Settings
 autoload -Uz vcs_info
