@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+#Creating ssh-key
+echo "Before running, insure git is installed, and arch boot-strapping script is in the home directory"
+echo " " 
+sudo pacman -S openssh
+ssh-keygen -t  ecdsa -b 521
+echo " "
+echo "Add this public key, to you're GitHub account before continuing"
+echo " "
+cat ~/.ssh/id_ecdsa.pub
+echo " "
+echo "Press any key when ready to continue"
+read y
+cd ~
+mkdir Repo
+cd Repo
+
+#Pull down dotfiles from Github
+git clone git@github.com:makccr/dot
+git clone git@github.com:makccr/fonts
+git clone git@github.com:makccr/makccr.github.io
+cd ~
+mkdir Media
+cd Media
+git clone git@github.com:makccr/wallpapers
+cd ~
+
+#Linking up dotfiles & stuff
+ln -s ~/Repo/fonts/makc-fonts /usr/share/fonts
+ln -s ~/Repo/dot/.bin ~/
+ln -s ~/Repo/dot/.config ~/
+ln -s ~/Repo/dot/.gitconfig ~/
+ln -s ~/Repo/dot/.zshenv ~/
+
+# Set up YAY (AUR Helper)
+sudo pacman -S base-devel
+cd ~/.config
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ~
+
+# Xorg stuff (pre-install)
+cd ~
+echo "exec awesome" >> .xinitrc
+cd ~
+
+# Install applications
+pacman=(
+xorg
+awesome
+termite
+unzip
+feh
+ranger
+pacmanfm
+nitrogen
+picom
+    )
+
+yay=(
+spotify
+dropbox
+    )
+
+sudo pacman -S ${pacman[@]}
+yay -S ${yay[@]}
