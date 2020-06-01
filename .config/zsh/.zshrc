@@ -13,6 +13,8 @@ export BROWSER='firefox'
 # Aliases
 alias tsm='transmission-remote'
 alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
 alias f='ranger'
 alias tty='tty-clock -C4 -c'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'

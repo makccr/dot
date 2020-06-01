@@ -45,3 +45,8 @@
 .config/kwinrc
 .config/trashrc
 .config/oomox/
+.config/blender/
+.config/calibre/
+.config/enchant/
+.config/gedit/
+.config/torbrowser/
