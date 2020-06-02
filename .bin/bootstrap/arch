@@ -57,6 +57,9 @@ ranger
 pacmanfm
 nitrogen
 picom
+mpv
+typora
+firefox
     )
 
 yay=(
