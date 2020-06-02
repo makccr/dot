@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #Creating ssh-key
-echo "Before running, insure git is installed, and arch boot-strapping script is in the home directory"
+echo "Before running, ensure git is installed, and arch boot-strapping script is in the home directory"
 echo " " 
 sudo pacman -S openssh
 ssh-keygen -t  ecdsa -b 521
