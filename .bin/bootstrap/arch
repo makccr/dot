@@ -73,9 +73,9 @@ sudo pacman -S ${pacman[@]}
 yay -S ${yay[@]}
 
 # Vim Settings (it's special and takes work to configure properly)
-PLUG INSTALL
-COC? 
-FZF
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 cd ~
 echo "Run :PlugInstall & :CocInstall, then exit" >> vim.txt
 nvim vim.txt
