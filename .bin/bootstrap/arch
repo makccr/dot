@@ -54,13 +54,12 @@ termite
 unzip
 feh
 ranger
-pacmanfm
 nitrogen
 picom
 mpv
 typora
 firefox
-nvim
+neovim
 vim
     )
 
