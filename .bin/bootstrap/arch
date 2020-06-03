@@ -3,20 +3,20 @@
 #Creating ssh-key
 echo "Before running, ensure git is installed, and arch boot-strapping script is in the home directory"
 echo " " 
-sudo pacman -S openssh
+sudo pacman -S openssh git
 ssh-keygen -t  ecdsa -b 521
 echo " "
 echo "Add this public key, to you're GitHub account before continuing"
 echo " "
 cat ~/.ssh/id_ecdsa.pub
 echo " "
-echo "Press any key when ready to continue"
+echo "Press [ENTER] key when ready to continue"
 read y
+
+#Pull down dotfiles from Github
 cd ~
 mkdir Repo
 cd Repo
-
-#Pull down dotfiles from Github
 git clone git@github.com:makccr/dot
 git clone git@github.com:makccr/fonts
 git clone git@github.com:makccr/makccr.github.io
@@ -27,7 +27,7 @@ git clone git@github.com:makccr/wallpapers
 cd ~
 
 #Linking up dotfiles & stuff
-ln -s ~/Repo/fonts/makc-fonts /usr/share/fonts
+sudo ln -s ~/Repo/fonts/makc-fonts /usr/share/fonts
 ln -s ~/Repo/dot/.bin ~/
 ln -s ~/Repo/dot/.config ~/
 ln -s ~/Repo/dot/.gitconfig ~/
@@ -60,6 +60,8 @@ picom
 mpv
 typora
 firefox
+nvim
+vim
     )
 
 yay=(
@@ -69,3 +71,15 @@ dropbox
 
 sudo pacman -S ${pacman[@]}
 yay -S ${yay[@]}
+
+# Vim Settings (it's special and takes work to configure properly)
+PLUG INSTALL
+COC? 
+FZF
+cd ~
+echo "Run :PlugInstall & :CocInstall, then exit" >> vim.txt
+nvim vim.txt
+rm vim.txt
+
+echo ' '
+echo "Installation complete, restart, or run 'startx' to get started"
