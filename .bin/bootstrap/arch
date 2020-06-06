@@ -50,7 +50,7 @@ cd ~
 pacman=(
 xorg
 awesome
-termite
+kitty
 unzip
 feh
 ranger
