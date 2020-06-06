@@ -31,6 +31,8 @@ alias pac='sudo pacman'
 alias s='startx'
 alias w='nitrogen --set-zoom-fill --random ~/Media/wallpapers/backgrounds'
 alias ddate='date +"%R - %a, %B %d, %Y"'
+alias hdmi='xrandr --output HDMI1 --mode 1920x960_60.00'
+alias vga='xrandr --output VGA1 --mode 1920x960_60.00'
 
 # Prompt Settings
 PROMPT='%F{blue}%2~%f %F{cyan}∳%f '
