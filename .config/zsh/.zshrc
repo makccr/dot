@@ -42,11 +42,11 @@ alias w='nitrogen --set-zoom-fill --random ~/Media/wallpapers/backgrounds'
 alias hdmi='xrandr --output HDMI1 --mode 1920x960_60.00'
 alias vga='xrandr --output VGA1 --mode 1920x960_60.00'
 ## Journal launching aliases
-alias vol1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
-alias vol2='cd ~/Dropbox/writing/journal; nvim volume-2.md'
-alias vol3='cd ~/Dropbox/writing/journal; nvim volume-3.md'
-alias vol4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
-alias vol5='cd ~/Dropbox/writing/journal; nvim volume-5.md'
+alias v1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
+alias v2='cd ~/Dropbox/writing/journal; nvim volume-2.md'
+alias v3='cd ~/Dropbox/writing/journal; nvim volume-3.md'
+alias v4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
+alias v5='cd ~/Dropbox/writing/journal; nvim volume-5.md'
 ## Snippets
 alias ddate='date +"%R - %a, %B %d, %Y"'
 
