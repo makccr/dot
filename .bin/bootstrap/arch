@@ -50,7 +50,7 @@ cd ~
 pacman=(
 xorg
 awesome
-kitty
+alacritty
 unzip
 feh
 ranger
@@ -61,6 +61,7 @@ typora
 firefox
 neovim
 vim
+mpv
     )
 
 yay=(
