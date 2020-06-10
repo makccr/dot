@@ -48,7 +48,7 @@ alias v3='cd ~/Dropbox/writing/journal; nvim volume-3.md'
 alias v4='cd ~/Dropbox/writing/journal; nvim volume-4.md'
 alias v5='cd ~/Dropbox/writing/journal; nvim volume-5.md'
 ## Snippets
-alias ddate='date +"%R - %a, %B %d, %Y"'
+alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard'
 
 #||\\ //||
 #|| \// || Mackenzie Criswell

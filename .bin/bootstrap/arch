@@ -52,7 +52,7 @@ xorg
 awesome
 alacritty
 unzip
-feh
+xclip
 ranger
 nitrogen
 picom
@@ -67,6 +67,7 @@ mpv
 yay=(
 spotify
 dropbox
+sxiv
     )
 
 sudo pacman -S ${pacman[@]}
