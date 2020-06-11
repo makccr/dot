@@ -62,6 +62,7 @@ firefox
 neovim
 vim
 mpv
+python-pip
     )
 
 yay=(
@@ -70,8 +71,13 @@ dropbox
 sxiv
     )
 
+pip=(
+ueberzug
+    )
+
 sudo pacman -S ${pacman[@]}
 yay -S ${yay[@]}
+sudo pip3 install ${pip[@]}
 
 # Setting up AwesomeWM Extensions
 cd ~/Repo/dot/.config/awesome/ 
