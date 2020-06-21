@@ -473,7 +473,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Adding gaps
-beautiful.useless_gap = 5
+beautiful.useless_gap = 10
 
 -- Autostart
 awful.spawn.with_shell("picom")

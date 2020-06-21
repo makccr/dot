@@ -79,7 +79,7 @@ map <F5> :colorscheme spacegray<CR>
 
 "Color Settings
 colorscheme gruvbox
-set background=dark termguicolors cursorline
+set background=dark cursorline termguicolors
 
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
