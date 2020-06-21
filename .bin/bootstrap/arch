@@ -48,6 +48,8 @@ cd ~
 
 # Install applications
 pacman=(
+cronie
+noto-fonts
 xorg
 awesome
 alacritty
@@ -63,6 +65,8 @@ neovim
 vim
 mpv
 python-pip
+feh
+deepin-gtk-theme
     )
 
 yay=(
@@ -92,6 +96,10 @@ cd ~
 echo "Run :PlugInstall & :CocInstall, then exit" >> vim.txt
 nvim vim.txt
 rm vim.txt
+
+systemctl enable NetworkManager
+systemctl enable dhcpcd
+systemctl enable cronie
 
 echo ' '
 echo "Installation complete, restart, or run 'startx' to get started"
