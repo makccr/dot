@@ -48,7 +48,6 @@ cd ~
 
 # Install applications
 pacman=(
-cronie
 noto-fonts
 xorg
 awesome
@@ -66,6 +65,8 @@ mpv
 python-pip
 feh
 deepin-gtk-theme
+dhcpcd
+NetworkManager
     )
 
 yay=(
@@ -98,7 +99,6 @@ rm vim.txt
 
 systemctl enable NetworkManager
 systemctl enable dhcpcd
-systemctl enable cronie
 
 echo ' '
 echo "Installation complete, restart, or run 'startx' to get started"
