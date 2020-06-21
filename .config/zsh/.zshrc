@@ -39,7 +39,7 @@ alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
 alias fetch='clear && neofetch && fortune ~/.bin/quotes/quotes'
 ## Changing Settings
-alias w='nitrogen --set-zoom-fill --random ~/Media/wallpapers/backgrounds'
+alias w='feh --bg-fill --randomize ~/Media/wallpapers/backgrounds'
 alias hdmi='xrandr --output HDMI1 --mode 1920x960_60.00'
 alias vga='xrandr --output VGA1 --mode 1920x960_60.00'
 ## Journal launching aliases

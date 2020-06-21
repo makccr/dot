@@ -478,7 +478,7 @@ beautiful.useless_gap = 10
 -- Autostart
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("dropbox")
-awful.spawn.with_shell("nitrogen --set-zoom-fill --random ~/Media/wallpapers/backgrounds")
+awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/backgrounds")
 
 --||\\ //||
 --|| \// || Mackenzie Criswell
