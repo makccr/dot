@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Setting up basic monitor settings
-xrandr --output "HDMI1" --mode "1440x900"
-xrandr --output "VGA1" --mode "1366x768"
+xrandr --output "HDMI1" --mode "1920x1080"
+xrandr --output "VGA1" --mode "1920x1080"
 xrandr --output "HDMI1" --auto --output "VGA1" --right-of "HDMI1"
 
 # Setting up recording resolutions
