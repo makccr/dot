@@ -37,7 +37,7 @@ modules-left =
 modules-center = date
 modules-right = battery powermenu
 
-tray-position = right
+tray-position = left
 tray-padding = 2
 tray-background = ${colors.background}
 
