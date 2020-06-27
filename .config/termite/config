@@ -3,13 +3,13 @@ allow_bold = true
 audible_bell = false
 bold_is_bright = true
 clickable_url = t
-font = Fira Code 9
+font = Fira Code 11
 scrollback_lines = 10000
 cursor_blink = on
 cursor_shape = block
 
 [colors]
-background = rgba(10, 10, 10, 0.9)
+background = rgba(10, 10, 10, 0.8)
 highlight = #dc3232
 
 # Colors from color0 to color254 can be set
