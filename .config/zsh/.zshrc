@@ -49,7 +49,7 @@ alias v3='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/wri
 alias v4='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-4.md'
 alias v5='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-5.md'
 ## Snippets
-alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard'
+alias ddate='date +"%R - %a, %B %d, %Y"'
 
 #||\\ //||
 #|| \// || Mackenzie Criswell
