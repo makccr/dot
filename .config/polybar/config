@@ -16,22 +16,22 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 0
+line-size = 1
 line-color = #f00
 
 padding-left = 2
 padding-right = 2
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 3
+module-margin-right = 3
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
-modules-center = date
-modules-right = battery 
+modules-center = date spotify
+modules-right = battery
 
 tray-position = right
 tray-padding = 10
@@ -130,6 +130,14 @@ animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python /home/makc/.config/polybar/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
 
 [settings]
 screenchange-reload = true
