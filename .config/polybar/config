@@ -20,8 +20,8 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-padding-left = 6
-padding-right = 6
+padding-left = 2
+padding-right = 2
 
 module-margin-left = 3
 module-margin-right = 3
