@@ -33,8 +33,10 @@ font-2 = siji:pixelsize=10;1
 tray-position = right
 tray-padding = 5
 tray-underline-size = 0
+tray-detached = false
+tray-transparent = true
 tray-background = ${colors.background}
-tray-foreground = ${colors.foreground}
+tray-foreground = ${colors.foreground-alt}
 
 modules-left = bspwm i3
 modules-center = spotify
