@@ -41,11 +41,6 @@ cd yay
 makepkg -si
 cd ~
 
-# Xorg stuff (pre-install)
-cd ~
-echo "exec awesome" >> .xinitrc
-cd ~
-
 # Install applications
 pacman=(
 noto-fonts
