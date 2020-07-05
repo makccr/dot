@@ -367,7 +367,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 10
 
 -- Autostart
-awful.spawn.with_shell("picom -CG")
+awful.spawn.with_shell("picom -CG --experimental-backends")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("kmix")
 awful.spawn.with_shell("nm-applet")

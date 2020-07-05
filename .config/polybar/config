@@ -1,8 +1,8 @@
 [colors]
 background = #DD0f0f0f
 background-alt = #DD0f0f0f
-foreground = #fff
-foreground-alt = #fff
+foreground = #d4be98
+foreground-alt = #d4be98
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -10,8 +10,9 @@ alert = #bd2c40
 [bar/makc]
 ;monitor = ${env:MONITOR:}
 width = 100%
-height = 28
+height = 30
 fixed-center = true
+border-size= 0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -19,8 +20,8 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-padding-left = 2
-padding-right = 2
+padding-left = 6
+padding-right = 6
 
 module-margin-left = 3
 module-margin-right = 3
@@ -32,6 +33,8 @@ font-2 = siji:pixelsize=10;1
 tray-position = right
 tray-padding = 5
 tray-underline-size = 0
+tray-background = ${colors.background}
+tray-foreground = ${colors.foreground}
 
 modules-left = bspwm i3
 modules-center = spotify
