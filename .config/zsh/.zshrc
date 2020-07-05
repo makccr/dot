@@ -33,6 +33,7 @@ alias s='startx'
 alias pac='sudo pacman'
 alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
+alias kill='killall -q'
 ## Terminal maintenance
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
