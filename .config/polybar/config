@@ -20,27 +20,27 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-padding-left = 2
-padding-right = 2
+padding-left = 10
+padding-right = 10
 
-module-margin-left = 3
+module-margin-left = 2
 module-margin-right = 3
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-2 = Weather Icons:size=11;0
 
-tray-position = right
-tray-padding = 5
-tray-underline-size = 0
-tray-detached = false
-tray-transparent = true
-tray-background = ${colors.background}
-tray-foreground = ${colors.foreground-alt}
+;tray-position = right
+;tray-padding = 5
+;tray-underline-size = 0
+;tray-detached = false
+;tray-transparent = false
+;tray-background = ${colors.background}
+;tray-foreground = ${colors.foreground-alt}
 
 modules-left = bspwm i3
 modules-center = spotify
-modules-right = date battery
+modules-right = update weather date battery
 
 ;wm-restack = bspwm
 
@@ -101,7 +101,7 @@ time = %l:%M %p
 time-alt = %l:%M %p
 label = %date%  %time%
 
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = "   " 
 
 [module/battery]
 type = internal/battery
@@ -141,7 +141,22 @@ type = custom/script
 interval = 1
 format-prefix = " "
 format = <label>
-exec = python /home/makc/.config/polybar/spotify_status.py -f '{artist}: {song}'
+exec = python /home/makc/.config/polybar/spotify_status.py -f '{song}: {artist}'
+
+label = %output%
+
+[module/weather]
+type = custom/script
+exec = busctl --user -j get-property io.ntfd /weather openweathermap.strings RenderedTemplate | jq -r .data
+interval = 60
+label-font = 3
+
+[module/update]
+type = custom/script
+exec = yay -Qu | wc -l
+interval = 1000
+label = %output%
+format-prefix = "  "
 
 [settings]
 screenchange-reload = true
