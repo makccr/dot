@@ -33,6 +33,7 @@ alias s='startx'
 alias pac='sudo pacman'
 alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
+alias m='neomutt'
 alias kill='killall -q'
 ## Terminal maintenance
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
@@ -40,9 +41,7 @@ alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
 alias fetch='clear && neofetch && fortune ~/.bin/quotes/quotes'
 ## Changing Settings
-alias w='feh --bg-fill --randomize ~/Media/wallpapers/backgrounds'
-alias hdmi='xrandr --output HDMI1 --mode 1920x960_60.00'
-alias vga='xrandr --output VGA1 --mode 1920x960_60.00'
+alias w='feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers/'
 ## Journal launching aliases
 alias v1='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-1.md'
 alias v2='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-2.md'

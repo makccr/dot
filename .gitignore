@@ -23,7 +23,6 @@
 .config/Typora__cly_queue.json
 .config/goa-1.0
 .config/gtk-2.0
-.config/gtk-3.0
 .config/VirtualBox/
 .config/eDEX-UI/
 .config/qtfm6/
@@ -80,3 +79,5 @@
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/xsettingsd/
+.config/gtk-3.0/settings.ini
+.config/mutt/

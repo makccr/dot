@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 # Setting up basic monitor settings
-xrandr --output "HDMI1" --mode "1920x1080"
-xrandr --output "VGA1" --mode "1920x1080"
-xrandr --output "HDMI1" --auto --output "VGA1" --right-of "HDMI1"
+xrandr --output "HDMI-0" --mode "1920x1080"
+xrandr --output "VGA-0" --mode "1920x1080"
+xrandr --output "HDMI-0" --auto --output "VGA-0" --right-of "HDMI-0"
 
 # Setting up recording resolutions
 xrandr --newmode "1920x960_60.00"  152.00  1920 2032 2232 2544  960 963 973 996 -hsync +vsync
-xrandr --addmode HDMI1 "1920x960_60.00"
-xrandr --addmode VGA1 "1920x960_60.00"
+xrandr --addmode HDMI-0 "1920x960_60.00"
+xrandr --addmode VGA-0 "1920x960_60.00"
 
 # Fixing Wallpapers
 feh --bg-fill --randomize ~/Media/wallpapers/backgrounds
