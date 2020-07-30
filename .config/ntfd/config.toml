@@ -7,7 +7,7 @@ enabled = true
 # api_key = "file:~/your_folder/some-key.txt"   # Read from a file
 # api_key = "env:OWM_API_KEY"                   # Read from an environment variable
 # api_key = "PLAINTEXT_VALUE"                   # Read the value directly
-api_key = "287ca0fcf504fcd3a22a7d16d49771de"
+api_key = "file:~/Dropbox/keys/openWeather.txt"
 # This is for Montreal, find your city at https://openweathermap.org
 # The id will be the last part of the URL
 city_id = "4740941"
