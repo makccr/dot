@@ -1,6 +1,6 @@
 [colors]
 background = #DD0f0f0f
-background-alt = #DD0f0f0f
+background-alt = #FF3f3f3f
 foreground = #d4be98
 foreground-alt = #d4be98
 primary = #ffb52a
@@ -21,15 +21,18 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-padding-left = 10
-padding-right = 10
+padding-left = 5
+padding-right = 5
 
 module-margin-left = 2
 module-margin-right = 3
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Weather Icons:size=11;0
+font-0 = "San Fransisco Text:size=10;0" 
+font-1 = "Material Icons:size=11;0"
+font-2 = "Weather Icons:size=11;0"
+font-3 = "Font Awesome 5 Brands:size=11;0"
+font-4 = "FontAwesome:size=11;0"
+font-5 = "SauceCodePro NF:size=15;0"
 
 ;tray-position = right
 ;tray-padding = 5
@@ -39,9 +42,9 @@ font-2 = Weather Icons:size=11;0
 ;tray-background = ${colors.background}
 ;tray-foreground = ${colors.foreground-alt}
 
-modules-left = bspwm i3
+modules-left = powermenu bspwm i3
 modules-center = spotify
-modules-right = update weather date battery
+modules-right = battery update weather date
 
 ;wm-restack = bspwm
 
@@ -79,19 +82,6 @@ label-empty-padding = 2
 ; Separator in between workspaces
 ; label-separator = |
 
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
 [module/date]
 type = internal/date
 interval = 5
@@ -100,9 +90,9 @@ date = %b %d
 date-alt = %A,  %B %d
 time = %l:%M %p
 time-alt = %l:%M %p
-label = %date%  %time%
+label =  %time%  %date%
 
-format-prefix = "   " 
+background = ${colors.background-alt} 
 
 [module/battery]
 type = internal/battery
@@ -137,27 +127,57 @@ animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-close =  cancel
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+label-active-font = 3
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+format-prefix = "  "
 format = <label>
 exec = python /home/makc/.config/polybar/spotify_status.py -f '{song}: {artist}'
 
 label = %output%
+label-active-font = 3
 
 [module/weather]
 type = custom/script
 exec = busctl --user -j get-property io.ntfd /weather openweathermap.strings RenderedTemplate | jq -r .data
 interval = 60
-label-font = 3
+label-active-font = 2
 
 [module/update]
 type = custom/script
 exec = yay -Qu | wc -l
 interval = 1000
 label = %output%
-format-prefix = "  "
+format-prefix = " "
+label-active-font = 4
 
 [settings]
 screenchange-reload = true
