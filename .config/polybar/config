@@ -28,11 +28,8 @@ module-margin-left = 2
 module-margin-right = 3
 
 font-0 = "San Fransisco Text:size=10;0" 
-font-1 = "Material Icons:size=11;0"
-font-2 = "Weather Icons:size=11;0"
-font-3 = "Font Awesome 5 Brands:size=11;0"
-font-4 = "FontAwesome:size=11;0"
-font-5 = "SauceCodePro NF:size=15;0"
+font-1 = "FontAwesome:size=11;0"
+font-2 = "Weather Icons:size=12;0"
 
 ;tray-position = right
 ;tray-padding = 5
@@ -44,7 +41,7 @@ font-5 = "SauceCodePro NF:size=15;0"
 
 modules-left = powermenu bspwm i3
 modules-center = spotify
-modules-right = battery update weather date
+modules-right = update weather date battery
 
 ;wm-restack = bspwm
 
@@ -90,7 +87,7 @@ date = %b %d
 date-alt = %A,  %B %d
 time = %l:%M %p
 time-alt = %l:%M %p
-label =  %time%  %date%
+label =  %time% - %date%
 
 background = ${colors.background-alt} 
 
@@ -110,20 +107,20 @@ format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -132,17 +129,17 @@ type = custom/menu
 
 expand-right = true
 
-format-spacing = 1
+format-spacing = 2
 
-label-open = 
-label-close =  cancel
-label-separator = |
+label-open = 
+label-close = 
+label-separator = -
 label-separator-foreground = ${colors.foreground-alt}
-label-active-font = 3
+label-active-font = 1
 
-menu-0-0 = reboot
+menu-0-0 = 
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = 
 menu-0-1-exec = menu-open-2
 
 menu-1-0 = cancel
@@ -169,15 +166,15 @@ label-active-font = 3
 type = custom/script
 exec = busctl --user -j get-property io.ntfd /weather openweathermap.strings RenderedTemplate | jq -r .data
 interval = 60
-label-active-font = 2
+label-active-font = 3
 
 [module/update]
 type = custom/script
 exec = yay -Qu | wc -l
 interval = 1000
 label = %output%
-format-prefix = " "
-label-active-font = 4
+format-prefix = " "
+label-active-font = 1
 
 [settings]
 screenchange-reload = true
