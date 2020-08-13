@@ -291,7 +291,7 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
-      properties = { border_width = beautiful.border_width,
+      properties = { border_width = 0,
                      border_color = beautiful.border_normal, 
                      focus = awful.client.focus.filter,
                      raise = true,
@@ -365,6 +365,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Adding gaps
 beautiful.useless_gap = 10
+--beautiful.border_normal = "#3F3F3F"
+--beautiful.border_focus  = "#dc3232"
+--beautiful.border_marked = "#CC9393"
 
 -- Autostart
 awful.spawn.with_shell("picom -CG --experimental-backends")
