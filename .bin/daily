@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 yay -Sy
-alias w='feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers/'
+feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers/
 
 #||\\ //||
 #|| \// || Mackenzie Criswell

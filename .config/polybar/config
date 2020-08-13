@@ -83,10 +83,8 @@ label-empty-padding = 2
 type = internal/date
 interval = 5
 
-date = %b %d
-date-alt = %A,  %B %d
+date = %a, %b %d
 time = %l:%M %p
-time-alt = %l:%M %p
 label = %date%  %time%
 
 background = ${colors.background-alt} 
@@ -137,20 +135,10 @@ label-separator =
 label-separator-foreground = ${colors.foreground-alt}
 label-active-font = 1
 
-menu-0-0 = ""
-menu-0-0-exec = menu-open-1
-menu-0-1 = "    "
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
+menu-0-0 = " Restart"
+menu-0-0-exec = sudo reboot
+menu-0-1 = "     Shutdown"
+menu-0-1-exec = sudo poweroff
 
 [module/spotify]
 type = custom/script
