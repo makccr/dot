@@ -10,7 +10,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: 0.6
+background_opacity: 0.8
 window.dynamic_title: true
 
 # Font Customization
