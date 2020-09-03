@@ -9,6 +9,7 @@ bindkey -v
 export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='firefox'
+export MANPAGER='nvim +Man!'
 
 # Prompt Settings
 PROMPT='%F{blue}%1~%f %F{cyan}∳%f '
