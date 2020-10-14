@@ -2,7 +2,7 @@
 
 echo 'Apps to update:'
 brew outdated
-brew cask outdated --greedy
+brew outdated --cask --greedy
 mas outdated
 
 echo ' ' 

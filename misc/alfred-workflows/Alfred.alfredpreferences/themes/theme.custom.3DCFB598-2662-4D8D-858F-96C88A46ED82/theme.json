@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 10,
+        "colorSelected" : "#FFFFFFC4",
+        "font" : "System",
+        "color" : "#FFFFFF65"
+      },
+      "shortcut" : {
+        "size" : 10,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "System",
+        "color" : "#DC3232FF"
+      },
+      "backgroundSelected" : "#DC3232E4",
+      "text" : {
+        "size" : 10,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "System",
+        "color" : "#FFFFFFE5"
+      },
+      "iconPaddingHorizontal" : 4,
+      "paddingVertical" : 0,
+      "iconSize" : 16
+    },
+    "search" : {
+      "paddingVertical" : 0,
+      "background" : "#000000FF",
+      "spacing" : 0,
+      "text" : {
+        "size" : 14,
+        "colorSelected" : "#000000FF",
+        "font" : "System Light",
+        "color" : "#FFFFFFFF"
+      },
+      "backgroundSelected" : "#B3D7FFFF"
+    },
+    "window" : {
+      "color" : "#000000DB",
+      "paddingHorizontal" : 0,
+      "width" : 1024,
+      "borderPadding" : 0,
+      "borderColor" : "#FFFFFF00",
+      "blur" : 0,
+      "roundness" : -64,
+      "paddingVertical" : 0
+    },
+    "credit" : "makc",
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#561A7200",
+      "thickness" : 2
+    },
+    "name" : "dmenu"
+  }
+}
