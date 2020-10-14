@@ -9,7 +9,7 @@ These are my dot files. I've primarily been a [MacOS](https://apple.com/macos/) 
 3. My [Awesome Window Manager](https://awesomewm.org/) configuration.
 4. My [Alacritty](https://github.com/alacritty/alacritty) configuration.
 5. My [Polybar](https://polybar.github.io/) configuration.
-6. My configs for [Ranger](https://github.com/ranger/ranger) & [Vifm](https://www.vifm.org/).
+6. My configs for [Ranger](https://github.com/ranger/ranger) & [Vifm](https://github.com/vifm/vifm).
 7. Snippets for [Auto Hot Key](https://www.autohotkey.com/) & [Keyboard Maestro](https://www.keyboardmaestro.com/main/). 
 
 I mainly use these apps: Vim & the Shell for standard writing; normally in the [Markdown](https://www.markdownguide.org/) or [Fountain](https://fountain.io/) format. I'm not a programmer, so I haven't customized these apps to make those kinds of tasks easier, the way that many users do.
