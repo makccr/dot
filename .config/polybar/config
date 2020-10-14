@@ -8,7 +8,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/makc]
-;monitor = ${env:MONITOR:HDMI-0}
+;monitor = ${env:MONITOR:HDMI-2}
 monitor = ${env:MONITOR}
 width = 100%
 height = 30
@@ -31,17 +31,17 @@ font-0 = San Fransisco Text:size=10;0
 font-1 = FontAwesome:size=11;0
 font-2 = Weather Icons:size=12;0
 
-;tray-position = right
+;tray-position = left
 ;tray-padding = 5
 ;tray-underline-size = 0
-;tray-detached = false
+;tray-detached = true
 ;tray-transparent = false
 ;tray-background = ${colors.background}
 ;tray-foreground = ${colors.foreground-alt}
 
 modules-left = powermenu bspwm i3
 modules-center = spotify
-modules-right = update weather date battery
+modules-right = update date battery
 
 ;wm-restack = bspwm
 

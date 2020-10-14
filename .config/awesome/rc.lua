@@ -364,13 +364,14 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Adding gaps
-beautiful.useless_gap = 10
+beautiful.useless_gap = 5
 --beautiful.border_normal = "#3F3F3F"
 --beautiful.border_focus  = "#dc3232"
 --beautiful.border_marked = "#CC9393"
 
 -- Autostart
-awful.spawn.with_shell("picom -CG --experimental-backends")
+--awful.spawn.with_shell("picom -CG --experimental-backends")
+awful.spawn.with_shell("picom")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("ntfd")
 awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")

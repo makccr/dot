@@ -37,6 +37,7 @@ alias weather='clear && curl wttr.in'
 alias m='neomutt'
 alias kill='killall -q'
 ## Terminal maintenance
+alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
