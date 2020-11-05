@@ -374,5 +374,6 @@ beautiful.useless_gap = 5
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("ntfd")
+awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")
 awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers")
