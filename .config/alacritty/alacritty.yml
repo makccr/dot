@@ -10,7 +10,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: 0.8
+background_opacity: .8
 window.dynamic_title: true
 
 # Font Customization
@@ -39,28 +39,28 @@ draw_bold_text_with_bright_colors: true
 # Color Settings (Gruvbox)
 colors:
   primary:
-    background: '#0f0f0f'
-    foreground: '#ebdbb2'
+    background: '#181818'
+    foreground: '#ffffff'
 
   normal:
-    black:   '#282828'
-    red:     '#cc241d'
-    green:   '#98971a'
+    black:   '#181818'
+    red:     '#95423a'
+    green:   '#a2b562'
     yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#a89984'
+    blue:    '#88c0b9'
+    magenta: '#b88bb1'
+    cyan:    '#db984b'
+    white:   '#ffffff'
 
   bright:
-    black:   '#928374'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
+    black:   '#181818'
+    red:     '#95423a'
+    green:   '#a2b562'
+    yellow:  '#db984b'
+    blue:    '#88c0b9'
+    magenta: '#b88bb1'
     cyan:    '#8ec07c'
-    white:   '#ebdbb2'
+    white:   '#ffffff'
 
   selection:
     text: '0xffffff'

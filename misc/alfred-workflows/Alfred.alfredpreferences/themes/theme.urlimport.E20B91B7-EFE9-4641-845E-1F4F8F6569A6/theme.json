@@ -26,7 +26,7 @@
       "iconSize" : 40
     },
     "search" : {
-      "paddingVertical" : 10,
+      "paddingVertical" : 8,
       "background" : "#00000000",
       "spacing" : 0,
       "text" : {
@@ -40,7 +40,7 @@
     "window" : {
       "color" : "#00000033",
       "paddingHorizontal" : 0,
-      "width" : 400,
+      "width" : 612,
       "borderPadding" : 0,
       "borderColor" : "#00000000",
       "blur" : 40,
@@ -54,7 +54,7 @@
     },
     "scrollbar" : {
       "color" : "#DC3232FF",
-      "thickness" : 5
+      "thickness" : 0
     },
     "name" : "Transparent Dark"
   }

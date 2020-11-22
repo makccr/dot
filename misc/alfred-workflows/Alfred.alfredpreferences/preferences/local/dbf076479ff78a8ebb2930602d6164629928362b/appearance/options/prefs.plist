@@ -2,9 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>xPoint</key>
-	<integer>-6</integer>
 	<key>yPoint</key>
-	<integer>-2</integer>
+	<integer>3</integer>
 </dict>
 </plist>
