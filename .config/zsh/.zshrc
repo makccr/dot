@@ -41,7 +41,7 @@ alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
-alias fetch='clear && neofetch && fortune ~/.bin/quotes/quotes'
+alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 ## Changing Settings
 alias w='feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers/'
 ## Journal launching aliases
