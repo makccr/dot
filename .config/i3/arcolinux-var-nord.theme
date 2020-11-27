@@ -1,0 +1,72 @@
+    ##START THEMING BAR
+    #Theme name : ArcoLinux Var Nord
+
+    # i3 bar colors
+    # variable border background Text
+
+    # Nord theme colors
+    # https://www.nordtheme.com/docs/colors-and-palettes
+
+    set $nord0   #2E3440
+    set $nord1   #3B4252
+    set $nord2   #434C5E
+    set $nord3   #4C566A
+    set $nord4   #D8DEE9
+    set $nord5   #E5E9F0
+    set $nord6   #ECEFF4
+    set $nord7   #8FBCBB
+    set $nord8   #88C0D0
+    set $nord9   #81A1C1
+    set $nord10  #5E81AC
+    set $nord11  #BF616A
+    set $nord12  #D08770
+    set $nord13  #EBCB8B
+    set $nord14  #A3BE8C
+    set $nord15  #B48EAD
+
+    colors {
+        background $nord0
+        statusline $nord9
+        separator  $nord10
+
+        # colorclass           border  backgr. text
+        focused_workspace     $nord3   $nord8  $nord4
+        active_workspace      $nord3   $nord8  $nord4
+        inactive_workspace    $nord8   $nord10 $nord4
+        urgent_workspace      $nord3   $nord11 $nord4
+        }
+
+    }
+    ##STOP THEMING BAR
+
+    ##START THEMING WM
+    #Theme name : ArcoLinux Var Nord
+
+    set $nord0   #2E3440
+    set $nord1   #3B4252
+    set $nord2   #434C5E
+    set $nord3   #4C566A
+    set $nord4   #D8DEE9
+    set $nord5   #E5E9F0
+    set $nord6   #ECEFF4
+    set $nord7   #8FBCBB
+    set $nord8   #88C0D0
+    set $nord9   #81A1C1
+    set $nord10  #5E81AC
+    set $nord11  #BF616A
+    set $nord12  #D08770
+    set $nord13  #EBCB8B
+    set $nord14  #A3BE8C
+    set $nord15  #B48EAD
+
+    # Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          $nord15 $nord15 $nord4  $nord15
+    client.unfocused        $nord2  $nord2  $nord6  $nord2
+    client.focused_inactive $nord2  $nord2  $nord6  $nord2
+    client.placeholder      $nord2  $nord2  $nord6  $nord2
+    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+
+    client.background       $nord04
+
+    ##STOP THEMING WM

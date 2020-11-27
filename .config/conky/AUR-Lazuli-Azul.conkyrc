@@ -1,0 +1,194 @@
+--[[
+#=====================================================================================
+#
+# Date    : package-date
+# Author  : Erik Dubois
+# Source  : Aureola - https://github.com/erikdubois/Aureola
+# Source  : conky-sys-info V5 by +WillemO 25-june-16
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#=====================================================================================
+
+]]
+
+conky.config = {
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,
+	diskio_avg_samples = 10,
+	double_buffer = true,
+	if_up_strictness = 'address',
+	net_avg_samples = 2,
+	no_buffers = true,
+	temperature_unit = 'celsius',
+	text_buffer_size = 2048,
+	update_interval = 1,
+	imlib_cache_size = 0,                       --spotify cover
+
+	--Placement
+
+	alignment = 'middle_right',
+	gap_x = 0,
+	gap_y = 30,
+	minimum_height = 800,
+	minimum_width = 290,
+	maximum_width = 290,
+
+	--Graphical
+
+	border_inner_margin = 10, 					-- margin between border and text
+	border_outer_margin = 1, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 280,
+	default_bar_height = 10,
+	default_gauge_height = 25,
+	default_gauge_width =40,
+	default_graph_height = 40,
+	default_graph_width = 153,
+	default_shade_color = '#000000',
+	default_outline_color = '#000000',
+	draw_borders = false,						--draw borders around text
+	draw_graph_borders = true,
+	draw_shades = false,
+	draw_outline = false,
+	stippled_borders = 0,
+
+	--Textual
+	
+	extra_newline = false,
+	format_human_readable = true,
+	font = 'ubuntu:size=11',
+	max_text_width = 0,
+	max_user_text = 16384,
+	override_utf8_locale = true,
+	short_units = true,
+	top_name_width = 21,
+	top_name_verbose = false,
+	uppercase = false,
+	use_spacer = 'none',
+	use_xft = true,
+	xftalpha = 1,
+
+	--Windows
+
+	own_window = true,
+	own_window_argb_value = 150,
+	own_window_argb_visual = true,
+	own_window_class = 'Conky',
+	own_window_colour = '#000000',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_transparent = no,
+	own_window_title = 'system_conky',
+	own_window_type = 'normal',-- # options are: normal/override/dock/desktop/panel
+	
+
+	--Colours
+
+	default_color = '#000000',  				-- default color and border color
+	color1 = '#718590', 
+	color2 = '#FF6500', 
+	color3 = '#888888', 
+	color4 = '#BDBDBD',
+	color5 = '#CCCCCC', 
+	color6 = '#FFFFFF',
+
+	--Signal Colours
+	color7 = '#1F7411',  --green
+	color8 = '#FFA726',  --orange
+	color9 = '#F1544B',  --firebrick
+};
+
+
+conky.text = [[
+${voffset 5}${color6}${font ubuntu:size=16:bold}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${font}
+#
+${voffset 10}${color1}${font ubuntu:size=11:regular}Base :${font}${color6} $distribution $sysname $kernel
+#${voffset 5}${color1}${font ubuntu:size=11:regular}${font ubuntu:size=11:regular}${execi 10000 lsb_release -d | cut -f 2| tr "[:upper:]" "[:upper:]"} ${font}${color6}${alignr}$kernel
+${voffset 0}${color1}${font ubuntu:size=11:regular}Uptime:${font}${color6} $uptime
+#
+
+${voffset 5}${color1}${font ubuntu:size=11:regular}CPU  ${font}${color6}${freq_g} GHz  ${stippled_hr 3 3}
+${voffset 5}${color1}${font ubuntu:size=11:regular}CPU1 ${font}${color6}${cpu cpu1}%  ${color3}${execi 5 sensors|grep 'Core 0'|awk '{print $3}'}${goto 155}${color1}${font ubuntu:size=11:regular}CPU2  ${font}${color6}${cpu cpu2}%  ${color3}${execi 5 sensors|grep 'Core 1'|awk '{print $3}'}
+# cpugraphs
+${color6}${cpugraph cpu1 35,135 ffffff ffffff} ${alignr}${cpugraph cpu2 35,135 ffffff ffffff}
+#
+#
+${voffset 5}${color1}${font ubuntu:size=11:regular}RAM usage: ${font}${color6}$mem${color1}${alignr}${font ubuntu:size=11:regular}Free: ${font}${color6}$memeasyfree
+${color6}${membar}
+#
+#
+
+${voffset 5}${color1}${font ubuntu:size=11:regular}${font ubuntu:size=11:regular}Disk  ${font}${color6}${stippled_hr 3 3}
+${voffset 5}${color1}${font ubuntu:size=11:regular}SSD: ${font}${color6}${fs_used /}${color1}${alignr}${font ubuntu:size=11:regular}Free: ${font}${color6}${fs_free /}
+${color6}${fs_bar /}
+#
+#
+# disk graphs
+${color6}${diskiograph_read sda 35,135 ffffff ffffff} ${alignr}${diskiograph_write sda 35,135 ffffff ffffff}
+${voffset -5}${color1}${font ubuntu:size=11:regular}Reads: ${font}${color6}${diskio_read sda} ${goto 158}${color1}${font ubuntu:size=11:regular}Writes: ${font}${color6}${diskio_write sda}
+#
+#
+# network
+
+${voffset 5}${color1}${font ubuntu:size=11:regular}Ethernet  ${color6}${stippled_hr 3 3}
+#${color1}${font ubuntu:size=11:regular}IP address: ${font}${color6}${addr enp0s31f6}
+#${color1}${font ubuntu:size=11:regular}External IP: ${font}${color6}${execi 3600 wget -q -O - checkip.dyndns.org | sed -e 's/[^[:digit:]\|.]//g'}
+${color1}${font ubuntu:size=11:regular}Connections: ${font}${color6}${tcp_portmon 1 65535 count}
+${color1}${font ubuntu:size=11:regular}Download speed: ${font}${color6}${downspeed enp0s31f6}
+${color1}${font ubuntu:size=11:regular}Upload speed: ${font}${color6}${upspeed enp0s31f6}
+#
+# netw graphs
+${voffset 5}${color6}${downspeedgraph enp0s31f6 35,135 ffffff ffffff 17000 -l} $alignr${upspeedgraph enp0s31f6 35,135 ffffff ffffff 3000 -l}
+#
+${voffset -5}${color1}${goto 75}${font ubuntu:size=11:regular}Received ${alignr 5}Sent
+${color1}${font ubuntu:size=11:regular}Session:${font}${color6}${goto 75}${totaldown enp0s31f6} ${alignr 5}${totalup enp0s31f6}
+${color1}${font ubuntu:size=11:regular}Today:${font}${color6}${goto 75}${execi 60 vnstat -i enp0s31f6 | grep "today" | awk '{print $2 $3}'}${alignr 5}${execi 60 vnstat -i enp0s31f6 | grep "today" | awk '{print $5 $6}'}
+${color1}${font ubuntu:size=11:regular}Month:${font}${color6}${goto 75}${execi 60 vnstat -i enp0s31f6 -m | grep "`date +"%Y-%m"`" | awk '{print $2 $3}'}${alignr 5}${execi 60 vnstat -i enp0s31f6 -m | grep "`date +"%Y-%m"`" | awk '{print $5 $6}'}
+#
+#
+# Processes
+
+${voffset 5}${color1}${font ubuntu:size=11:regular}Processes  ${color6}${stippled_hr 3 3}
+${color1}${font ubuntu:size=11:regular}Name${goto 180}CPU%${alignr}MEM%${font}
+${color4}${top name 1} ${goto 180}${top cpu 1}${alignr}${top mem 1}${color6}
+${top name 2} ${goto 180}${top cpu 2}${alignr}${top mem 2}
+${top name 3} ${goto 180}${top cpu 3}${alignr}${top mem 3}
+${top name 4} ${goto 180}${top cpu 4}${alignr}${top mem 4}
+${top name 5} ${goto 180}${top cpu 5}${alignr}${top mem 5}
+
+${voffset 5}${color1}${font ubuntu:size=11:regular}Memory  ${color6}${stippled_hr 3 3}${font}
+${color1}${font ubuntu:size=11:regular}Name${goto 180}MEM%${alignr}MEM${font}
+${color4}${top_mem name 1} ${goto 180}${top_mem mem 1}${alignr}${top_mem mem_res 1}${color6}
+${top_mem name 2} ${goto 180}${top_mem mem 2}${alignr}${top_mem mem_res 2}
+${top_mem name 3} ${goto 180}${top_mem mem 3}${alignr}${top_mem mem_res 3}
+${top_mem name 4} ${goto 180}${top_mem mem 4}${alignr}${top_mem mem_res 4}
+${top_mem name 5} ${goto 180}${top_mem mem 5}${alignr}${top_mem mem_res 5}
+]]

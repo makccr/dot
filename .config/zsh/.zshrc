@@ -1,7 +1,7 @@
 source ~/.config/zsh/.zprofile
 
 # Basic zsh setting & themes
-PATH=$PATH:$HOME/.bin
+PATH=$PATH:$HOME/.scripts
 setopt no_list_ambiguous
 bindkey -v
 

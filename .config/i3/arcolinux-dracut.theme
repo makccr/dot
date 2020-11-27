@@ -1,0 +1,35 @@
+    ##START THEMING BAR
+    #Theme name : ArcoLinux Default
+
+    # i3 bar colors
+    # variable border background Text
+
+    colors {
+        background #3c3b37
+        statusline #dcdccc
+        separator  #666666
+
+        # colorclass           border  backgr. text
+        focused_workspace     #93b3a3 #3c3b37 #93b3a3
+        active_workspace      #ffcfaf #3c3b37 #ffcfaf
+        inactive_workspace    #636363 #3c3b37 #dcdccc
+        urgent_workspace      #dca3a3 #3c3b37 #dca3a3
+        }
+
+    }
+    ##STOP THEMING BAR
+
+    ##START THEMING WM
+    #Theme name : ArcoLinux Default
+
+    # Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          #ffcfaf #ffcfaf #e5e5e5 #ffcfaf
+    client.unfocused        #222222 #222222 #aaaaaa #222222
+    client.focused_inactive #222222 #222222 #a9a9a9 #222222
+    client.placeholder      #222222 #222222 #aaaaaa #222222
+    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+
+    client.background       #242424
+
+    ##STOP THEMING WM

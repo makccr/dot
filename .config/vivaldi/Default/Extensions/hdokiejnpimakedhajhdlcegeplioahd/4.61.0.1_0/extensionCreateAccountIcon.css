@@ -1,0 +1,311 @@
+
+#createAccountDialog {
+  width: 350px;
+  height: 333px;
+  background-color: #fff;
+}
+.large-view {
+  width: 700px !important;
+  height: 400px !important;
+}
+#mpFields {
+  width: 315px;
+  padding: 20px;
+}
+
+.extensionCreateAccount {
+  padding: 0;  /* removes padding by .lp-grid.gutter-sm.container */
+}
+
+
+/* HELP CONTAINER AND ARROW */
+#helpContainer {
+  position: absolute;
+  right: -15px;
+  top: 0;
+  width: 335px;
+  height: calc(100%);
+  background-color: white;
+  overflow-y: scroll;
+}
+.arrow-box {
+  position: absolute;
+  box-sizing: border-box;
+  background: #F3F4F7;
+}
+.extensionCreateAccount .help-box .tip-validators {
+  line-height: 16px;
+}
+.extensionCreateAccount .tip-more-container {
+  margin-top: 12px;
+}
+.arrow-box:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: 7px solid black;
+  transform-origin: 0 0;
+  transform: rotate(-225deg);
+  margin-left: 13.5px;
+}
+.arrow-box.a-left {
+  left: -4px;
+}
+.arrow-box.a-left:after {
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+  border-color: transparent white white transparent;
+}
+
+/* INPUTS AND LABELS */
+
+.extensionCreateAccount .checkbox + label{
+  height: auto;
+}
+
+#mpEntry {
+  width: 700px;
+  height: 400px;
+  margin: 0;
+  margin-right: 13px;
+}
+
+#emailEntry {
+  width: 315px;
+}
+
+
+.master-password-container {
+  clear: both;
+}
+.master-password-form {
+  float: left;
+  height: 100%;
+  -webkit-box-shadow: 1px 0 5px 2px #ccc;  /* Safari */
+  -moz-box-shadow:    1px 0 5px 2px #ccc;  /* Firefox */
+  box-shadow:         1px 0 5px 2px #ccc;  /* Opera, IE, Firefox, Chrome, iOS */
+}
+.master-password-help {
+  float: right;
+  height: 100%;
+}
+
+
+.extensionCreateAccount{
+  font-size: 13px;
+}
+
+.extensionCreateAccount label {
+  color: #A1A9AD;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  display: inline-block;
+}
+.extensionCreateAccount .validator-label {
+  margin-bottom: 0;
+}
+
+.extensionCreateAccount .text-confirm{
+  color: #2ECC71;
+  font-weight: 600;
+}
+
+.extensionCreateAccount .checkboxContainer label {
+  font-weight: 500;
+  background-position: 4px 2px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.extensionCreateAccount p {
+  color: #3B4A54;
+}
+
+.extensionCreateAccount h2{
+  color: #646D73;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+}
+.extensionCreateAccount .help-box {
+  margin-left: 0;
+  padding: 12px 24px;
+  background: white;
+  font-size: 13px;
+  border-radius: 3px;
+  line-height: 16px;
+  letter-spacing: .2px;
+}
+.extensionCreateAccount .help-box .tip-title {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+.extensionCreateAccount .help-box .tip {
+  margin-bottom: 20px;
+}
+
+.first-field {
+  margin-top: 0;
+}
+
+.extensionCreateAccount .dialog-title {
+  padding: 20px;
+  background-color: #F3F4F7;
+  color: #444444;
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 315px;
+}
+#emailEntry .dialog-title {
+  width: 100%;
+}
+.extensionCreateAccount .email-form {
+  width: 100%;
+  padding: 25px 20px 20px 20px;
+}
+
+.extensionCreateAccount .meter {
+  margin: -6px 0 0 1px;
+  border-bottom-left-radius: 2px;
+}
+.extensionCreateAccount .meterLabel {
+  display:none;
+}
+.extensionCreateAccount .meter .strength{
+  background-color: white;
+}
+#mpFields .buttonContent {
+  position: absolute;
+  bottom: 12px;
+  width: 315px;
+}
+.error-summary p {
+  font-size: 10px;
+}
+.extensionCreateAccount .error-summary {
+  margin-bottom: 0;
+  width: 100%;
+}
+.extensionCreateAccount a {
+  color: #3498DB;
+  font-weight: 600;
+}
+
+.extensionCreateAccount .dialogInput{
+  height: 36px;
+  padding: 0;
+  border: 0 solid #E7E8EA;
+  border-bottom-width: 1px;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.extensionCreateAccount .dialogInput:placeholder,
+.extensionCreateAccount .dialogInput:placeholder-shown{
+  font-weight: 100;
+}
+
+.extensionCreateAccount .dialogInput:hover,
+.extensionCreateAccount .dialogInput:focus {
+  border-color: #3498DB;
+  outline: 0
+}
+/* BUTTONS */
+
+.extensionCreateAccount .nbtn {
+  width: auto;
+  min-width: 100px;
+  max-width: 100% !important;
+  height: 36px;
+  padding: 0 24px 0 24px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 100px;
+}
+
+.extensionCreateAccount .wbtn,
+.extensionCreateAccount .lbtn {
+  box-shadow: none;
+  background-color: transparent;
+  font-weight: 700;
+  color: #646D73 !important;
+}
+
+.extensionCreateAccount .rbtn:focus,
+.extensionCreateAccount .wbtn:focus,
+.extensionCreateAccount a:focus {
+  box-shadow: 0 0 0 1px #3498DB;
+}
+.extensionCreateAccount .wbtn:hover, .extensionCreateAccount .wbtn:focus,
+.extensionCreateAccount .lbtn:hover, .extensionCreateAccount .lbtn:focus,
+.iconButton:hover, .iconButton:focus {
+  background-color: rgba(60,89,110,0.1);
+}
+
+.extensionCreateAccount .iconButton {
+  margin-right: 6px;
+}
+
+.extensionCreateAccount .iconButton:focus,
+.extensionCreateAccount .nbtn:focus {
+  outline: none;
+}
+
+.lp-field {
+  margin-top: 25px;
+}
+.lp-field:first-of-type {
+  margin-top: 12px;
+}
+
+.dialog .extensionCreateAccount #mpValidators .validation-img{
+  margin-top: 4px;
+  margin-bottom: -2px;
+}
+.validation-img.empty {
+  background-image: url('images/validation_grey.png');
+}
+
+#createAccountDialog .col-11 {
+  min-height: 20px;
+  display: inline-block;
+}
+#createAccountDialog .col-1 {
+  margin-left: 0;
+  margin-right: 5px;
+  display: inline-block;
+}
+#createAccountDialog .error-summary p {
+  color: #E67E22;
+  font-size: 13px;
+}
+#createAccountDialog .validation-img.warning {
+  background-image: url('images/validation_warning_orange.png');
+}
+
+.buttonContent .nbtn {
+  min-width: 80px;
+}
+
+#createAccountDialog .termsConditions {
+  color: #000;
+  height: 85px;
+  margin-top: 15px;
+}
+
+.extensionCreateAccount .error-summary p {
+  line-height: 1.2;
+}
+
+#validatorSummaryPassword,
+#validatorSummaryReconfirm {
+  display: flex;
+}

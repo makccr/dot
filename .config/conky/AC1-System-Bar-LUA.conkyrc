@@ -1,0 +1,85 @@
+conky.config = {
+
+-- System Info widget for use with Conky
+-- by debianmainuser (07/11/2015 <debianmainuser@gmail.com>)
+--
+--	Based off of Basic V0.7 by Moob (20-10-2015 <moobvda@gmail.com>)
+--	This widget draws the Wired Conky interface to display system information
+--
+--      Used some mods from soundrolf
+--
+--	Start conky with '-q' to get rid of conky statfs64 messages when a usb stick/disk is unmounted.
+--
+--	Prerequisites : lm-sensors, Conky version 1.10.0 (only!!)
+--
+--	debianmainuser	Modified function: conky_wired_tab_system for system info-- OS, Kernel, CPU Type & Speed.
+--	07/11/2015      Added: conky_wired_tab_cpu_temp & gpu_temp for CPU temp & GPU temp. Locked CPU Load & Temp to 4 CPU's 
+--                      (modify if you need less info)
+--                      Added: conky_wired_bar_temp to support temp bar functions. (replaces "%" with "C". 100 = 100C)
+--                      Removed: Battery tab  (for desktop use only)
+--                      Removed: Radio tab
+--                      Added: semi-transparent surrounding box to allow monitor to be seen with any wallpaper
+--                      Changed: Default font type
+--                      Sized for 1920x1080 window (change max height below for smaller monitors-designed for Gnome3 top panel use)
+--                      More notes are in the System_Bar.lua
+
+-- source : https://www.gnome-look.org/p/1006484/
+-- credits : autocrosser1
+-- ------------------------
+own_window = true,
+own_window_type = 'normal',
+own_window_transparent = false,
+own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
+own_window_argb_visual = false,
+--arc color
+--own_window_colour = '#273543',
+own_window_colour = '#000000',
+own_window_argb_value = 180,
+
+double_buffer = true,
+background = false,
+-- ------------------------- Font
+use_xft = true,
+xftalpha = 0.1,
+override_utf8_locale = true,
+font = 'Technical CE:size=12',
+uppercase = false,
+
+draw_borders = false,
+draw_outline = false,
+draw_shades = false,
+border_width = 0,
+stippled_borders = 0,
+
+-- ------------------------- Color
+default_color = 'black',
+
+-- ------------------------- Other
+update_interval = 1,
+cpu_avg_samples = 2,
+net_avg_samples = 2,
+no_buffers = true,
+out_to_console = false,
+out_to_stderr = false,
+extra_newline = false,
+use_spacer = 'none',
+show_graph_scale = false,
+show_graph_range = false,
+draw_graph_borders = false,
+
+-- ------------------------- Position
+alignment = 'top_right',
+
+minimum_width = 162,
+minimum_height = 1080,
+maximum_width = 162,
+gap_x = 4,
+gap_y = 30,
+
+-- ------------------------- Lua scripts
+lua_load = '$HOME/.config/conky/lua/system-bar.lua',
+lua_draw_hook_pre = 'main',
+};
+
+conky.text = [[
+]]

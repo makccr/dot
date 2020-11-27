@@ -1,0 +1,137 @@
+#siteFeedback,
+.dialogContent {
+  overflow: auto;
+}
+
+.siteFeedback {
+  height: 560px;
+}
+
+#submitConfirmation {
+  text-align: center;
+  margin: 120px 30px 0;
+}
+
+#bottomLink {
+  margin-top: 100px;
+}
+
+#siteFeedback #siteFeedbackDialog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: none;
+}
+
+#siteFeedback {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: normal;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 6px 0px;
+}
+
+label {
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 6px 0px;
+}
+
+.detailsHeader {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+#siteFeedbackDialog {
+  width: 350px;
+  background-color: #fff;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#siteFeedback .dialogContent {
+  overflow: visible;
+  font-size: 12px;
+}
+
+.extension-dialog .content #siteFeedbackView {
+  background-color: #f3f4f7;
+  padding: 0 20px 20px;
+  width: 100%;
+}
+
+#siteFeedbackDialog.buttons {
+  padding: 0;
+  margin-top: 18px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.rounded-border {
+  border: 1px solid #a7afba;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+select {
+  background: #ffffff;
+  height: 32px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+
+textarea {
+  font-size: 13px;
+  height: 64px;
+}
+
+textarea:disabled {
+  background: #e8e9eb;
+}
+
+.warningText {
+  color: #d32d27;
+  font-weight: bold;
+}
+
+.warningBorder {
+  border: 1px solid #d32d27;
+}
+
+#siteFeedbackDialog .row {
+  margin: 20px 0px 6px;
+}

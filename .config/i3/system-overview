@@ -1,0 +1,153 @@
+--[[
+#=====================================================================================
+#                               arcolinux
+#
+# Author  : Erik Dubois at http://www.erikdubois.be
+# License : Distributed under the terms of GNU GPL version 2 or later
+# Documentation : http://erikdubois.be/category/linux/aureola/
+#======================================================================================
+
+
+]]
+
+conky.config = {
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
+	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
+	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
+	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
+	net_avg_samples = 2,						-- The number of samples to average for net data
+	no_buffers = true,							-- Subtract (file system) buffers from used memory?
+	temperature_unit = 'celsius',				-- fahrenheit or celsius
+	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
+	update_interval = 1,						-- update interval
+	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
+
+
+	--Placement
+
+	alignment = 'middle_right',					-- top-left,top-middle,top-right,bottom-left,bottom-middle,bottom-right,
+												-- middle-left,middle-middle,middle-right,none
+	--Arch Duoscreen
+	--gap_x = -1910,
+	gap_x = 10,									-- pixels between right or left border
+	gap_y = 10,									-- pixels between bottom or left border
+	minimum_height = 200,						-- minimum height of window
+	minimum_width = 280,						-- minimum height of window
+	maximum_width = 280,						-- maximum height of window
+
+	--Graphical
+
+	border_inner_margin = 5, 					-- margin between border and text
+	border_outer_margin = 5, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 280,					-- default is 0 - full width
+	default_bar_height = 10,					-- default is 6
+	default_gauge_height = 25,					-- default is 25
+	default_gauge_width =40,					-- default is 40
+	default_graph_height = 40,					-- default is 25
+	default_graph_width = 153,					-- default is 0 - full width
+	default_shade_color = '#000000',			-- default shading colour
+	default_outline_color = '#000000',			-- default outline colour
+	draw_borders = false,						-- draw borders around text
+	draw_graph_borders = true,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+	stippled_borders = 0,						-- dashing the border
+
+	--Textual
+
+	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font = 'Noto Mono:size=11:regular',  			-- font for complete conky unless in code defined
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
+	max_user_text = 16384,						-- max text in conky default 16384
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = true,							-- shorten units from KiB to k
+	top_name_width = 21,						-- width for $top name value default 15
+	top_name_verbose = false,					-- If true, top name shows the full command line of  each  process - Default value is false.
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 1,								-- alpha of the xft font - between 0-1
+
+	--Windows
+
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 150,				    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'override',				    -- if own_window true options are: normal/override/dock/desktop/panel
+
+
+	--Colours
+
+	default_color = '#ff0000',  				-- default color and border color
+	color1 = '#FFFFFF',
+	color2 = '#FFA726',
+	color3 = '#cccccc',
+	color4 = '#BDBDBD',
+	color5 = '#CCCCCC',
+	color6 = '#aa0000',
+
+	--Signal Colours
+	color7 = '#1F7411',  						--green
+	color8 = '#FFA726',  						--orange
+	color9 = '#F1544B',  						--firebrick
+
+
+	--Lua
+
+
+};
+conky.text = [[
+${color1}${alignc}S Y S T E M    I N F O${color}
+${color1}${hr}${color}
+${color1}Host:${alignr}${color2}${nodename}${color}
+#${color1}Kernel:${color2}${alignr}$kernel${color}
+#${color1}Uptime:${color2}${alignr}${uptime}${color}
+#${color1}UTC:${color2}${alignr}${utime %H:%M}${color}
+
+${color1}${goto 60}Used${alignr}Size${color}
+${color1}Root${goto 60}${color2}${fs_used /}${alignr}${fs_size /}${color}
+#${color1}Home${goto 60}${color2}${fs_used /home}${alignr}${fs_size /home}${color}
+
+${color1}${goto 60}Mem${alignr}Max${color}
+${color1}RAM${goto 60}${color2}${mem}${alignr}${memmax}${color}
+${color1}Swap${goto 60}${color2}${swap}${alignr}${swapmax}${color}
+
+${color1}CPU:${goto 60}Used${alignr}GHz${color}
+${color1}Avg${goto 60}${color2}${if_match ${cpu cpu0}<50}  ${cpu cpu0}\
+${else}${if_match ${cpu cpu0}<=100}${color9} ${cpu cpu0}\
+${else}${cpu cpu0}${endif}${endif}%${alignr}${freq_g}${color}
+
+${color1}${alignc}S H O R T C U T    K E Y S${color}
+${color1}${hr}${color}
+${color1}[S]+[Shift]+D${alignr}${color2}Main Menu${color}
+${color1}[Alt]+F2${alignr}${color2}Alt Menu${color}
+${color1}[Alt]+F3${alignr}${color2}Alt Menu${color}
+${color1}${hr}${color}
+${color1}[S]+Enter${alignr}${color2}Terminal${color}
+${color1}[S]+[Shift]+Enter${alignr}${color2}File Manager${color}
+${color1}[S]+F1${alignr}${color2}Vivaldi${color}
+${color1}[S]+F2${alignr}${color2}Editor${color}
+${color1}[S]+F6${alignr}${color2}Media Player${color}
+${color1}[Ctrl]+[Shift]+Esc${alignr}${color2}Task Manager${color}
+${color1}[Ctrl]+[Alt]+U${alignr}${color2}Volume Control${color}
+${color1}[PrtSc]${alignr}${color2}Screenshot${color}
+${color1}[Ctrl]+[Alt]+m${alignr}${color2}Settings${color}
+${color1}[S]+[Shift]+R${alignr}${color2}Restart i3wm${color}
+${color1}${hr}${color}
+${color1}[S]+[Shift]+E${alignr}${color2}Stop i3wm${color}
+${color1}[S]+[Shift]+Q${alignr}${color2}Stop application${color}
+${color1}[S]+x${alignr}${color2}Exit${color}
+${color1}${hr}${color}
+${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+]];

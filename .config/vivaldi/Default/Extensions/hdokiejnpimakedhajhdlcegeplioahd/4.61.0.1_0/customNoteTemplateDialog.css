@@ -1,0 +1,115 @@
+/*
+******* Custom Note Template Dialog *******
+*/
+
+#customNoteTemplateDialog {
+  max-height: 650px;
+  min-height: 215px;
+  max-width: 1000px;
+  min-width: 640px;
+}
+
+#actionOption {
+  float: right;
+  margin-left: 9px;
+  position: relative;
+}
+
+#actionOptionMenu {
+  background-color: #FFF;
+  cursor: default;
+  min-width: 250px;
+  right: 0px;
+  text-align: right;
+}
+
+#actionOptionMenu li {
+  font-size: 14px;
+  height: 56px;
+  line-height: 56px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+#actionOptionMenu li:hover {
+  background-color: #F0F2F3;
+}
+
+.removeFieldButton {
+  cursor: pointer;
+  background: url("images/vault_4.0/Close_Small.png") center center no-repeat;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.sortFieldButton:hover,
+.removeFieldButton:hover {
+  opacity: 0.7;
+}
+
+.sortFieldButton {
+  cursor: pointer;
+  background: url("images/vault_4.0/Move.png") center center no-repeat;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#customNoteTemplateDialog .settings {
+  height: auto;
+  table-layout: fixed;
+}
+
+#customNoteTemplateDialog td {
+  padding: 5px 0;
+  position: relative;
+}
+
+#customNoteTemplateDialog .fieldLabel {
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+#customNoteTemplateDialog .fieldCell {
+  padding-right: 40px;
+  padding-left: 10px;
+}
+
+#customNoteTemplateDialog .fieldCell .dialogInput[disabled] {
+  background-color: #FFF;
+}
+
+.fieldTemplate {
+  position: relative;
+}
+
+.fieldTemplateOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.dragTarget {
+  border-top: 2px solid red;
+  margin-top: -1px;
+}
+
+#customNoteTemplateDialog .optionsDropdown {
+  background-color: #F0F2F3;
+}
+
+#customNoteTemplateDialog .optionsDropdown:hover {
+  background-color: #E2E4E6;
+}

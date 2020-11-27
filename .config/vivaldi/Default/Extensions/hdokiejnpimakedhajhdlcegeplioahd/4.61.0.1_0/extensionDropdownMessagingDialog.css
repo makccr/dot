@@ -1,0 +1,168 @@
+.extensionDropdownMessagingDialog .panelContainer {
+  min-height: 300px;
+  min-width: 350px;
+  width: 350px;
+  display: inline-block;
+  vertical-align: top;
+  top:0;
+}
+
+.extensionDropdownMessagingDialog.panelIsActive #innerWrapper {
+  width: 350px;
+  min-height: 300px;
+  right: 0;
+  float: right;
+}
+
+.extensionDropdownMessagingDialog.panelIsActive .panelContainer {
+  float: left;
+  color: #41536B;
+  overflow: hidden;
+  padding: 0;
+  display: inline-block;
+  margin: auto;
+}
+
+.extensionDropdownMessagingDialog .panelContent {
+  padding: 12px 24px 24px 24px;
+}
+
+.extensionDropdownMessagingDialog .panelContent .headings {
+  text-align: center;
+}
+
+.extensionDropdownMessagingDialog .panelContent .headings h1 {
+  margin: 5px;
+  color: #1D3049;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.extensionDropdownMessagingDialog #extensionDropdownMessagingDialogSubHeader {
+  font-weight: normal;
+  font-size: 12px;
+  color: #41536B;
+}
+
+.extensionDropdownMessagingDialog .panelContent p {
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.5;
+  margin: 6px 0 0;
+  color: #1D3049;
+  text-align: center
+}
+
+.extensionDropdownMessagingDialog .panelContent .boldText .bold {
+  font-weight: bold;
+}
+
+.extensionDropdownMessagingDialog .tall .panelContent #extensionDropdownMessagingDialogHeader {
+  font-size: 22px;
+}
+
+.extensionDropdownMessagingDialog .tall .panelContent p {
+  margin: 25px 0;
+}
+
+.extensionDropdownMessagingDialog .block {
+  display: block;
+  margin: 10px auto;
+}
+
+.extensionDropdownMessagingDialog .largeImage {
+  height: 125px;
+  width: 125px;
+}
+
+.extensionDropdownMessagingDialog .smallImage {
+  width: 75px;
+}
+
+.extensionDropdownMessagingDialog .panelContent a {
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.extensionDropdownMessagingDialog #extensionDropdownMessagingDialogLowerText {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.extensionDropdownMessagingDialog #extensionDropdownMessagingDialogButton {
+  padding: 0 25px;
+  border-radius: 25px;
+  line-height: 45px;
+  background: #d32d27;
+  cursor: pointer;
+  font-size: 12px;
+  border: 0;
+  color: #fff;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1), 0 2px 4px 0 rgba(0, 0, 0, .1);
+  width: 240px;
+  text-transform: uppercase;
+  position: relative;
+  height: 45px;
+  font-weight: 600;
+  margin: 20px 0 0 30px;
+}
+
+.extensionDropdownMessagingDialog.sharingUpsell #flexContainerLabels,
+.extensionDropdownMessagingDialog.sharingUpsell #flexContainerImages {
+  display: flex;
+}
+
+.extensionDropdownMessagingDialog.sharingUpsell .imagesCenter {
+  flex: 1;
+  margin: 10px;
+}
+
+.extensionDropdownMessagingDialog.sharingUpsell .labelText {
+  font-size: 12px;
+  text-align: center;
+  flex: 1;
+}
+
+.extensionDropdownMessagingDialog.emergencyUpsell #extensionDropdownMessagingDialogButton,
+.extensionDropdownMessagingDialog.sharingUpsell #extensionDropdownMessagingDialogButton {
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.extensionDropdownMessagingDialog.emergencyUpsell #extensionDropdownMessagingDialogHeader,
+.extensionDropdownMessagingDialog.sharingUpsell #extensionDropdownMessagingDialogHeader {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.extensionDropdownMessagingDialog.promotion .panelContainer {
+  margin: 0;
+}
+
+.extensionDropdownMessagingDialog.promotion #extensionDropdownMessagingDialog {
+  display: table;
+  height: 100%;
+}
+
+.extensionDropdownMessagingDialog.promotion .panelContent {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.extensionDropdownMessagingDialog.promotion .largeImage {
+  height: auto;
+  width: 220px;
+}
+
+.extensionDropdownMessagingDialog.promotion .smallImage {
+  width: 210px;
+}
+
+.extensionDropdownMessagingDialog.promotion #extensionDropdownMessagingDialogText1 {
+  font-size: 14px;
+  font-weight: bold;
+}
+

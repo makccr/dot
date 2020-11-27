@@ -1,0 +1,115 @@
+conky.config = {
+--======================================================================================
+--                               aurora
+-- Date    : 26/06/2016
+-- Author  : Erik Dubois at http://www.erikdubois.be
+-- Version : v3.0.4
+-- License : Distributed under the terms of GNU GPL version 2 or later
+-- Documentation English: http://erikdubois.be/linux/install-conky-theme-aurora
+-- Documentation Dutch: http://erikdubois.be/linux/conky
+--======================================================================================
+
+--======================================================================================
+--                               
+-- Source : http://www.superbwallpapers.com/tv-shows/walter-white-and-jesse-pinkman-16014/
+-- Source : http://fc07.deviantart.net/fs70/f/2012/348/a/8/green_smoke_by_daatte-d5nzz5r.jpg
+
+-- Source Files : Gimp
+-- https://drive.google.com/folderview?id=0B0R9dPe6spPCfkxVZ0tyU3lraW55VldQM2pCc0l6QzFGbEk3OVJJMngySmVOWGg2YzN4b0E&usp=sharing
+
+--======================================================================================
+
+--##Settings###
+	background = true,
+	cpu_avg_samples = 1,
+	default_bar_width = 200, default_bar_height = 10,
+	default_graph_width = 200, default_graph_height = 100,
+	diskio_avg_samples = 10,
+	double_buffer = true,
+	extra_newline = false,
+	if_up_strictness = 'address',
+	net_avg_samples = 1,
+	no_buffers = true,
+	temperature_unit = 'celsius',
+	text_buffer_size = 2048,
+	short_units = true,
+	update_interval = 1,
+--##End Settings###
+
+--##Position###
+	alignment = 'top_right',
+	gap_x = 20,
+	gap_y = 40,
+	minimum_width = 540, minimum_height = 400,
+	maximum_width = 600,
+--##End Position###
+
+--##Borders###
+	border_inner_margin = 0,
+	border_outer_margin = 10,
+	border_width = 0,
+	draw_borders = false,
+	draw_graph_borders = false,
+	draw_outline = false,
+	draw_shades = false,
+--##End Borders###
+
+--##Window###
+	own_window = true,
+	own_window_argb_value = 100,
+	own_window_argb_visual = true,
+	own_window_class = 'systemConky',
+	own_window_colour = '#000000',
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+	own_window_type = 'desktop',
+	own_window_transparent = true,
+	own_window_title = 'system_conky',
+--##End Window###
+
+--##Font###
+	max_text_width = 0,
+	override_utf8_locale = true,
+	uppercase = false,
+	use_spacer = 'none',
+	use_xft = true,
+	font = 'Droid Sans Mono:size=10',
+	xftalpha = 0.9,
+--##End Font###
+
+--##Defining Colors###
+	default_color = '#FFFFFF',
+	default_outline_color = '#000000',
+	default_shade_color = '#000000',
+--Shades of Gray#
+	default_color = '#FFFFFF',
+	color0 = '#de883f',
+	color1 = '#9b262c',
+	color2 = '#266222',
+	color3 = '#6cb764',
+	color4 = '#dbb44d',
+	color5 = '#6b161b',
+	color7 = '#c13327',
+	color8 = '#FFA300',
+--##End Color###
+
+--##Loading lua script###
+	lua_load = '~/.config/conky/breaking-bad/rings-v1.2.1_breaking_bad.lua',
+	lua_draw_hook_pre = 'rings-v1.2.1_breaking_bad.lua',
+	lua_draw_hook_pre = 'main',
+--##End Loading Lua###
+
+};
+
+conky.text = [[
+${image ~/.config/conky/breaking-bad/wallwhite.png -p 10,0 -s 560x385}
+${voffset -0}${goto 405}${color0}${font Droid Sans Mono:style=bold:italic:size=12}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${color}}${font}
+${voffset -20}${goto 40}${color0}${font Droid Sans Mono:style=bold:size=12}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}${color}${font}
+${voffset 40}${goto 92}${color0}${font Droid Sans Mono:style=:size=10}CPU1${goto 145}${color0}${font Droid Sans Mono:style=normal:size=10}CPU2${color}${font}
+${voffset 0}${goto 98}${color0}${font Droid Sans Mono:style=normal:size=10}${cpu cpu0}%${goto 149}${color0}${font Droid Sans Mono:style=normal:size=10}${cpu cpu1}%${color}${font}
+${voffset 15 }${goto 227}${color0}${font Droid Sans Mono:style=normal:size=10}Ram${color}${font}
+${voffset 0 }${goto 233}${color0}${font Droid Sans Mono:style=normal:size=10}${memperc}%${color}${font}
+${voffset 30}${goto 130}${color0}${font Desyrel:style=normal:size=18}${time %H:%M}${color}${font}
+${voffset 0}${goto 30}${color0}${font Desyrel:style=normal:size=18}${time %A, %d %B}${color}${font}
+${voffset 40}${goto 455}${color0}${font Droid Sans Mono:style=normal:size=8}Root${color}${font}
+${voffset 30 }${goto 480}${color0}${font Droid Sans Mono:style=normal:size=8}Home${color}${font}
+${voffset -113}${goto 0}${color0}${font Droid Sans Mono:style=normal:size=8}${cpugraph 30,300}${color}${font}]];

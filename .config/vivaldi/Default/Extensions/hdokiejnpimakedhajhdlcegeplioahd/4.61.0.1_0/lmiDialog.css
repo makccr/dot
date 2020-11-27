@@ -1,0 +1,137 @@
+/*
+* New LMI Styling
+*/
+
+.dialog.lmiDialog,
+.lmiDialog .label,
+.lmiDialog .dialogInput {
+  color: #3C4A54;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.lmiDialog .label {
+  margin: 6px 0;
+}
+
+.lmiDialog .dialogInput:focus {
+  border-color: #81D6E3;
+  outline: none;
+}
+
+.lmiDialog .dialogInput {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  font-weight: 600;
+  border-color: #E7E7E7;
+  transition: border-color .2s;
+}
+
+.lmiDialog .dialogInput::-webkit-input-placeholder {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.lmiDialog .dialogInput::-moz-placeholder {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.lmiDialog .dialogInput,
+.lmiDialog .dialogInput.typeaheadDropdown {
+  border-radius: 2px;
+}
+
+.lmiDialog .label {
+  font-weight: 400;
+}
+
+.lmiDialog .dialogInput.typeaheadDropdown.clickToggles {
+  background-image: url('images/lmi-dropdown.png');
+  background-position: right 10px center;
+}
+
+.dialog.lmiDialog {
+  overflow: visible;
+  background-color: transparent;
+  display: inline-block;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+
+.lmiDialog .dialogContent {
+  padding: 0;
+  overflow: visible;
+  position: static;
+}
+
+/*
+* LMI Dropdown Styling
+*/
+
+.lmiDropdown.selectDropdownList {
+  margin-top: 5px !important;
+  cursor: pointer;
+  border-radius: 3px !important;
+  box-shadow: 0 1px 2px 0 rgba(127, 129, 129, 0.3);
+  margin-bottom: 3px;
+  border: none;
+  max-height: 180px;
+}
+
+.lmiDropdown.dropdownMenu li {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+.lmiDropdown.selectDropdownList.dropdownMenu li {
+  border-top: 1px solid #e7e7e7;
+}
+
+.lmiDropdown.selectDropdownList.dropdownMenu .hover {
+  background-color: #81D6E3;
+  color: #FFF;
+}
+
+/*
+* New LMI Error Styling
+*/
+
+.lmiDialog .dialogError {
+  padding: 0;
+}
+
+.lmiDialog .dialogErrorContainer {
+  color: rgb(239, 194, 15);
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 20px;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 5px;
+}
+
+.lmiDialog .dialogErrorContainer:before,
+.lmiDialog .dialogErrorContainer.alignTop:after {
+  content: none;
+}
+
+.lmiDialog .validation-img {
+  width: 20px;
+  height: 20px;
+  background-position: center center;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  float: left;
+  margin-right: 5px;
+}
+
+.lmiDialog .validation-img.warning {
+  background-image: url(images/validation_warning.png);
+}

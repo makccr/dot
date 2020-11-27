@@ -1,0 +1,118 @@
+/*
+******* Note Dialog *******
+*/
+
+#noteDialog {
+  max-height: 650px;
+  min-height: 215px;
+  max-width: 1000px;
+  min-width: 640px;
+}
+
+#noteDialog .noResize {
+  resize: none;
+  min-height: 30px;
+  height: 30px;
+  line-height: 20px;
+}
+
+#noteDialogType {
+  width: 75%;
+  outline: none;
+  border: none;
+}
+
+#noteDialogTypeContainer .itemIcon {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+  height: 30px;
+  float: left;
+}
+
+#noteDialogTypeContainer .itemIcon img {
+  height: 60%;
+}
+
+#noteDialogTypeContainer .bigIcon {
+  font-size: 18px;
+  height: 18px;
+}
+
+.noteDropdown .itemIcon {
+  margin-right: 5px;
+  height:100%;
+}
+
+.selectDropdownList.dropdownMenu .noteDropdown {
+  padding-left: 0;
+}
+
+#noteDialogTypeContainer {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #A7AFBA;
+}
+
+#noteDialogTypeContainer.focus {
+  border-color: #84B7F8;
+  outline: 1px solid #CCE0FD;
+}
+
+#noteDialogTypeContainer .selectDropdownList.dropdownMenu {
+  left: -1px;
+  right: -1px;
+}
+
+#noteDialogTypeContainer .subMenu {
+  overflow: auto;
+}
+
+#noteDialogTypeContainer .dropdownButton {
+  top: 0;
+  bottom: 0;
+}
+
+#noteDialogTypeContainer .dropdownMenu ul {
+  box-shadow: none;
+  border-bottom: 1px solid #B7B7B7;
+}
+
+#addAttachmentButton {
+  background-image: url('images/vault_4.0/Attachment_Black.png');
+  padding-left: 35px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 10px;
+}
+
+#addAttachmentFileField {
+  display: none;
+}
+
+#addCustomTemplate {
+  background-image: url('images/vault_4.0/Add_Black.png');
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding-left: 35px;
+  padding-right: 10px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+#addCustomTemplate:hover {
+  opacity: 0.7;
+}
+
+#deleteCustomNoteTemplate {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin: 0px;
+}
+
+#noteDialogLanguageDropdown {
+  margin-bottom: 10px;
+  margin-top: -10px;
+}

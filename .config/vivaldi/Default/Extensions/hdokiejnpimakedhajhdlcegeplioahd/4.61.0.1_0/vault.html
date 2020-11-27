@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>My LastPass Vault</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+
+<link rel="stylesheet" type="text/css" href="buttons.css">
+<link rel="stylesheet" type="text/css" href="newvaultGlobal.css">
+<link rel="stylesheet" type="text/css" href="dialog.css">
+<link rel="stylesheet" type="text/css" href="notifications.css">
+<link rel="stylesheet" type="text/css" href="vault.css">
+<link rel="stylesheet" type="text/css" href="vaultItem.css">
+<link rel="stylesheet" type="text/css" href="fonts/fontawesome.min.css">
+</head>
+
+<body class="loggedout">
+
+<div id="vaultLoadingOverlay">
+  <div>
+    <img src="images/vault_4.0/LP_Wallpaper.png" alt="Loading..."/>
+    <div></div>
+    <button id="loginButton" class="nbtn btn_midi gbtn">Login</button>
+    <p id="loginText">You are logged out of LastPass. To log in again, simply click on the LastPass extension icon near the top of your browser.</p>
+  </div>
+</div>
+
+<div id="omar-migration-tooltip" class="omar-migration-tooltip">
+  <h2 id="omar-migration-tooltip-label"></h2>
+  <div id="omar-migration-tooltip-body"></div>
+  <div class="buttons">
+    <button id="omar-migration-close-tooltip" class="nbtn btn_midi wbtn">Close</button>
+    <button id="omar-migration-next-tooltip" class="nbtn btn_midi rbtn"></button>
+  </div>
+</div>
+
+<div id="omar-migration-first-step" class="omar-migration-first-step">
+
+  <h2>We've got something for you!</h2>
+  <div>We've organized the Vault by what things are instead of how they're used. All your saved items are here, in the left sidebar.</div>
+  <div class="buttons">
+    <button id="omar-migration-first-step-later" class="nbtn btn_midi wbtn">Later</button>
+    <button id="omar-migration-start-tooltip" class="nbtn btn_midi rbtn">Learn more</button>
+  </div>
+</div>
+
+<div id="vault">
+
+  <div id="header" class="absolute top headerBar right">
+    <div class="header__content">
+      <div id="search">
+        <div id="logoContainer" class="logo-container">
+          <img id="logo" class="logo-lp" src="images/vault_4.0/LastPass_Logo_White.svg" alt="LastPass"/>
+          <div id="logoPartnerContainer" class="logo-partner-container">
+            <img id="logoPartner" class="logo-partner" src="" alt="LastPass"/>
+          </div>
+        </div>
+        <div class="searchWrapper menuButtonLeft">
+          <input type='text' id='vaultSearch' class='searchInput inputLight' autocomplete='off' placeholder='search my vault' spellcheck='false'/>
+        </div>
+        <div class="menuRight">
+          <a class="headerButton" id="upgradeButton" target="_blank">
+            <div class="headerButtonTitle">Upgrade</div>
+          </a>
+          <div id="userMenuContainer" class="menuButtonRight">
+            <div id="userMenu"><img class="userIcon" src="images/vault_4.0/Profile.png"/></div>
+            <div id="userMenuText"></div>
+            <div id="userMenuItems" class="menuList"></div>
+          </div>
+          <div id="specialOfferMenu" class="menuButtonRight"><img src="images/vault_4.0/Gift.png"/>
+            <span class="showLarge userMenuTextPrimary">Gift LastPass</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="leftMenu" class="absolute left">
+    <div class="leftMenuContainer">
+      <div class="leftMenuRow">
+        <div id="leftMenuMinimizeButton" class="leftMenuCell leftMenuItem" automation-id="vaultCollapseMenu">
+          <div title="Collapse Menu" class="menuIcon"></div>
+          <span class="menuText">Collapse</span>
+        </div>
+      </div>
+      <div class="leftMenuRow">
+        <div class="leftMenuCell">
+          <div id="leftMenuItems">
+            <div id="leftMenuItemsContainer" class="omaria"></div>
+            <div class="no-omaria">
+              <div id="cloudAppsMenuItem" class="leftMenuRow" user="Enterprise Admin|Enterprise User|Enterprise Role User" automation-id="vaultCloudAppsMenuItem">
+                <div class="leftMenuCell leftMenuItem">
+                  <div title="Cloud Apps" class="menuIcon"></div>
+                  <p class="menuText">Cloud Apps</p>
+                </div>
+              </div>
+              <div id="vaultMenuItem" class="leftMenuRow" automation-id="vaultSitesMenuItem">
+                <div class="leftMenuCell leftMenuItem">
+                  <div title="Sites" class="menuIcon"></div>
+                  <p class="menuText">Sites</p>
+                </div>
+              </div>
+              <div id="notesMenuItem" class="leftMenuRow" automation-id="vaultSecureNotesMenuItem">
+                <div class="leftMenuCell leftMenuItem">
+                  <div title="Secure Notes" class="menuIcon"></div>
+                  <p class="menuText">Secure Notes</p>
+                </div>
+              </div>
+              <div id="formFillMenuItem" class="leftMenuRow" automation-id="vaultFormFillsMenuItem">
+                <div class="leftMenuCell leftMenuItem">
+                  <div title="Form Fills" class="menuIcon"></div>
+                  <p class="menuText">Form Fills</p>
+                </div>
+              </div>
+              <div id="sharingMenuItem" class="sharingMenuItem leftMenuRow" automation-id="vaultSharingCenterMenuItem">
+                <div class="leftMenuCell leftMenuItem">
+                  <div title="Sharing Center" class="menuIcon">
+                      <div class="notificationBubble"></div>
+                  </div>
+                  <p class="menuText">Sharing Center</p>
+                </div>
+              </div>
+              <div class="securityMenuItem leftMenuRow" automation-id="vaultSecurityChallengeMenuItem">
+                <div class="leftMenuCell leftMenuItem">
+                  <div title="Security Challenge" class="menuIcon">
+                    <div class="securityScore"></div>
+                  </div>
+                  <span class="menuText">Security Challenge</span>
+                </div>
+              </div>
+              <div class="securityDashboardMenuItem leftMenuRow" automation-id="vaultSecurityDashboardMenuItem">
+                <div class="leftMenuCell leftMenuItem">
+                  <div title="Security Dashboard" class="menuIcon">
+                    <div class="notificationBubble"></div>
+                  </div>
+                  <span class="menuText">Security Dashboard</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="promotionMenuItem" class="leftMenuRow leftMenuFooterItem omaria displaynone" automation-id="vaultPromotionMenuItem">
+        <div class="leftMenuCell leftMenuItem">
+          <div class="menuIcon">
+          </div>
+          <span class="menuText"></span>
+          <div class="freeTrialTag"></div>
+        </div>
+      </div>
+      <div class="securityMenuItem leftMenuRow leftMenuFooterItem omaria" automation-id="vaultSecurityChallengeMenuItem">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="Security Challenge" class="menuIcon">
+            <div class="securityScore"></div>
+          </div>
+          <span class="menuText">Security Challenge</span>
+        </div>
+      </div>
+      <div class="securityDashboardMenuItem leftMenuRow leftMenuFooterItem omaria" automation-id="vaultSecurityDashboardMenuItem">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="Security Dashboard" class="menuIcon">
+            <div class="notificationBubble"></div>
+          </div>
+          <span class="menuText">Security Dashboard</span>
+        </div>
+      </div>
+      <div id="sharingMenuItemOmaria" class="sharingMenuItem leftMenuRow leftMenuFooterItem omaria" automation-id="vaultSharingCenterMenuItem">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="Sharing Center" class="menuIcon">
+              <div class="notificationBubble"></div>
+          </div>
+          <p class="menuText">Sharing Center</p>
+        </div>
+      </div>
+      <div id="emergencyAccessMenuItem" user="Free User|Premium Trial User|Premium User|Family Admin|Family Role User|Family User" class="leftMenuRow leftMenuFooterItem" automation-id="vaultEmergencyAccessMenuItem">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="Emergency Access" class="menuIcon">
+            <div class="notificationBubble"></div>
+          </div>
+          <span class="menuText">Emergency Access</span>
+        </div>
+      </div>
+      <div id="linkAccountMenuItem" user="Enterprise Admin|Enterprise User|Enterprise Role User|Teams Admin|Teams User|Teams Role User" class="leftMenuRow leftMenuFooterItem" automation-id="vaultLinkAccountMenuItem">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="Link Personal Account" class="menuIcon"></div>
+          <span class="menuText">Link Account</span>
+        </div>
+      </div>
+      <div id="verifyLinkedAccountMenuItem" user="Enterprise Admin|Enterprise User|Enterprise Role User" class="leftMenuRow leftMenuFooterItem" automation-id="vaultVerifyLinkedAccountMenuItem">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="Verify Linked Personal Account" class="menuIcon"></div>
+          <span class="menuText">Verify Linked Account</span>
+        </div>
+      </div>
+      <div id="adminConsoleMenuItem" user="Enterprise Admin|Enterprise Role User|Teams Admin|Teams Role User" class="leftMenuRow leftMenuFooterItem" automation-id="vaultAdminConsoleMenuItemEnterprise">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="Admin Console" class="menuIcon"></div>
+          <span class="menuText">Admin Console</span>
+        </div>
+      </div>
+      <div id="familyAdminConsoleMenuItem" user="Family Admin" class="leftMenuRow leftMenuFooterItem" automation-id="vaultAdminConsoleMenuItemFamily">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="Manage Family" class="fa fa-group menuIcon"></div>
+          <span class="menuText">Manage Family</span>
+        </div>
+      </div>
+      <div id="settingsMenuItem" class="leftMenuRow leftMenuFooterItem" automation-id="vaultAccountSettingsMenuItem">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="Account Settings" class="menuIcon"></div>
+          <span class="menuText">Account Settings</span>
+        </div>
+      </div>
+      <div id="advancedMenuItem" class="leftMenuRow leftMenuFooterItem" automation-id="vaultMoreOptionsMenuItem">
+        <div class="leftMenuCell leftMenuItem">
+          <div title="More Options" class="menuIcon"></div>
+          <span class="menuText">More Options</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tools" class="right middlePosition">
+    <ul>
+      <li><div class="toolsMenuItem title" automation-id="moreOptionsTitle">More Options</div></li>
+      <li><div id="featureManager" class="toolsMenuItem" automation-id="featureManagerMenuItem">Transmogrifier</div></li>
+      <li><div class="toolsMenuItem" id="generateSharingKeys" automation-id="generateKeysMenuItem">Generate Sharing Keys</div></li>
+      <li user="Free User|Premium Trial User|Premium User"><div id="lp-try-families" class="toolsMenuItem" target="_blank" automation-id="lpForFamiliesMenuItem">Try LastPass Families</div></li>
+      <li user="Free User|Premium Trial User"><a id="more-options-go-premium" class="toolsMenuItem" href="https://lastpass.com/go-premium" target="_blank" automation-id="goPremiumMenuItem">Go Premium</a></li>
+      <li user="Free User|Premium Trial User|Premium User"><div id="tryEnterprise" class="toolsMenuItem" automation-id="lpForTeamsMenuItem">LastPass Enterprise for Teams</div></li>
+      <li><div class="toolsMenuItem subMenuOption" automation-id="advancedMenuItem">Advanced</div></li>
+      <div class="toolsSubMenu">
+        <li user="Enterprise User|Enterprise Admin|Teams User|Teams Admin"><div class="toolsMenuItem" id="removedLinkedAccountMenuItem" automation-id="removeLinkedAccountMenuItem"><span class="tab1">Remove Linked Personal Account</span></div></li>
+        <li><div class="toolsMenuItem" id="toolsImport" automation-id="importMenuItem"><span class="tab1">Import</span></div></li>
+        <li><div class="toolsMenuItem" id="toolsExport" automation-id="exportMenuItem"><span class="tab1">Export</span></div></li>
+        <li><div class="toolsMenuItem" id="toolsMigrate" automation-id="migrateMenuItem"><span class="tab1">Update Vault</span></div></li>
+        <li><div class="toolsMenuItem" id="deletedMenuItem" automation-id="deletedItemsMenuItem"><span class="tab1">Deleted Items</span></div></li>
+        <li><div class="toolsMenuItem" id="historyMenuItem" automation-id="historyMenuItem"><span class="tab1">History</span></div></li>
+        <li><div class="toolsMenuItem" id="creditMonitoringMenuItem" automation-id="creditMonitoringMenuItem"><span class="tab1">Credit Monitoring</span></div></li>
+        <li><div class="toolsMenuItem" id="bookmarkletsMenuItem" automation-id="bookmarkletsMenuItem"><span class="tab1">Bookmarklets</span></div></li>
+        <li><a class="toolsMenuItem" id="otpMenuItem" href="#" target="_blank" automation-id="oneTimePasswordsMenuItem"><span class="tab1">One Time Passwords</span></a></li>
+        <li><div class="toolsMenuItem" id="toolsOpenFavorites" automation-id="openFavoritesMenuItem"><span class="tab1">Open All Favorites</span></div></li>
+        <li><div class="toolsMenuItem" id="manageIdentitiesMenuItem" automation-id="manageIdentitiesMenuItem"><span class="tab1">Manage Identities</span></div></li>
+        <li><div class="toolsMenuItem" id="generatePasswordMenuItem" automation-id="generatePasswordMenuItem"><span class="tab1">Generate Secure Password</span></div></li>
+      </div>
+      <li><div class="toolsMenuItem subMenuOption" automation-id="helpMenuItem">Help</div></li>
+      <div class="toolsSubMenu">
+        <li><a class="toolsMenuItem" href="https://support.logmeininc.com/lastpass" target="_blank" automation-id="helpCenterMenuItem"><span class="tab1">Help Center</span></a></li>
+        <li><a class="toolsMenuItem" href="https://support.logmeininc.com/lastpass" target="_blank" automation-id="userManualMenuItem"><span class="tab1">User Manual</span></a></li>
+        <li><a class="toolsMenuItem" href="https://lastpass.com/support_screencasts.php" target="_blank" automation-id="tutorialsMenuItem"><span class="tab1">Tutorials</span></a></li>
+        <li><div class="toolsMenuItem" id="openTourMenuItem" automation-id="vaultTourMenuItem"><span class="tab1">Vault Tour</span></div></li>
+      </div>
+    </ul>
+  </div>
+
+  <div id="options" class="absolute right middlePosition middleHeight leftOfAd">
+
+    <h3 id="pageTitle" class="inlineblock"></h3>
+
+    <div id="moreActions" class="noWrap">
+      <span id="selectedItemCounter"></span>
+      <div id="actions" class="optionsDropdown">Actions<img class="optionDropdown" src='images/vault_4.0/Search_Arrow.png'/>
+        <div id="contextMenu" class="contextMenu dropdownMenu">
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="orderOption" class="optionsDropdown">
+      <label>Sort By:</label>
+      <span id="sortOrderOption">Folder (a-z)</span>
+      <img class="optionDropdown" src="images/vault_4.0/Search_Arrow.png"/>
+      <div id="sortOrderMenu" class="contextMenu dropdownMenu">
+        <ul>
+        </ul>
+      </div>
+    </div>
+
+    <div id="displayButtons" class="optionButtons">
+      <div title="Grid View" id="gridButton" class="selected optionButton"></div><div title="List View" id="listButton" class="optionButton"></div>
+    </div>
+
+    <div class="optionButtons">
+      <div title="Show Compact View" id="sizeToggle" class="toggleButton"></div>
+    </div>
+
+    <div id="optionButtons" class="optionButtons">
+      <div title="Collapse All" id="collapseAllToggle" class="collapseAllToggle toggleButton"></div>
+    </div>
+
+  </div>
+
+  <div id="sharingMenu" class="tabMenu absolute right middlePosition middleHeight leftOfAd itemContentPadding">
+    <div class="relative fillHeight">
+      <div class="listMargin">
+        <div id="sharedFoldersMenuItem" class="tabMenuItem">Manage Shared Folders<span class="tabNotification" title="Pending Items"></span></div>
+        <div id="sentSharesMenuItem" class="tabMenuItem">Shared with Others</div>
+        <div id="receivedSharesMenuItem" class="tabMenuItem">Shared with Me<span class="tabNotification" title="Pending Items"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="emergencyAccessMenu" class="tabMenu absolute right middlePosition middleHeight leftOfAd itemContentPadding">
+    <div class="relative fillHeight">
+      <div class="listMargin">
+              <div id="emergencyTrustedMenuItem" class="tabMenuItem">People I Trust</div>
+              <div id="emergencyTrustingMenuItem" class="tabMenuItem last">People Who Trust Me<span class="tabNotification" title="Pending Offers"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="main" class="absolute right bottom leftOfAd">
+    <div id="mainScroll" class="absolute">
+      <div id="newSettingsWrapper">
+        <iframe id="new-settings-iframe" class="newSettingsIframe"></iframe>
+      </div>
+      <div id="emptyVaultOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_All_Omaria.png'  srcset='images/vault_4.0/Empty_All_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Nothing to see here</h1>
+              <p>Click the 'Add item' button to start organizing your Vault.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptySites" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Empty_Site.png' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Remember every password</h1>
+            <p>Save and fill passwords for any website or app. Search them all from your vault.</p>
+          </div>
+        </div>
+      </div>
+      <div id="emptyPasswordsOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_Site_Omaria.png'  srcset='images/vault_4.0/Empty_Site_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Add a password</h1>
+              <p>LastPass saves and fills passwords for any site, app, or service.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptySearch" class="emptyVaultContainer">
+        <div class="emptyVault search">
+          <div class="emptySearchPlaceholder">No Matching Results</div>
+        </div>
+      </div>
+      <div id="emptyNote" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Empty_Note.png' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Store every note</h1>
+            <p>Add WiFi passwords, membership IDs, or any other info you want to keep safe.</p>
+          </div>
+        </div>
+      </div>
+      <div id="emptyNotesOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_Note_Omaria.png'  srcset='images/vault_4.0/Empty_Note_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Add a secure note</h1>
+              <p>Securely save and sync anything in LastPass: secret notes, contracts, or important legal documents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptyAddressesOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div id="emptyAddressesWrapper" class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_Address_Omaria.png'  srcset='images/vault_4.0/Empty_Address_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Add an address</h1>
+              <p>These can be auto-filled into any form. They contain your contact information: address, phone, email, and more.</p>
+            </div>
+          </div>
+          <div id="emptyAddressesWrapperMigration" class="emptyVaultWrapper">
+            <h1 class="vaultCategoryTakeoverHeader">A New Home for Your Form Fill Data</h1>
+            <img src="images/vault_4.0/Empty_Addresses_Migration.png" class="emptyVaultImage vaultCategoryTakeoverImage" />
+            <div id="vault_addresses" class="emptyVaultText">
+              <div class="vaultCategoryTakeoverText">As part of the latest LastPass update, Addresses information stored in Form Fills have been moved here. However, you must complete the update process to transfer your Form Fill data. Don’t worry, it only takes a minute.</div>
+              <div class="vaultCategoryTakeoverText"><a href="https://link.lastpass.com/help-new-form-fills">Learn more about these changes.</a></div>
+              <div class="vaultCategoryTakeoverText boldText">Your Form Fill data will be unavailable until you complete the update.</div>
+              <button id="addressesButton" class="nbtn rbtn vaultCategoryTakeoverButton">Finish the Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptyBankAccountsOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div id="emptyBankAccountsWrapper" class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_Bank_Account_Omaria.png'  srcset='images/vault_4.0/Empty_Bank_Account_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Add a bank account</h1>
+              <p>Bank accounts include account information for savings and checking accounts. They can be auto-filled into any form.</p>
+            </div>
+          </div>
+          <div id="emptyBankAccountsWrapperMigration" class="emptyVaultWrapper">
+            <h1 class="vaultCategoryTakeoverHeader">A New Home for Your Form Fill Data</h1>
+            <img src="images/vault_4.0/Empty_Bank_Accounts_Migration.png" class="emptyVaultImage vaultCategoryTakeoverImage" />
+            <div id="vault_bank_accounts" class="emptyVaultText">
+              <div class="vaultCategoryTakeoverText">As part of the latest LastPass update, Bank Account information stored in Form Fills have been moved here. However, you must complete the update process to transfer your Form Fill data. Don’t worry, it only takes a minute.</div>
+              <div class="vaultCategoryTakeoverText"><a href="https://link.lastpass.com/help-new-form-fills">Learn more about these changes.</a></div>
+              <div class="vaultCategoryTakeoverText boldText">Your Form Fill data will be unavailable until you complete the update.</div>
+              <button id="bankAccountsButton" class="nbtn rbtn vaultCategoryTakeoverButton">Finish the Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptyCreditCardsOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div id="emptyPaymentCardsWrapper" class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_Credit_Card_Omaria.png'  srcset='images/vault_4.0/Empty_Credit_Card_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Add a payment card</h1>
+              <p>Payment cards include credit cards, debit cards, and anything else you use to shop. They can be auto-filled into any form.</p>
+            </div>
+          </div>
+          <div id="emptyPaymentCardsWrapperMigration" class="emptyVaultWrapper">
+            <h1 class="vaultCategoryTakeoverHeader">A New Home for Your Form Fill Data</h1>
+            <img src="images/vault_4.0/Empty_Credit_Card_Migration.png" class="emptyVaultImage vaultCategoryTakeoverImage" />
+            <div id="vault_payment_cards" class="emptyVaultText">
+              <div class="vaultCategoryTakeoverText">As part of the latest LastPass update, Payment Card information stored in Form Fills have been moved here. However, you must complete the update process to transfer your Form Fill data. Don’t worry, it only takes a minute.</div>
+              <div class="vaultCategoryTakeoverText"><a href="https://link.lastpass.com/help-new-form-fills">Learn more about these changes.</a></div>
+              <div class="vaultCategoryTakeoverText boldText">Your Form Fill data will be unavailable until you complete the update.</div>
+              <button id="paymentCardsButton" class="nbtn rbtn vaultCategoryTakeoverButton">Finish the Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptyFormFills" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Empty_Form.png' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Fill every form</h1>
+            <p>Add payment cards or address profiles to type less when shopping online.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptyReceivedShares" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Share_You.png' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Shared with You</h1>
+            <p>Review any passwords and notes others shared with you.</p>
+          </div>
+        </div>
+      </div>
+      <div id="emptyReceivedSharesOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_Shared_Omaria.png'  srcset='images/vault_4.0/Empty_Shared_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Shared with You</h1>
+              <p>Review any passwords and notes others shared with you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="emptySentShares" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Share_Others.png' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Shared with Others</h1>
+            <p>Securely send passwords and notes to friends and family.</p>
+          </div>
+        </div>
+      </div>
+      <div id="emptySentSharesOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_Shared_Omaria.png'  srcset='images/vault_4.0/Empty_Shared_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Shared with Others</h1>
+              <p>Securely send passwords and notes to friends and family.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="reactMainContent" class="absolute"></div>
+      <div id="vaultContent" class="noSelect"></div>
+      <div id="vaultFooter" class="noSelect">
+        <div class="folder">
+          <div class="folderContainer"></div>
+          <div class="vaultFooterContent">
+          </div>
+        </div>
+      </div>
+      <div id="receivedSharesContent" class="noSelect"></div>
+      <div id="sentSharesContent" class="noSelect"></div>
+      <div id="sharedFoldersContent" class="noSelect"></div>
+      <div id="emptySharedFolders" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Manage_Folders.png' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Shared Folders</h1>
+            <p>Create and manage folders of shared logins and notes.</p>
+          </div>
+        </div>
+      </div>
+      <div id="emptySharedFoldersOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_Shared_Folders_Omaria.png'  srcset='images/vault_4.0/Empty_Shared_Folders_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Shared Folders</h1>
+              <p>Create and manage folders of shared logins and notes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="deletedItemsContent">
+        <div class="itemContentPadding">
+          <div class="viewExplanation listMargin">
+            <p>View passwords and notes that you have deleted from your vault. You can restore an item to your vault if needed, or permanently wipe deleted items. Items that have been deleted for 30 days will be wiped automatically.</p>
+          </div>
+          <div id="deletedItemsEmpty" class="listMargin">No deleted items were found.</div>
+        </div>
+        <div id="deletedItems" class="noSelect"></div>
+      </div>
+
+      <div id="identityContentContainer" class="itemContentPadding">
+        <div class="viewExplanation listMargin">
+          <p>An Identity helps you organize your vault into convenient 'subvaults'. Group your Sites, Secure Notes, and Form Fills based on what you need in specific situations, such as 'Home' and 'Work'. When you switch Identities, you'll only see and fill the items you added to your current identity.</p>
+        </div>
+        <div id="identityContent" class="noSelect"></div>
+      </div>
+
+      <div id="emptyCreditMonitoring" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Credit_Monitoring.png' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Keep an Eye on Your Credit Report</h1>
+            <p>Free, daily credit monitoring. Get notified of events and protect yourself from identity theft, with no impact on your credit score.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="creditMonitoring" class="itemContentPadding">
+
+        <div class="viewExplanation listMargin">
+          <p>Better protect your identity, monitor your credit scores, and get help from our team of experts in investigating and stopping unauthorized activity. For only 9.95 USD per month you will receive:</p>
+          <ul>
+            <li compoundtranslation><strong>Identity Dashboard:</strong>24/7 web access to your ID records and credit scores for all three credit bureaus.</li>
+            <li compoundtranslation><strong>Regular Monitoring:</strong>Instant alerts to any changes, with details on what changed and how to take action.</li>
+            <li compoundtranslation><strong>Full-Service Resolution:</strong>Victim of identity theft? Our team of experts investigate and help restore your records</li>
+          </ul>
+
+          <div class='buttons'>
+            <a target="_blank" href="https://support.logmeininc.com/lastpass/help/set-up-and-manage-lastpass-credit-monitoring-lp030026" class="nbtn wbtn btn_midi">FAQ</a>
+            <a target="_blank" href="https://lastpass.com/features_joinpremium_creditmon.php" class='nbtn rbtn btn_midi'>Upgrade</a>
+          </div>
+
+        </div>
+
+        <div class="creditMonitoringTable listMargin">
+          <div class="header">Credit Monitoring Profiles</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Profile ID</th>
+                <th>Date Enabled</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody class="profiles">
+              <tr>
+                <td colspan="4">You have not enabled credit monitoring for any profiles.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="creditMonitoringTable alertsTable listMargin">
+          <div class="header">Alerts</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Date Received</th>
+                <th>Profile ID</th>
+                <th>Message</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody class="alerts">
+              <tr>
+                <td colspan="4">You have no alerts at this time.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div id="emergencyTrusted">
+        <div class="itemContentPadding">
+          <div class="viewExplanation listMargin">
+            <p>In case something unexpected happens, give someone you trust access to your vault. When your trusted contact requests Emergency Access to your vault, you can decline their request within the specified waiting period. After the waiting period passes, your vault will sync to their LastPass account automatically.</p>
+          </div>
+        </div>
+        <div id="emergencyTrustedContainer" class="noSelect"></div>
+      </div>
+
+      <div id="emptyEmergencyTrusted" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Emergency_Access.png' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Add Emergency Access</h1>
+            <p>Give trusted family or friends access to your vault in case of an emergency. You choose when they can access.</p>
+          </div>
+        </div>
+      </div>
+      <div id="emptyEmergencyTrustedOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <div class="emptyVaultWrapper">
+            <img src='images/vault_4.0/Empty_Emergency_Access_Omaria.png'  srcset='images/vault_4.0/Empty_Emergency_Access_Omaria@2x.png 2x' class="emptyVaultImage"/>
+            <div class="emptyVaultText">
+              <h1>Add Emergency Access</h1>
+              <p>Give trusted family or friends access to your vault in case of an emergency. You choose when they can access.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="emergencyTrusting" class="noSelect"></div>
+
+      <div id="emptyEmergencyTrusting" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Emergency_Access.png' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Accept Emergency Access</h1>
+            <p>When someone grants you emergency access to their vault, their account will be listed here.</p>
+          </div>
+        </div>
+      </div>
+      <div id="emptyEmergencyTrustingOmaria" class="emptyVaultContainer">
+        <div class="emptyVault">
+          <img src='images/vault_4.0/Empty_Emergency_Access_Omaria.png'  srcset='images/vault_4.0/Empty_Emergency_Access_Omaria@2x.png 2x' class="emptyVaultImage"/>
+          <div class="emptyVaultText">
+            <h1>Accept Emergency Access</h1>
+            <p>When someone grants you emergency access to their vault, their account will be listed here.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="ad" class="middlePosition">
+  </div>
+
+
+
+  <div id="addMenu">
+    <ul id="addMenuItems" class="addMenu leftOfAd"></ul>
+    <div id="addMenuButton" class="addMenu leftOfAd">
+      <div id="addMenuButtonCustom"></div>
+      <div class="addMenuItem" id="addMenuButtonDefault">
+        <div><div><img src="images/vault_4.0/Add.png"/></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="addMenuArrow">
+    <img src='images/vault_4.0/Empty_Add_Arrow.png'  srcset='images/vault_4.0/Empty_Add_Arrow@2x.png 2x'>
+  </div>
+
+  <div id="dragElement" draggable="true"></div>
+<div id="advacedOptionsOverlay" class="overlay leftOfAd"></div>
+<div id="dialogOverlay" class="overlay"></div>
+<div id="inProgressOverlay" class="overlay"></div>
+<div id="inProgressWithSpinner" class="spinner-overlay spinner"></div>
+<div id="inProgressMigration" class="spinner-overlay">
+  <div class="container--spinner">
+    <div class="spinner__header">
+      <div class="spinner">
+        <img src="images/vault_4.0/lp-loading.gif" class="spinner">
+      </div>
+    </div>
+    <div class="spinner__body">
+      <h2 class="spinner__body__headline">One Moment...</h2>
+      <p class="spinner__body__text">LastPass is updating.</p>
+      <div class="container--progress-bar">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="reactOverlayContent"></div>
+
+<script type='text/javascript' src="jquery-3.2.1.min.js"></script>
+<script type='text/javascript' src="topics.js"></script>
+<script type='text/javascript' src="platform.js"></script>
+
+<!-- This file is platform specific -->
+<script type='text/javascript' src="platformOverride.js"></script>
+
+<script type='text/javascript' src="vaultStrings.js"></script>
+<script type='text/javascript' src="controller.js"></script>
+<script type='text/javascript' src="tools.js"></script>
+<script type='text/javascript' src="dialog.js"></script>
+<script type='text/javascript' src="dialogFields.js"></script>
+<script type='text/javascript' src="dialogs.js"></script>
+<script type='text/javascript' src="vaultDialogs.js"></script>
+<script type='text/javascript' src="buildVars.js"></script>
+<script type='text/javascript' src="cc.js"></script>
+<script type='text/javascript' src="model.js"></script>
+<script type='text/javascript' src="view.js"></script>
+<script type='text/javascript' src="vaultModel.js"></script>
+<script type='text/javascript' src="features.js"></script>
+<script type='text/javascript' src="request.js"></script>
+
+<!-- Migration scripts -->
+<script type="text/javascript" src="migrations.js"></script>
+<script type="text/javascript" src="migrationsWeb.js"></script>
+
+<!-- These should loaded dynamically -->
+<script type='text/javascript' src="creditModel.js"></script>
+<script type='text/javascript' src="sharingModel.js"></script>
+<script type='text/javascript' src="emergencyAccessModel.js"></script>
+
+<script type='text/javascript' src="selectDropdown.js"></script>
+<script type='text/javascript' src="identityDropdown.js"></script>
+<script type='text/javascript' src="notifications.js"></script>
+<script type='text/javascript' src="vaultLicenseExpiration.js"></script>
+<script type='text/javascript' src="vault.js"></script>
+<script type='text/javascript' src="vaultState.js"></script>
+
+<script type='text/javascript' src="securityDashboard.js"></script>
+
+<!-- This file is platform specific -->
+<script type='text/javascript' src="initializeVault.js"></script>
+<script type='text/javascript' src="formfill-custom-fields-usage.js"></script>
+
+</body>
+</html>

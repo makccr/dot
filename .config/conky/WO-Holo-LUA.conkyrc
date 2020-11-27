@@ -1,0 +1,182 @@
+--[[
+#=====================================================================================
+#                               arcolinux
+# Date    : package-date
+# Source  : WillemO https://plus.google.com/u/0/+WillemO
+# Editor  : Erik Dubois at http://www.erikdubois.be
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+# Documentation : http://erikdubois.be/
+#======================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no fonts necessary to install
+#======================================================================================
+
+]]
+
+
+conky.config = {
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
+	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
+	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
+	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
+	net_avg_samples = 2,						-- The number of samples to average for net data
+	no_buffers = true,							-- Subtract (file system) buffers from used memory?
+	temperature_unit = 'celsius',				-- fahrenheit or celsius
+	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
+	update_interval = 1,						-- update interval
+	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
+
+
+	--Placement
+
+	alignment = 'top_left',		                -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+												-- middle_left,middle_middle,middle_right,none
+	--Arch Duoscreen
+	--gap_x = -1910,
+	gap_x = 20,									-- pixels between right or left border
+	gap_y = 60,									-- pixels between bottom or left border
+	minimum_height = 520,						-- minimum height of window
+	minimum_width = 300,						-- minimum height of window
+	maximum_width = 300,						-- maximum height of window
+
+	--Graphical
+
+	border_inner_margin = 10, 					-- margin between border and text
+	border_outer_margin = 1, 					-- margin between border and edge of window
+	border_width = 1, 							-- border width in pixels
+	default_bar_width = 280,					-- default is 0 - full width
+	default_bar_height = 10,					-- default is 6
+	default_gauge_height = 25,					-- default is 25
+	default_gauge_width =40,					-- default is 40
+	default_graph_height = 40,					-- default is 25
+	default_graph_width = 153,					-- default is 0 - full width
+	default_shade_color = '#000000',			-- default shading colour
+	default_outline_color = '#FFFFFF',			-- default outline colour
+	draw_borders = true,						-- draw borders around text
+	draw_graph_borders = true,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+	stippled_borders = 0,						-- dashing the border
+
+	--Textual
+
+	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font = 'Sans:size=10',  			        -- font for complete conky unless in code defined
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
+	max_user_text = 16384,						-- max text in conky default 16384
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = true,							-- shorten units from KiB to k
+	top_name_width = 21,						-- width for $top name value default 15
+	top_name_verbose = false,					-- If true, top name shows the full command line of  each  process - Default value is false.
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 1,								-- alpha of the xft font - between 0-1
+
+	--Windows
+
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 0,			        -- real transparency - composite manager required 0-255
+	own_window_argb_visual = false,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#2A373E',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
+
+
+	--Colours
+
+	default_color = '#00BCD4',  				-- default color and border color
+	color0 = '#B0E0E6',
+	color1 = '#eaffff',
+	color2 = 'gold',
+	color3 = '#ffffff',
+	color4 = '#00BCD4',
+	color5 = '#00BCD4',
+	color6 = 'yellow',
+
+	--Signal Colours
+	color7 = '#1F7411',  						--green
+	color8 = '#FFA726',  						--orange
+	color9 = '#F1544B',  						--firebrick
+
+
+	--Lua
+	lua_load = '$HOME/.config/conky/lua/widget_rings.lua',
+	lua_draw_hook_post = 'main_rings',
+
+
+};
+
+conky.text = [[
+${font Sans:size=8}${color3}OS: ${color2}${alignr}${execi 10000 lsb_release -d | cut -f 2| tr "[:upper:]" "[:upper:]"}
+${color3}Kernel: ${color2}${alignr}${kernel}
+${color3}Uptime:${color2}${alignr}${uptime}
+
+${voffset -10}${color5}CPU ${hr}
+${voffset 5}${color3}Freq: ${goto 65}${color2}${freq_g} GHz
+
+${color3}CPU1: ${goto 65}${color2}${cpu cpu1}%
+${goto 65}${exec sensors|grep 'Core 0'|awk '{print $3}'}
+${color3}CPU2: ${goto 65}${color2}${cpu cpu2}%
+${goto 65}${exec sensors|grep 'Core 1'|awk '{print $3}'}
+${color3}Tasks: ${color2}${goto 65}${processes}
+${color3}Running: ${color2}${goto 65}${running_processes}
+${voffset -48}${goto 150}${color4}Core 1 ${goto 250}Core 2
+
+${voffset 30}${color4}NET: ${hr}
+${voffset 5}${color3}SSID: ${color2}${wireless_essid wls33}
+${color3}IP: ${color2}${addr wls33}
+${color3}Speed: ${color2}${wireless_bitrate wls33}
+${color3}Signal: ${color2}${wireless_link_qual_perc wls33} %
+${color3}Dw: ${color2}${totaldown wls33}
+${color3}Up:  ${color2}${totalup wls33}
+${voffset -46}${goto 152}${color1}${upspeed wls33}${goto 250}${downspeed wls33}
+${voffset 0}${color4}${goto 150}upload ${goto 240}download
+
+${voffset 20}${color4}PROCESSES ${hr}
+${voffset 5}${color4} NAME${alignr 10}CPU ${alignr}RAM
+${color1} ${top name 1} ${alignr}${top cpu 1} ${alignr}${top mem 1}
+${color1} ${top name 2} ${alignr}${top cpu 2} ${alignr}${top mem 2}
+${color1} ${top name 3} ${alignr}${top cpu 3} ${alignr}${top mem 3}
+${color1} ${top name 4} ${alignr}${top cpu 4} ${alignr}${top mem 4}
+${color1} ${top name 5} ${alignr}${top cpu 5} ${alignr}${top mem 5}
+ ${voffset 5}${color5}DATE & CLOCK ${hr}
+
+${color1}${voffset 6}${font Monospace:style=bold:size=9}${execpi 1800 LAR=`date +%-d`; cal -1 -s | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color0}&${color1}/' | sed ':a;N;$!ba;s/\n/\n${goto 28}/g'
+
+${goto 204}${voffset -84}${color ff8000}${font Sans:size=12}${time %H}${color 00ff00}${time :%M}${color 6495EE}${time :%S}
+${voffset -45}
+##========================== Regards, Etles_Team ====================================##
+]];

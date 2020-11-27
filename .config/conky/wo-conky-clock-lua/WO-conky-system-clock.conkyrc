@@ -1,0 +1,75 @@
+--[[
+#########################
+# conky-system-lua-V3   #
+# by +WillemO @wim66    #
+# v1.0 10-dec-17         #
+#                       #
+#########################
+#=====================================================================================
+#
+# Date    : package-date
+# Author  : WillemO or https://wim66.deviantart.com/
+# Conky   : https://wim66.deviantart.com/art/conky-system-lua-V3-719087192
+# G+      : https://plus.google.com/u/0/+WillemO
+# Editor  : Erik Dubois
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+]]
+
+conky.config = {
+
+	background = true,
+	double_buffer = true,
+	no_buffers = true,
+	text_buffer_size = 2048,
+	update_interval = 1,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+
+	alignment = 'top_right',
+	gap_x = 30,
+	gap_y = 720,
+
+	minimum_width = 242, minimum_height = 112,
+	maximum_width = 242,
+
+	border_inner_margin = 10,
+	border_outer_margin = 1,
+	draw_borders = false,
+	stippled_borders = 0,
+
+	override_utf8_locale = true,
+	use_xft = true,
+	font = 'ubuntu:size=11',
+	xftalpha = 1,
+	uppercase = false,
+	extra_newline = false,
+	short_units = true,
+	top_name_width = 23,
+	top_name_verbose = false,
+	temperature_unit = 'celsius' ,
+
+	own_window = true,
+	own_window_type = 'desktop',-- # options are: normal/override/dock/desktop/panel
+	own_window_title = 'conky-lua-system',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+--	Window_background
+	own_window_transparent = true,
+	own_window_argb_visual = true,
+	own_window_argb_value = 0,
+	--own_window_colour = '2A373E',
+
+	default_color = '#ffffff',
+
+	lua_load = '~/.config/conky/wo-conky-clock-lua/settings.lua ~/.config/conky/wo-conky-clock-lua/scripts/loadall.lua' ,
+	lua_draw_hook_post = 'main' ,
+    lua_startup_hook = 'vars',
+
+};
+
+conky.text = [[
+
+
+]]

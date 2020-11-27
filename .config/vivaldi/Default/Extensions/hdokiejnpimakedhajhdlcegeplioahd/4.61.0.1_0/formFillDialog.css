@@ -1,0 +1,38 @@
+/*
+******* Form Fill Dialog *******
+*/
+
+#formFillDialog {
+  max-height: 650px;
+  min-height: 215px;
+  max-width: 1000px;
+  min-width: 650px;
+}
+
+#formFillDialog .checkboxContainer {
+  margin-top: 20px;
+}
+
+#formFillDialog .dialogLeftPane {
+  width: 33%;
+}
+
+#formFillDialog .dialogRightPane {
+  left: 33%;
+}
+
+#formFillDialog .dialogTopPane td {
+  width: 33%;
+}
+
+#formFillDialog .inputFields {
+  margin: 0 20px;
+}
+
+/*
+******* Credit Card *******
+*/
+
+#formFillDialog.creditCard .creditCardHide {
+  display: none;
+}

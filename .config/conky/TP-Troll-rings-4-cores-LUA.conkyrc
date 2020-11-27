@@ -1,0 +1,66 @@
+conky.config = {
+-- -- Conky settings -- #
+	background = true,
+	update_interval = 3,
+
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+
+	override_utf8_locale = true,
+
+	double_buffer = true,
+	no_buffers = true,
+
+	text_buffer_size = 2048,
+	imlib_cache_size = 0,
+
+-- -- Window specifications -- #
+
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+	own_window_argb_value = 0,
+	own_window_argb_visual = true,
+	own_window_colour = '#000000',
+
+
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+
+	minimum_width = 920, minimum_height = 300,
+	maximum_width = 1024,
+
+	alignment = 'top_left',
+	gap_x = 20,
+	gap_y = 79,
+
+-- -- Graphics settings -- #
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+-- -- Text settings -- #
+	use_xft = true,
+	font = 'Santana:size=18',
+	xftalpha = 0.8,
+
+	uppercase = false,
+
+	default_color = '#FFFFFF',
+
+-- -- Lua Load -- #
+	lua_load = '~/.config/conky/lua/clock_rings.lua',
+	lua_draw_hook_pre = 'clock_rings',
+
+};
+
+conky.text = [[
+${font Santana:size=12}  Root   ${fs_used /}/${fs_size /}                Home   ${fs_used /home}/${fs_size /home}$font
+${voffset 105}${goto 123}${font Santana:size=24}${time %H:%M}${voffset -10}${font Santana:size=10}${font}
+${voffset -28}${goto 268}${hr 2}
+${voffset -70}${goto 278}${cpugraph 50,285 d5dcde ffffff} #${voffset -18} ${alignr} ${execi 60 ~/.Conky/gmailnotify.sh}
+${voffset 16}${goto 285}${time %A, %d %B %Y}						
+#${font Santana:size=14}${voffset -120}${goto 300}BATTERY     ${battery BAT0}
+]];

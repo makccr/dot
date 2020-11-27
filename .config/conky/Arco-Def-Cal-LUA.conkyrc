@@ -1,0 +1,197 @@
+--[[
+#=====================================================================================
+#                               arcolinux
+# Date    : package-date
+# Source  : BunsenLabs smacz betatester
+# converted to conky 1.10 syntax for arcolinux by: postmaster and Erik Dubois
+# original config borrowed from BunsenLabs with love
+# Editor  : Erik Dubois at http://www.erikdubois.be
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+# Documentation : http://erikdubois.be
+#======================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#======================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#======================================================================================
+# LUA
+# You need not only install conky but also a package that supports lua on your computer
+# Depending on your HARDWARE you should choose wisely in the AUR
+# My hardware has an NVIDIA I will choose "conky-lua-nv" from AUR.
+#======================================================================================
+
+]]
+
+conky.config = {
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
+	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
+	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
+	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
+	net_avg_samples = 2,						-- The number of samples to average for net data
+	no_buffers = true,							-- Subtract (file system) buffers from used memory?
+	temperature_unit = 'celsius',				-- fahrenheit or celsius
+	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
+	update_interval = 1,						-- update interval
+	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
+
+
+	--Placement
+
+	alignment = 'top_right',		            -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+												-- middle_left,middle_middle,middle_right,none
+	--Arch Duoscreen
+	--gap_x = -1910,
+	gap_x = 20,									-- pixels between right or left border
+	gap_y = 60,									-- pixels between bottom or left border
+	minimum_height = 700,						-- minimum height of window
+	minimum_width = 200,						-- minimum height of window
+	maximum_width = 200,						-- maximum height of window
+
+	--Graphical
+
+	border_inner_margin = 5, 					-- margin between border and text
+	border_outer_margin = 5, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 280,					-- default is 0 - full width
+	default_bar_height = 10,					-- default is 6
+	default_gauge_height = 25,					-- default is 25
+	default_gauge_width =40,					-- default is 40
+	default_graph_height = 40,					-- default is 25
+	default_graph_width = 153,					-- default is 0 - full width
+	default_shade_color = '#000000',			-- default shading colour
+	default_outline_color = '#000000',			-- default outline colour
+	draw_borders = false,						-- draw borders around text
+	draw_graph_borders = true,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+	stippled_borders = 0,						-- dashing the border
+
+	--Textual
+
+	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font = 'Monospace:bold:size=9',  			-- font for complete conky unless in code defined
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
+	max_user_text = 16384,						-- max text in conky default 16384
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = true,							-- shorten units from KiB to k
+	top_name_width = 21,						-- width for $top name value default 15
+	top_name_verbose = false,					-- If true, top name shows the full command line of  each  process - Default value is false.
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 1,								-- alpha of the xft font - between 0-1
+
+	--Windows
+
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 0,			    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
+
+
+	--Colours
+
+	default_color = '#C0C0C0',  				-- default color and border color
+	color0 = '#B0E0E6',
+	color1 = '#5393BF',
+	color2 = '#D8BFD8',
+	color3 = '#cccccc',
+	color4 = '#BDBDBD',
+	color5 = '#CCCCCC',
+	color6 = '#aa0000',
+
+	--Signal Colours
+	color7 = '#1F7411',  						--green
+	color8 = '#FFA726',  						--orange
+	color9 = '#F1544B',  						--firebrick
+
+
+	--Lua
+	lua_load = '$HOME/.config/conky/lua/draw-bg.lua',
+	lua_draw_hook_pre = 'draw_bg 15 0 0 0 0 0x101010 0.5',
+
+};
+
+conky.text = [[
+${font Monospace:bold:size=10}${alignc}${color5}${time %X}
+${goto 27}${color1}${execpi 7200 LAR=`date +%-d`; cal -1 -s | sed 's/\<'$LAR'\>/${color5}&${color1}/' | sed ':a;N;$!ba;s/\n/\n${goto 27}/g'}${color}${font}
+${color5}${alignc}S Y S T E M    I N F O
+${hr}${color}
+Host:${alignr}${nodename}
+Uptime:${alignr}${uptime}
+#Time:${alignr}${time %H:%M}
+UTC:${alignr}${utime %H:%M}
+#Brussels: ${alignr}${tztime Europe/Brussels %H:%M}# ${time %p}${font}
+
+${goto 60}Used${alignr}Size
+Root${goto 60}${fs_used /}${alignr}${fs_size /}
+Home${goto 60}${fs_used /home}${alignr}${fs_size /home}
+
+${goto 60}MEM${alignr}MAX
+RAM${goto 60}${mem}${alignr}${memmax}
+Swap${goto 60}${swap}${alignr}${swapmax}
+
+CPU:${goto 60}Used${alignr}GHz
+Avg${goto 60}${if_match ${cpu cpu0}<10}${color}00${color}${cpu cpu0}\
+${else}${if_match ${cpu cpu0}<100}${color1}0${color}${cpu cpu0}\
+${else}${cpu cpu0}${endif}${endif}%${alignr}${freq_g}
+
+${color1}${alignc}S H O R T C U T    K E Y S${color}
+${color1}${hr}${color}
+${color1}${color2}Right-mouse click on
+desktop to get menu${color}
+${color1}${hr}${color}
+${color1}[S]+Space${alignr}${color2}Main Menu${color}
+${color1}[Alt]+F2${alignr}${color2}Alt Menu${color}
+${color1}[Alt]+F3${alignr}${color2}Alt Menu${color}
+${color1}[S]+[Shift]+D${alignr}${color2}Alt Menu${color}
+${color1}[Ctrl]+[Space]${alignr}${color2}Alt Menu${color}
+#${color1}[S] + Tab${alignr}${color2}Client Menu${color}
+${color1}${hr}${color}
+${color1}[S]+t${alignr}${color2}Terminal${color}
+${color1}[S]+f${alignr}${color2}File Manager${color}
+${color1}[S]+e${alignr}${color2}Editor${color}
+${color1}[S]+m${alignr}${color2}Media Player${color}
+${color1}[S]+w${alignr}${color2}Web Browser${color}
+${color1}[S]+h${alignr}${color2}Task Manager${color}
+${color1}[S]+k${alignr}${color2}Lock Screen${color}
+${color1}[S]+v${alignr}${color2}Volume Control${color}
+${color1}[PrtSc]${alignr}${color2}Screenshot${color}
+${color1}[Ctrl]+[Alt]+m${alignr}${color2}Settings${color}
+${color1}[S]+Esc${alignr}${color2}Kill${color}
+${color1}[S]+x${alignr}${color2}Exit${color}
+${color1}${hr}${color}
+${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+]];

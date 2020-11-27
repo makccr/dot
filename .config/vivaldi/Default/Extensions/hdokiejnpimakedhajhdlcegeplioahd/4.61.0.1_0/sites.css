@@ -1,0 +1,222 @@
+body {
+    width: auto; 
+    height: auto; 
+    margin: 0;
+    padding: 30px 40px 60px 40px; 
+    background-color: #F9FBFD; 
+    text-align: center; 
+}
+body * {
+    box-sizing: border-box;
+    outline: none;
+    -webkit-transition: all;
+    transition: all .35s cubic-bezier(.19,1,.22,1);
+}
+body, input, button, textarea, select, table {
+    font-family: "Open Sans", sans-serif; 
+    font-size: 15px;
+    color: rgba(0, 0, 0, .8);
+}
+.logo {
+    width: 200px; 
+}
+.main {
+    display: inline-block; 
+    margin: 0 auto; 
+    text-align: left; 
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.hidden {
+    display: none
+}
+.floleft {
+    float: left
+}
+.floright {
+    float: right
+}
+.mrgbtm30 {
+    margin-bottom: 30px;
+}
+.searchsites {
+    margin-top: 40px; 
+    margin-bottom: 30px
+}
+.searchsites * {
+    vertical-align: middle
+}
+.searchsites input[type="search"] {
+    width: 300px; 
+    border: 1px solid #9AC0DA; 
+    padding: 8px 10px; 
+    border-radius: 3px; 
+    box-shadow: 0 0 1px 1px transparent
+}
+.searchsites input[type="search"]:focus,
+select:focus {
+    box-shadow: 0 0 1px 1px #9AC0DA
+}
+a {
+    color: #2980B8; 
+    text-decoration: none; 
+    font-weight: 600; 
+    cursor: pointer
+}
+a:hover {
+    text-decoration: underline
+}
+.searchsites a {
+    margin-left: 10px
+}
+input[type="search"] {
+    transition: box-shadow .35s cubic-bezier(.19,1,.22,1);
+    -webkit-transition: box-shadow .35s cubic-bezier(.19,1,.22,1)
+}
+button, input[type="button"] {
+    background-color: rgba(0, 0, 0, .06); 
+    border: 0; 
+    border-radius: 100px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    padding: 9px 16px; 
+    min-width: 110px;
+}
+button#lpimport,
+input[type="button"]#import {
+    background-color: #D32D27; 
+    color: white
+}
+select {
+    border: 1px solid #9AC0DA; 
+    padding: 7px; 
+    border-radius: 3px; 
+    box-shadow: 0 0 1px 1px transparent
+}
+#gridsites #headername, 
+#gridsites .sitename {
+    width: 25%
+}
+#gridsites #headerusername, 
+#gridsites .siteusername {
+    width: 25%
+}
+#gridsites #headerpassword, 
+#gridsites .sitepassword {
+    width: 18%
+}
+#gridsites #headerfavorite,      
+#gridsites #headernote,          
+#gridsites #headerprotected,     
+#gridsites #headerautologin,
+#gridsites .sitefavorite,
+#gridsites .sitenote,
+#gridsites .siteprotected,
+#gridsites .siteautologin {
+    width: 3%; 
+    font-size: 12px
+}
+#gridsites #headeraction, 
+#gridsites .siteaction {
+    width: 20%; 
+    text-align: right
+}
+#gridsites.import #headername, 
+#gridsites.import .sitename {
+    width: 35%
+}
+#gridsites.import #headerusername, 
+#gridsites.import .siteusername {
+    width: 30%
+}
+#gridsites.import #headerpassword, 
+#gridsites.import .sitepassword {
+    width: 20%
+}
+#gridsites.import #headerimport, 
+#gridsites.import .siteimport {
+    width: 15%; 
+    text-align: center
+}
+#gridsites, 
+#maincontent {
+    width: 800px; 
+    margin-top: 15px;
+}
+#gridsites div.header div {
+    height: 30px; 
+    float: left; 
+    font-size: 14px;
+}
+#gridsites .header {
+    border-bottom: 2px solid rgba(0, 0, 0, .05)
+}
+#gridsites .header .sort {
+    display: block; 
+    line-height: 30px; 
+    font-weight: 600; 
+    padding: 0px 10px
+}
+#gridsites .site .border:after {
+    content: ""; 
+    clear: both; 
+    display: table
+}
+#gridsites .site .border > div {
+    float: left; 
+    line-height: 30px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis
+}
+#gridsites .site .content:after {
+    content: "."; 
+    visibility: hidden
+}
+#gridsites .sitename a {
+    font-weight: 600
+}
+#gridsites .sitename img {
+    margin-right: 5px; 
+    position: relative; 
+    top: 3px;
+}
+#gridsites .siteaction span {
+    padding: 0 5px 0px 5px; 
+    color: #AAAAAA;
+}
+#gridsites .sitename .content,
+#gridsites .siteusername .content,
+#gridsites .sitepassword .content,
+#gridsites .siteaction {
+    padding: 0px 10px;
+}
+#gridsites .site:hover {
+    background: rgba(0, 0, 0, .04)
+}
+#gridsites .site input[type="checkbox"] {
+    width: 18px; 
+    height: 18px; 
+    margin: 6px
+}
+.textbi {
+    font-weight: bold; 
+    font-style: italic
+}
+.texti {
+    font-style: italic
+}
+#askforpasswordtext {
+    font-weight: bold
+}
+#askforpassword {
+    width: 200px
+}
+#gridsite {
+    height: auto !important; 
+    overflow: auto; 
+    clear: both
+}

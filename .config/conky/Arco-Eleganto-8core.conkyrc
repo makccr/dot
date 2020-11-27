@@ -1,0 +1,209 @@
+--[[
+#=====================================================================================
+#
+# Date    : 09/09/2017
+# Author  : Erik Dubois
+# Source  : Aureola - https://github.com/erikdubois/Aureola
+# Version : v3.0.0
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# font xirod.ttf to have nice titles - included in folder fonts
+#=====================================================================================
+
+#======================================================================================
+# new conky configuration (lua format)
+#======================================================================================
+
+
+#install the font xirod.ttf to have nice titles
+#run sensors-detect if needed
+#you need to have 8 cores or else it will never run.
+#delete the lines if you have only 4 or 2 cores. 
+
+]]
+
+conky.config = {
+
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
+	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
+	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
+	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
+	net_avg_samples = 2,						-- The number of samples to average for net data
+	no_buffers = true,							-- Subtract (file system) buffers from used memory?
+	temperature_unit = 'celsius',				-- fahrenheit or celsius
+	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
+	update_interval = 1,						-- update interval
+	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
+
+
+	--Placement
+
+	alignment = 'middle_right',		            -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+												-- middle_left,middle_middle,middle_right,none
+	--Arch Duoscreen
+	--gap_x = -1910,
+	gap_x = 10,									-- pixels between right or left border
+	gap_y = 20,									-- pixels between bottom or left border
+	minimum_height = 520,						-- minimum height of window
+	minimum_width = 300,						-- minimum height of window
+	maximum_width = 300,						-- maximum height of window
+
+	--Graphical
+
+	border_inner_margin = 10, 					-- margin between border and text
+	border_outer_margin = 1, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 170,					-- default is 0 - full width
+	default_bar_height = 10,					-- default is 6
+	default_gauge_height = 25,					-- default is 25
+	default_gauge_width =40,					-- default is 40
+	default_graph_height = 40,					-- default is 25
+	default_graph_width = 153,					-- default is 0 - full width
+	default_shade_color = '#000000',			-- default shading colour
+	default_outline_color = '#000000',			-- default outline colour
+	draw_borders = false,						-- draw borders around text
+	draw_graph_borders = true,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+	stippled_borders = 0,						-- dashing the border
+
+	--Textual
+
+	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font = 'Droid Sans:size=8:bold',  	-- font for complete conky unless in code defined
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
+	max_user_text = 16384,						-- max text in conky default 16384
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = true,							-- shorten units from KiB to k
+	top_name_width = 21,						-- width for $top name value default 15
+	top_name_verbose = false,					-- If true, top name shows the full command line of  each  process - Default value is false.
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 1,								-- alpha of the xft font - between 0-1
+
+	--Windows
+
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 150,			    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
+
+
+	--Colours
+
+	default_color = '#bbbbbb',  				-- default color and border color
+	color1 = '#F68516',
+	color2 = '#8C8C8C',
+	color3 = '#ABABAB',
+	color4 = '#C9C9C9',
+	color5 = '#DEDEDE',
+	color6 = '#757575',
+
+	--Signal Colours
+	color7 = '#1F7411',  --green
+	color8 = '#FFA726',  --orange
+	color9 = '#F1544B',  --firebrick
+
+
+	--Lua
+
+};
+
+
+conky.text = [[
+${font xirod:Bold:size=12}${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}} 
+$font${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+# SYS
+
+${color5}System Uptime $alignr $uptime${color5}
+$sysname $kernel $alignr $machine
+System Temp $alignr${exec sensors | grep Core\ 3 | awk '{print $3}'}
+
+
+# CPU
+${font xirod:Bold:size=10}${color1}CPU ${hr 2}$font$color
+
+${font}Core 0   ${color1}${execi 30 sensors | grep 'Core 0:' | cut -c17-18}°C${color}  @  ${cpu cpu1} % $alignr ${color6}${cpubar cpu1}${color}
+${font}Core 1   ${color1}${execi 30 sensors | grep 'Core 1:' | cut -c17-18}°C${color}  @  ${cpu cpu2} % $alignr ${color6}${cpubar cpu2}${color}
+${font}Core 2   ${color1}${execi 30 sensors | grep 'Core 2:' | cut -c17-18}°C${color}  @  ${cpu cpu3} % $alignr ${color6}${cpubar cpu3}${color}
+${font}Core 3   ${color1}${execi 30 sensors | grep 'Core 3:' | cut -c17-18}°C${color}  @  ${cpu cpu4} % $alignr ${color6}${cpubar cpu4}${color}
+${font}Core 4   ${color1}${execi 30 sensors | grep 'Core 0:' | cut -c17-18}°C${color}  @  ${cpu cpu5} % $alignr ${color6}${cpubar cpu5}${color}
+${font}Core 5   ${color1}${execi 30 sensors | grep 'Core 1:' | cut -c17-18}°C${color}  @  ${cpu cpu6} % $alignr ${color6}${cpubar cpu6}${color}
+${font}Core 6   ${color1}${execi 30 sensors | grep 'Core 2:' | cut -c17-18}°C${color}  @  ${cpu cpu7} % $alignr ${color6}${cpubar cpu7}${color}
+${font}Core 7   ${color1}${execi 30 sensors | grep 'Core 3:' | cut -c17-18}°C${color}  @  ${cpu cpu8} % $alignr ${color6}${cpubar cpu8}${color}
+
+Core 0${alignr}Core1
+${cpugraph cpu1 25,150 000000 757575} ${alignr}${cpugraph cpu2 25,150 000000 757575}
+Core 2${alignr}Core 3
+${cpugraph cpu3 25,150 000000 757575} ${alignr}${cpugraph cpu4 25,150 000000 757575}
+Core 4${alignr}Core 5
+${cpugraph cpu4 25,150 000000 757575} ${alignr}${cpugraph cpu5 25,150 000000 757575}
+Core 6${alignr}Core 7
+${cpugraph cpu6 25,150 000000 757575} ${alignr}${cpugraph cpu7 25,150 000000 757575}
+
+# LOAD
+
+${font xirod:Bold:size=10}${color1}LOAD ${hr 2}$font${color}
+
+${font Droid Sans:bold:size=8}CPU ${hr 1}
+       ${running_processes} / $processes ${goto 195}(%) PID${goto 275}CPU $alignr MEM$font
+       ${font Droid Sans:bold:size=8}${color2}${top name 1}${goto 200}${top pid 1}${goto 270}${top cpu 1}$alignr${top mem 1}${color}$font
+       ${color3}${top name 2}${goto 200}${top pid 2}${goto 270}${top cpu 2}$alignr${top mem 2}${color}
+       ${color4}${top name 3}${goto 200}${top pid 3}${goto 270}${top cpu 3}$alignr${top mem 3}${color}
+       ${top name 4}${goto 200}${top pid 4}${goto 270}${top cpu 4}$alignr${top mem 4}
+       ${top name 5}${goto 200}${top pid 5}${goto 270}${top cpu 5}$alignr${top mem 5}
+
+${font Droid Sans:bold:size=8}MEM  ${hr 1}
+${goto 195}(%) PID${goto 275}MEM${alignr}CPU$font
+       ${font Droid Sans:bold:size=8}${color2}${top_mem name 1}${goto 200}${top_mem pid 1}${goto 270}${top_mem mem 1}${alignr}${top_mem cpu 1}$font
+       ${color3}${top_mem name 2}${goto 200}${top_mem pid 2}${goto 270}${top_mem mem 2}${alignr}${top_mem cpu 2}$color
+       ${color4}${top_mem name 3}${goto 200}${top_mem pid 3}${goto 270}${top_mem mem 3}${alignr}${top_mem cpu 3}$color
+       ${color5}${top_mem name 4}${goto 200}${top_mem pid 4}${goto 270}${top_mem mem 4}${alignr}${top_mem cpu 4}$color
+       ${top_mem name 5}${goto 200}${top_mem pid 5}${goto 270}${top_mem mem 5}${alignr}${top_mem cpu 5}
+
+# MEMORY
+
+${font xirod:Bold:size=10}${color1}MEMORY ${hr 2}$color$font
+
+${color5}${font Droid Sans:bold:size=8}RAM$font$color
+       $mem / $memmax $alignr $memperc %
+       ${color6}${membar 10,280 /}$color
+${color5}${font Droid Sans:bold:size=8}SWAP$font$color
+       $swap / $swapmax $alignr $swapperc %
+       ${color6}${swapbar 10,280 /}$color
+]]

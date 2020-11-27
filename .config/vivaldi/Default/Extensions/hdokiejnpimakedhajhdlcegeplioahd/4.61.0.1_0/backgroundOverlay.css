@@ -1,0 +1,53 @@
+.blur-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+  display: table;
+}
+.blur-background.dark {
+  background-color: #000;
+  opacity: .6;
+}
+.blur-background.light {
+  background-color: #fff;
+  opacity: .6; 
+}
+.blur-background.untransparent {
+  opacity: 1;
+}
+.blur-background.top-left {
+  top: 0;
+  left: 0;
+}
+.blur-background .background-overlay-content {
+  display:table-cell;
+  vertical-align: middle;
+}
+.blur-background .loading {
+  margin: auto;
+  height: 64px;
+  width: 64px;
+}
+.blur-background .loading-inner {
+  height: 64px;
+  width: 64px;
+  animation: spin 1s linear infinite;
+  background-repeat: no-repeat;
+  background-image: url('images/Loading@0.25x.png');
+}
+.blur-background .background-overlay-content .loading-text {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+}

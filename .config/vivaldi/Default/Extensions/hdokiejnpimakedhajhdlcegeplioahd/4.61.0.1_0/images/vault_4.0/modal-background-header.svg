@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="334" height="122" viewBox="0 0 334 122">
+    <defs>
+        <filter id="a" width="113.7%" height="113.5%" x="-6.9%" y="-6.8%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <!-- <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="7"/> -->
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <path id="b" d="M0 0h596v124H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(-132 -12)">
+        <mask id="c" fill="#fff">
+            <use xlink:href="#b"/>
+        </mask>
+        <ellipse cx="107.25" cy="27.566" fill="#E9F2F2" fill-opacity=".5" mask="url(#c)" rx="640.25" ry="90.566"/>
+        <path stroke="#C6D8E1" stroke-linecap="round" stroke-width="2" d="M199 114.089l8.711 4.533M201.089 120.711l4.533-8.71" mask="url(#c)"/>
+        <rect width="5" height="5" x="130" y="94" stroke="#C6D8E1" stroke-width="2" mask="url(#c)" rx="1" transform="rotate(45 132.5 96.5)"/>
+        <path stroke="#C6D8E1" stroke-linecap="round" stroke-width="2" d="M390.5 60h13M406.5 60h3.5M403.5 64h13" mask="url(#c)"/>
+    </g>
+</svg>

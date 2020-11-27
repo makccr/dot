@@ -1,0 +1,66 @@
+conky.config = {
+-- -- Conky settings -- #
+	background = true,
+	update_interval = 3,
+
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+
+	override_utf8_locale = true,
+
+	double_buffer = true,
+	no_buffers = true,
+
+	text_buffer_size = 2048,
+	imlib_cache_size = 0,
+
+-- -- Window specifications -- #
+
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+	own_window_argb_value = 0,
+	own_window_argb_visual = true,
+	own_window_colour = '#000000',
+
+
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+
+	minimum_width = 160, minimum_height = 160,
+	maximum_width = 160,
+
+	alignment = 'top_left',
+	gap_x = 260,
+	gap_y = 400,
+
+-- -- Graphics settings -- #
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+-- -- Text settings -- #
+	use_xft = true,
+	font = 'Santana:size=10',
+	xftalpha = 0.8,
+
+	uppercase = false,
+
+	default_color = '#FFFFFF',
+
+};
+
+conky.text = [[
+${font Santana:size=14}CPU ${alignr}$cpu%${font}
+${font Santana:size=12}${stippled_hr}${font}
+
+Load: ${alignr}${loadavg 1}
+Processes: ${alignr}${running_processes}/${processes}
+
+${top name 1} ${alignr}${top cpu 1}
+${top name 2} ${alignr}${top cpu 2}
+${top name 3} ${alignr}${top cpu 3}
+${top name 4} ${alignr}${top cpu 4}
+]];

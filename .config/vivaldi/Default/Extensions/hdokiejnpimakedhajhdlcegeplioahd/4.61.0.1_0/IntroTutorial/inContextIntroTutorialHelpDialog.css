@@ -1,0 +1,221 @@
+#inContextIntroTutorialHelpDialog {
+  box-shadow: none;
+  margin: 1px 2px 3px 1px;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  max-width: 350px;
+  min-width: 200px;
+}
+
+#inContextIntroTutorialHelpDialog .dialogHeader {
+  display: none;
+}
+
+#inContextIntroTutorialHelpDialog .dialogContent {
+  position: static;
+  overflow: visible;
+  padding: 0;
+}
+
+.tutorialDialog {
+  min-height: 100px;
+  max-height: 168px;
+  min-width: 168px;
+  width: auto;
+  box-sizing: border-box;
+  padding: 18px;
+  margin-top: 10px;
+  position: relative;
+  box-shadow: 0 2px 9px RGBA(64, 47, 84, 0.7);
+  border-radius: 2px;
+  background-color: #d32d27;
+}
+
+.tutorialDialog.a-top {
+  background-color: #d32d27;
+}
+
+.tutorialDialog.a-bottom {
+  background-color: #d32d27;
+}
+
+.tutorialDialog.a-left {
+  background-color: #d32d27;
+}
+
+.tutorialDialog.a-right {
+  background-color: #d32d27;
+}
+
+.footerDiv {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+}
+
+.downloadDialog {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  z-index: 9;
+}
+
+.tutorialDialog p {
+  color: white;
+  line-height: 18px;
+}
+
+.tutorialDialog .bottomText {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.tutorialDialog .topText .lpIcon {
+  vertical-align: middle;
+  margin-left: 3px;
+}
+
+.tutorialDialog .topText {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.tutorialDialog .hideButton {
+  display: none;
+  font-size: 12px;
+  color: rgba(60, 74, 84, .5);
+}
+
+.allowHide .hideButton {
+  display: block;
+}
+
+.tutorialDialog .hideButton:hover {
+  color: rgba(60, 74, 84, 1);
+}
+
+.arrow_box.a-top {
+  margin-top: 15px !important;
+}
+.arrow_box.a-bottom {
+  margin-bottom: 15px !important;
+}
+.arrow_box.a-left {
+  margin-left: 15px !important;
+}
+.arrow_box.a-right {
+  margin-right: 15px !important;
+}
+
+.arrow_box:after, .arrow_box:before {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box.a-top:after,
+.arrow_box.a-top:before {
+  bottom: 100%;
+}
+.arrow_box.a-bottom:after,
+.arrow_box.a-bottom:before {
+  top: 100%;
+}
+.arrow_box.a-left:after,
+.arrow_box.a-left:before {
+  right: 100%;
+}
+.arrow_box.a-right:after,
+.arrow_box.a-right:before {
+  left: 100%;
+}
+
+.arrow_box.a-h-left:after,
+.arrow_box.a-h-left:before {
+  left: 25%;
+}
+.arrow_box.a-h-center:after,
+.arrow_box.a-h-center:before {
+  left: 50%;
+}
+.arrow_box.a-h-right:after,
+.arrow_box.a-h-right:before {
+  left: 75%;
+}
+.arrow_box.a-v-high:after,
+.arrow_box.a-v-high:before {
+  top: 25%;
+}
+.arrow_box.a-v-middle:after,
+.arrow_box.a-v-middle:before {
+  top: 50%;
+}
+.arrow_box.a-v-low:after,
+.arrow_box.a-v-low:before {
+  top: 75%;
+}
+
+
+.arrow_box:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 15px;
+}
+.arrow_box.a-top:after {
+  border-bottom-color: #D32D27;
+  margin-left: -15px;
+}
+.arrow_box.a-bottom:after {
+  border-top-color: #D32D27;
+  margin-left: -15px;
+}
+.arrow_box.a-left:after {
+  border-right-color: #D32D27;
+  margin-top: -15px;
+}
+.arrow_box.a-right:after {
+  border-left-color: #D32D27;
+  margin-top: -15px;
+}
+.arrow_box:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-width: 15px;
+}
+.arrow_box.a-top:before {
+  border-bottom-color: #D32D27;
+  margin-left: -15px;
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.4));
+  -webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.4));
+
+}
+.arrow_box.a-bottom:before {
+  border-top-color: #D32D27;
+  margin-left: -15px;
+  filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.4));
+  -webkit-filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.4));
+}
+.arrow_box.a-left:before {
+  border-right-color: #D32D27;
+  margin-top: -15px;
+  filter: drop-shadow(-2px 0 1px rgba(0, 0, 0, 0.2));
+  -webkit-filter: drop-shadow(-2px 0 1px rgba(0, 0, 0, 0.2));
+}
+.arrow_box.a-right:before {
+  border-left-color: #D32D27;
+  margin-top: -15px;
+  filter: drop-shadow(2px 0 1px rgba(0, 0, 0, 0.2));
+  -webkit-filter: drop-shadow(2px 0 1px rgba(0, 0, 0, 0.2));
+}
+
+.dialog .dialogContent .siteDialogButtons #submit {
+  border-radius: 17px;
+}
+
+.dialogLoading #dialogLoadingOverlay {
+  display:none;
+}
+

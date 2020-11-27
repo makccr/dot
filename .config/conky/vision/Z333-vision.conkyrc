@@ -1,0 +1,213 @@
+--[[
+#=====================================================================================
+#
+# Date    : package-date
+# Author  : http://zagortenay333.deviantart.com/art/Conky-Vision-395777503
+# Github  : https://github.com/zagortenay333/conky-Vision
+# Editor  : Erik Dubois
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#=====================================================================================
+# The conky code is not in the lua format.
+
+]]
+
+
+conky.config = {
+
+-------------------------------------
+--  Generic Settings
+-------------------------------------
+background=true,
+update_interval=1,
+double_buffer=true,
+no_buffers=true,
+imlib_cache_size=10,
+
+draw_shades=false,
+draw_outline=false,
+draw_borders=false,
+
+
+-------------------------------------
+--  Window Specifications
+-------------------------------------
+gap_x=0,
+gap_y=0,
+
+alignment="middle_middle",
+
+minimum_height=400,
+minimum_width=600,
+
+own_window=true,
+own_window_type="desktop",
+own_window_transparent=false,
+own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+
+own_window_argb_visual=true,
+own_window_argb_value=50,
+
+-------------------------------------
+--  Text Settings
+-------------------------------------
+use_xft=true,
+xftalpha=1,
+font="Droid Sans:size=10",
+text_buffer_size=256,
+override_utf8_locale=true,
+
+
+-------------------------------------
+--  Color Scheme
+-------------------------------------
+default_color='FFFFFF',
+
+color0='FFFFFF', -- clock
+color1='FFFFFF', -- date
+color2='FFFFFF', -- current temperature
+color3='FFFFFF', -- high tempratures
+color4='FFFFFF', -- low tempratures
+color5='FFFFFF', -- days
+
+
+-------------------------------------
+--  Icon Sources
+-------------------------------------
+template0='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  today
+template1='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  +1day
+template2='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  +2days
+template3='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  +3days
+template4='~/.config/conky/vision/.conky-vision-icons/#fff__32',  --  +4days
+
+
+-------------------------------------
+--  API Key
+-------------------------------------
+template6="f042f7478e95fc946e760486707df45f",
+
+
+-------------------------------------
+--  City ID
+-------------------------------------
+template7="2803138",
+
+
+-------------------------------------
+--  Temp Unit (default, metric, imperial)
+-------------------------------------
+template8="metric",
+
+
+-------------------------------------
+--  Locale (e.g. "es_ES.UTF-8")
+--  Leave empty for default
+-------------------------------------
+template9=""
+
+}
+
+
+---------------------------------------------------
+---------------------------------------------------
+
+
+conky.text = [[
+\
+\
+\
+\
+${execi 300 l=${template9}; l=${l%%_*}; curl -s "api.openweathermap.org/data/2.5/forecast/daily?APPID=${template6}&id=${template7}&cnt=5&units=${template8}&lang=$l" -o ~/.cache/forecast.json}\
+${execi 300 l=${template9}; l=${l%%_*}; curl -s "api.openweathermap.org/data/2.5/weather?APPID=${template6}&id=${template7}&cnt=5&units=${template8}&lang=$l" -o ~/.cache/weather.json}\
+\
+\
+\
+\
+${font DroidSansMono:weight=Light:size=96}${color0}\
+${alignc}${time %H:%M}\
+${font}${color}
+\
+\
+\
+\
+${font DroidSansMono:weight=Light:size=28}${color1}\
+${voffset 30}\
+${alignc}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A, %B %d"}\
+${font}${color}
+\
+\
+\
+\
+${font DroidSansMono:size=12}${color2}\
+${voffset 36}\
+${goto 60}${execi 300 jq .main.temp ~/.cache/weather.json | awk '{print int($1+0.5)}' # round num}°\
+${font}${color}\
+\
+\
+\
+\
+${font DroidSansMono:size=12}${color3}\
+${goto 164}${execi 300 jq .list[1].temp.max ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}°\
+${goto 272}${execi 300 jq .list[2].temp.max ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}°\
+${goto 378}${execi 300 jq .list[3].temp.max ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}°\
+${goto 484}${execi 300 jq .list[4].temp.max ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}°\
+${font}${color}\
+\
+\
+\
+\
+${font DroidSansMono:size=12}${color4}\
+${voffset 52}\
+${goto 218}${execi 300 jq .list[1].temp.min ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}°\
+${goto 324}${execi 300 jq .list[2].temp.min ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}°\
+${goto 430}${execi 300 jq .list[3].temp.min ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}°\
+${goto 536}${execi 300 jq .list[4].temp.min ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}°\
+${font}${color}
+\
+\
+\
+\
+${font DroidSansMono:size=14}${color5}\
+${voffset 20}\
+${goto 76}${execi 300 LANG=${template9} LC_TIME=${template9} date +%^a}\
+${goto 182}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%^a}\
+${goto 288}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2days +%^a}\
+${goto 394}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +3days +%^a}\
+${goto 500}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +4days +%^a}\
+${font}${color}
+\
+\
+\
+\
+${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/weather.json).png ~/.cache/current.png}${image ~/.cache/current.png -p 72,268 -s 32x32}\
+${execi 300 cp -f ${template1}/$(jq .list[1].weather[0].id ~/.cache/forecast.json).png ~/.cache/forecast-1.png}${image ~/.cache/forecast-1.png -p 178,268 -s 32x32}\
+${execi 300 cp -f ${template2}/$(jq .list[2].weather[0].id ~/.cache/forecast.json).png ~/.cache/forecast-2.png}${image ~/.cache/forecast-2.png -p 284,268 -s 32x32}\
+${execi 300 cp -f ${template3}/$(jq .list[3].weather[0].id ~/.cache/forecast.json).png ~/.cache/forecast-3.png}${image ~/.cache/forecast-3.png -p 390,268 -s 32x32}\
+${execi 300 cp -f ${template4}/$(jq .list[4].weather[0].id ~/.cache/forecast.json).png ~/.cache/forecast-4.png}${image ~/.cache/forecast-4.png -p 496,268 -s 32x32}\
+]]

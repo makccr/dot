@@ -1,0 +1,194 @@
+--[[
+#=====================================================================================
+#                               
+# Date    : package-date
+# Editor  : Erik Dubois - https://github.com/erikdubois/Aureola
+# Source  : Daniel Zet Google+
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+# 
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download 
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#=====================================================================================
+]]
+
+conky.config = {
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,
+	diskio_avg_samples = 10,
+	double_buffer = true,
+	if_up_strictness = 'address',
+	net_avg_samples = 2,
+	no_buffers = true,
+	temperature_unit = 'celsius',
+	text_buffer_size = 2048,
+	update_interval = 1,
+	imlib_cache_size = 0,                       --spotify cover
+
+	--Placement
+
+	alignment = 'middle_right',
+	--Arch Duoscreen
+	--gap_x = -1910,
+	gap_x = 5,
+	gap_y = 5,
+	minimum_height = 800,
+	minimum_width = 240,
+	maximum_width = 240,
+
+	--Graphical
+
+	border_inner_margin = 10, 					-- margin between border and text
+	border_outer_margin = 1, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 280,
+	default_bar_height = 10,
+	default_gauge_height = 25,
+	default_gauge_width =40,
+	default_graph_height = 40,
+	default_graph_width = 153,
+	default_shade_color = '#000000',
+	default_outline_color = '#000000',
+	draw_borders = false,						--draw borders around text
+	draw_graph_borders = true,
+	draw_shades = false,
+	draw_outline = false,
+	stippled_borders = 0,
+
+	--Textual
+	
+	extra_newline = false,
+	format_human_readable = true,
+	font = 'Sans Mono:size=9',
+	max_text_width = 0,
+	max_user_text = 16384,
+	override_utf8_locale = true,
+	short_units = true,
+	top_name_width = 21,
+	top_name_verbose = false,
+	uppercase = false,
+	use_spacer = 'none',
+	use_xft = true,
+	xftalpha = 1,
+
+	--Windows
+
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 100,			    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
+	
+
+	--Colours
+
+	default_color = '#FFFFFF',  				-- default color and border color
+	color1 = '#FFA726', 
+	color2 = '#dddddd', 
+	color3 = '#aaaaaa', 
+	color4 = '#888888',
+	color5 = '#CCCCCC', 
+	color6 = '#FFFFFF',
+
+	--Signal Colours
+	color7 = '#1F7411',  --green
+	color8 = '#FFA726',  --orange
+	color9 = '#F1544B',  --firebrick
+	
+
+	--Lua
+
+
+};
+
+
+conky.text = [[
+${goto 12}+-----------------------------------------------------------+
+${goto 15}|${goto 38}+-- ${color2}Node ${goto 155}${color4}${nodename}${font}${color}
+${goto 15}|${goto 38}+-- ${color2}Os${goto 155}${color4}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${color}
+${goto 15}|${goto 38}+-- ${color2}Version${goto 155}${color4}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+${goto 15}|${goto 38}+-- ${color2}Kernel ${goto 155}${color4}${kernel}${color}
+${goto 15}|
+${goto 12}${color1}+----Memory ${color}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- ${color2}Total${goto 155}${color4}${memmax}${color}
+${goto 15}|${goto 38}+-- ${color2}In Use${goto 155}${color4}${mem} ${color1}(${memperc}%)${color}
+${goto 15}|${goto 38}+-- ${color2}Free${goto 155}${color4}${memfree}${color}
+${goto 15}|${goto 38}+-- ${color2}Up to${goto 155}${color4}${memeasyfree}${color}
+${goto 15}|${goto 38}+-- ${color2}Swap${color}
+${goto 15}|${goto 60}+-- ${color3}Total${goto 155}${color4}${swapmax}${color}
+${goto 15}|${goto 60}+-- ${color3}Used${goto 155}${color4}${swap} - ${swapperc}%${color}
+${goto 15}|${goto 60}+-- ${color3}Free${goto 155}${color4}${swapfree}${color}
+${goto 15}|
+${goto 12}${color1}+----Status${color}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- ${color2}Cpu${goto 155}${color1}${cpu cpu0}% ${color4}- ${freq_g}GHz${color}
+${goto 15}|${goto 38}+-- ${color2}Temp${goto 155}${color1}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}${color}
+${goto 15}|${goto 38}+-- ${color2}LoadAvg${goto 155}${color4}${loadavg}${color}
+${goto 15}|${goto 38}+-- ${color2}Disk${goto 155}${color4}${fs_used_perc /}% Used${color}
+${goto 15}|${goto 38}+-- ${color2}Diskio ${goto 155}${color4}${diskio}${color}
+${goto 15}|${goto 60}+-- ${color3}Read${goto 155}${color4}${diskio_read}${color}
+${goto 15}|${goto 60}+-- ${color3}Write${goto 155}${color4}${diskio_write}${color}
+${goto 15}|
+${goto 12}${color1}+----Storage ${color}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- ${color2}Root${goto 155}${color4}${fs_free /} / ${fs_size /}
+${goto 15}|
+${goto 12}${color1}+----Processes ${color}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- ${color2}Total${goto 155}${color4}${processes}${color}
+${goto 15}|${goto 38}+-- ${color2}Running${goto 155}${color4}${running_processes}${color}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- ${color2}Cpu${color}
+${goto 15}|${goto 40}|${goto 60}+-- ${color3}${top name 1}${goto 155}${color4}${top cpu 1}${top mem 1}${color}
+${goto 15}|${goto 40}|${goto 60}+-- ${color3}${top name 2}${goto 155}${color4}${top cpu 2}${top mem 2}${color}
+${goto 15}|${goto 40}|${goto 60}+-- ${color3}${top name 3}${goto 155}${color4}${top cpu 3}${top mem 3}${color}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- ${color2}Mem${color}
+${goto 15}|${goto 60}+-- ${color3}${top_mem name 1}${goto 155}${color4}${top_mem cpu 1}${top_mem mem 1}${color}
+${goto 15}|${goto 60}+-- ${color3}${top_mem name 2}${goto 155}${color4}${top_mem cpu 2}${top_mem mem 2}${color}
+${goto 15}|${goto 60}+-- ${color3}${top_mem name 3}${goto 155}${color4}${top_mem cpu 3}${top_mem mem 3}${color}
+${goto 15}|
+${goto 12}${color1}+----Net ${color}
+${goto 15}|${goto 40}|
+#${goto 15}|${goto 38}+-- ${color2}Ip${goto 155}${addr enp0s31f6}${color}
+${goto 15}|${goto 38}+-- ${color2}Up${color}
+${goto 15}|${goto 40}|${goto 60}+-- ${color3}Speed${goto 155}${color4}${upspeedf enp0s31f6}KB${color}
+${goto 15}|${goto 40}|${goto 60}+-- ${color3}Total${goto 155}${color4}${totalup enp0s31f6}${color}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- ${color2}Down${color}
+${goto 15}|${goto 60}+-- ${color3}Speed${goto 155}${color4}${downspeedf enp0s31f6}KB${color}
+${goto 15}|${goto 60}+-- ${color3}Total${goto 155}${color4}${totaldown enp0s31f6}${color}
+${goto 15}|
+${goto 12}+-----------------------------------------------------------+
+]]

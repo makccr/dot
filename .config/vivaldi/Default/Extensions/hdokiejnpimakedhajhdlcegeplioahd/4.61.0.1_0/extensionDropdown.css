@@ -1,0 +1,1838 @@
+html {
+  height: auto;
+  width: auto;
+}
+
+body {
+  height: auto;
+  width: 350px;
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container {
+  border: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+#container.initialized {
+  visibility: visible;
+}
+
+#container .dialogInput {
+  font-size: 14px;
+}
+
+.header {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #cacaca;
+}
+
+#childViews .header {
+  border-bottom: none;
+}
+
+#backButton {
+  padding-left: 30px;
+  padding-right: 20px;
+  line-height: 49px;
+  height: 49px;
+  background-image: url("images/vault_4.0/Back.png");
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#backLabel {
+  display: inline-block;
+  float: left;
+  min-width: 70px;
+}
+
+#groupLabel {
+  padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  opacity: 0.5;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+#groupLabel .textOverflowContainer,
+#groupLabel .textTail {
+  float: right;
+}
+
+#groupLabel .textTail {
+  max-width: calc(100% - 25px);
+}
+
+#groupLabel > span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#backButton:hover {
+  background-color: #e2e2e2;
+}
+
+#searchContainer {
+  padding: 20px;
+}
+
+#searchInput {
+  font-style: italic;
+}
+
+.extensionMenuItem {
+  line-height: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 20px;
+  text-decoration: none;
+  color: #000;
+  overflow-y: visible;
+}
+
+.extensionMenuItem.none {
+  cursor: default;
+}
+
+.extensionMenuItem.none:hover {
+  background-color: transparent;
+}
+
+.iconList .extensionMenuItem {
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  padding-left: 36px;
+}
+
+.showIcons .extensionMenuItem {
+  padding-left: 50px;
+}
+
+.extensionMenuItem.hover {
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+.extensionMenuItem.divider {
+  border-top: 1px solid #cacaca;
+}
+
+.extensionMenuItem.topLevelMatchesShadow {
+  box-shadow: 0 -1px 1px -1px darkgrey;
+  -moz-box-shadow: 0 -1px 1px -1px darkgrey;
+  -webkit-box-shadw: 0 -1px 1px -1px darkgrey;
+}
+
+.showIcons #vaultMenuItem {
+  background-image: url("images/vault_4.0/extension/Vault.png");
+}
+
+.showIcons #sitesMenuItem {
+  background-image: url("images/vault_4.0/extension/Sites.png");
+}
+
+.showIcons #formFillsMenuItem {
+  background-image: url("images/vault_4.0/extension/FormFill.png");
+}
+
+.showIcons #generateMenuItem {
+  background-image: url("images/vault_4.0/extension/Generate.png");
+}
+
+.showIcons #securityDashboardMenuItem {
+  background-image: url("images/vault_4.0/extension/securityDashboard.png");
+}
+
+.showIcons #notesMenuItem {
+  background-image: url("images/vault_4.0/extension/Secure_Note.png");
+}
+
+.showIcons #logoutMenuItem {
+  background-image: url("images/vault_4.0/extension/Log_Out.png");
+}
+
+#specialOfferMenuItem {
+  display: none;
+  background-image: url("images/vault_4.0/extension/Gift.png");
+}
+
+.feature-omaria #specialOfferMenuItem {
+  background-image: url("images/vault_4.0/extension/Gift@2x.png");
+  background-size: 15px;
+  background-position: 24px 12px;
+}
+
+#main {
+  display: none;
+  overflow: hidden;
+  /* Chrome's max popup height is 600px so this represents the max size without overflowing the popup (#container border: 2px, #searchContainer 71px) */
+  max-height: 527px;
+  position: relative;
+}
+
+.main #main {
+  display: block;
+}
+
+.main.quickSearch #main {
+  display: none;
+}
+
+.matchingSiteCounter {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  line-height: 20px;
+  height: 20px;
+  font-size: 13px;
+  margin: auto;
+  border-radius: 4px;
+  background-color: #d22d27;
+  color: #fff;
+  padding: 0 2px 0 2px;
+  margin-left: -2px;
+  min-width: 15px;
+  text-align: center;
+}
+
+.loading #items,
+.loading #allItems,
+.loading #searchResults,
+.loading #recentSites,
+.loading #matchingSites {
+  background-image: url("images/vault_4.0/Loading.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/*
+* Only show these under certain conditions
+*/
+
+#debugconsole,
+#applicationsMenuItem,
+#wifiExportMenuItem,
+#matchingSitesMenuItem {
+  display: none;
+}
+
+/*
+******* Groups *******
+*/
+
+.extensionMenuItem.group {
+  padding-right: 30px;
+}
+
+.more {
+  width: 6px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  background: url("images/vault_4.0/extension/More.png") center center no-repeat;
+}
+
+.badge {
+  background: #00a878;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.newBadge {
+  width: 40px;
+  height: 20px;
+  margin: auto auto auto 8px;
+  border-radius: 1000px;
+}
+
+/*
+******* Items *******
+*/
+
+.extensionMenuItem.item {
+  line-height: normal;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+}
+
+.itemIcon,
+.extensionMenuItem.item > .itemInfoText,
+.extensionMenuItem.hover .moreItem {
+  vertical-align: middle;
+  display: table-cell !important;
+}
+
+.itemInfoText p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.extensionMenuItem.note .itemInfoText,
+.extensionMenuItem.formFill .itemInfoText {
+  padding-left: 10px;
+}
+
+.extensionMenuItem.group,
+.extensionMenuItem.item,
+.extensionMenuItem.addCustomItem {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #dcdcdc;
+}
+
+#main .extensionMenuItem.item {
+  border-width: 1px 0 0 0;
+}
+
+.lp-fill {
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTNweCIgaGVpZ2h0PSIxM3B4IiB2aWV3Qm94PSIwIDAgMTMgMTMiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjIgKDcyNjQzKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5pY29uLWxwLWxvZ29tYXJrPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkV4dC1JdGVtLS0tT3B0aW9uLTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00OTEuMDAwMDAwLCAtNzE1LjAwMDAwMCkiIGZpbGw9IiNBQUIxQjUiPgogICAgICAgICAgICA8cGF0aCBkPSJNNDkyLDcxNSBMNTAzLDcxNSBDNTAzLjU1MjI4NSw3MTUgNTA0LDcxNS40NDc3MTUgNTA0LDcxNiBMNTA0LDcyNyBDNTA0LDcyNy41NTIyODUgNTAzLjU1MjI4NSw3MjggNTAzLDcyOCBMNDkyLDcyOCBDNDkxLjQ0NzcxNSw3MjggNDkxLDcyNy41NTIyODUgNDkxLDcyNyBMNDkxLDcxNiBDNDkxLDcxNS40NDc3MTUgNDkxLjQ0NzcxNSw3MTUgNDkyLDcxNSBaIE00OTMsNzIyLjUgQzQ5My41NTIyODUsNzIyLjUgNDk0LDcyMi4wNTIyODUgNDk0LDcyMS41IEM0OTQsNzIwLjk0NzcxNSA0OTMuNTUyMjg1LDcyMC41IDQ5Myw3MjAuNSBDNDkyLjQ0NzcxNSw3MjAuNSA0OTIsNzIwLjk0NzcxNSA0OTIsNzIxLjUgQzQ5Miw3MjIuMDUyMjg1IDQ5Mi40NDc3MTUsNzIyLjUgNDkzLDcyMi41IFogTTQ5Niw3MjIuNSBDNDk2LjU1MjI4NSw3MjIuNSA0OTcsNzIyLjA1MjI4NSA0OTcsNzIxLjUgQzQ5Nyw3MjAuOTQ3NzE1IDQ5Ni41NTIyODUsNzIwLjUgNDk2LDcyMC41IEM0OTUuNDQ3NzE1LDcyMC41IDQ5NSw3MjAuOTQ3NzE1IDQ5NSw3MjEuNSBDNDk1LDcyMi4wNTIyODUgNDk1LjQ0NzcxNSw3MjIuNSA0OTYsNzIyLjUgWiBNNDk5LDcyMi41IEM0OTkuNTUyMjg1LDcyMi41IDUwMCw3MjIuMDUyMjg1IDUwMCw3MjEuNSBDNTAwLDcyMC45NDc3MTUgNDk5LjU1MjI4NSw3MjAuNSA0OTksNzIwLjUgQzQ5OC40NDc3MTUsNzIwLjUgNDk4LDcyMC45NDc3MTUgNDk4LDcyMS41IEM0OTgsNzIyLjA1MjI4NSA0OTguNDQ3NzE1LDcyMi41IDQ5OSw3MjIuNSBaIE01MDIsNzE3LjUgQzUwMS40NDc3MTUsNzE3LjUgNTAxLDcxNy45NDc3MTUgNTAxLDcxOC41IEw1MDEsNzI0LjUgQzUwMSw3MjUuMDUyMjg1IDUwMS40NDc3MTUsNzI1LjUgNTAyLDcyNS41IEM1MDIuNTUyMjg1LDcyNS41IDUwMyw3MjUuMDUyMjg1IDUwMyw3MjQuNSBMNTAzLDcxOC41IEM1MDMsNzE3Ljk0NzcxNSA1MDIuNTUyMjg1LDcxNy41IDUwMiw3MTcuNSBaIiBpZD0iaWNvbi1scC1sb2dvbWFyayI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
+}
+
+.circleHover + span {
+  filter: brightness(2);
+}
+
+.extensionMenuItem.group.last,
+.extensionMenuItem.item.last {
+  margin-bottom: -1px;
+}
+
+.extensionMenuItem.item .bigIcon {
+  height: 50%;
+}
+
+.extensionMenuItem .squareIcon {
+  height: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+}
+
+.extensionMenuItem.item .bigIcon.fa {
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.extensionMenuItem.item img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.itemIcon {
+  background-color: #fff;
+  height: 100%;
+  vertical-align: top;
+  width: 100px;
+  position: relative;
+}
+
+.itemIconOverlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.extensionMenuItem.hover .itemIconOverlay {
+  display: block;
+}
+
+.ziggyOverride.hover {
+  background-color: #f7f9fa !important;
+}
+
+.moreItem {
+  width: 40px;
+  display: none !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.moreItem-override:hover {
+  background-color: transparent !important;
+}
+
+.background {
+  background-image: url("images/vault_4.0/Edit.png");
+}
+
+.backgroundCircle {
+  padding-right: 25px;
+}
+
+.fontAwesomeIcon {
+  color: #aab1b5;
+  line-height: 0px !important;
+  font-size: 15px !important;
+}
+
+.circle.empty {
+  opacity: 0.6;
+}
+
+.circle.empty.circleHover .fontAwesomeIcon {
+  color: #aab1b5;
+}
+
+.circle {
+  color: #e7e8ea;
+  line-height: 0px !important;
+  width: 102% !important;
+  bottom: 30px;
+}
+
+.circleHover {
+  color: #d32d27;
+  font-size: 32px !important;
+}
+
+.circleHover .fontAwesomeIcon {
+  color: white;
+}
+
+.circleHover .dropDownIcon {
+  color: white;
+}
+
+.circleHover .dropDownCircle {
+  color: #d32d27;
+  font-size: 14px !important;
+}
+
+.dropDownCircle {
+  font-size: 0.5em !important;
+  margin-left: 20%;
+  margin-top: 15%;
+  bottom: -10px;
+}
+
+.dropDownIcon {
+  font-size: 0.9em !important;
+  margin-top: 1px;
+}
+
+.moreItem.copyUsername {
+  background-image: url("images/vault_4.0/Copy_Username.png");
+}
+
+.moreItem.copyPassword {
+  background-image: url("images/vault_4.0/Copy_Password.png");
+}
+
+.moreItem:hover {
+  background-color: #e2e2e2;
+}
+
+/*
+******* Child Views *******
+*/
+
+#childViews {
+  display: block;
+}
+
+.main #childViews {
+  display: none;
+}
+
+#searchContainer {
+  display: none;
+}
+
+.main #searchContainer,
+.search #searchContainer {
+  display: block;
+}
+
+.search .header {
+  display: none;
+}
+
+.childView {
+  display: none;
+  position: absolute;
+  top: 51px;
+  left: 1px;
+  right: 1px;
+  bottom: 50px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.quickSearch .childView {
+  position: static;
+  max-height: 527px;
+}
+
+.allItems #allItems,
+.omariaItems #items,
+.addOmariaItems #addOmariaItems,
+.addCustomItems #addCustomItems,
+.sites #items,
+.notes #items,
+.formFills #items,
+.applications #items,
+.favoriteSites #favoriteSites {
+  display: block;
+}
+
+.omariaItems #items,
+#addCustomItems,
+#addOmariaItems,
+#allItems {
+  bottom: 0;
+}
+
+#extensionDropdownGeneratePassword {
+  bottom: 0;
+}
+
+.extensionDropdownGeneratePassword #extensionDropdownGeneratePassword {
+  display: block;
+  box-shadow: none;
+}
+
+#siteFeedback {
+  bottom: 0;
+}
+
+.siteFeedback #siteFeedback {
+  display: block;
+  box-shadow: none;
+}
+
+.siteFeedback #innerWrapper {
+  min-height: 410px;
+}
+
+#chooseProfileCreditCard {
+  bottom: 0;
+}
+.extensionDropdownGeneratePassword #innerWrapper {
+  min-height: 450px;
+}
+
+.omariaItems .innerWrapper {
+  min-height: 410px;
+}
+
+.expirationSet.main #innerWrapper,
+.expirationSet.options #innerWrapper {
+  min-height: 420px;
+}
+
+.noFavorites.expirationSet.options #innerWrapper {
+  min-height: 375px;
+}
+
+.admin.options #innerWrapper {
+  min-height: 410px;
+}
+
+.noFavorites.admin.options #innerWrapper {
+  min-height: 365px;
+}
+
+.expirationSet #innerWrapper {
+  min-height: 450px;
+}
+
+.panelIsActive #innerWrapper {
+  min-height: 410px;
+}
+
+.panelIsActive #displayGenerateContainer {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.panelIsActive #generateAndFillView {
+  width: 320px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.chooseProfileCreditCard #chooseProfileCreditCard {
+  display: block;
+}
+
+.tools #tools {
+  display: block;
+}
+
+.options #options {
+  display: block;
+}
+
+.omarAdvancedOptions #omarAdvancedOptions {
+  display: block;
+}
+
+.advanced #advanced {
+  display: block;
+}
+
+.search #mainMenu {
+  display: none;
+}
+
+#searchResults {
+  bottom: 0;
+}
+
+.search #searchResults {
+  top: 73px;
+  display: block;
+}
+
+.expirationSet #searchResults {
+  top: 136px;
+}
+
+.import #import {
+  display: block;
+}
+
+.export #export {
+  display: block;
+}
+
+.print #print {
+  display: block;
+}
+
+.matchingSites #matchingSites {
+  display: block;
+}
+
+.recentSites #recentSites {
+  display: block;
+}
+
+.search #searchResults,
+.searchItem #searchResults {
+  display: block;
+}
+
+.identities #identities {
+  display: block;
+}
+
+/*
+******* Footers *******
+*/
+
+#itemsFooter {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  bottom: 0;
+}
+
+.footer {
+  display: none;
+  border-top: 1px solid #cacaca;
+  height: 49px;
+  line-height: 49px;
+  padding-left: 20px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+
+.footer ul {
+  margin-left: -20px;
+}
+
+.footer li {
+  border-bottom: 1px solid #cacaca;
+  padding-left: 20px;
+}
+
+.footer li:hover {
+  background-color: #e2e2e2;
+}
+
+.footer li:last-child {
+  border-bottom: none;
+}
+
+.sites #items {
+  bottom: 100px;
+}
+
+#siteFooter {
+  height: 99px;
+}
+
+.sites #siteFooter {
+  display: block;
+}
+
+#formFillFooter {
+  height: 199px;
+}
+
+.formFills #formFillFooter {
+  display: block;
+}
+
+.formFills #items {
+  bottom: 200px;
+}
+
+.notes #addNote {
+  display: block;
+}
+
+.recentSites #clearMostRecent {
+  display: block;
+}
+
+/*
+******* Empty Views *******
+*/
+
+.emptyView {
+  height: 290px;
+  max-height: 80%;
+  text-align: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.omariaItems .emptyView {
+  margin-top: 25px;
+}
+
+.emptyViewIcon {
+  height: 80%;
+}
+
+.omariaItems .emptyViewIcon {
+  height: 130px;
+}
+
+.omariaItems .emptyViewText {
+  font-size: 13px;
+  color: #646d73;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.emptyViewText {
+  font-size: 22px;
+  color: #d32d27;
+}
+
+.omariaItems .emptyView input.addItem {
+  border: 1px solid #e7e8ea;
+  border-radius: 50px;
+  box-shadow: 0 1px 1px rgba(59, 74, 84, 0.1);
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: -0.3px;
+  height: 36px;
+  padding: 7px 40px 9px 40px;
+  outline: 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  webkit-transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/*
+******* Policy Specific Layout *******
+*
+* Any policy listed here defines the behaviour
+* when it is disabled.
+*
+*/
+
+.no-feature-import #importMenuItemMain {
+  display: none;
+}
+
+.feature-noexport #exportMenuItemMain {
+  display: none;
+}
+
+.no-feature-show_notes #notesMenuItem {
+  display: none;
+}
+
+.no-feature-show_formfills #formFillsMenuItem {
+  display: none;
+}
+
+.feature-hideidentities #identitiesMenuItem {
+  display: none;
+}
+
+.emptyPlaceholder {
+  width: auto;
+  height: auto;
+  min-height: 155px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-style: italic;
+  line-height: 135px;
+  font-weight: 100;
+}
+
+.extensionSearchPlaceholder {
+  background-image: url("images/vault_4.0/extension/Empty_Search.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(188, 198, 206);
+  font-size: 24px;
+}
+
+.matchingSitesTopLevelContainer {
+  max-height: 105px;
+  overflow: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.matchingSitesTopLevelContainer.hidden {
+  display: none;
+}
+
+#allMatchingSitesMenuItem.hidden {
+  display: none;
+}
+
+.feature-omaria .nomaria {
+  display: none !important;
+}
+
+.no-feature-omaria .omaria {
+  display: none;
+}
+
+.menuIcon {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-width: 35px;
+  font-size: 20px !important;
+  line-height: 40px !important;
+  text-align: center;
+}
+
+.matchingNote .itemInfoText {
+  padding-left: 5px;
+}
+
+/* Omari IA Feature-Specific Styling */
+
+.omarSpacer {
+  background-color: #f7f9fa;
+  height: 12px;
+  border-top: 1px solid #e7e8ea;
+  border-bottom: 1px solid #e7e8ea;
+}
+
+.omarSpacer:last-child {
+  height: 1px;
+  border-bottom: none;
+}
+
+.feature-omaria #container {
+  border: none;
+}
+
+.feature-omaria #main {
+  /* Chrome's max popup height is 600px so this represents the max size without overflowing the popup (#container border: 2px, #searchContainer 71px) */
+  max-height: 543px;
+}
+
+.feature-omaria #searchContainer {
+  padding: 12px 18px;
+}
+
+.feature-omaria .body {
+  color: #22303b;
+}
+
+.feature-omaria .header {
+  background-color: #f7f9fa;
+  border-bottom: 1px solid #e7e8ea;
+}
+
+.feature-omaria .childView {
+  background-color: #f7f9fa;
+  bottom: 0;
+}
+
+.feature-omaria #backButton {
+  border-bottom: 1px solid #e7e8ea;
+}
+
+.feature-omaria #backButton:hover {
+  background-color: #e7e8ea;
+}
+
+.feature-omaria .extensionMenuItem {
+  line-height: 44px;
+  height: 44px;
+  color: #22303b;
+  background-color: white;
+}
+
+.feature-omaria .matchingSitesTopLevelContainer {
+  max-height: 140px;
+}
+
+body:not(.noFavorites).matchingSitesOverTwo .matchingSitesTopLevelContainer {
+  max-height: 99px;
+}
+
+.feature-omaria #main .extensionMenuItem.matchingSite {
+  border-width: 0 0 1px 0;
+}
+
+.feature-omaria #main .extensionMenuItem.matchingSite:last-child {
+  border: none;
+}
+
+.feature-omaria .extensionMenuItem.hover {
+  background-color: #f7f9fa;
+}
+
+.feature-omaria .circle {
+  transition: 200ms all;
+}
+
+.feature-omaria .extensionMenuItem.divider {
+  border-top: 1px solid #e7e8ea;
+}
+
+.feature-omaria .extensionMenuItem.item {
+  height: 61px;
+}
+
+.feature-omaria .extensionMenuItem.item {
+  line-height: normal;
+}
+
+.feature-omaria .matchingNote .itemInfoText,
+.feature-omaria .note .itemInfoText,
+.feature-omaria .formFill .itemInfoText {
+  padding-left: 0;
+}
+
+.feature-omaria .itemIcon {
+  background-color: transparent;
+  width: 61px;
+}
+
+.feature-omaria .itemIconOverlay {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.feature-omaria .circle {
+  transition: 200ms all;
+}
+
+.feature-omaria .footer {
+  border-top: 1px solid #e7e8ea;
+  background-color: #f7f9fa;
+}
+
+.feature-omaria .footer li {
+  border-bottom: 1px solid #e7e8ea;
+}
+
+.feature-omaria .footer li:hover {
+  background-color: #e7e8ea;
+}
+
+.omariaMenuItem .menuIcon {
+  position: static;
+  width: 36px;
+  margin-right: 18px;
+  margin-left: -12px;
+  float: left;
+  text-align: center;
+  font-size: 22px !important;
+  line-height: 44px !important;
+  text-align: center;
+  color: #a1a9ad;
+}
+
+.omariaMenuItem .name {
+  float: left;
+}
+
+.feature-omaria .noteFormFillIcon {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 2px;
+}
+
+.contextOptionsDropdown {
+  background: white;
+  position: absolute;
+  border-color: white;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 0 7px 0 rgba(60, 74, 84, 0.3);
+  text-align: left;
+  line-height: 19.5px;
+  right: 0;
+  top: 20px;
+  cursor: pointer;
+}
+
+.contextOptionsDropdownElement {
+  display: block;
+  height: 20px;
+  color: #646d73 !important;
+  font-size: 13px !important;
+  color: #646d73;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  padding-top: 10px;
+  padding: 12px 36px;
+}
+
+.contextOptionsDropdownElement.hover {
+  width: inherit;
+  background: rgba(100, 109, 115, 0.12);
+}
+
+.topDropwdownElement {
+  padding-top: 20px;
+}
+
+.displayblock {
+  display: block !important;
+}
+
+.feature-omaria .extensionMenuItem .squareIcon {
+  height: auto;
+  max-height: 31px;
+  width: 31px;
+}
+
+.feature-omaria #searchInput {
+  font-style: normal;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-left: 42px;
+  background-position: 6px center;
+  background-size: 15px;
+}
+
+.feature-omaria #searchInput:focus {
+  outline: none;
+  border-bottom: #a1a9ad;
+}
+
+.feature-omaria #searchInput::placeholder {
+  color: #a1a9ad;
+  font-weight: 300;
+}
+
+.feature-omaria .searchCloseButton.inputDialog {
+  width: 26px;
+  background-size: 12px;
+  opacity: 0.7;
+}
+
+.feature-omaria .searchCloseButton.inputDialog:hover {
+  background-color: transparent;
+  opacity: 1;
+}
+
+.feature-omaria #searchResults {
+  top: 61px;
+}
+
+.feature-omaria.expirationSet #searchResults {
+  top: 120px;
+}
+
+.search #searchResults.partner-logo {
+  top: 119px;
+}
+
+.feature-omaria #searchResults.partner-logo {
+  top: 105px;
+}
+
+.feature-omaria .iconList .extensionMenuItem {
+  padding-left: 60px;
+}
+
+.feature-omaria .iconList .extensionMenuItem.matchingSite {
+  padding-left: 0;
+}
+
+.feature-omaria .extensionMenuItem {
+  color: rgb(23, 33, 40);
+  background-size: 21px;
+  background-position: 20px 12px;
+}
+
+.feature-omaria .more {
+  background-image: url("images/dropdownIconset/chevron.png");
+  background-size: 21px;
+  background-repeat: no-repeat;
+  width: 20px;
+  right: 12px;
+  background-position: 0 12px;
+}
+
+.feature-omaria #vaultMenuItem {
+  background-image: url("images/dropdownIconset/vault.png");
+}
+
+.feature-omaria .premiumIncentiveBadge {
+  width: 120px;
+  height: 20px;
+  border-radius: 4px;
+  right: 12px;
+  margin: -35px auto auto 150px;
+}
+.feature-omaria .premiumIncentiveBadge .premiumIncentiveBadgeText {
+  padding-left: 5px;
+}
+.feature-omaria .premiumIncentiveBadge .premiumIncentiveImage {
+  width: 15px;
+  height: 15px;
+}
+
+.feature-omaria #favoriteSitesMenuItem {
+  background-image: url("images/dropdownIconset/favorites.png");
+}
+
+.feature-omaria #recentSitesMenuItem {
+  background-image: url("images/dropdownIconset/recentlyUsed.png");
+}
+
+.feature-omaria #allItemsMenuItem {
+  background-image: url("images/dropdownIconset/allItems.png");
+}
+
+.feature-omaria #addItem {
+  background-image: url("images/dropdownIconset/add.png");
+}
+
+.feature-omaria #generateMenuItem {
+  background-image: url("images/dropdownIconset/generatePassword.png");
+}
+
+.feature-omaria #securityDashboardMenuItem {
+  background-image: url("images/dropdownIconset/securityDashboard.png");
+}
+
+.feature-omaria #optionsMenuItem,
+.feature-omaria #optionsMenuItemEnt {
+  background-image: url("images/dropdownIconset/accountOptions.png");
+}
+
+.feature-omaria #adminConsoleMenuItem {
+  background-image: url("images/dropdownIconset/adminConsole.png");
+}
+
+.feature-omaria #logoutMenuItem {
+  background-image: url("images/dropdownIconset/logout.png");
+  border: 0;
+}
+
+.subMenuOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.logo-container {
+  display: none;
+  height: 45px;
+  text-align: center;
+  background: #fff;
+}
+
+.logo-lp {
+  display: inline-block;
+}
+
+.logo-partner-vr {
+  height: 32px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 11px 0 11px;
+  display: inline-block;
+  top: 7px;
+  position: relative;
+}
+
+.logo-partner {
+  display: inline-block;
+}
+.logo-partner:after {
+  clear: both;
+}
+
+.logo-webroot {
+  margin-top: 10px;
+}
+
+.logo-webroot-white {
+  top: 9px;
+}
+
+/** SAFARI MESSAGING TO BE REMOVED ONCE APP EXTENSION IS LIVE */
+
+#safariMessageContainer {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+#extensionDropdown.feature-safariLegacyMessaging {
+  width: 700px !important;
+}
+
+#safariMessageContainer #safariMessageButton {
+  width: 120px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #d32d27;
+  color: white;
+  margin: 25px auto 0;
+  text-transform: uppercase;
+  display: block;
+}
+
+.feature-safariLegacyMessaging #container {
+  float: right !important;
+  width: 350px !important;
+}
+
+.feature-safariLegacyMessaging .childView {
+  float: right !important;
+  width: 350px !important;
+  left: unset !important;
+}
+
+.feature-safariLegacyMessaging #itemsFooter {
+  float: right !important;
+  width: 350px !important;
+  left: unset !important;
+}
+
+.feature-safariLegacyMessaging #extensionDropdownGeneratePassword {
+  float: right !important;
+  width: 350px !important;
+  left: unset !important;
+}
+
+.feature-safariLegacyMessaging #safariMessageImg img {
+  width: 150px;
+  margin: auto;
+  display: block;
+  padding-bottom: 7px;
+}
+
+#extensionDropdown #safariMessageButtonContainer {
+  height: 60px;
+}
+
+.feature-safariLegacyMessaging #safariMessageContainer {
+  visibility: visible !important;
+  width: 350px !important;
+  height: 360px !important;
+  padding-top: 7px;
+}
+
+.feature-safariLegacyMessaging #safariMessageHeader {
+  height: 48px;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b4a54;
+  margin: auto auto -7px auto;
+}
+
+.feature-safariLegacyMessaging #safariMessageBody {
+  height: 88px;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b4a54;
+  margin: auto;
+  padding: 0 25px;
+}
+
+.notificationContainer {
+  display: none;
+  align-items: center;
+  padding: 6px 18px;
+  min-height: 44px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.feature-omaria.partner.expirationSet .notificationContainer {
+  border-top: 1px solid #e7e8ea;
+}
+
+.expirationSet .notificationContainer {
+  display: flex;
+}
+
+.notificationContainer button {
+  padding: 11px 20px;
+  background: #d22d27;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.notificationContainer p {
+  font-weight: 600;
+  color: #d22d27;
+  font-size: 13px;
+  display: inline;
+  margin-right: 4px;
+}
+
+.notificationContainer span,
+.notificationContainer a,
+.panelContainer a {
+  font-size: 12px;
+  color: #3598db;
+  cursor: pointer;
+}
+
+.panelContainer a {
+  font-size: 16px;
+}
+
+.searchInputContainer {
+  background: #f6f7f8;
+  border-radius: 8px;
+}
+
+.panelContainer {
+  vertical-align: top;
+  padding: 10px 24px 0 24px;
+  box-sizing: border-box;
+  display: none;
+  position: relative;
+}
+
+.panelIsActive.licenseExpired .panelContainer {
+  width: 454px;
+  min-height: 370px;
+  min-width: 454px;
+}
+
+/*Language Downgrade override*/
+
+.panelIsActive.languageUpdateInfo .panelContainer {
+  display: none;
+  min-width: 350px;
+  width: 350px;
+  min-height: 370px;
+  height: auto !important;
+  padding: 0;
+}
+
+.panelIsActive.billingAddressNotification .panelContainer {
+  display: none;
+  min-width: 350px;
+  width: 350px;
+  min-height: 370px;
+  height: auto !important;
+  padding: 0;
+}
+
+/*end of override*/
+
+.panelContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 800px;
+  width: 1px;
+  background-color: #e7e8ea;
+}
+
+.panelContainer * {
+  box-sizing: border-box;
+}
+
+.panelContainer button {
+  min-width: auto;
+  padding: 0 40px;
+  border-radius: 5px;
+  line-height: 50px;
+  background: #d32d27;
+  cursor: pointer;
+  font-size: 15px;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.panelContainer button.renew-btn {
+  width: unset;
+  border-radius: 100px;
+  padding: 0 60px;
+}
+
+.panelContainer h1.expired-flow {
+  padding-top: 24px;
+}
+
+.panelContainer div.buttons.expired-flow {
+  padding-bottom: 24px;
+}
+
+.panelContainer button.no-thanks-btn {
+  background: #fff;
+  color: #646d73;
+  box-shadow: none;
+  line-height: 30px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.panelContainer h1 {
+  color: black;
+  font-size: 18px;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.panelContainer p {
+  margin: 0 auto 40px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.panelContainer p span {
+  margin-right: 6px;
+}
+
+.panelContainer .features {
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.panelContainer .features .feature {
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  min-width: 132px;
+  padding-top: 90px;
+  position: relative;
+  word-break: break-word;
+}
+.panelContainer .features .feature:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-image: url("images/upgradetier.png");
+  background-position: 0 0;
+  background-size: 240px 320px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -40px;
+}
+
+.panelContainer.premiumExpired .features .feature.one:after {
+  background-position: 0 0;
+}
+
+.panelContainer.premiumExpired .features .feature.two:after {
+  background-position: -80px 0;
+}
+
+.panelContainer.premiumExpired .features .feature.three:after {
+  background-position: -160px 0;
+}
+
+.panelContainer.familiesExpired .features .feature.one:after {
+  background-position: 0 -80px;
+}
+
+.panelContainer.familiesExpired .features .feature.two:after {
+  background-position: -80px -80px;
+}
+
+.panelContainer.familiesExpired .features .feature.three:after {
+  background-position: -160px -80px;
+}
+
+.panelContainer.teamsExpired .features .feature.one:after {
+  background-position: -80px -80px;
+}
+
+.panelContainer.teamsExpired .features .feature.two:after {
+  background-position: -80px -160px;
+}
+
+.panelContainer.teamsExpired .features .feature.three:after {
+  background-position: -80px 0;
+}
+
+.panelContainer.enterpriseExpired .features .feature.one:after {
+  background-image: url("images/shared-folder-icon.png");
+  background-repeat: no-repeat;
+  background-size: 78px;
+}
+
+.panelContainer.enterpriseExpired .features .feature.two:after {
+  background-image: url("images/single-sign-on-icon.png");
+  background-repeat: no-repeat;
+  background-size: 78px;
+}
+
+.panelContainer.enterpriseExpired .features .feature.three:after {
+  background-image: url("images/admin-console-logo.png");
+  background-repeat: no-repeat;
+  background-size: 78px;
+}
+
+.panelContainer .buttons {
+  padding: 0;
+  text-align: center;
+}
+
+.expirationSet .panelContainer {
+  display: none;
+}
+
+.panelIsActive .panelContainer {
+  display: inline-block;
+}
+
+/*Overrides for Trial Expiration*/
+
+body.panelIsActive {
+  width: auto;
+}
+
+.panelIsActive .childView {
+  position: static;
+  max-width: 336px;
+}
+
+.no-feature-omaria.panelIsActive #container {
+  border: 0;
+}
+
+.no-feature-omaria.panelIsActive .childView {
+  position: relative;
+}
+
+.no-feature-omaria.panelIsActive .childView .emptyView {
+  position: relative;
+  min-height: 380px;
+}
+
+.no-feature-omaria.panelIsActive .childView .emptyView .emptyViewIcon {
+  height: 40%;
+  top: 30px;
+  position: relative;
+}
+
+.no-feature-omaria.panelIsActive #itemsFooter {
+  left: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 16;
+}
+
+.expirationSet .childViews {
+  border-top: 1px solid #e7e8ea;
+}
+
+.expirationSet .childView {
+  top: 119px;
+}
+
+.expirationSet #expirationTextContainer {
+  flex-direction: column;
+  display: flex;
+}
+
+.panelIsActive #betterGeneratePasswordDialog {
+  position: static;
+}
+
+.no-feature-omaria.panelIsActive.extensionDropdownGeneratePassword
+  #betterGeneratePasswordDialog
+  .dialogContent {
+  position: static;
+}
+
+.no-feature-omaria.panelIsActive #extensionDropdownGeneratePassword {
+  top: 0;
+}
+
+.no-feature-omaria.panelIsActive #items,
+.no-feature-omaria.panelIsActive #tools {
+  position: static;
+  min-height: 320px;
+}
+
+.feature-omaria.panelIsActive #betterGeneratePasswordDialog .dialogContent {
+  position: static;
+}
+
+.panelIsActive .innerWrapper {
+  display: inline-block;
+  min-width: 336px;
+  position: relative;
+  margin: 0 -4px;
+}
+
+.innerWrapper {
+  max-width: 350px;
+}
+
+.feature-omaria.panelIsActive #container {
+  display: flex;
+}
+
+.feature-omaria.panelIsActive .innerWrapper {
+  margin: 0;
+}
+
+.feature-omaria.panelIsActive.allItems .innerWrapper,
+.feature-omaria.panelIsActive.addOmariaItems .innerWrapper,
+.feature-omaria.panelIsActive.favoriteSites .innerWrapper,
+.feature-omaria.panelIsActive.items .innerWrapper,
+.feature-omaria.panelIsActive.matchingSites .innerWrapper,
+.feature-omaria.panelIsActive.search .innerWrapper,
+.feature-omaria.panelIsActive.recentSites .innerWrapper,
+.feature-omaria.panelIsActive.identities .innerWrapper {
+  height: 430px;
+  overflow: auto;
+}
+
+.feature-omaria.expirationSet.matchingSitesIsVisible.partner
+  #main
+  .extensionMenuItem,
+.feature-omaria.panelIsActive.matchingSitesIsVisible.partner
+  #main
+  .extensionMenuItem,
+.feature-omaria.expirationSet.matchingSitesIsVisible.partner.admin
+  #main
+  .extensionMenuItem,
+.feature-omaria.panelIsActive.matchingSitesIsVisible.partner.admin
+  #main
+  .extensionMenuItem,
+.feature-omaria.matchingSitesIsVisible.partner.admin #main .extensionMenuItem {
+  line-height: 38px;
+  height: 38px;
+  background-position: 20px 8px;
+}
+
+.feature-omaria.matchingSitesIsVisible.expirationSet.admin
+  #main
+  .extensionMenuItem {
+  line-height: 40px;
+  height: 40px;
+  background-position: 20px 10px;
+}
+
+.feature-omaria.expirationSet.matchingSitesIsVisible.partner
+  #main
+  #topLevelContainer
+  .extensionMenuItem,
+.feature-omaria.panelIsActive.matchingSitesIsVisible.partner
+  #main
+  #topLevelContainer
+  .extensionMenuItem,
+.feature-omaria.expirationSet.matchingSitesIsVisible.partner.admin
+  #main
+  #topLevelContainer
+  .extensionMenuItem,
+.feature-omaria.panelIsActive.matchingSitesIsVisible.partner.admin
+  #main
+  #topLevelContainer
+  .extensionMenuItem,
+.feature-omaria.matchingSitesIsVisible.partner.admin
+  #main
+  #topLevelContainer
+  .extensionMenuItem,
+.feature-omaria.matchingSitesIsVisible.expirationSet.admin
+  #main
+  #topLevelContainer
+  .extensionMenuItem {
+  height: 60px;
+  line-height: normal;
+}
+
+.feature-omaria.expirationSet.matchingSitesIsVisible.partner #searchContainer,
+.feature-omaria.expirationSet.matchingSitesIsVisible.partner.admin
+  #searchContainer {
+  padding: 5px 18px;
+}
+
+.feature-omaria.expirationSet.matchingSitesIsVisible.partner .childView,
+.feature-omaria.matchingSitesIsVisible.partner .childView,
+.feature-omaria.partner .childView {
+  top: 95px;
+}
+
+.feature-omaria.partner.expirationSet .notificationContainer {
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  z-index: 99;
+}
+
+.feature-omaria.partner.expirationSet #main,
+.feature-omaria.partner.expirationSet .childView {
+  padding-bottom: 56px;
+}
+
+.feature-omaria.partner.expirationSet .childView {
+  top: 95px;
+}
+
+.newFeatureTag {
+  width: 27px;
+  height: 14px;
+  margin-left: 5px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("images/vault_4.0/new-tag.png");
+}
+
+.freeTrialTag {
+  width: 70px;
+  height: 20px;
+  margin-left: 5px;
+  margin-top: 12px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("images/vault_4.0/promotion/tag-free-trial@2x.png");
+}
+
+#promotionG2aMenuItem {
+  background-size: 155px;
+  background-position: 18px center;
+  background-image: url("images/vault_4.0/promotion/logo-gotoassist-lmi.png");
+}
+
+#promotionG2wMenuItem {
+  background-size: 180px;
+  background-position: 20px center;
+  background-image: url("images/vault_4.0/promotion/logo-gotowebinar-lmi.png");
+}
+
+.promotion.extensionMenuItem {
+  display: none;
+  text-align: right;
+  padding-right: 15px;
+  overflow: hidden;
+}
+
+.promotionSearch.extensionMenuItem.item {
+  height: 70px;
+}
+
+.promotionSearch.extensionMenuItem.item .text {
+  font-size: 10px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.promotionSearch.extensionMenuItem.item .image {
+  position: relative;
+  margin-top: 20px;
+}
+
+.promotionSearch.extensionMenuItem.item .image img {
+  width: 130px;
+}

@@ -1,0 +1,140 @@
+--[[
+#=====================================================================================
+#                               
+# Date    : package-date
+# Author  : Jesse_Avalos or http://speedracker.deviantart.com/
+# Editor  : Erik Dubois
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+# 
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download 
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# packer ephifonts
+#=====================================================================================
+# LUA 
+# You need not only install conky but also a package that supports lua on your computer
+# Depending on your HARDWARE you should choose wisely in the AUR
+# My hardware has an NVIDIA I will choose "conky-lua-nv" from AUR.
+#======================================================================================
+]]
+
+conky.config = {
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,
+	diskio_avg_samples = 10,
+	double_buffer = true,
+	if_up_strictness = 'address',
+	net_avg_samples = 2,
+	no_buffers = true,
+	temperature_unit = 'celsius',
+	text_buffer_size = 2048,
+	update_interval = 1,
+	imlib_cache_size = 0,                       --spotify cover
+
+	--Placement
+
+	--alignment = 'middle_middle',
+	alignment = 'top_left',
+	gap_x = 40,
+	gap_y = 100,
+	minimum_height = 30,
+	minimum_width = 1600,
+	maximum_width = 1600,
+
+	--Graphical
+
+	border_inner_margin = 10, 					-- margin between border and text
+	border_outer_margin = 1, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 280,
+	default_bar_height = 10,
+	default_gauge_height = 25,
+	default_gauge_width =40,
+	default_graph_height = 40,
+	default_graph_width = 153,
+	default_shade_color = '#000000',
+	default_outline_color = '#C6BCB6',
+	draw_borders = false,						--draw borders around text
+	draw_graph_borders = true,
+	draw_shades = false,
+	draw_outline = false,
+	stippled_borders = 0,
+
+	--Textual
+	
+	extra_newline = false,
+	format_human_readable = true,
+	font = 'Roboto:size=9',
+	max_text_width = 0,
+	max_user_text = 16384,
+	override_utf8_locale = true,
+	short_units = true,
+	top_name_width = 21,
+	top_name_verbose = false,
+	uppercase = false,
+	use_spacer = 'none',
+	use_xft = true,
+	xftalpha = 1,
+
+	--Windows
+
+	own_window = true,
+	own_window_argb_value = 0,
+	own_window_argb_visual = true,
+	own_window_class = 'Conky',
+	own_window_colour = '#000000',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_transparent = false,
+	own_window_title = 'system_conky',
+	own_window_type = 'desktop',-- # options are: normal/override/dock/desktop/panel 
+	
+
+	--Colours
+
+	default_color = '#FFFFFF',  				-- default color and border color
+	color1 = '#F4BE1D', 
+	color2 = '#C62E1C', 
+	color3 = '#EDD077', 
+	color4 = '#BDBDBD',
+	color5 = '#CCCCCC', 
+	color6 = '#FFFFFF',
+
+	--Signal Colours
+	color7 = '#1F7411',  --green
+	color8 = '#FFA726',  --orange
+	color9 = '#F1544B',  --firebrick
+
+	--Lua
+	lua_load = '~/.config/conky/lua/time.lua',
+
+};
+
+
+conky.text = [[
+${offset 0}${color2}${font Aliquam:size=80}${lua Hour}${color1}${lua Minute}
+]]

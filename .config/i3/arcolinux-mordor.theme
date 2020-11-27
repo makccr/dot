@@ -1,0 +1,35 @@
+    ##START THEMING BAR
+    #Theme name : ArcoLinux Mordor
+
+    # i3 bar colors
+    # variable border background Text
+
+    colors {
+        background #454242
+        statusline #eeeeee
+        separator  #b5b3b3
+
+        # colorclass           border  backgr. text
+        focused_workspace     #eeae0a #222222 #eeae0a
+        active_workspace      #a9a9a9 #222222 #eeeeee
+        inactive_workspace    #a9a9a9 #5f676a #a9a9a9
+        urgent_workspace      #a9a9a9 #d42121 #eeeeee
+        }
+
+    }
+    ##STOP THEMING BAR
+
+    ##START THEMING WM
+    #Theme name : ArcoLinux Mordor
+
+    # Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          #eeae0a #eeae0a #ffffff #eeae0a
+    client.unfocused        #222222 #222222 #aaaaaa #222222
+    client.focused_inactive #222222 #222222 #a9a9a9 #222222
+    client.placeholder      #222222 #222222 #aaaaaa #222222
+    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+
+    client.background       #242424
+
+    ##STOP THEMING WM

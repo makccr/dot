@@ -1,0 +1,183 @@
+#addItemDialog {
+  max-height: 350px;
+  max-width: 850px;
+  transition: 425ms ease-out;
+}
+
+#addItemDialog .dialogContent {
+  background-color: #f9fbfd;
+  padding: 15px 0 0 0;
+}
+
+#addItemDialog.isMaximized {
+  max-height: 818px!important;
+}
+
+.addItemCard {
+  position: relative;
+  min-height: 100px;
+  width: 157px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 20px 20px 0;
+  border-radius: 2px;
+  color: #A1A9AD;
+  background-repeat: no-repeat;
+  background-position: center 6px;
+  padding-top: 70px;
+}
+
+.addItemCard:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23), 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #FFF;
+}
+
+.addItemCard:hover .addItemCardName {
+  color: #d32d27;
+}
+
+.addItemCardName {
+  color: #646D73;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: -4px;
+  word-break: break-word;
+}
+
+.customTemplateDeleteButton {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  height: 14px;
+  width: 14px;
+  color: rgba(100, 109, 115, .4);
+}
+
+.addItemCard i {
+  display: block;
+}
+
+.customTemplateDeleteButton i {
+  font-size: 14px;
+}
+
+.addItemCard:hover .customTemplateDeleteButton,
+.addItemCard:focus .customTemplateDeleteButton {
+  color: rgba(100, 109, 115, .6);
+}
+
+.customTemplateDeleteButton i:focus,
+.customTemplateDeleteButton i:hover {
+  color: rgba(100, 109, 115, 1);
+}
+
+.customTemplateAddButton i {
+  font-size: 49px;
+  position: absolute;
+  color: #b5e1e3;
+  left: 0;
+  right: 0;
+  top: 12px;
+}
+
+#addItemSecondaryOptionsLabel {
+  margin-left: 45px;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(100, 109, 115, .6);
+  padding-right: 5px;
+}
+
+#addItemOptions {
+  overflow: auto;
+}
+
+#addItemSecondaryOptionsContainer {
+  padding-top: 15px;
+}
+
+#addItemSecondaryOptionsLabel:hover {
+  text-decoration: underline;
+}
+
+#addItemSecondaryOptionsLabel {
+  color: #d32d27;
+}
+
+#addItemSecondaryOptionsLabel i {
+  margin-left: 10px;
+  display: inline-block;
+  transition: transform .2s;
+  transform: rotate(90deg);
+}
+
+#addItemSecondaryOptionsLabel.open i {
+  transform: rotate(-90deg);
+}
+
+.addItemCard.Password {
+  background-image: url('images/vault_4.0/addItems/mid-lock-color.png');
+}
+.addItemCard.SecureNote {
+  background-image: url('images/vault_4.0/addItems/mid-sticky-note-color.png');
+}
+.addItemCard.Address {
+  background-image: url('images/vault_4.0/addItems/mid-address-book-color.png');
+}
+.addItemCard.CreditCard {
+  background-image: url('images/vault_4.0/addItems/mid-credit-card-color.png');
+}
+.addItemCard.BankAccount {
+  background-image: url('images/vault_4.0/addItems/mid-bank-color.png');
+}
+.addItemCard.DriversLicense {
+  background-image: url('images/vault_4.0/addItems/mid-car-color.png');
+}
+.addItemCard.Passport {
+  background-image: url('images/vault_4.0/addItems/mid-globe-color.png');
+}
+.addItemCard.SocialSecurity {
+  background-image: url('images/vault_4.0/addItems/mid-scale-color.png');
+}
+.addItemCard.Insurance {
+  background-image: url('images/vault_4.0/addItems/mid-umbrella-color.png');
+}
+.addItemCard.HealthInsurance {
+  background-image: url('images/vault_4.0/addItems/mid-heartbeat-color.png');
+}
+.addItemCard.Membership {
+  background-image: url('images/vault_4.0/addItems/mid-barcode-color.png');
+}
+.addItemCard.Wifi {
+  background-image: url('images/vault_4.0/addItems/mid-wifi-color.png');
+}
+.addItemCard.EmailAccount {
+  background-image: url('images/vault_4.0/addItems/mid-envelope-color.png');
+}
+.addItemCard.InstantMessenger {
+  background-image: url('images/vault_4.0/addItems/mid-comments-color.png');
+}
+.addItemCard.Database {
+  background-image: url('images/vault_4.0/addItems/mid-database-color.png');
+}
+.addItemCard.Server {
+  background-image: url('images/vault_4.0/addItems/mid-server-color.png');
+}
+.addItemCard.SSHKey {
+  background-image: url('images/vault_4.0/addItems/mid-user-secret-color.png');
+}
+.addItemCard.SoftwareLicense {
+  background-image: url('images/vault_4.0/addItems/mid-laptop-color.png');
+}
+.addItemCard.Custom {
+  background-image: url('images/vault_4.0/addItems/mid-puzzle-piece-color.png');
+}
+.addItemCard.CloudApps {
+  background-image: url('images/vault_4.0/addItems/mid-puzzle-piece-color.png');
+}

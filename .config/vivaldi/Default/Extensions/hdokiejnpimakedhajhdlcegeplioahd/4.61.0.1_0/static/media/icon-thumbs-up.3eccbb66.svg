@@ -1,0 +1,36 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M60 120C93.1371 120 120 93.1371 120 60C120 26.8629 93.1371 0 60 0C26.8629 0 0 26.8629 0 60C0 93.1371 26.8629 120 60 120Z" fill="#ECF5FB"/>
+<path d="M37.0002 98.6667H84.3336" stroke="#B5D9F1" stroke-width="1.79259" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64.6865 22.7578C64.6865 22.0632 65.2497 21.5 65.9443 21.5C66.639 21.5 67.2021 22.0632 67.2021 22.7578V26.3906C67.2021 27.0853 66.639 27.6484 65.9443 27.6484C65.2497 27.6484 64.6865 27.0853 64.6865 26.3906V22.7578Z" fill="#162649" stroke="#ECF5FB"/>
+<path d="M55.6472 26.6194L55.6472 26.6194L58.1331 29.1053C58.6243 29.5965 58.6243 30.3929 58.1331 30.8841L58.1331 30.8841C57.642 31.3753 56.8455 31.3752 56.3543 30.8841L53.8684 28.3982C53.3772 27.907 53.3772 27.1106 53.8684 26.6194C54.3597 26.1282 55.1561 26.1282 55.6472 26.6194Z" fill="#162649" stroke="#ECF5FB"/>
+<path d="M78.0203 26.6194L78.0203 26.6194C78.5115 27.1106 78.5115 27.907 78.0203 28.3982L75.5344 30.8841C75.0432 31.3753 74.2468 31.3752 73.7557 30.884L73.7556 30.884C73.2644 30.3927 73.2644 29.5964 73.7556 29.1052C73.7556 29.1052 73.7556 29.1052 73.7556 29.1052L76.2415 26.6194L76.2415 26.6194C76.7328 26.1282 77.5292 26.1282 78.0203 26.6194Z" fill="#162649" stroke="#ECF5FB"/>
+<g filter="url(#filter0_i)">
+<path d="M63 34C59.9848 45.9227 56.754 49.5399 49 52V75.5C53.021 77.5108 55.5573 78.9076 61 79.7336H76.5C81.5 79.7336 81.5 72.5 76.5 72.5H81.5C86.5 72.5 86.5 65.5 81.5 65.5C86.5 65.5 86.5 58.5 81.5 58.5C86.5 58.5 86.5 51.5 81.5 51.5H67.5L68 51C71.9327 38.1196 71.0553 34.1563 63 34Z" fill="white"/>
+</g>
+<path d="M67.5 51.5L68 51C71.9327 38.1196 71.0553 34.1563 63 34C59.9848 45.9227 56.754 49.5399 49 52V75.5C53.021 77.5108 55.5573 78.9076 61 79.7336H76.5C81.5 79.7336 81.5 72.5 76.5 72.5H81.5C86.5 72.5 86.5 65.5 81.5 65.5M67.5 51.5H63H62.5H62H67.5ZM67.5 51.5H81.5C86.5 51.5 86.5 58.5 81.5 58.5M81.5 58.5H76.5M81.5 58.5C86.5 58.5 86.5 65.5 81.5 65.5M81.5 65.5H76.5" stroke="#162649" stroke-width="1.79"/>
+<g filter="url(#filter1_i)">
+<path d="M38 78C37.4477 78 37 77.5523 37 77V50C37 49.4477 37.4477 49 38 49L41.0631 49H42.7009L45.0099 49.0077C46.6629 49.0131 48 50.3547 48 52.0076V75C48 76.6569 46.6569 78 45 78H38Z" fill="white"/>
+</g>
+<path d="M42.7039 48.105V48.105H42.7009H41.0631L38 48.105C36.9534 48.105 36.105 48.9534 36.105 50V77C36.105 78.0466 36.9534 78.895 38 78.895H45C47.1511 78.895 48.895 77.1512 48.895 75V52.0076C48.895 49.8615 47.159 48.1198 45.0129 48.1127L42.7039 48.105Z" stroke="#1C315F" stroke-width="1.79"/>
+<path d="M42 74C42.5523 74 43 73.5523 43 73C43 72.4477 42.5523 72 42 72C41.4477 72 41 72.4477 41 73C41 73.5523 41.4477 74 42 74Z" fill="#D32D27"/>
+<defs>
+<filter id="filter0_i" x="48.105" y="33.0914" width="38.04" height="47.5372" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.760784 0 0 0 0 0.878431 0 0 0 0 0.956863 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+</filter>
+<filter id="filter1_i" x="35.21" y="47.21" width="14.58" height="32.58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-3" dy="-3"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.760784 0 0 0 0 0.878431 0 0 0 0 0.956863 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+</filter>
+</defs>
+</svg>

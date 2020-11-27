@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="134px" height="85px" viewBox="0 0 134 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Circle_Success Copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M119,41 C119,63.6354167 100.635417,82 78,82 C55.3645833,82 37,63.6354167 37,41 C37,18.3645833 55.3645833,0 78,0 C100.635417,0 119,18.3645833 119,41 Z" id="path-1"></path>
+        <filter x="-4.9%" y="-4.9%" width="109.8%" height="109.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="-4" dy="-6" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.558798332   0 0 0 0 0.82116284   0 0 0 0 0.664472925  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Circle_Success-Copy-5" transform="translate(0.000000, 1.000000)">
+            <g id="Success-Circle" stroke-dasharray="140,10,3.058823585510254,7.647058963775635">
+                <use fill-opacity="0.5" fill="#39CA73" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use stroke="#4A4A4A" stroke-width="2" xlink:href="#path-1"></use>
+            </g>
+            <path d="M52.7885592,38.8416115 L52.7885592,38.8416115 L52.7885592,38.8416115 C50.9746439,40.6555707 50.9746439,43.596533 52.7885592,45.4104922 L64.149401,56.7716087 L64.1492441,56.7717656 C67.7328355,60.3554436 73.5430553,60.3555138 77.1267333,56.7719225 C77.1267856,56.7718702 77.1268379,56.7718179 77.1268902,56.7717656 L103.948518,29.9491757 L103.948518,29.9491757 C105.762433,28.1352166 105.762433,25.1942542 103.948518,23.3802951 L103.948518,23.3802951 L103.948518,23.3802951 C102.134659,21.5663926 99.1937778,21.5663571 97.3798753,23.3802157 C97.3798488,23.3802421 97.3798224,23.3802686 97.3797959,23.3802951 L73.8824002,46.8782589 L73.8824787,46.8783374 C72.090683,48.6701764 69.1855731,48.6702115 67.3937341,46.8784158 C67.3937079,46.8783897 67.3936818,46.8783635 67.3936556,46.8783374 L59.357281,38.8416115 L59.357281,38.8416115 C57.5434224,37.0277091 54.602541,37.0276735 52.7886386,38.8415321 C52.7886121,38.8415586 52.7885857,38.8415851 52.7885592,38.8416115 Z" id="Path-4" stroke="#39CA73" stroke-width="2" fill="#FFFFFF" stroke-dasharray="100,8,2,4"></path>
+            <g id="Breeze" transform="translate(0.000000, 56.000000)" stroke="#C6D8E1" stroke-width="2">
+                <path d="M1.5,5 L14.5,5" id="Line"></path>
+                <path d="M11.5,1 L24.5,1" id="Line"></path>
+                <path d="M17.5,5 L21,5" id="Line"></path>
+            </g>
+            <g id="Ex" transform="translate(115.000000, 73.000000)" stroke="#C6D8E1" stroke-width="2">
+                <path d="M10,1 L1,10" id="Line"></path>
+                <path d="M10,10 L1,1" id="Line-Copy"></path>
+            </g>
+            <g id="Breeze-Copy" transform="translate(119.000000, 1.000000)" stroke="#C6D8E1" stroke-width="2">
+                <path d="M0.5,1 L13.5,1" id="Line"></path>
+                <path d="M6.5,5 L10,5" id="Line"></path>
+            </g>
+        </g>
+    </g>
+</svg>

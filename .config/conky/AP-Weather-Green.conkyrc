@@ -1,0 +1,250 @@
+--[[
+#=====================================================================================
+#
+# Date    : package-date
+# Author  : Adhi Pambudi - https://plus.google.com/u/0/+AdhiPambudi
+# Editor  : Erik Dubois
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#======================================================================================
+#
+# Readme from Adhi Pambudi
+#
+# These conky configs tested in arcolinux (Conky version 1.10)
+
+# How to use
+# edit one of the conky files that you want to use, replace the variables.
+# to get an API Key, first you have to sign up here https://openweathermap.org/appid
+# find your city id here http://openweathermap.org/help/city_list.txt
+# after you replace those variables with your own, save.
+# open the conky chooser, tick your edited conkyrc, then press OK.
+
+# Credits
+#1. zagortenay333 for Jelly Conky
+#2. Kestrel8891 for BARS Conky
+#3. aresgon for Workspace Indicator Conky
+#4. Classic Crunchbang Conky (I can't find who wrote that code)
+#======================================================================================
+
+]]
+
+
+conky.config = {
+
+-------------------------------------
+--  Generic Settings
+-------------------------------------
+background=true,
+update_interval=1,
+double_buffer=true,
+no_buffers=true,
+imlib_cache_size=10,
+
+draw_shades=false,
+draw_outline=false,
+draw_borders=false,
+
+use_xft = true,
+font = 'Roboto:size=11',
+total_run_times = 0,
+mpd_port = 6600,
+
+
+-------------------------------------
+--  Window Specifications
+-------------------------------------
+gap_x=30,
+gap_y=30,
+
+minimum_height=500,
+minimum_width=200,
+
+alignment = 'top_right',
+
+own_window=true,
+own_window_type="normal",
+own_window_transparent=false,
+own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+own_window_class = 'Conky',
+own_window_argb_visual=true,
+own_window_argb_value=100,
+double_buffer = true,
+draw_shades = false,
+default_shade_color = '#000000',
+draw_borders = false,
+border_width = 0,
+
+-------------------------------------
+--  Text Settings
+-------------------------------------
+use_xft=true,
+xftalpha=1,
+font="Droid Sans:size=10",
+text_buffer_size=256,
+override_utf8_locale=true,
+draw_graph_borders = false,
+draw_outline = false,
+default_outline_color = '#828282',
+no_buffers = true,
+uppercase = false,
+cpu_avg_samples = 4,
+pad_percents = 2,
+-------------------------------------
+--  Color Scheme
+-------------------------------------
+default_color="ffffff",
+
+color0="5F8A45",  --  green
+color1="a8adb5",  --  grey
+color2="ffffff",  --  white
+
+
+-------------------------------------
+--  Icon Sources
+-------------------------------------
+template0="~/.config/conky/images/weather-icons/64px-green",
+
+
+-------------------------------------
+--  API Key
+--  To get API Key, first you have to sign up here https://openweathermap.org/appid
+-------------------------------------
+template6="5819c5947231280ab4691cbedd2f1d61",
+
+
+-------------------------------------
+--  City ID
+--  Find your City ID here https://openweathermap.org/city
+-------------------------------------
+template7="2803138",
+
+
+-------------------------------------
+--  Temp Unit (default, metric, imperial)
+-------------------------------------
+template8="metric",
+
+
+-------------------------------------
+--  Locale (e.g. "es_ES.UTF-8")
+--  Leave empty for default
+-------------------------------------
+template9=""
+
+}
+
+
+-------------------------------------
+-------------------------------------
+
+
+conky.text = [[
+\
+\
+# Here is code I have taken from Jelly Conky from zagortenay333
+#${image ~/.path-to-image -p 0,0 -s 200x700}
+${execi 300 l=${template9}; l=${l%%_*}; curl -s "api.openweathermap.org/data/2.5/forecast/daily?APPID=${template6}&id=${template7}&cnt=5&units=${template8}&lang=$l" -o ~/.cache/forecast.json}\
+${execi 300 l=${template9}; l=${l%%_*}; curl -s "api.openweathermap.org/data/2.5/weather?APPID=${template6}&id=${template7}&cnt=5&units=${template8}&lang=$l" -o ~/.cache/weather.json}\
+\
+\
+\
+\
+${font Roboto :size=64}${color0}\
+${time %H}\
+\
+\
+\
+\
+${font Roboto :size=52}${color1}:\
+\
+\
+\
+\
+${font Roboto :size=40}${color1}\
+${time %M}${font}${color}
+\
+\
+\
+\
+${font Roboto :size=12}${color1} ${voffset 12}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A"},${color}\
+${font Roboto :size=20}${color0} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%d"}${color}\
+${font Roboto :size=12}${color1} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}${font}${color}
+\
+\
+\
+\
+${font Roboto :size=24}${color0}\
+${voffset 5}\
+$alignr${execi 300 jq ".main.temp" ~/.cache/weather.json | awk '{print int($1+0.5)}' # round num}°${font}${color}
+\
+\
+\
+\
+${font Roboto :size=12}\
+${voffset 5}\
+$alignr${color1}${execi 300 jq ".list[0].temp.min" ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}° ${color}| \
+${color1}${execi 300 jq ".list[0].temp.max" ~/.cache/forecast.json | awk '{print int($1+0.5)}' # round num}°${font}${color}
+\
+\
+\
+\
+${font Roboto :size=14}${color1}\
+${voffset 5}\
+${execi 300 jq -r ".weather[0].description" ~/.cache/weather.json}${font}${color}
+\
+\
+\
+\
+${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/weather.json).png ~/.cache/current.png}${image ~/.cache/current.png -p 0,120 -s 64x64}
+\
+${font Roboto :size=14}${color1}\
+${voffset -10}\
+${execi 300 jq -r ".name" ~/.cache/weather.json}${font}${color}
+# Here is end of code I have taken from Jelly Conky from zagortenay333
+\
+${color2}
+${alignc}S Y S T E M    I N F O
+${hr}
+# Here is code I have taken from BARS Conky Vertical by Kestrel8891
+$alignr${color1}${font Roboto:pixelsize=12}${cpu cpu0} % CPU${font}
+${color0}${cpubar cpu0}
+$alignr${color1}${font Roboto:pixelsize=12}${voffset 12}${mem} / ${memperc} % RAM${font}
+${color0}${membar}
+$alignr${color1}${font Roboto:pixelsize=12}${voffset 12}${fs_free /} / ${fs_free_perc /} % HDD${font}
+${color0}${fs_bar /}
+#$alignr${color1}${font Roboto:pixelsize=10}${voffset 10}${kernel} ${machine}${font}
+$alignr${color1}${font Roboto:pixelsize=12}${voffset 10}${uptime} UPTIME${font}
+# Here is end of code I have taken from BARS Conky Vertical by Kestrel8891
+
+# Here is code I have taken from Workspace Indicator by from aresgon
+${goto 100}${font Droid Sans :size=25}${if_match ${desktop}==1}${color0}${endif}•${color1}${offset 10}${if_match ${desktop}==2}${color0}${endif}•${color1}${offset 10}${if_match ${desktop}==3}${color0}${endif}•${color1}${offset 10}${if_match ${desktop}==4}${color0}${endif}•${color1}${font}
+# Here is end of code I have taken from Workspace Indicator by from aresgon
+${hr}
+${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+]]

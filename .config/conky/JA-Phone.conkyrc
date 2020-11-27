@@ -1,0 +1,57 @@
+conky.config = {
+-- By Jesse_Avalos , See me on Eye Candy Linux_  on Google +
+	background = true,
+	use_xft = true,
+	xftalpha = 0.8,
+	update_interval = 1,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type = 'desktop',--normal/override/dock/desktop/panel 
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	double_buffer = true,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	stippled_borders = 0,
+	border_margin = '5',
+	border_width = 1,
+	default_color = '#000000',
+	default_shade_color = '#000000',
+	default_outline_color = '#000000',
+	minimum_width = 100, minimum_height = 100,
+	maximum_width = 430,
+	gap_x = 50,
+	gap_y = 50,
+	alignment = 'top_left',
+	no_buffers = true,
+	uppercase = false,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+	short_units = true,
+	text_buffer_size = 2048,
+	use_spacer = 'none',
+	override_utf8_locale = true,
+
+-- Text settings #
+	use_xft = true,
+	xftalpha = 0,
+	override_utf8_locale = true,
+
+-- Color scheme #
+	default_color = 'white',
+	color1 = '#212021',
+	color2 = 'white',
+
+
+	own_window_argb_value = 0,
+	own_window_argb_visual = true,
+	own_window_colour = '#000000',
+};
+
+conky.text = [[
+${offset 80}${color2}${font Aliquam:bold:size=104}${time %I}
+${offset 160}${voffset -80}${font Aliquam:size=80}${time %M}${font Aliquam::UltraLight:bold:size=18}
+${offset 48}${voffset 10}${time %p - %A %B, %d}
+]];

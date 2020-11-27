@@ -1,0 +1,144 @@
+<div class="container extensionCreateAccount">
+
+    <div id="emailEntry" class="content-pull-left">
+
+        <div class="dialog-title">
+            <span>Get started with your email</span>
+        </div>
+
+        <div class="email-form">
+
+            <div id="inputDiv" class="lp-field">
+                <label id="createAccountEmailLabel" class="validator-label" for="createAccountEmail"></label>
+                <label class="error-summary" for="createAccountEmail"></label>
+                <label class="error-summary" for="termsAndConditions"></label>
+                <input class="dialogInput" id="createAccountEmail" dialogfield="email" errorgroup="1" type="text"
+                       spellcheck="false" placeholder="Email address"/>
+            </div>
+            <div id="termsAndConditionsSimple" class="checkboxContainer">
+                <input id="termsAndConditions" class="checkbox" dialogfield="termsAndConditions" type="checkbox"/>
+                <label for="termsAndConditions" id="termsAndConditionsLabel" class="checkboxLabel" compoundtranslation>
+                    I agree to the <a target="_blank" href="https://lastpass.com/terms.php">LastPass Terms</a> and <a
+                        target="_blank" href="https://lastpass.com/privacy.php">Privacy Policy</a>
+                </label>
+            </div>
+            <div class="termsConditions" id="termsConditions">
+                <span compoundtranslation>
+                By completing this form, I agree to the <a target="_blank"
+                                                           href="https://lastpass.com/terms.php" id="termsLink">Terms</a> and <a
+                    target="_blank"
+                    href="https://lastpass.com/privacy.php" id="privacyLink">Privacy Policy</a>.
+                </span>
+                <span compoundtranslation class="contactPermissionClause">
+              I want to receive promotional emails, unless <a id="chooseOtherwise" data-default-opt-out-value="0">I opt out</a>.
+          </span>
+                <div class="checkboxContainer contactPermissionContainer">
+                    <input id="contactPermissionCheckbox" class="checkbox" type="checkbox"/>
+                    <label for="contactPermissionCheckbox" class="checkboxLabel">
+                        I prefer not to receive promotional emails.
+                    </label>
+                </div>
+            </div>
+            <div>
+                <div class="buttonContent">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="mpEntry" class="master-password-container">
+
+        <div class="master-password-form">
+
+            <div class="dialog-title">
+                <span id="masterPasswordDialogTitle">Get started with LastPass</span>
+            </div>
+
+            <div id="mpFields">
+
+                <div class="lp-field first-field">
+                    <label id="createAccountDialogPasswordLabel" class="validator-label"
+                           for="createAccountDialogPassword"></label>
+                    <label class="error-summary" for="createAccountDialogPassword"></label>
+                    <input class="dialogInput passwordToggle" id="createAccountDialogPassword" dialogfield="password"
+                           type="password" placeholder="New master password"/>
+                </div>
+                <div class="lp-field">
+                    <label id="createAccountDialogConfirmPasswordLabel" class="validator-label"
+                           for="createAccountDialogConfirmPassword"></label>
+                    <label class="error-summary" for="createAccountDialogConfirmPassword"></label>
+                    <input class="dialogInput passwordToggle" id="createAccountDialogConfirmPassword"
+                           dialogfield="reconfirm" type="password" placeholder="Confirm master password"/>
+                    <div class="twinsContainer">
+                        <p id="twinsies" class="meterLabel text-confirm">It's a match!</p>
+                    </div>
+                </div>
+                <div class="lp-field">
+                    <label id="createAccountReminderLabel" class="validator-label" for="createAccountReminder"></label>
+                    <label class="error-summary" for="createAccountReminder"></label>
+                    <input class="dialogInput" id="createAccountReminder" dialogfield="reminder" type="text"
+                           placeholder="Password hint (optional)"/>
+                </div>
+
+                <div>
+                    <div class="buttonContent">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="master-password-help">
+            <div id="helpContainer">
+                <div id="mpHelp" fieldToolTipInputId="createAccountDialogPassword" class="help-box content-box">
+                    <h2>Pick a new master password</h2>
+                    <div>
+                        <div>
+                            <p class="tip-title">Our minimum requirements:</p>
+                        </div>
+                        <div id="mpValidators" class="tip-validators">
+                        </div>
+                    </div>
+                    <div id="easyPassword">
+                        <p class="tip-title">Our advice:</p>
+                        <p compoundtranslation class="tip">Tell a story unique to you like: <br/>
+                        <em>Fidoate!my2woolsox</em></p>
+                    </div>
+                    <div class="tip-more-container">
+                        <a class="tip-more-btn">What makes a password strong?</a>
+                        <div class="tip-more">
+                            <p class="tip">
+                                A secure password is long and hard to guess; special characters and numbers are less important.
+                            </p>
+                            <p class="tip">
+                                A short phrase unique to your life is far more secure than any version of P@s$W0r|D and it'll be a lot easier to remember!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="mpConfirmHelp" fieldToolTipInputId="createAccountDialogConfirmPassword"
+                     class="help-box content-box">
+                    <h2>Make sure you remember it!</h2>
+                    <div>
+                        <p class="tip">
+                          LastPass is so secure, even we can't get into your account without your master password…and we never store it. So make sure you can remember it.
+                        </p>
+                    </div>
+                </div>
+                <div id="reminderHelp" fieldToolTipInputId="createAccountReminder" class="help-box content-box">
+                    <h2>Leave yourself a lifeline</h2>
+                    <div>
+                        <p class="tip">Since we can't reset your password, this reminder is your phone-a-friend... and that friend is you.</p>
+                    </div>
+                    <div>
+                        <p class="tip">Make sure your reminder is clear to you, but don't include your password in it!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="createAccountLoading">
+</div>

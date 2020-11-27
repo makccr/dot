@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1"
+   width="335"
+   height="127"
+   id="svg8"
+   sodipodi:docname="arcolinux-text-cp-rw.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:export-filename="/home/erik/Insync/Arcolinux/arcolinux-text-cp-rw.png"
+   inkscape:export-xdpi="28.656717"
+   inkscape:export-ydpi="28.656717">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     pagecolor="#474747"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     id="namedview10"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.2746778"
+     inkscape:cx="180.20584"
+     inkscape:cy="-34.022814"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <sodipodi:guide
+       position="-272.929,11.094675"
+       orientation="0,1"
+       id="guide831"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     style="fill:#b30000;fill-opacity:1;stroke-width:0.55410355"
+     d="m 2.5227224,115.76292 c 0,-0.37518 54.4241596,-103.902777 56.2486296,-106.998175 l 1.26042,-2.138463 1.37663,2.41551 c 0.75717,1.328499 6.30592,11.890665 12.33055,23.471408 6.02464,11.58078 18.17325,34.864571 26.996888,51.741761 12.38156,23.682489 15.87227,30.794009 15.29497,31.159829 -0.41141,0.26071 -5.36946,0.47785 -11.01787,0.48254 l -10.269848,0.008 -3.02864,-3.07102 C 84.116112,105.1297 70.835512,98.144545 55.993682,94.046415 l -6.6492,-1.835987 8.31154,-0.416894 c 7.808,-0.391622 16.61611,-0.12761 21.43183,0.642468 1.60961,0.2574 2.11756,0.151944 2.11756,-0.439637 0,-1.461516 -20.37446,-38.704726 -21.17404,-38.704726 -0.58272,0 -4.69581,7.169522 -20.66261,36.016711 -7.84366,14.1712 -14.30449,25.81834 -14.35742,25.88256 -0.23636,0.28682 -22.4886196,0.8524 -22.4886196,0.57153 z"
+     id="path4559-6-7-5"
+     inkscape:connector-curvature="0" />
+  <g
+     id="g821"
+     transform="matrix(0.48914397,0,0,0.48914397,28.441818,59.40239)"
+     style="fill:#ffffff"
+     inkscape:export-xdpi="28.656717"
+     inkscape:export-ydpi="28.656717">
+    <text
+       transform="scale(1.0054532,0.99457638)"
+       id="text823"
+       y="115.61451"
+       x="310.48788"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:125.34772491px;line-height:1.25;font-family:'Final Frontier';-inkscape-font-specification:'Final Frontier';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.65285265"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.65285265"
+         y="115.61451"
+         x="310.48788"
+         id="tspan821"
+         sodipodi:role="line">Linux</tspan></text>
+    <text
+       transform="scale(1.0054532,0.99457638)"
+       id="text823-3"
+       y="115.92799"
+       x="124.02187"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:125.34772491px;line-height:1.25;font-family:'Final Frontier';-inkscape-font-specification:'Final Frontier';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.65285265"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.65285265"
+         y="115.92799"
+         x="124.02187"
+         id="tspan821-6"
+         sodipodi:role="line">rco</tspan></text>
+  </g>
+</svg>

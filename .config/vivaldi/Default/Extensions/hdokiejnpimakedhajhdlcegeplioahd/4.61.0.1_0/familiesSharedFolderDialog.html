@@ -1,0 +1,20 @@
+<div class="familiesSharedFolder">
+  <label for="groupName" class="shared-folder-name">Shared folder name</label>
+  <input id="loadedGroupName" dialogField="loadedGroupName" type="hidden" class="dialogInput" />
+  <input id="groupName" dialogField="groupName" type="text" class="dialogInput" />
+  <div class="emailFamilyMembers">
+    <input type="checkbox" id="notifyFamilyMembers">
+      <span id="notifyFamilyMembersText">Email invited family members</span>
+    </input>
+  </div>
+  <table style="width: 100%;" border="1">
+    <thead>
+    <tr>
+      <th>Family member</th>
+      <th>Permissions</th>
+    </tr>
+    </thead>
+    <tbody id="familyBody">
+    </tbody>
+  </table>
+</div>

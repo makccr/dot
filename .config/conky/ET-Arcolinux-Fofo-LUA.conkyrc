@@ -1,0 +1,81 @@
+conky.config = {
+	background = true,
+	update_interval = 0.5,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+
+	override_utf8_locale = true,
+	short_units = true,
+	double_buffer = true,
+	no_buffers = true,
+
+	text_buffer_size = 2048,
+	imlib_cache_size = 0,
+
+	own_window = true,
+	own_window_transparent = true,
+	own_window_type = 'desktop',
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+	own_window_argb_visual = true,
+	own_window_argb_value = 0,
+	own_window_colour = '#000000',
+
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+
+	minimum_width = 300, minimum_height = 700,
+	alignment = 'top_left',
+	gap_x = 10,
+	gap_y = 40,
+
+	draw_shades = false,
+	draw_outline = false,
+	default_color = '#cccccc',
+	draw_borders = false,
+	draw_graph_borders = false,
+
+	use_xft = true,
+--xftfont Eurostile:Bold:size=10
+	font = 'DroidSansMono:size=9',
+	xftalpha = 0.5,
+
+	color1 = '#EEEEEE',
+	color2 = '#778899',
+
+	lua_load = '~/.config/conky/lua/rings.lua',
+	lua_draw_hook_pre = 'ring_stats',
+
+};
+
+conky.text = [[
+${voffset 26}${goto 16}${color2}${time %H:%M}
+${voffset -24}${goto 70}${color2}${time %d %B}
+${voffset -5}${goto 62}${color2}${cpubar cpu0 1,80}
+${voffset -6}${goto 72}${color2}${time %A}
+#
+${voffset 66}${goto 75}${color2}Cpu usage
+${voffset -4}${goto 62}${color2}${cpubar cpu0 1,80}
+${voffset -6}${goto 75}${color2}${cpu cpu1} %    ${cpu cpu2} %
+#
+${voffset 66}${goto 75}${color2}Freq info
+${voffset -5}${goto 62}${color2}${cpubar cpu0 1,80}
+${voffset -6}${goto 70}${color2}${freq cpu} Mhz
+#
+${voffset 66}${goto 75}${color2}Upspeed
+${voffset -5}${goto 62}${color2}${cpubar cpu0 1,100}
+${voffset -6}${goto 75}${color2}${upspeedf enp0s31f6} kb/s
+#${voffset -6}${goto 75}${color2}${upspeedf wlan0} kb/s
+#
+${voffset 66}${goto 75}${color2}Downspeed
+${voffset -6}${goto 62}${color2}${cpubar cpu0 1,100}
+${voffset -5}${goto 75}${color2}${downspeedf enp0s31f6} kb/s
+#${voffset -5}${goto 75}${color2}${downspeedf wlan0} kb/s
+#
+${voffset 64}${goto 72}${color2}Wifi Signal
+${voffset -5}${goto 62}${color2}${cpubar cpu0 1,80}
+${voffset -4}${goto 90}${color2}${wireless_link_qual_perc wlan0} %
+#
+${voffset 66}${goto 70}${color2}Homedir
+${voffset -5}${goto 60}${color2}${cpubar cpu0 1,70}
+${voffset -2}${goto 80}${color2}${fs_used_perc} %
+]];

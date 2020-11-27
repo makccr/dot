@@ -1,0 +1,1 @@
+conky -c /home/erik/.config/conky/AUR-Misty-LUA.conkyrc & sleep 1s

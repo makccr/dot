@@ -1,0 +1,1 @@
+for filename in *.png; do file=`echo "$filename"`;convert $filename -fuzz 100% -fill '#5294e2' -opaque white $file;done

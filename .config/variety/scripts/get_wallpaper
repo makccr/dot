@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# This script is run when the application starts
+# Its purpose is to obtain the current wallpaper as an absolute path, or file URI (e.g. file://a/b.jpg)
+# This is needed by Variety at start to ensure History->Back works OK to revert back to the pre-Variety wallpaper.
+
+desktop="$DESKTOP_SESSION"
+
+# Gnome 3, Unity:
+if [ "$desktop" == "ubuntu" ] || [ "$XDG_CURRENT_DESKTOP" == "Unity" ]; then
+        gsettings get org.gnome.desktop.background picture-uri
+
+# XFCE
+elif [ "$desktop" == "xubuntu" ] || [ "$XDG_CURRENT_DESKTOP" == "XFCE" ]; then
+        xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image
+
+# LXDE/PCManFM
+elif [ "$XDG_CURRENT_DESKTOP" == "LXDE" ]; then
+        # The PCManFM config path varies by session name; Lubuntu is effectively a special case here
+        if [ "$desktop" == "Lubuntu" ]; then
+            desktop="lubuntu"  # Curse this inconsistency in cases
+        fi
+        grep wallpaper=/ "$HOME/.config/pcmanfm/$desktop/desktop-items-0.conf" | sed -e 's/wallpaper=//g'
+
+# LXQt/PCmanFM-qt
+elif [ "$XDG_CURRENT_DESKTOP" == "LXQt" ]; then
+        grep wallpaper=/ ~/.config/pcmanfm-qt/lxqt/settings.conf | sed -e 's/wallpaper=//g'
+
+# MATE
+elif [ "$XDG_CURRENT_DESKTOP" == "MATE" ]; then
+        gsettings get org.mate.background picture-filename
+
+# Cinnamon after 2.0
+elif [ "$desktop" == "Cinnamon" ] || [ "$XDG_CURRENT_DESKTOP" == "X-Cinnamon" ]; then
+        gsettings get org.cinnamon.desktop.background picture-uri
+
+# KDE Plasma 5
+elif [ "$XDG_CURRENT_DESKTOP" == "KDE" ] && [ "$KDE_SESSION_VERSION" == "5" ]; then
+        grep 'Image=' ~/.config/plasma-org.kde.plasma.desktop-appletsrc | sed 's/Image=//'
+
+# Trinity
+elif [ "$XDG_CURRENT_DESKTOP" == "Trinity" ]; then
+        # The "1" refers to the virtual desktop number
+        dcop kdesktop KBackgroundIface currentWallpaper 1 2> /dev/null
+
+# All above fails => fallback to the Gnome 3 way
+else
+        gsettings get org.gnome.desktop.background picture-uri
+fi
+
+# Feh
+# sed "s/\ /\n/g" ~/.fehbg | grep \'
+
+# Gnome 2
+# gconftool-2 --get /desktop/gnome/background/picture_filename

@@ -1,0 +1,165 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <link rel="stylesheet" type="text/css" href="popupcombobox.css">
+    <link rel="stylesheet" type="text/css" href="lpInfield.css">
+
+    <script type='text/javascript' src="jquery-3.2.1.min.js"></script>
+    <script type='text/javascript' src="topics.js"></script>
+    <script type='text/javascript' src="platform.js"></script>
+    <script type='text/javascript' src="platformOverride.js"></script>
+    <script type='text/javascript' src="vaultStrings.js"></script>
+    <script type='text/javascript' src="tools.js"></script>
+    <script type='text/javascript' src="lpfulllib.js"></script>
+    <script type='text/javascript' src="passwordMeter.js"></script>
+    <script type='text/javascript' src="generate.js"></script>
+    <script type='text/javascript' src="popupfilltab_common.js"></script>
+    <script type="text/javascript" src="popupfilltab_40.js"></script>
+    <script type="text/javascript" src="interfaces.js"></script>
+    <script type="text/javascript" src="contentScriptInterface.js"></script>
+    <script type="text/javascript" src="infieldPopupInterface.js"></script>
+    <script type="text/javascript" src="lpArrow.js"></script>
+    <script type="text/javascript" src="lpInfield.js"></script>
+</head>
+<body>
+<div class="infield-dialog lp-grid container gutter-md">
+    <div id="menuContainer"></div>
+    <div class="header row">
+        <div id="headerContainer" class="col-12">
+            <div class="row">
+                <div id="currentTab" class="trigger col-8">
+                    <p id="currentTabText" tabindex="1"></p>
+                    <span id="currentTabIcon" class="lp-icon down-arrow"/>
+                </div>
+                <div id="navigationPlaceholder">
+                </div>
+                <div id="searchContainer" class="searchContainer">
+                    <span id="searchBtn" class="lp-icon search" tabindex="1"></span>
+                    <input type="text" id="inlineSearch" class="inline-search" placeholder="Filter" tabindex="1"/>
+                    <span id="searchCloseBtn" class="lp-icon close pull-right" tabindex="1"></span>
+                </div>
+
+                <div id="generateBtnContainer" class="col-4 pull-right">
+                    <span id="generateBtn" class="lp-icon refresh pull-right"></span>
+                    <span id="btnCopy" class="pull-right btn-link">Copy</span>
+                    <span id="copied" class="pull-right">Copied!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content row">
+        <div id="sitesView" class="col-12"></div>
+        <div id="formFillView" class="col-12"></div>
+        <div id="generatePassView" class="col-12">
+            <div id="generateAndFillView" class="row content-pull-center">
+                <div class="col-12">
+                    <button id="generateAndFillBtn" class="btn-base btn-primary radius-sm" tabindex="1">Generate and fill</button>
+                </div>
+            </div>
+            <div id="advancedView">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="pull-left gradient-to-right">
+                            <input autocomplete="off" role="textfield" class="radius-tl-sm radius-bl-sm password " id="password" spellcheck="false" type="text">
+                        </div>
+                        <div class="pull-right">
+                            <button class= "btn-base btn-primary radius-tr-sm radius-br-sm" id="fillPasswordBtn">Fill</button>
+                            <input type="hidden" id="generatedPasswordCount" value="0" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row gutter-top-md gutter-bottom-md content-pull-center">
+                    <div class="col-4 col-offset-4">
+                        <button id="hideOptions" class="radius-xl options-btn less">Hide options</button>
+                    </div>
+                </div>
+                <div class ="row advanced-background">
+                    <span class="col-6 first-col">
+                        <div class="row gutter-top-md">
+                            <div class="col-9">
+                                <label id="lengthlabel" for="length" class="tipboldlabel">Length</label>
+                            </div>
+                            <div class="col-3 content-pull-right">
+                                <p id="generatedPasswordLength"></p>
+                            </div>
+                        </div>
+                        <div class="row gutter-top-md gutter-bottom-md">
+                            <div class="col-12">
+                                <div class="gutter-top-sm gutter-bottom-sm sliderContainer">
+                                    <div id="sliderFill"></div>
+                                    <input class="pwgen" type="range" id="length" name="length" min="4" max ="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <input class="pwgen" id="pronounceable" type="checkbox">
+                            </div>
+                            <div class="col-9 no-left-gutter">
+                                <label for="pronounceable" class="tiplabel">Easy to say</label>
+                                <span id="pronounceableTip" class="lp-icon questionMark">
+                                    <span class="tooltiptext">Avoid numbers and special characters</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row gutter-top-sm">
+                            <div class="col-2">
+                                <input class="pwgen" id="ambig" type="checkbox">
+                            </div>
+                            <div class="col-9 no-left-gutter">
+                                <label for="ambig" class="tiplabel">Easy to read</label>
+                                <span id="ambigtTip" class="lp-icon questionMark">
+                                    <span class="tooltiptext">Avoid ambiguous characters like I, l, O, and 0</span>
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="col-6">
+                        <div class="row gutter-top-md">
+                            <div class="col-2">
+                                <input class="pwgen" id="upper" type="checkbox">
+                            </div>
+                            <div class="col-9 no-left-gutter">
+                                <label class="tiplabel" for="upper">Uppercase</label>
+                            </div>
+                        </div>
+                        <div class="row gutter-top-sm">
+                            <div class="col-2">
+                                <input class="pwgen" id="lower" type="checkbox">
+                            </div>
+                            <div class="col-9 no-left-gutter">
+                                <label class="tiplabel" for="lower">Lowercase</label>
+                            </div>
+                        </div>
+                        <div class="row gutter-top-sm">
+                            <div class="col-2">
+                                <input class="pwgen" id="digits" type="checkbox">
+                            </div>
+                            <div class="col-9 no-left-gutter">
+                                <label class="tiplabel" for="digits">Numbers</label>
+                            </div>
+                        </div>
+                        <div class="row gutter-top-sm">
+                            <div class="col-2">
+                                <input class="pwgen" id="special" type="checkbox">
+                            </div>
+                            <div class="col-9 no-left-gutter">
+                                <label class="tiplabel" for="special">!$%@#</label>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer content-pull-center row">
+        <div class="col-4 col-offset-4">
+            <button id="moreOptions" class="radius-xl options-btn more">More options</button>
+        </div>
+        <span class="col-2 pull-right btn-link" id="btnClose" tabindex="1">Close</span>
+    </div>
+</div>
+</body>
+</html>

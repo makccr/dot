@@ -1,0 +1,15 @@
+#
+# User-specific variables should be placed in $HOME/.config/openbox/environment
+#
+
+# To set your language for displaying messages and time/date formats, use the following:
+#LANG=en_CA.UTF8
+
+# To set your keyboard layout, you need to modify your X config:
+# http://www.google.com/search?q=how+to+set+keyboard+layout+xorg
+
+## GNOME Keyring
+export $(gnome-keyring-daemon --start --components=pkcs11,secrets)
+
+## Modify xdg-open behaviour
+export XDG_CURRENT_DESKTOP=XFCE

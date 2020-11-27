@@ -1,0 +1,53 @@
+<div>
+  <div class="dialogLeftPane">
+    <div id="sharedFolderDialogDisclaimer">
+      <label id="sharedFolderDialogLegacyDisclaimer">This is a legacy folder and may include users who are not in your Family.</label>
+    </div>
+    <div id="sharedFolderDialogInvites">
+      <div>
+        <label class="label first">Invite Users or Groups:</label>
+        <input id="sharedFolderDialogUserTypeahead" class="dialogInput" type="text" spellcheck="false" autocomplete="off"/>
+      </div>
+      <div>
+       <div id="sharedFolderDialogInviteContainer">
+        <button id="sharedFolderDialogInviteButton" class="nbtn rbtn btn_midi">Invite</button>
+        </div>
+        <label class="label">Permissions:</label>
+        <div>
+          <input id="sharedFolderDialogReadOnly" class="checkbox" type="checkbox" dialogfield="readonly"/>
+          <label for="sharedFolderDialogReadOnly">Read Only</label>
+        </div>
+        <div>
+          <input id="sharedFolderDialogAdmin"  class="checkbox" type="checkbox" dialogfield="can_administer"/>
+          <label user="Enterprise User|Enterprise Admin|Enterprise Role User|Teams User|Teams Admin|Teams Role User" for="sharedFolderDialogAdmin">Administrator</label>
+        </div>
+        <div>
+          <input id="sharedFolderDialogHide"  class="checkbox" type="checkbox" dialogfield="hidePasswords"/>
+          <label for="sharedFolderDialogHide">Hide Passwords</label>
+        </div>
+        <div id="sharedFolderDialogNewUsersContainer"></div>
+      </div>
+    </div>
+    <p id="sharedFolderMaxMembers" compoundtranslation>You have assigned this folder to the maximum number of people under the Family Feature. If you wish to assign to more people, please consider <a href="https://lastpass.com/enterprise/" target="_blank">LastPass Enterprise</a>.</p>
+  </div>
+
+  <div class="dialogRightPane">
+    <div>
+      <table class="settings">
+        <thead>
+          <tr class="settingsHeader">
+            <th>Name</th>
+            <th>Read Only</th>
+            <th user="Enterprise User|Enterprise Admin|Enterprise Role User|Teams User|Teams Admin|Teams Role User">Administrator</th>
+            <th>Hide Passwords</th>
+            <th>Invite Accepted</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="folderMembers">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

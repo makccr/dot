@@ -1,36 +1,86 @@
 [options]
+#https://github.com/thestinger/termite/blob/master/config
 allow_bold = true
 audible_bell = false
-bold_is_bright = true
-clickable_url = t
-font = Fira Code 11
-scrollback_lines = 10000
-cursor_blink = on
+browser = xdg-open
+clickable_url = true
+cursor_blink = system
 cursor_shape = block
+dynamic_title = true
+filter_unmatched_urls = true
+font = Monospace 11
+#font = Hack Bold 10
+geometry = 900x650
+highlight = #2f2f2f
+icon_name = terminal
+modify_other_keys = false
+mouse_autohide = false
+scroll_on_output = false
+scroll_on_keystroke = true
+scrollback_lines = 15000
+size_hints = false
+search_wrap = true
+urgent_on_bell = true
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 10
+#roundness = 2.0
+
+############################################################
+#### You can change the color coding to your liking
+#### There is a folder themes in ~/config/termite/themes
+#### Copy/paste the colors from one of the 79+ templates to this one
+#### A backup of the original config termite is present
+############################################################
+#### Use websites to make the terminal your own
+#### https://terminal.sexy
+#### https://critical.ch/xterm/
+############################################################
 
 [colors]
-background = rgba(10, 10, 10, 0.8)
-highlight = #dc3232
+# ArcoLinux Default Theme
+background = rgba(40, 42, 54, 0.8)
 
-# Colors from color0 to color254 can be set
-color0 = #665c54
-color1 = #ea6962
-color2 = #a9b665
-color3 = #e78a4e
-color4 = #7daea3
-color5 = #d3869b
-color6 = #89b482
-color7 = #d4be98
-color8 = #928374
-color9 = #ea6962
-color10 = #a9b665
-color11 = #d8a657
-color12 = #7daea3
-color13 = #d3869b
-color14 = #89b482
-color15 = #d4be98
+# special
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
 
-#||\\ //||
-#|| \// || Mackenzie Criswell
-#|| //\ || https://makc.co
-#||   \\|| https://github.com/makccr
+# black
+color0  = #000000
+color8  = #79A9FF
+
+# red
+color1  = #ff5555
+color9  = #ff6e67
+
+# green
+color2  = #50fa7b
+color10 = #5af78e
+
+# yellow
+color3  = #f1fa8c
+color11 = #f4f99d
+
+# blue
+color4  = #6790EB
+color12 = #79A9FF
+
+# magenta
+color5  = #ff79c6
+color13 = #ff92d0
+
+# cyan
+color6  = #8be9fd
+color14 = #9aedfe
+
+# white
+color7  = #bfbfbf
+color15 = #e6e6e6

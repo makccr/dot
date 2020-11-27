@@ -1,0 +1,16 @@
+#encryptedExportDialog {
+  max-width: 650px;
+}
+
+#encryptedExportDialog .input-wrapper {
+  display: flex;
+}
+
+#encryptedExportDialog .input-wrapper .relative {
+  width: 100%;
+}
+
+#encryptedExportDialog .input-wrapper .showPassword {
+  position: relative;
+  height: auto;
+}

@@ -1,0 +1,151 @@
+--[[
+#=====================================================================================
+#                               
+# Date    : package-date
+# Editor  : Erik Dubois -https://github.com/erikdubois/Aureola
+# Source  : Jesse Avalos Google+
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+# 
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download 
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# http://www.dafont.com/distortion-dos-digital.font
+#======================================================================================
+# LUA 
+# You need not only install conky but also a package that supports lua on your computer
+# Depending on your HARDWARE you should choose wisely in the AUR
+# My hardware has an NVIDIA I will choose "conky-lua-nv" from AUR.
+#=====================================================================================
+# LUA INFO
+# In the folder lua/bars.lua you will have to change the name of your ethernet or wireless card
+# Find it with ifconfig
+#=====================================================================================
+
+]]
+
+conky.config = {
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,
+	diskio_avg_samples = 10,
+	double_buffer = true,
+	if_up_strictness = 'address',
+	net_avg_samples = 2,
+	no_buffers = true,
+	temperature_unit = 'celsius',
+	text_buffer_size = 2048,
+	update_interval = 1,
+	imlib_cache_size = 0,                       --spotify cover
+
+	--Placement
+
+	--alignment = 'middle_middle',
+	alignment = 'top_right',
+	gap_x = 20,
+	gap_y = 50,
+	minimum_height = 210,
+	minimum_width = 210,
+	maximum_width = 210,
+
+	--Graphical
+
+	border_inner_margin = 10, 					-- margin between border and text
+	border_outer_margin = 1, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 280,
+	default_bar_height = 10,
+	default_gauge_height = 25,
+	default_gauge_width =40,
+	default_graph_height = 40,
+	default_graph_width = 153,
+	default_shade_color = '#000000',
+	default_outline_color = '#C6BCB6',
+	draw_borders = false,						--draw borders around text
+	draw_graph_borders = true,
+	draw_shades = false,
+	draw_outline = false,
+	stippled_borders = 0,
+
+	--Textual
+	
+	extra_newline = false,
+	format_human_readable = true,
+	font = 'Sans Mono:size=8:oblique',
+	max_text_width = 0,
+	max_user_text = 16384,
+	override_utf8_locale = true,
+	short_units = true,
+	top_name_width = 21,
+	top_name_verbose = false,
+	uppercase = false,
+	use_spacer = 'none',
+	use_xft = true,
+	xftalpha = 1,
+
+	--Windows
+
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 100,			    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
+	
+
+	--Colours
+
+	default_color = '#FFFFFF',  				-- default color and border color
+	color1 = '#C6C6C6', 
+	color2 = '#FFFFFF', 
+	color3 = '#FFFFFF', 
+	color4 = '#BDBDBD',
+	color5 = '#CCCCCC', 
+	color6 = '#FFFFFF',
+
+	--Signal Colours
+	color7 = '#1F7411',  --green
+	color8 = '#FFA726',  --orange
+	color9 = '#F1544B',  --firebrick
+
+	--Lua
+	lua_load = '~/.config/conky/lua/bars.lua',
+	lua_draw_hook_pre = 'main_bars',
+};
+
+
+conky.text = [[
+${offset 00}${voffset 0}${font Distortion Dos Digital:size=16}${color3}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${color2}${offset 00}${voffset 0}${font Noto Sans:size=8:regular}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+${color1}${offset 19}${voffset 0}${font Noto Sans:size=8:regular}${color1}Kernel : ${color2}${kernel}${offset 00}${voffset 0}${alignr}${color2}${offset 00}${voffset 0}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}${color}
+${color1}${offset 19}${cpubar cpu0 10,110}${color1} Cpu ${alignr}${if_match ${cpu cpu0} > 80}${color9}${else}${if_match ${cpu cpu0} > 50}${color8}${else}${color2}${endif}${endif}${cpu cpu0}%${color}
+${color1}${offset 19}${cpugraph 10,110 aaaaaa ffffff  -t} Cpu History${color}
+${color1}${offset 19}${membar 10,110} Mem ${color2}${alignr}${if_match ${memperc} > 80}${color9}${else}${color6}${endif}${color2}${memperc}%${color}
+
+${color2}${offset 15}${voffset 140}${font Noto Sans:size=8}CPU1 CPU2  Mem  HDD DOWN  UP
+]]

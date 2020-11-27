@@ -1,0 +1,79 @@
+<div class="container" style="display:block;">
+  <div id="siteFeedbackView" class="container">
+    <div class="content row">
+      <h2>Help improve LastPass</h2>
+      <h3 id="currentSiteHeader">on</h3>
+    </div>
+    <div id="mainView">
+      <div id="whatIWantedToDo" class="content row">
+        <label for="goalSelect" id="goalLabel">What I wanted to do:</label>
+        <select id="goalSelect" class="full-width rounded-border" name="select">
+          <option value="none" selected hidden>Select an action</option>
+          <option value="fill">Fill my username and password</option>
+          <option value="save">Save a new username or password</option>
+          <option value="update">Update an existing password</option>
+          <option value="other">Other</option>
+        </select>
+        <p id="goalSelectWarning" class="warningText" hidden>Select an action</p>
+      </div>
+      <div id="whatActuallyHappened" class="content row">
+        <label for="fill" id="fillLabel">What actually happened:</label>
+        <select id="fill" class="full-width rounded-border" name="select" disabled>
+          <option value="none" selected hidden>Select an issue</option>
+          <option value="fillNothing">Nothing filled at all</option>
+          <option value="fillOnlyUsername">Only the username filled</option>
+          <option value="fillOnlyPassword">Only the password filled</option>
+          <option value="fillWrongInfo">The wrong information filled</option>
+          <option value="fillOther">Other</option>
+        </select>
+        <label for="save" id="saveLabel" hidden>What actually happened:</label>
+        <select id="save" class="full-width rounded-border" name="select" hidden>
+          <option value="none" selected hidden>Select an issue</option>
+          <option value="saveMissedCredentials">LastPass didn't prompt to save my username and password</option>
+          <option value="saveMissedUsername">LastPass prompted to save my password but didn't find my username</option>
+          <option value="saveOther">Other</option>
+        </select>
+        <label for="update" id="updateLabel" hidden>What actually happened:</label>
+        <select id="update" class="full-width rounded-border" name="select" hidden>
+          <option value="none" selected hidden>Select an issue</option>
+          <option value="updateMissedCredentials">LastPass didn't prompt to update my password</option>
+          <option value="updateMissedGenerated">LastPass didn't fill the generated password</option>
+          <option value="updateOther">Other</option>
+        </select>
+        <p id="issueSelectWarning" class="warningText" hidden>Select an issue</p>
+      </div>
+      <div id="helpfulDetails" class="content row">
+        <h3 class="detailsHeader">Helpful details:</h3>
+        <h3 id="optionalLabel" class="detailsHeader">(optional)</h3>
+        <textarea id="feedbackText" class="full-width rounded-border" maxlength="1000" disabled></textarea>
+        <p id="feedbackTextCaption">
+          Help us understand the issue, but never send personal information or passwords!
+        </p>
+      </div>
+      <div class="buttons">
+        <button id="sendFeedbackButton" class="nbtn rbtn btn_midi">
+          Send Feedback
+        </button>
+        <!-- <p>Learn more in the <a>Help Center</a> or review <a>Terms of Service</a></p> -->
+        <!-- re-enable above line when we determine which links to anchor to -->
+      </div>
+    </div>
+    <div id="submitConfirmation">
+      <div class="content row">
+        <img src="images/dropdownIconSet/check.png" alt="Success checkmark icon" height="64" width="64" />
+        <h3>All set!</h3>
+        <p>
+          We review all feedback, but can't respond directly. To open a support ticket, please
+          <a
+            href="https://support.logmeininc.com/lastpass/help/how-do-i-contact-customer-support-for-lastpass-lp010121"
+            target="_blank"
+            >contact customer support</a
+          >
+        </p>
+      </div>
+      <div id="bottomLink">
+        <a id="resetPageButton" href="#!">Send additional feedback</a>
+      </div>
+    </div>
+  </div>
+</div>

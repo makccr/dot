@@ -1,0 +1,52 @@
+<link rel="stylesheet" type="text/css" href="{extensionUrl}content-script/views/basic-auth/style.css">
+<div id="login-body">
+    <div class="login__overlay"></div>
+    <section class="login-section-wrapper">
+        <div class="container-main">
+            <div class="login">
+                <div class="login__container">
+                    <div class="login__head">
+                        <img src="{extensionUrl}images/basic-auth-image.png">
+                        <h4 class="heading" id="title"></h4>
+                        <p class="paragraph">requires your username and password.</p>
+                        <p id="secureWarning" class="subtext">Warning: Your connection to this site is not private.</p>
+                    </div>
+                    <div class="login__body">
+                        <form action="">
+                            <div class="login__body__input__container">
+                                <input id="ba_username" class="login__body__input--text" type="text" name="username">
+                            </div>
+                            <div class="login__body__input__container">
+                                <input id="ba_password" class="login__body__input--text" type="password"
+                                       name="password">
+                            </div>
+                            <div class="error-box">
+                                <p id="wronguserpass" class="login__body__text--error">Wrong username or
+                                    password!</p>
+                            </div>
+                            <div class="login__button__container">
+                                <button type="button" class="login__button--cancel" id="lp-cancel-btn">Cancel</button>
+                                <button type="button" class="login__button" id="lp-login-btn">Log in</button>
+                            </div>
+                            <div class="brand-img__container">
+                                <img class="brand-img" src="{extensionUrl}images/LP-Logo.png">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="notification__body">
+        <div class="notification__body__image--container">
+            <img class="notification__body__image" src="{extensionUrl}images/lp-dots.png">
+        </div>
+        <div class="notification__body__text">
+            <h4 class="notification__heading">Let LastPass assist with this site!</h4>
+            <div class="notification__body__inner-b7,ox">
+                <span class="notification__subheading">Authentication never been easier!</span>
+            </div>
+        </div>
+        <div title="Close" class="notification__close__button">x</div>
+    </div>
+</div>

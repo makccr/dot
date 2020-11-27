@@ -1,0 +1,18 @@
+.composite-overlay-root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color:white;
+  opacity: .6;
+}
+
+.composite-background-overlay-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}

@@ -1,0 +1,113 @@
+/*Default Dialog Overrides*/
+
+#vaultTakeoverUpdateNotification {
+    text-align: center;
+}
+
+#vaultTakeoverUpdateNotification .dialogContent {
+    overflow: hidden;
+}
+
+#vaultTakeoverUpdateNotification.dialog{
+    width: 650px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-size: 13px;
+    color: #22303a;
+}
+
+#vaultTakeoverUpdateNotification .dialogHeader {
+    display: none;
+}
+
+#vaultTakeoverUpdateNotification .dialogHeaderInner {
+    display: none;
+}
+
+#vault-takeover-update-notification-header {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    padding-bottom: 20px;
+    color: #172128;
+}
+
+.vault-takeover-update-notification-text {
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.vault-takeover-update-notification-images {
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.vault-takeover-update-notification-images .column {
+    flex: 33%;
+    padding-bottom: 10px;
+}
+
+.image {
+    width: 80px;
+}
+
+.image-text {
+    padding-top: 10px;
+}
+
+.post-forced-update-messaging #vault-takeover-update-notification-row-skip {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.vault-takeover-update-notification .dialog__actions .button--primary {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #646d73;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    line-height: 2.4;
+    height: 50px;
+    width: 215px;
+    margin: 0;
+    padding: 6px 18px;
+    outline: 0;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: box-shadow 225ms cubic-bezier(0.25, 0.8, 0.25, 1), border-color 225ms cubic-bezier(0.25, 0.8, 0.25, 1), background-color 225ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    -moz-transition: box-shadow 225ms cubic-bezier(0.25, 0.8, 0.25, 1), border-color 225ms cubic-bezier(0.25, 0.8, 0.25, 1), background-color 225ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: box-shadow 225ms cubic-bezier(0.25, 0.8, 0.25, 1), border-color 225ms cubic-bezier(0.25, 0.8, 0.25, 1), background-color 225ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: box-shadow 225ms cubic-bezier(0.25, 0.8, 0.25, 1), border-color 225ms cubic-bezier(0.25, 0.8, 0.25, 1), background-color 225ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.vault-takeover-update-notification .dialog__actions .button--primary {
+    color: #FFFFFF;
+    background-color: #D32D27;
+    box-shadow: 0 1px 1px rgba(59, 74, 84, 0.1);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+#vault-takeover-update-notification-row-skip {
+    cursor: pointer;
+}
+
+.learn-more-link {
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.bold-text {
+    font-weight: 700;
+    margin-top: 20px;
+}

@@ -1,0 +1,35 @@
+    ##START THEMING BAR
+    #Theme name : ArcoLinux Ruins
+
+    # i3 bar colors
+    # variable border background Text
+
+    colors {
+        background #303030
+        statusline #d0e1d4
+        separator  #c1d0c1
+
+        # colorclass           border  backgr. text
+        focused_workspace     #FF6F54 #FF6F54 #FFF2CE
+        active_workspace      #FF6F54 #FF6F54 #FFF2CE
+        inactive_workspace    #64635f #64635f #a7afa9
+        urgent_workspace      #e82951 #e82951 #FFF2CE
+        }
+
+    }
+    ##STOP THEMING BAR
+
+    ##START THEMING WM
+    #Theme name : ArcoLinux Ruins
+
+    # Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          #FF6F54 #FF6F54 #e5e5e5 #FF6F54
+    client.unfocused        #222222 #222222 #aaaaaa #222222
+    client.focused_inactive #222222 #222222 #aaaaaa #222222
+    client.placeholder      #222222 #222222 #aaaaaa #222222
+    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+
+    client.background       #242424
+
+    ##STOP THEMING WM

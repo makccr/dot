@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <path id="b" d="M240 60h1200v114H240z"/>
+        <filter id="a" width="100.1%" height="101.8%" x="0%" y="-.4%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        </filter>
+        <path id="c" d="M48.958 25c0 13.233-10.729 23.958-23.958 23.958C11.765 48.958 1.042 38.233 1.042 25 1.042 11.767 11.765 1.042 25 1.042c13.23 0 23.958 10.725 23.958 23.958z"/>
+        <filter id="d" width="114.6%" height="114.6%" x="-7.3%" y="-7.3%" filterUnits="objectBoundingBox">
+            <feOffset dx="5" dy="-4" in="SourceAlpha" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.858823529 0 0 0 0 0.925490196 0 0 0 0 0.964705882 0 0 0 1 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F9FBFD" d="M-272-91h1440v800H-272z"/>
+        <g transform="translate(-272 -91)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="#FFF" xlink:href="#b"/>
+        </g>
+        <g stroke-linecap="round" stroke-linejoin="round">
+            <g>
+                <use fill="#FFF" xlink:href="#c"/>
+                <use fill="#000" filter="url(#d)" xlink:href="#c"/>
+                <use stroke="#3C4862" stroke-width="2" xlink:href="#c"/>
+            </g>
+            <path stroke="#70C385" stroke-width="2" d="M35.417 17.708L19.792 32.292l-5.209-5.209"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,234 @@
+--[[
+#=====================================================================================
+#                               arcolinux
+# Date    : package-date
+# Author  : http://etlesteam.deviantart.com/art/Conky-Harfo-613015068
+# Editor  : Erik Dubois
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+# Documentation : http://erikdubois.be
+#======================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#======================================================================================
+]]
+
+conky.config = {
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
+	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
+	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
+	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
+	net_avg_samples = 2,						-- The number of samples to average for net data
+	no_buffers = true,							-- Subtract (file system) buffers from used memory?
+	temperature_unit = 'celsius',				-- fahrenheit or celsius
+	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
+	update_interval = 1,						-- update interval
+	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
+
+
+	--Placement
+
+	alignment = 'top_left',		                -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+												-- middle_left,middle_middle,middle_right,none
+	--Arch Duoscreen
+	--gap_x = -1910,
+	gap_x = 20,									-- pixels between right or left border
+	gap_y = 50,									-- pixels between bottom or left border
+	minimum_height = 610,						-- minimum height of window
+	minimum_width = 250,						-- minimum height of window
+	maximum_width = 250,						-- maximum height of window
+
+	--Graphical
+
+	border_inner_margin = 0, 					-- margin between border and text
+	border_outer_margin = 0, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 280,					-- default is 0 - full width
+	default_bar_height = 10,					-- default is 6
+	default_gauge_height = 25,					-- default is 25
+	default_gauge_width =40,					-- default is 40
+	default_graph_height = 26,					-- default is 25
+	default_graph_width = 80,					-- default is 0 - full width
+	default_shade_color = '#AAAAAA',			-- default shading colour
+	default_outline_color = '#AAAAAA',			-- default outline colour
+	draw_borders = false,						-- draw borders around text
+	draw_graph_borders = false,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+	stippled_borders = 0,						-- dashing the border
+	top_name_width = 7,
+	--Textual
+
+	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font = 'Droid Sans:size=8',  			    -- font for complete conky unless in code defined
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
+	max_user_text = 16384,						-- max text in conky default 16384
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = true,							-- shorten units from KiB to k
+	top_name_width = 21,						-- width for $top name value default 15
+	top_name_verbose = false,					-- If true, top name shows the full command line of  each  process - Default value is false.
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 0.5,
+	pad_percents = 2,							-- alpha of the xft font - between 0-1
+
+	--Windows
+
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 0,			        -- real transparency - composite manager required 0-255
+	own_window_argb_visual = false,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = true,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
+
+
+	--Colours
+
+	default_color = '#EBEA04',  				-- default color and border color
+	color0 = '#B0E0E6',
+	color1 = '#242424',
+	color2 = '#D8BFD8',
+	color3 = '#cccccc',
+	color4 = '#BDBDBD',
+	color5 = '#CCCCCC',
+	color6 = '#aa0000',
+
+	--Signal Colours
+	color7 = '#1F7411',  						--green
+	color8 = '#FFA726',  						--orange
+	color9 = '#F1544B',  						--firebrick
+
+
+	--Lua
+
+
+};
+
+conky.text = [[
+${image ~/.config/conky/harfo/images/top-bg.png -p 0,10 -s 228x61}\
+${image ~/.config/conky/harfo/images/bottom-bg.png -p 0,472 -s 228x178}\
+${image ~/.config/conky/harfo/images/bg-1.png -p 0,157 -s 228x86}\
+${image ~/.config/conky/harfo/images/bg-2.png -p 0,243 -s 228x105}\
+${image ~/.config/conky/harfo/images/bg-3.png -p 0,348 -s 228x110}\
+${image ~/.config/conky/harfo/images/bg-4.png -p 0,458 -s 228x14}\
+${image ~/.config/conky/harfo/images/bg-5.png -p 0,255 -s 228x14}\
+${image ~/.config/conky/harfo/images/bg-6.png -p 0,71 -s 228x86}\
+${image ~/.config/conky/harfo/images/fav-color.png -p 0,69 -s 228x89}\
+${image ~/.config/conky/harfo/images/border.png -p 0,10 -s 228x640}\
+${image ~/.config/conky/harfo/images/separator-h.png -p 1,472 -s 226x1}\
+${image ~/.config/conky/harfo/images/bg-5.png -p 0,365 -s 228x14}\
+${image ~/.config/conky/harfo/images/separator-h.png -p 1,568 -s 226x1}\
+${image ~/.config/conky/harfo/images/separator-v.png -p 114,473 -s 1x95}\
+\
+${voffset 20}${font Droid Sans :size=11}${alignc 10}${color}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${font}${color}
+${voffset 6}${font Droid Sans :size=10}${alignc 10}Kernel : ${kernel}${font}${color}
+${voffset 6}${goto 25}${font Droid Sans :size=50}${color1}${time %H:%M}${font}
+${voffset 1}${goto 50}${font Droid Sans :size=15}${time %b %d} on ${time %a}${font}${color}
+\
+${voffset 14}${goto 10}Cpu :${color}
+${voffset 4}${goto 10}Mem :${color}
+${voffset 4}${goto 10}Uptime :${color}
+\
+${voffset -47}${alignr 30}${cpu cpu0}%
+${voffset 4}${alignr 30}${memperc}%
+${voffset 4}${alignr 30}${uptime_short}
+${voffset -47}${alignc 10 }${cpubar 5,36}
+${voffset 4}${alignc 10}${membar 5,36}
+${voffset 20}${alignr 30}${loadgraph 26,212 -l}${color}
+\
+${voffset 0}${goto 10}TOP MEM
+${voffset -13}${alignc -5}MEM %
+${voffset -13}${alignr 30}MEM${color}
+\
+${voffset 8}${goto 10}${top_mem name 1}
+${voffset 4}${goto 10}${top_mem name 2}
+${voffset 4}${goto 10}${top_mem name 3}
+${voffset 4}${goto 10}${top_mem name 4}
+${voffset 4}${goto 10}${top_mem name 5}${color}
+\
+${voffset -81}${alignc -5}${top_mem mem 1}%
+${voffset 4}${alignc -5}${top_mem mem 2}%
+${voffset 4}${alignc -5}${top_mem mem 3}%
+${voffset 4}${alignc -5}${top_mem mem 4}%
+${voffset 4}${alignc -5}${top_mem mem 5}%${color}
+\
+${voffset -81}${alignr 30}${top_mem mem_res 1}
+${voffset 4}${alignr 30}${top_mem mem_res 2}
+${voffset 4}${alignr 30}${top_mem mem_res 3}
+${voffset 4}${alignr 30}${top_mem mem_res 4}
+${voffset 4}${alignr 30}${top_mem mem_res 5}${color}
+\
+${voffset 8}${goto 10}TOP PROCESS
+${voffset -13}${alignc -5}CPU %
+${voffset -13}${alignr 30}MEM${color}
+\
+${voffset 5}${goto 10}${top name 1}${font}
+${voffset 4}${goto 10}${top name 2}
+${voffset 4}${goto 10}${top name 3}
+${voffset 4}${goto 10}${top name 4}
+${voffset 4}${goto 10}${top name 5}${color}${font}
+\
+${voffset -81}${alignc -5}${top cpu 1}%${font}
+${voffset 4}${alignc -5}${top cpu 2}%
+${voffset 4}${alignc -5}${top cpu 3}%
+${voffset 4}${alignc -5}${top cpu 4}%
+${voffset 4}${alignc -5}${top cpu 5}%${color}${font}
+\
+${voffset -81}${alignr 30}${top_mem mem_res 1}
+${voffset 4}${alignr 30}${top_mem mem_res 2}
+${voffset 4}${alignr 30}${top_mem mem_res 3}
+${voffset 4}${alignr 30}${top_mem mem_res 4}
+${voffset 4}${alignr 30}${top_mem mem_res 5}${color}${font}
+\
+${if_existing /proc/net/route wlp3s0}${font}
+${voffset 2}${goto 10}Up : ${upspeed wlp3s0} ${goto 135}Down : ${downspeed wlp3s0}
+${voffset 8}${goto 10}${upspeedgraph wlp3s0 26,100} ${goto 121}${downspeedgraph wlp3s0 26,100}
+${voffset 9}${goto 10}Sent : ${totalup wlp3s0} ${goto 132}Received : ${totaldown wlp3s0}${color}
+${else}
+${voffset 99}${goto 10}Network : Disconnected${color}
+${image ~/.config/conky/harfo/images/off.png -p 170,590 -s 40x40}
+${image ~/.config/conky/harfo/images/red-off.png -p 2,72 -s 225x83}
+${else}
+${voffset 1}${goto 10}Network : Connected${color}
+${image ~/.config/conky/harfo/images/on-yellow.png -p 170,590 -s 40x40}
+${image ~/.config/conky/harfo/images/yellow-on.png -p 2,72 -s 224x83}
+${endif}
+\
+${voffset -35}${goto 10}SSID : ${wireless_essid wlp3s0}
+${voffset 4}${goto 10}Speed : ${wireless_bitrate wlp3s0}
+${voffset 4}${goto 10}Signal : ${wireless_link_qual_perc wlp3s0} %
+${voffset -100}
+##========================== Regards, Etles_Team =========================##
+]];

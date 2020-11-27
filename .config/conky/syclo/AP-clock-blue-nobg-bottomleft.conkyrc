@@ -1,0 +1,191 @@
+--[[
+#=====================================================================================
+#
+# Date    : package-date
+# name    : syclo conky (Simple System Info And Clock)
+# Author  : Adhi Pambudi
+#           https://plus.google.com/+AdhiPambudi
+#           http://addy-dclxvi.deviantart.com/
+# Github  : https://github.com/zagortenay333/conky-Vision
+# Editor  : Erik Dubois
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#=====================================================================================
+# The conky code is not in the lua format.
+
+]]
+
+conky.config = {
+--##  Begin Window Settings  #####################
+own_window = true,
+own_window_type = 'desktop',
+own_window_transparent = true,
+own_window_hints = 'undecorated,below,skip_taskbar,skip_pager,sticky',
+own_window_colour = '#000000',
+own_window_class = 'Conky',
+own_window_title = 'arcolinux Top Conky',
+--## ARGB can be used for real transparency
+--## NOTE that a composite manager is required for real transparency.
+--## This option will not work as desired (in most cases) in conjunction with
+--## own_window_type normal
+-- own_window_argb_visual yes # Options: yes or no
+
+--## When ARGB visuals are enabled, this use this to modify the alpha value
+--## Use: own_window_type normal
+--## Use: own_window_transparent no
+--## Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity.
+-- own_window_argb_value 50
+
+minimum_width = 400,
+minimum_height = 240,
+maximum_width = 400,
+
+gap_x = 20,--## left | right
+gap_y = 0,--## up | down
+
+alignment = 'bottom_left',
+--######################  End Window Settings  ###
+--##  Font Settings  #############################
+-- Use Xft (anti-aliased font and stuff)
+use_xft = true,
+--# Requires mono font for spacing reasons
+--xftfont Liberation Mono:bold:size=9
+font = 'Roboto:size=10',
+
+
+-- Alpha of Xft font. Must be a value at or between 1 and 0 ###
+xftalpha = 1,
+-- Force UTF8? requires XFT ###
+override_utf8_locale = true,
+
+uppercase = false,
+--########################  End Font Settings  ###
+--##  Colour Settings  ###########################
+draw_shades = false,--yes
+default_shade_color = 'black',
+
+draw_outline = false,-- amplifies text if yes
+default_outline_color = 'black',
+
+--default_color 656667 # Waldorf original colour
+--default_color 7a7a7a # Flame  & Bunsen Grey
+--default_color 929292 # Labs Grey
+default_color = '#ffffff',-- PureWhite
+color0 = '#5294E2',-- Blue
+color1 = '#778899',-- LightSlateGray
+color2 = '#D8BFD8',-- Thistle
+color3 = '#9ACD32',-- YellowGreen
+color4 = '#FFA07A',-- LightSalmon
+color5 = '#FFDEAD',-- NavajoWhite
+color6 = '#00BFFF',-- DeepSkyBlue
+color7 = '#5F9EA0',-- CadetBlue
+color8 = '#BDB76B',-- DarkKhaki
+color9 = '#CD5C5C',-- IndianRed
+--######################  End Colour Settings  ###
+--##  Borders Section  ###########################
+draw_borders = false,
+-- Stippled borders?
+stippled_borders = 5,
+-- border margins
+border_inner_margin = 5,
+border_outer_margin = 0,
+-- border width
+border_width = 2,
+-- graph borders
+draw_graph_borders = true,--no
+--default_graph_size 15 40
+--#######################  End Borders Secton  ###
+--##  Miscellaneous Section  #####################
+-- Boolean value, if true, Conky will be forked to background when started.
+background = true,
+-- Adds spaces around certain objects to stop them from moving other things
+-- around, this only helps if you are using a mono font
+-- Options: right, left or none
+use_spacer = 'none',
+
+-- Default and Minimum size is 256 - needs more for single commands that
+-- "call" a lot of text IE: bash scripts
+--text_buffer_size 6144
+
+-- Subtract (file system) buffers from used memory?
+no_buffers = true,
+
+-- change GiB to G and MiB to M
+short_units = true,
+
+-- Like it says, ot pads the decimals on % values
+-- doesn't seem to work since v1.7.1
+pad_percents = 2,
+
+-- Imlib2 image cache size, in bytes. Default 4MiB Increase this value if you use
+-- $image lots. Set to 0 to disable the image cache.
+imlib_cache_size = 0,
+
+-- Use the Xdbe extension? (eliminates flicker)
+-- It is highly recommended to use own window with this one
+-- so double buffer won't be so big.
+double_buffer = true,
+
+--   Maximum size of user text buffer, i.e. layout below TEXT line in config file
+--  (default is 16384 bytes)
+-- max_user_text 16384
+
+-- Desired output unit of all objects displaying a temperature. Parameters are
+-- either "fahrenheit" or "celsius". The default unit is degree Celsius.
+-- temperature_unit Fahrenheit
+--################  End Miscellaneous Section  ###
+
+update_interval = 1,
+
+};
+
+conky.text = [[
+${goto 20}${font Roboto:Light:size=72}${color0}\
+${time %H}${color}\
+\
+\
+:\
+\
+\
+${time %M}${font}${color}
+\
+\
+\
+\
+${goto 20}${font Roboto:Light:size=24}${voffset 12}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A"},${color}\
+${color0} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%d"}${color}\
+ ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}${font}${color}
+\
+
+${goto 24}\
+${font Roboto:Light:pixelsize=12}\
+${image ~/.config/conky/syclo/images/blue/hdd.png -p 15,158 -s 16x16} ${offset 14}${fs_used /} / ${fs_size /}\
+${offset 30}${image ~/.config/conky/syclo/images/blue/ram.png -p 125,158 -s 16x16} ${offset 9}$mem / $memmax\
+${offset 30}${image ~/.config/conky/syclo/images/blue/cpu.png -p 240,158 -s 16x16} ${offset 9}${cpu cpu0}%
+]];

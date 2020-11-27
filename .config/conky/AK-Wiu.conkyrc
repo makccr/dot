@@ -1,0 +1,138 @@
+conky.config = {
+--Credits : Andy Kefi from Facebook
+	use_xft = true,
+	font = 'DejaVu Sans:size=10',
+	xftalpha = 0.8,
+	text_buffer_size = 2048,
+
+-- Update interval in seconds
+	update_interval = 1,
+
+-- This is the number of times Conky will update before quitting.
+	total_run_times = 0,
+
+	own_window = true,
+	own_window_transparent = true,
+--own_window_type override
+--own_window_type desktop
+	own_window_type = 'normal',--use this if you want a nice shadow to appear around conky
+
+-- If own_window is yes, these window manager hints may be used
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+-- Use double buffering (reduces flicker, may not work for everyone)
+	double_buffer = true,
+
+-- Minimum size of text area
+	minimum_width = 220, minimum_height = 0,
+--maximum_width 200
+
+-- Draw shades?
+	draw_shades = false,
+
+-- Draw outlines?
+	draw_outline = false,
+
+-- Draw borders around text
+	draw_borders = false,
+
+-- Stippled borders?
+	stippled_borders = 0,
+
+-- border margins
+	border_margin = '5',
+
+-- border width
+	border_width = 1,
+
+-- Default colors and also border colors
+	default_color = 'white',
+--default_shade_color black
+--default_outline_color grey
+	own_window_colour = '#000000',
+
+-- Text alignment, other possible values are commented
+--alignment top_left
+	alignment = 'top_right',
+--alignment bottom_left
+--alignment bottom_right
+--alignment middle_right
+
+-- Gap between borders of screen and text
+-- same thing as passing -x at command line
+	gap_x = 20,
+	gap_y = 50,
+
+-- Subtract file system buffers from used memory?
+	no_buffers = true,
+
+-- set to yes if you want all text to be in uppercase
+	uppercase = false,
+
+-- number of cpu samples to average
+-- set to 1 to disable averaging
+	cpu_avg_samples = 2,
+
+-- number of net samples to average
+-- set to 1 to disable averaging
+	net_avg_samples = 2,
+
+-- Force UTF8? note that UTF8 support required XFT
+	override_utf8_locale = true,
+
+-- Add spaces to keep things from moving about? This only affects certain objects.
+	use_spacer = 'none',
+
+	own_window_argb_value = 0,
+	own_window_argb_visual = true,
+};
+
+conky.text = [[
+${font Zekton:Bold:size=11}${alignc}SYSTEM
+${hr 2}
+${font Zekton:Bold:size=12}${alignc}${exec cut -d '\' -f 1 /etc/issue}
+${voffset -20}${alignc}&
+${alignc =10}${font Zekton:Bold:size=12}ArcoLinux
+#PC
+${hr 2}
+${font Zekton:Bold:size=12}${alignc}JUST
+${font Zekton:Bold:size=12}${alignc}KEEP
+${font Zekton:Bold:size=12}${alignc}ROLLING
+${hr 2}
+${font StyleBats:Bold:size=16}K${font} Kernel: ${alignr}${kernel}
+${font StyleBats:Bold:size=16}A${font} CPU 1: ${cpu cpu1}% ${alignr}${cpubar cpu1 8,60}
+${font StyleBats:Bold:size=16}A${font} CPU 2: ${cpu cpu2}% ${alignr}${cpubar cpu2 8,60}
+${font StyleBats:Bold:size=16}g${font} RAM: $mem $memperc% ${alignr}${membar 8,60}
+${font StyleBats:Bold:size=16}j${font} SWAP: $swap $swapperc% ${alignr}${swapbar 8,60}
+${font Webdings:Bold:size=16}~${font}Battery: ${battery_percent BAT0}% ${alignr}${battery_bar 8,60 BAT0}
+${font StyleBats:Bold:size=16}S${font} Cpu Temp : ${alignr}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
+${font StyleBats:Bold:size=16}q${font} Uptime: ${alignr}${uptime}
+
+${font Zekton:Bold:size=11}DATE ${hr 2}
+
+${alignc 0}${font Space age:size=40}${time %H:%M}
+${font Zekton:size=10}${voffset -30}${alignc}${time %A, %d %B %Y}
+
+${font Zekton:Bold:size=11}HD ${hr 2}
+${voffset 4}${font StyleBats:Bold:size=14}2${font} ${voffset -5}Root:
+${voffset 4}${fs_used /}/${fs_size /} ${alignr}${fs_bar 8,60 /}
+#${font StyleBats:Bold:size=14}m${font} ${voffset -5}Home:
+#${voffset 4}${fs_free /home}/${fs_size /home} ${alignr}${fs_bar 8,60 /home}
+
+${font Zekton:Bold:size=11}NET${hr 2}
+#Wired = enp0s31f6 and WiFi = wlp3s0
+${if_existing /proc/net/route enp0s31f6}
+${voffset -15}${alignc 0}${font Deja sans:size=12}Wired
+${font StyleBats:Bold:size=14}V${font} Up: ${upspeed enp0s31f6}${alignr}${upspeedgraph enp0s31f6 8,60 black black}
+${voffset 4}${font StyleBats:Bold:size=14}T${font} Down: ${downspeed enp0s31f6}${alignr}${downspeedgraph enp0s31f6 8,60 black black}
+${voffset 4}${font StyleBats:Bold:size=14}N${font} Upload: ${alignr}${totalup enp0s31f6}
+${voffset 4}${font StyleBats:Bold:size=14}X${font} Download: ${alignr}${totaldown enp0s31f6}
+${else}${if_existing /proc/net/route wlp3s0}${alignc 0}${font Deja sans:size=12}Wireless
+${font}SSID: ${wireless_essid wlp3s0}
+Signal: ${wireless_link_qual_perc wlp3s0}% ${alignr}${wireless_link_bar 8,60 wlp3s0}
+${voffset 8}${font StyleBats:Bold:size=14}V${font} Up: ${upspeed wlp3s0}${alignr}${upspeedgraph wlp3s0 8,60 black black}
+${voffset 4}${font StyleBats:Bold:size=14}T${font} Down: ${downspeed wlp3s0}${alignr}${downspeedgraph wlp3s0 8,60 black black}
+${voffset 4}${font StyleBats:Bold:size=14}N${font} Upload: ${alignr}${totalup wlp3s0}
+${voffset 4}${font StyleBats:Bold:size=14}X${font} Download: ${alignr}${totaldown wlp3s0}
+${endif}
+]];

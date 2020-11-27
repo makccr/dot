@@ -1,0 +1,52 @@
+conky.config = {
+--https://www.deviantart.com/mowgli-writes/art/qlocktwo-conky-470067388
+
+	background = false,
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_class = 'Conky',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	alignment = 'middle_middle',
+	gap_x = 0,
+--575
+	gap_y = 0,
+--310
+	use_xft = true,
+	font = 'Source Sans Pro Bold:size=18',
+	xftalpha = 0.1,
+	update_interval = 1,
+	uppercase = true,
+	double_buffer = true,
+	own_window_argb_visual = true,
+	own_window_argb_value = 0,
+	draw_shades = true,
+	default_shade_color = '#000000',
+	default_color = '#ffffff',
+	color1 = '#2d2d2d',
+--2d2d2d
+--4A2B45
+--382536
+--3F2E2F
+--000000
+};
+
+conky.text = [[
+${alignc}${color}I T ${color1}L ${color}I S ${color1}A S T I M E
+${alignc}${if_match ${exec date +"%M"} < 35}${if_match ${exec date +"%M"} >= 15}${if_match ${exec date +"%M"} < 20}${color}${endif}${endif}A ${color1}C ${if_match ${exec date +"%M"} >= 15}${if_match ${exec date +"%M"} < 20}${color}${endif}${endif}Q U A R T E R ${color1}D C
+${alignc}${if_match ${exec date +"%M"} >= 20}${if_match ${exec date +"%M"} < 30}${color}${endif}${endif}T W E N T Y ${if_match ${exec date +"%M"} >= 25}${if_match ${exec date +"%M"} < 30}${color}${endif}${else}${color1}${endif}${if_match ${exec date +"%M"} >= 5}${if_match ${exec date +"%M"} < 10}${color}${endif}${endif}F I V E ${color1}X
+${alignc}${if_match ${exec date +"%M"} >= 30}${if_match ${exec date +"%M"} < 35}${color}${endif}${endif}H A L F ${color1}B ${if_match ${exec date +"%M"} >= 10}${if_match ${exec date +"%M"} < 15}${color}${endif}${endif}T E N ${color1}F T O
+${alignc}${else}${if_match ${exec date +"%M"} >= 45}${if_match ${exec date +"%M"} < 50}${color}${endif}${endif}A ${color1}C ${if_match ${exec date +"%M"} >= 45}${if_match ${exec date +"%M"} < 50}${color}${endif}${endif}Q U A R T E R ${color1}D C
+${alignc}${if_match ${exec date +"%M"} >= 35}${if_match ${exec date +"%M"} < 45}${color}${endif}${endif}T W E N T Y ${if_match ${exec date +"%M"} < 40}${if_match ${exec date +"%M"} >= 35}${color}${endif}${else}${color1}${endif}${if_match ${exec date +"%M"} >= 55}${color}${endif}F I V E ${color1}X
+${alignc}H A L F B ${if_match ${exec date +"%M"} >= 50}${if_match ${exec date +"%M"} < 55}${color}${endif}${endif}T E N ${color1}F ${color}T O${color1}
+${alignc}${endif}${if_match ${exec date +"%M"} < 35}${if_match ${exec date +"%M"} >= 5}${color}${endif}${endif}P A S T ${color1}E R U ${if_match ${exec date +"%M"} < 35}${if_match ${exec date +"%I"} == 9}${color}${else}${color1}${endif}N I N E
+${alignc}${if_match ${exec date +"%I"} == 1}${color}${else}${color1}${endif}O N E ${if_match ${exec date +"%I"} == 6}${color}${else}${color1}${endif}S I X ${if_match ${exec date +"%I"} == 3}${color}${else}${color1}${endif}T H R E E
+${alignc}${if_match ${exec date +"%I"} == 4}${color}${else}${color1}${endif}F O U R ${if_match ${exec date +"%I"} == 5}${color}${else}${color1}${endif}F I V E ${if_match ${exec date +"%I"} == 2}${color}${else}${color1}${endif}T W O
+${alignc}${if_match ${exec date +"%I"} == 8}${color}${else}${color1}${endif}E I G H T ${if_match ${exec date +"%I"} == 11}${color}${else}${color1}${endif}E L E V E N
+${alignc}${if_match ${exec date +"%I"} == 7}${color}${else}${color1}${endif}S E V E N ${if_match ${exec date +"%I"} == 12}${color}${else}${color1}${endif}T W E L V E
+${alignc}${if_match ${exec date +"%I"} == 10}${color}${else}${color1}${endif}T E N ${else}${if_match ${exec date +"%I"} == 8}${color}${else}${color1}${endif}N I N E
+${alignc}${if_match ${exec date +"%I"} == 12}${color}${else}${color1}${endif}O N E ${if_match ${exec date +"%I"} == 5}${color}${else}${color1}${endif}S I X ${if_match ${exec date +"%I"} == 2}${color}${else}${color1}${endif}T H R E E
+${alignc}${if_match ${exec date +"%I"} == 3}${color}${else}${color1}${endif}F O U R ${if_match ${exec date +"%I"} == 4}${color}${else}${color1}${endif}F I V E ${if_match ${exec date +"%I"} == 1}${color}${else}${color1}${endif}T W O
+${alignc}${if_match ${exec date +"%I"} == 7}${color}${else}${color1}${endif}E I G H T${if_match ${exec date +"%I"} == 10}${color}${else}${color1}${endif} E L E V E N
+${alignc}${if_match ${exec date +"%I"} == 6}${color}${else}${color1}${endif}S E V E N${if_match ${exec date +"%I"} == 11}${color}${else}${color1}${endif} T W E L V E
+${alignc}${if_match ${exec date +"%I"} == 9}${color}${else}${color1}${endif}T E N ${endif}${color1}S E ${if_match ${exec date +"%M"} < 5}${color}${endif}O C L O C K
+]];

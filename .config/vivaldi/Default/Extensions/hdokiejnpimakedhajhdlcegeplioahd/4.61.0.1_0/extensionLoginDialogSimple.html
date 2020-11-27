@@ -1,0 +1,47 @@
+<div dialogsection="main" id="loginView" class="lp-grid container gutter-sm">
+  <div id="virtualkeyboard" style="display:none;">
+    <div class="simple-keyboard"></div>
+  </div>
+  <div class="small-margins">
+    <label for="loginDialogEmail" class="label first">Email</label>
+    <label class="error-summary" for="loginDialogEmail"></label>
+  </div>
+  <input class="dialogInput typeaheadDropdown" id="loginDialogEmail" dialogfield="email" type="text" spellcheck="false"/>
+  <div class="row small-margins">
+    <div class="col-8 hideOnFederation">
+      <label class="label" for="loginDialogPassword" >Master Password</label>
+      <label class="error-summary" for="loginDialogPassword"></label>
+    </div>
+  </div>
+  <div class="relative hideOnFederation">
+    <input class="dialogInput inputCapsMatter" id="loginDialogPassword" dialogfield="password" type="password"/>
+    <span class="change-password-visibility hide" id="changePasswordVisibility"></span>
+    <div class="pull-right tabOrderChange">
+    <button class="showKeyboard" title="Use Virtual Keyboard"></button>
+      <a id="forgotPassword" href="javascript:void(0)">Recovery Help</a>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="beforeButtons">
+    <div class="checkboxContainer pull-left">
+      <input id="loginDialogRememberEmail" class="checkbox" dialogfield="rememberEmail" type="checkbox"/>
+      <label class="checkboxLabel" for="loginDialogRememberEmail">Remember Email</label>
+    </div>
+    <div class="checkboxContainer pull-right">
+      <input id="loginDialogRememberPassword" class="checkbox" dialogfield="rememberPassword" type="checkbox"/>
+      <label class="checkboxLabel hideOnFederation" for="loginDialogRememberPassword" id="loginDialogRememberPasswordLabel">Remember Password</label>
+    </div>
+    <div id="loginDialogDisableBrowserDiv" class="checkboxContainer pull-left">
+      <input id="loginDialogDisableBrowser" class="checkbox" dialogfield="disablePasswordManager" type="checkbox"/>
+      <label class="checkboxLabel" for="loginDialogDisableBrowser" id="loginDialogDisableBrowserLabel">Disable Browser Password Management</label>
+    </div>
+  </div>
+  <div class='buttons centerButtons'>
+   <button id="logInButton" class='nbtn rbtn'>Log In</button>
+  </div>
+  <div class="showOnFederation" style="display:none;">Press Log In to use your company credentials</div>
+  <div class="content-pull-center gutter-bottom-xl">
+    <div><p class="hr">or</p></div>
+    <button id="newToLastPass">Create an account</button>
+  </div>
+</div>

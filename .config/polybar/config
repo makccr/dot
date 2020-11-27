@@ -41,7 +41,7 @@ font-2 = Weather Icons:size=12;0
 
 modules-left = powermenu bspwm i3
 modules-center = spotify
-modules-right = date battery
+modules-right = update weather date battery
 
 ;wm-restack = bspwm
 

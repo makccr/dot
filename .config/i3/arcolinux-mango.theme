@@ -1,0 +1,35 @@
+    ##START THEMING BAR
+    #Theme name : ArcoLinux Mango
+
+    # i3 bar colors
+    # variable border background Text
+
+    colors {
+        background #2F2F2F
+        statusline #eeeeee
+        separator  #fdb95b
+
+        # colorclass           border  backgr. text
+        focused_workspace     #a9a9a9 #fdb95b #000000
+        active_workspace      #a9a9a9 #ffddaf #000000
+        inactive_workspace    #a9a9a9 #5f676a #eeeeee
+        urgent_workspace      #a9a9a9 #d42121 #eeeeee
+        }
+
+    }
+    ##STOP THEMING BAR
+
+    ##START THEMING WM
+    #Theme name : ArcoLinux Mango
+
+    # Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          #242424 #fdb95b #ffffff #fdb95b
+    client.unfocused        #222222 #ffddaf #ffffff #ffddaf
+    client.focused_inactive #222222 #ffddaf #ffffff #ffddaf
+    client.placeholder      #242424 #242424 #ffffff
+    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+
+    client.background       #242424
+
+    ##STOP THEMING WM

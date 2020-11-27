@@ -1,0 +1,35 @@
+    ##START THEMING BAR
+    #Theme name : ArcoLinux Solar
+
+    # i3 bar colors
+    # variable border background Text
+
+    colors {
+        background #657b83
+        statusline #eee8d5
+        separator  #073642
+
+        # colorclass           border  backgr. text
+        focused_workspace     #657b83 #073642 #eee8d5
+        active_workspace      #eee8d5 #657b83 #eee8d5
+        inactive_workspace    #657b83 #657b83 #eee8d5
+        urgent_workspace      #657b83 #d42121 #eee8d5
+        }
+
+    }
+    ##STOP THEMING BAR
+
+    ##START THEMING WM
+    #Theme name : ArcoLinux Solar
+
+    # Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          #eee8d5 #eee8d5 #073642 #eee8d5
+    client.unfocused        #073642 #073642 #eee8d5 #073642
+    client.focused_inactive #073642 #073642 #eee8d5 #073642
+    client.placeholder      #073642 #073642 #eee8d5 #073642
+    client.urgent           #657b83 #d42121 #eee8d5 #d42121
+
+    client.background       #242424
+
+    ##STOP THEMING WM

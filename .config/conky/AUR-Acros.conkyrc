@@ -1,0 +1,178 @@
+--[[
+#=====================================================================================
+#
+# Date    : package-date
+# Author  : Erik Dubois
+# Source  : Aureola - https://github.com/erikdubois/Aureola
+# Version : package-version
+# License : Distributed under the terms of GNU GPL version 2 or later
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#=====================================================================================
+
+]]
+
+conky.config = {
+
+
+	--Various settings
+
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
+	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
+	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
+	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
+	net_avg_samples = 2,						-- The number of samples to average for net data
+	no_buffers = true,							-- Subtract (file system) buffers from used memory?
+	temperature_unit = 'celsius',				-- fahrenheit or celsius
+	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
+	update_interval = 1,						-- update interval
+	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
+
+
+	--Placement
+
+	alignment = 'middle_right',		            -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+												-- middle_left,middle_middle,middle_right,none
+	--Arch Duoscreen
+	--gap_x = -1910,
+	gap_x = 10,									-- pixels between right or left border
+	gap_y = 20,									-- pixels between bottom or left border
+	minimum_height = 600,						-- minimum height of window
+	minimum_width = 230,						-- minimum height of window
+	maximum_width = 230,						-- maximum height of window
+
+	--Graphical
+
+	border_inner_margin = 10, 					-- margin between border and text
+	border_outer_margin = 1, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 230,					-- default is 0 - full width
+	default_bar_height = 10,					-- default is 6
+	default_gauge_height = 25,					-- default is 25
+	default_gauge_width =40,					-- default is 40
+	default_graph_height = 40,					-- default is 25
+	default_graph_width = 153,					-- default is 0 - full width
+	default_shade_color = '#000000',			-- default shading colour
+	default_outline_color = '#000000',			-- default outline colour
+	draw_borders = false,						-- draw borders around text
+	draw_graph_borders = true,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+	stippled_borders = 0,						-- dashing the border
+
+	--Textual
+
+	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font = 'SourceSansPro-ExtraLight:size=11:oblique',  	-- font for complete conky unless in code defined
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too small
+	max_user_text = 16384,						-- max text in conky default 16384
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = true,							-- shorten units from KiB to k
+	top_name_width = 21,						-- width for $top name value default 15
+	top_name_verbose = false,					-- If true, top name shows the full command line of  each  process - Default value is false.
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 1,								-- alpha of the xft font - between 0-1
+
+	--Windows
+
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 100,			    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
+
+
+	--Colours
+
+	default_color = '#000000',  				-- default color and border color
+	color1 = '#bbbbbb',
+	color2 = '#FFFFFF',
+	color3 = '#9C1220',
+	color4 = '#BDBDBD',
+	color5 = '#CCCCCC',
+	color6 = '#FFA300',
+
+	--Signal Colours
+	color7 = '#1F7411',  --green
+	color8 = '#FFA726',  --orange
+	color9 = '#F1544B',  --firebrick
+
+
+	--Lua
+
+};
+
+
+conky.text = [[
+${image ~/.config/conky/images/arcolinux-white-100x100.png -p 170,0 -s 50x50}
+
+${color1}${font SourceSansPro-ExtraLight:size=18:weight:bold}${color2}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}
+${color1}${hr 2}
+${voffset -10}${color1}${font SourceSansPro-ExtraLight:size=10:weight:bold:italic}${color6}$sysname $kernel ${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+${color1}${font SourceSansPro-ExtraLight:size=12:weight:bold}Uptime ${alignr}${color6} $uptime
+${color1}${font SourceSansPro-ExtraLight:size=12:weight:bold}Cpu Temp ${alignr}${color6}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
+${color1}${color1}Cpu Freq ${alignr}${color6}${freq_g} Ghz
+${color1}${cpubar cpu0 10,150}${color1} Cpu ${alignr}${if_match ${cpu cpu0} > 80}${color9}${else}${if_match ${cpu cpu0} > 50}${color8}${else}${color6}${endif}${endif}${cpu cpu0}%
+${if_existing /proc/acpi/battery/BAT0/info}${if_match ${battery_percent BAT0} <= 20}${color3}${battery_bar 10,150 BAT0} Battery${alignr}${color7}${battery_percent BAT0}%${else}${color1}${battery_bar 10,150 BAT0} Battery${alignr}${color1}${battery_percent BAT0}%${endif}${else}${voffset -20}${endif}
+${color1}${membar 10,150} Mem ${alignr}${if_match ${memperc} > 80}${color9}${else}${color6}${endif}${color6}${memperc}%
+${color1}Total Processes${alignr}${color6}${processes}
+${color1}Running processes${color6}${alignr}${running_processes}
+${color1}Load${alignr}${color6}${loadavg}
+${color1}Packages Upgrades${alignr}${color6}${execi 3600 checkupdates | wc -l}
+${color1}${hr 2}
+${font SourceSansPro-ExtraLight size=12:weight:bold}${color1}CPU
+${font SourceSansPro-ExtraLight size=8:weight:italic}${color6}${execi 6000 cat /proc/cpuinfo | grep -i 'Model name' -m 1 | cut -c14-43}
+# Showing TOP 5 CPU-consumers
+${offset 30}${font SourceSansPro-ExtraLight:size=12:weight:bold}${color1}${top name 1}${alignr}${color6}${top cpu 1}%${font}
+${offset 30}${color1}${top name 2}${alignr}${color6}${top cpu 2}%
+${offset 30}${color1}${top name 3}${alignr}${color6}${top cpu 3}%
+${offset 30}${color1}${top name 4}${alignr}${color6}${top cpu 4}%
+${offset 30}${color1}${top name 5}${alignr}${color6}${top cpu 5}%
+${offset 30}${color1}${top name 6}${alignr}${color6}${top cpu 6}%
+${font SourceSansPro-ExtraLight size=12 weight:bold}${color1}CPU Usage over Time
+${color1}${cpugraph 40,230 FFA300 ffffff  -t}
+${color1}${hr 2}
+${if_existing /proc/net/route en}${font SourceSansPro-ExtraLight size=12 weight:bold}${color2}Ethernet
+${offset 10}${color1}Up ${color6}${totalup enp2s0}${color1}${alignr}${color6}${totaldown enp2s0} ${color1}Down
+${offset 10}${color1}Up ${color6}${upspeed enp2s0}${color1}${alignr}${color6}${downspeed enp2s0} ${color1}Down
+#${upspeedgraph enp2s0 40,300 4B1B0C FF5C2B 10000000 -l -t}
+#${downspeedgraph enp2s0 40,300 324D23 77B753 10000000 -l -t}
+${else}${font SourceSansPro-ExtraLight size=12 weight:bold}${color2}Wireless
+${offset 10}${color1}Up ${color1}${totalup wlan0}${color1}${alignr}${color1}${totaldown wlan0} Down
+${offset 10}${color1}Up ${color1}${upspeed wlan0}${color1}${alignr}${color1}${downspeed wlan0} Down
+#${upspeedgraph wlan0 40,300 4B1B0C FF5C2B 10000000 -l -t}
+#${downspeedgraph wlan0 40,300 324D23 77B753 10000000 -l -t}
+${endif}\
+]]

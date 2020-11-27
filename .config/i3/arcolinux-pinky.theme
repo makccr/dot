@@ -1,0 +1,35 @@
+    ##START THEMING BAR
+    #Theme name : ArcoLinux Pinky from ArcoLinux Coritani
+
+    # i3 bar colors
+    # variable border background Text
+
+    colors {
+        background #2F3D44
+        statusline #F9FAF9
+        separator  #454947
+
+        # colorclass           border  backgr. text
+        focused_workspace     #F9FAF9 #e82951 #F9FAF9
+        active_workspace      #595B5B #2F3D44 #F9FAF9
+        inactive_workspace    #595B5B #202A2E #F9FAF9
+        urgent_workspace      #e82951 #e82951 #F9FAF9
+        }
+
+    }
+    ##STOP THEMING BAR
+
+    ##START THEMING WM
+    #Theme name : ArcoLinux Pinky from ArcoLinux Coritani
+
+    # Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          #FFB6C1 #FFB6C1 #e82951 #FDF6E3
+    client.unfocused        #2F3D44 #2F3D44 #FFB6C1 #454948
+    client.focused_inactive #2F3D44 #2F3D44 #FFB6C1 #454948
+    client.placeholder      #2F3D44 #2F3D44 #FFB6C1 #454948
+    client.urgent           #CB4B16 #FDF6E3 #FFB6C1 #CB4B16
+
+    client.background       #242424
+
+    ##STOP THEMING WM
