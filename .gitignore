@@ -80,4 +80,8 @@
 .config/user-dirs.locale
 .config/xsettingsd/
 .config/gtk-3.0/settings.ini
+.config/plex.tv/
 .config/mutt/
+.config/vivaldi/
+.config/xfce4/
+.config/variety/
