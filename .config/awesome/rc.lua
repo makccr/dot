@@ -532,7 +532,7 @@ beautiful.useless_gap = 5
 
 -- Autostart
 --awful.spawn.with_shell("picom -CG --experimental-backends")
-awful.spawn.with_shell("picom")
+awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("ntfd")
 awful.spawn.with_shell("nm-applet")
