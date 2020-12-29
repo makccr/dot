@@ -11,4 +11,3 @@ if type "xrandr"; then
 else
   polybar --reload makc &
 fi
-

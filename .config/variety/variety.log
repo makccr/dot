@@ -1,282 +1,128 @@
-INFO: 2020-11-23 20:11:36,007: main() 'Using profile folder /home/makc/.config/variety/'
-INFO: 2020-11-23 20:11:36,010: makedirs() 'Creating folder /home/makc/.config/variety/plugins'
-INFO: 2020-11-23 20:11:36,011: perform_upgrade() 'Last run version was 0.4.12 or earlier, current version is 0.8.4'
-INFO: 2020-11-23 20:11:36,152: perform_upgrade() 'Performing upgrade to 0.4.13'
-INFO: 2020-11-23 20:11:36,154: perform_upgrade() 'Writing .variety_download_folder to current download folder /home/makc/.config/variety/Downloaded'
-INFO: 2020-11-23 20:11:36,154: makedirs() 'Creating folder /home/makc/.config/variety/Downloaded'
-INFO: 2020-11-23 20:11:36,154: perform_upgrade() 'Performing upgrade to 0.4.14'
-INFO: 2020-11-23 20:11:36,155: perform_upgrade() 'Performing upgrade to 0.8.0'
-INFO: 2020-11-23 20:11:36,158: perform_upgrade() 'Performing upgrade to 0.8.2'
-INFO: 2020-11-23 20:11:36,162: perform_upgrade() 'Performing upgrade to 0.8.3'
-INFO: 2020-11-23 20:11:36,165: write_current_version() 'Writing current version 0.8.4 to .version'
-INFO: 2020-11-23 20:11:36,166: perform_upgrade() 'Updating Variety autostart desktop entry'
-INFO: 2020-11-23 20:11:36,167: process_command() 'Received command: []'
-INFO: 2020-11-23 20:11:36,169: load_banned() 'Missing or invalid banned URLs list, no URLs will be banned'
-INFO: 2020-11-23 20:11:36,184: start() 'Using data_path /usr/share/variety'
-INFO: 2020-11-23 20:11:36,184: load() 'Jumble loading'
-INFO: 2020-11-23 20:11:36,184: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.8/site-packages/variety/plugins/builtin/__init__.py'
-INFO: 2020-11-23 20:11:36,186: _walk_modules() 'Jumble loading module in WallhavenSource from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/WallhavenSource.py'
-INFO: 2020-11-23 20:11:36,188: load() 'Jumble found plugin class: <class 'WallhavenSource.WallhavenSource'>: {'name': 'WallhavenSource', 'description': 'Configurable source for fetching images from Wallhaven.cc', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,189: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/__init__.py'
-INFO: 2020-11-23 20:11:36,189: _walk_modules() 'Jumble loading module in MediaRSSSource from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/MediaRSSSource.py'
-INFO: 2020-11-23 20:11:36,190: load() 'Jumble found plugin class: <class 'MediaRSSSource.MediaRSSSource'>: {'name': 'MediaRSSSource', 'description': 'Configurable source for fetching images from MediaRSS feeds', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,191: _walk_modules() 'Jumble loading module in BingDownloader from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/BingDownloader.py'
-INFO: 2020-11-23 20:11:36,192: load() 'Jumble found plugin class: <class 'BingDownloader.BingDownloader'>: {'name': 'BingDownloader', 'description': 'Bing Photo of the Day', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,192: _walk_modules() 'Jumble loading module in EarthviewDownloader from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/EarthviewDownloader.py'
-INFO: 2020-11-23 20:11:36,193: load() 'Jumble found plugin class: <class 'EarthviewDownloader.EarthviewDownloader'>: {'name': 'EarthviewDownloader', 'description': 'Google Earth View Wallpapers', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,193: _walk_modules() 'Jumble loading module in UnsplashConfigurableSource from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/UnsplashConfigurableSource.py'
-INFO: 2020-11-23 20:11:36,195: load() 'Jumble found plugin class: <class 'UnsplashConfigurableSource.UnsplashConfigurableSource'>: {'name': 'UnsplashConfigurableSource', 'description': 'Configurable source for fetching photos from Unsplash.com', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,196: _walk_modules() 'Jumble loading module in RedditSource from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/RedditSource.py'
-INFO: 2020-11-23 20:11:36,197: load() 'Jumble found plugin class: <class 'RedditSource.RedditSource'>: {'name': 'RedditSource', 'description': 'Configurable source for fetching images from Reddit', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,197: _walk_modules() 'Jumble loading module in UnsplashDownloader from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/UnsplashDownloader.py'
-INFO: 2020-11-23 20:11:36,198: load() 'Jumble found plugin class: <class 'UnsplashDownloader.UnsplashDownloader'>: {'name': 'UnsplashDownloader', 'description': 'High-resolution photos from Unsplash.com', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,198: _walk_modules() 'Jumble loading module in WallhavenDownloader from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/WallhavenDownloader.py'
-INFO: 2020-11-23 20:11:36,199: _walk_modules() 'Jumble loading module in RedditDownloader from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/RedditDownloader.py'
-INFO: 2020-11-23 20:11:36,199: _walk_modules() 'Jumble loading module in APODDownloader from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/APODDownloader.py'
-INFO: 2020-11-23 20:11:36,200: load() 'Jumble found plugin class: <class 'APODDownloader.APODDownloader'>: {'name': 'APODDownloader', 'description': 'NASA Astro Pic of the Day', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,200: _walk_modules() 'Jumble loading module in MediaRSSDownloader from /usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/MediaRSSDownloader.py'
-INFO: 2020-11-23 20:11:36,201: _walk_modules() 'Jumble loading module in FortuneSource from /usr/lib/python3.8/site-packages/variety/plugins/builtin/quotes/FortuneSource.py'
-INFO: 2020-11-23 20:11:36,202: load() 'Jumble found plugin class: <class 'FortuneSource.FortuneSource'>: {'name': 'UNIX fortune program', 'description': 'Displays quotes using the UNIX fortune program. You may want to install additional fortune packs, e.g. fortunes-bofh-excuses.', 'author': 'Dan Jones', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,202: _walk_modules() 'Jumble loading module in UrbanDictionarySource from /usr/lib/python3.8/site-packages/variety/plugins/builtin/quotes/UrbanDictionarySource.py'
-INFO: 2020-11-23 20:11:36,202: load() 'Jumble found plugin class: <class 'UrbanDictionarySource.UrbanDictionarySource'>: {'name': 'Urban Dictionary', 'description': 'Displays definitions from Urban Dictionary', 'author': 'James Miller', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,203: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.8/site-packages/variety/plugins/builtin/quotes/__init__.py'
-INFO: 2020-11-23 20:11:36,203: _walk_modules() 'Jumble loading module in GoodreadsSource from /usr/lib/python3.8/site-packages/variety/plugins/builtin/quotes/GoodreadsSource.py'
-INFO: 2020-11-23 20:11:36,227: load() 'Jumble found plugin class: <class 'GoodreadsSource.GoodreadsSource'>: {'name': 'Goodreads', 'description': 'Fetches quotes from Goodreads.com', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,228: _walk_modules() 'Jumble loading module in LocalFilesSource from /usr/lib/python3.8/site-packages/variety/plugins/builtin/quotes/LocalFilesSource.py'
-INFO: 2020-11-23 20:11:36,228: load() 'Jumble found plugin class: <class 'LocalFilesSource.LocalFilesSource'>: {'name': 'Local text files', 'description': 'Displays quotes, defined in local text files.\nPut your own txt files in: ~/.config/variety/pluginconfig/quotes/.\nThe file format is:\n\nquote -- author\n.\nsecond quote -- another author\n.\netc...\n\nExample: http://rvelthuis.de/zips/quotes.txt', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,229: _walk_modules() 'Jumble loading module in QuotationsPageSource from /usr/lib/python3.8/site-packages/variety/plugins/builtin/quotes/QuotationsPageSource.py'
-INFO: 2020-11-23 20:11:36,229: load() 'Jumble found plugin class: <class 'QuotationsPageSource.QuotationsPageSource'>: {'name': 'TheQuotationsPage.com', 'description': 'Fetches quotes from TheQuotationsPage.com', 'author': 'Peter Levi', 'version': '0.1'}'
-INFO: 2020-11-23 20:11:36,230: makedirs() 'Creating folder /home/makc/.config/variety/pluginconfig/downloaders'
-INFO: 2020-11-23 20:11:36,232: makedirs() 'Creating folder /home/makc/.config/variety/Favorites'
-INFO: 2020-11-23 20:11:36,232: makedirs() 'Creating folder /home/makc/.config/variety/Fetched'
-INFO: 2020-11-23 20:11:36,233: log_options() 'Loaded options:'
-INFO: 2020-11-23 20:11:36,233: log_options() 'change_enabled = False'
-INFO: 2020-11-23 20:11:36,233: log_options() 'change_interval = 300'
-INFO: 2020-11-23 20:11:36,233: log_options() 'change_on_start = False'
-INFO: 2020-11-23 20:11:36,233: log_options() 'clipboard_enabled = False'
-INFO: 2020-11-23 20:11:36,233: log_options() 'clipboard_hosts = ['wallhaven.cc', 'wallpapers.net', 'flickr.com', 'imgur.com', 'deviantart.com', 'interfacelift.com', 'vladstudio.com', 'imageshack.us', 'deviantart.net', 'imageshack.com']'
-INFO: 2020-11-23 20:11:36,233: log_options() 'clipboard_use_whitelist = True'
-INFO: 2020-11-23 20:11:36,233: log_options() 'clock_date_font = Ubuntu Condensed, 30'
-INFO: 2020-11-23 20:11:36,233: log_options() 'clock_enabled = False'
-INFO: 2020-11-23 20:11:36,233: log_options() 'clock_filter = -density 100 -font `fc-match -f '%{file[0]}' '%CLOCK_FONT_NAME'` -pointsize %CLOCK_FONT_SIZE -gravity SouthEast -fill '#00000044' -annotate 0x0+[%HOFFSET+58]+[%VOFFSET+108] '%H:%M' -fill white -annotate 0x0+[%HOFFSET+60]+[%VOFFSET+110] '%H:%M' -font `fc-match -f '%{file[0]}' '%DATE_FONT_NAME'` -pointsize %DATE_FONT_SIZE -fill '#00000044' -annotate 0x0+[%HOFFSET+58]+[%VOFFSET+58] '%A, %B %d' -fill white -annotate 0x0+[%HOFFSET+60]+[%VOFFSET+60] '%A, %B %d''
-INFO: 2020-11-23 20:11:36,233: log_options() 'clock_font = Ubuntu Condensed, 70'
-INFO: 2020-11-23 20:11:36,233: log_options() 'configfile = /home/makc/.config/variety/variety.conf'
-INFO: 2020-11-23 20:11:36,233: log_options() 'copyto_enabled = False'
-INFO: 2020-11-23 20:11:36,233: log_options() 'copyto_folder = Default'
-INFO: 2020-11-23 20:11:36,233: log_options() 'desired_color = [160, 160, 160]'
-INFO: 2020-11-23 20:11:36,233: log_options() 'desired_color_enabled = False'
-INFO: 2020-11-23 20:11:36,234: log_options() 'download_folder = /home/makc/.config/variety/Downloaded'
-INFO: 2020-11-23 20:11:36,234: log_options() 'download_preference_ratio = 0.9'
-INFO: 2020-11-23 20:11:36,234: log_options() 'favorites_folder = /home/makc/.config/variety/Favorites'
-INFO: 2020-11-23 20:11:36,234: log_options() 'favorites_operations = [['Downloaded', 'Copy'], ['Fetched', 'Move'], ['Others', 'Copy']]'
-INFO: 2020-11-23 20:11:36,234: log_options() 'fetched_folder = /home/makc/.config/variety/Fetched'
-INFO: 2020-11-23 20:11:36,234: log_options() 'filters = [[False, 'Keep original', ''], [False, 'Grayscale', '-type Grayscale'], [False, 'Heavy blur', '-blur 120x40'], [False, 'Soft blur', '-blur 20x7'], [False, 'Oil painting', '-paint 8'], [False, 'Pointilism', '-spread 10 -noise 3'], [False, 'Pixellate', '-scale 3% -scale 3333%']]'
-INFO: 2020-11-23 20:11:36,234: log_options() 'icon = Light'
-INFO: 2020-11-23 20:11:36,234: log_options() 'lightness_enabled = False'
-INFO: 2020-11-23 20:11:36,234: log_options() 'lightness_mode = 0'
-INFO: 2020-11-23 20:11:36,234: log_options() 'min_rating = 4'
-INFO: 2020-11-23 20:11:36,234: log_options() 'min_rating_enabled = False'
-INFO: 2020-11-23 20:11:36,234: log_options() 'min_size = 80'
-INFO: 2020-11-23 20:11:36,234: log_options() 'min_size_enabled = True'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quota_enabled = True'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quota_size = 1000'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_authors = '
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_bg_color = [80, 80, 80]'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_bg_opacity = 55'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_change_enabled = False'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_change_interval = 300'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_disabled_sources = ['Urban Dictionary']'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_enabled = False'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_favorites_file = /home/makc/.config/variety/favorite_quotes.txt'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_font = Bitstream Charter 30'
-INFO: 2020-11-23 20:11:36,234: log_options() 'quotes_hpos = 100'
-INFO: 2020-11-23 20:11:36,235: log_options() 'quotes_max_length = 250'
-INFO: 2020-11-23 20:11:36,235: log_options() 'quotes_tags = '
-INFO: 2020-11-23 20:11:36,235: log_options() 'quotes_text_color = [255, 255, 255]'
-INFO: 2020-11-23 20:11:36,235: log_options() 'quotes_text_shadow = False'
-INFO: 2020-11-23 20:11:36,235: log_options() 'quotes_vpos = 40'
-INFO: 2020-11-23 20:11:36,235: log_options() 'quotes_width = 70'
-INFO: 2020-11-23 20:11:36,235: log_options() 'safe_mode = False'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_custom_enabled = False'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_custom_folder = /home/makc/Pictures'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_downloads_enabled = False'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_fade = 0.4'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_favorites_enabled = True'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_mode = Fullscreen'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_monitor = All'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_pan = 0.05'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_seconds = 6.0'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_sort_order = Random'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_sources_enabled = True'
-INFO: 2020-11-23 20:11:36,235: log_options() 'slideshow_zoom = 0.2'
-INFO: 2020-11-23 20:11:36,235: log_options() 'smart_enabled = False'
-INFO: 2020-11-23 20:11:36,235: log_options() 'smart_notice_shown = False'
-INFO: 2020-11-23 20:11:36,235: log_options() 'smart_register_shown = False'
-INFO: 2020-11-23 20:11:36,235: log_options() 'sources = [[True, 'favorites', 'The Favorites folder'], [False, 'fetched', 'The Fetched folder'], [True, 'folder', '/usr/share/backgrounds'], [False, 'flickr', 'user:www.flickr.com/photos/peter-levi/;user_id:93647178@N00;'], [False, 'apod', "NASA's Astronomy Picture of the Day"], [False, 'bing', 'Bing Photo of the Day'], [False, 'earthview', 'Google Earth View Wallpapers'], [False, 'unsplash', 'High-resolution photos from Unsplash.com']]'
-INFO: 2020-11-23 20:11:36,235: log_options() 'stats_enabled = True'
-INFO: 2020-11-23 20:11:36,235: log_options() 'stats_notice_shown = False'
-INFO: 2020-11-23 20:11:36,235: log_options() 'sync_enabled = True'
-INFO: 2020-11-23 20:11:36,235: log_options() 'use_landscape_enabled = True'
-INFO: 2020-11-23 20:11:36,236: reload_config() 'No need to clear prepared queue'
-INFO: 2020-11-23 20:11:36,236: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg'
-INFO: 2020-11-23 20:11:36,243: load_last_change_time() 'Change interval < 6 hours, ignore persisted last_change_time, wait initially the whole interval: 300'
-INFO: 2020-11-23 20:11:36,243: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg'
-INFO: 2020-11-23 20:11:36,244: regular_change_thread() 'regular_change thread running'
-INFO: 2020-11-23 20:11:36,244: regular_change_thread() 'regular_change: waiting till user resumes'
-INFO: 2020-11-23 20:11:36,245: prepare_thread() 'Prepare thread running'
-INFO: 2020-11-23 20:11:36,245: prepare_thread() 'Prepared buffer contains 0 images'
-INFO: 2020-11-23 20:11:36,245: prepare_thread() 'Preparing some images'
-INFO: 2020-11-23 20:11:36,246: update_indicator_icon() 'Creating indicator'
-WARNING: 2020-11-23 20:11:36,261: create_menu() 'Variety Slideshow is not installed. This is an optional extension adding pan-and-zoom slideshows to Variety: see https://github.com/peterlevi/variety-slideshow for details'
-INFO: 2020-11-23 20:11:36,262: create_indicator() 'indicator backend: AppIndicator3'
-INFO: 2020-11-23 20:11:36,271: prepare_thread() 'After search prepared buffer contains 12 images'
-INFO: 2020-11-23 20:11:36,293: set_from_theme_icon() 'Showing indicator icon variety-indicator from GTK theme'
-INFO: 2020-11-23 20:11:36,344: do_set_wp() 'Calling do_set_wp with /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg, time: 1606183896.344185'
-INFO: 2020-11-23 20:11:36,361: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg'
-INFO: 2020-11-23 20:11:37,634: reload() 'Reloading preferences dialog'
-INFO: 2020-11-23 20:11:38,272: trigger_download() 'Triggering download thread to check if download needed'
-INFO: 2020-11-23 20:11:56,266: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
-ERROR: 2020-11-23 20:11:56,284: server_options_thread() 'Could not fetch Variety serverside options'
-Traceback (most recent call last):
-  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
-    conn = connection.create_connection(
-  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
-    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -2] Name or service not known
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
-    httplib_response = self._make_request(
-  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
-    conn.request(method, url, **httplib_request_kw)
-  File "/usr/lib/python3.8/http/client.py", line 1255, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.8/http/client.py", line 1301, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.8/http/client.py", line 1250, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.8/http/client.py", line 1010, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.8/http/client.py", line 950, in send
-    self.connect()
-  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
-    conn = self._new_conn()
-  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
-    raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7efcd02c6b50>: Failed to establish a new connection: [Errno -2] Name or service not known
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
-    resp = conn.urlopen(
-  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
-    retries = retries.increment(
-  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='tiny.cc', port=80): Max retries exceeded with url: /variety-options-063 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcd02c6b50>: Failed to establish a new connection: [Errno -2] Name or service not known'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1086, in server_options_thread
-    self.server_options = Util.fetch_json(VarietyWindow.SERVERSIDE_OPTIONS_URL)
-  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 644, in fetch_json
-    return Util.request(url, data, **request_kwargs).json()
-  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 614, in request
-    r = requests.request(
-  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
-    r = adapter.send(request, **kwargs)
-  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='tiny.cc', port=80): Max retries exceeded with url: /variety-options-063 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcd02c6b50>: Failed to establish a new connection: [Errno -2] Name or service not known'))
-INFO: 2020-11-23 20:12:26,316: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
-ERROR: 2020-11-23 20:12:38,416: server_options_thread() 'Could not fetch Variety serverside options'
-Traceback (most recent call last):
-  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
-    self._validate_conn(conn)
-  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 978, in _validate_conn
-    conn.connect()
-  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 362, in connect
-    self.sock = ssl_wrap_socket(
-  File "/usr/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 384, in ssl_wrap_socket
-    return context.wrap_socket(sock, server_hostname=server_hostname)
-  File "/usr/lib/python3.8/ssl.py", line 500, in wrap_socket
-    return self.sslsocket_class._create(
-  File "/usr/lib/python3.8/ssl.py", line 1040, in _create
-    self.do_handshake()
-  File "/usr/lib/python3.8/ssl.py", line 1309, in do_handshake
-    self._sslobj.do_handshake()
-socket.timeout: _ssl.c:1107: The handshake operation timed out
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
-    resp = conn.urlopen(
-  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
-    retries = retries.increment(
-  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 403, in increment
-    raise six.reraise(type(error), error, _stacktrace)
-  File "/usr/lib/python3.8/site-packages/urllib3/packages/six.py", line 735, in reraise
-    raise value
-  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
-    httplib_response = self._make_request(
-  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 384, in _make_request
-    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
-  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 335, in _raise_timeout
-    raise ReadTimeoutError(
-urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='gist.githubusercontent.com', port=443): Read timed out. (read timeout=5)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1086, in server_options_thread
-    self.server_options = Util.fetch_json(VarietyWindow.SERVERSIDE_OPTIONS_URL)
-  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 644, in fetch_json
-    return Util.request(url, data, **request_kwargs).json()
-  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 614, in request
-    r = requests.request(
-  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 665, in send
-    history = [resp for resp in gen]
-  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 665, in <listcomp>
-    history = [resp for resp in gen]
-  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 237, in resolve_redirects
-    resp = self.send(
-  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
-    r = adapter.send(request, **kwargs)
-  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 529, in send
-    raise ReadTimeout(e, request=request)
-requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='gist.githubusercontent.com', port=443): Read timed out. (read timeout=5)
-INFO: 2020-11-23 20:13:08,444: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
-INFO: 2020-11-23 20:13:21,310: server_options_thread() 'Fetched server options: {'flickr': {'min_fill_queue_interval': 1200, 'min_download_interval': 1200}, 'wallbase': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallhaven': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallpapers.net': {'min_fill_queue_interval': 601, 'min_download_interval': 0}, 'unsplash': {'min_fill_queue_interval': 20000000000, 'min_download_interval': 20000000000}, 'unsplash_v2': {'min_fill_queue_interval': 2000, 'min_download_interval': 1200}, 'status_message': {'0.0.1': '', '*': ''}}'
-INFO: 2020-11-24 20:13:08,972: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
-INFO: 2020-11-24 20:13:10,471: server_options_thread() 'Fetched server options: {'flickr': {'min_fill_queue_interval': 1200, 'min_download_interval': 1200}, 'wallbase': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallhaven': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallpapers.net': {'min_fill_queue_interval': 601, 'min_download_interval': 0}, 'unsplash': {'min_fill_queue_interval': 20000000000, 'min_download_interval': 20000000000}, 'unsplash_v2': {'min_fill_queue_interval': 2000, 'min_download_interval': 1200}, 'status_message': {'0.0.1': '', '*': ''}}'
-INFO: 2020-11-25 20:13:03,324: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
-INFO: 2020-11-25 20:13:04,804: server_options_thread() 'Fetched server options: {'flickr': {'min_fill_queue_interval': 1200, 'min_download_interval': 1200}, 'wallbase': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallhaven': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallpapers.net': {'min_fill_queue_interval': 601, 'min_download_interval': 0}, 'unsplash': {'min_fill_queue_interval': 20000000000, 'min_download_interval': 20000000000}, 'unsplash_v2': {'min_fill_queue_interval': 2000, 'min_download_interval': 1200}, 'status_message': {'0.0.1': '', '*': ''}}'
-INFO: 2020-11-26 20:13:03,955: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
-INFO: 2020-11-26 20:13:04,763: server_options_thread() 'Fetched server options: {'flickr': {'min_fill_queue_interval': 1200, 'min_download_interval': 1200}, 'wallbase': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallhaven': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallpapers.net': {'min_fill_queue_interval': 601, 'min_download_interval': 0}, 'unsplash': {'min_fill_queue_interval': 20000000000, 'min_download_interval': 20000000000}, 'unsplash_v2': {'min_fill_queue_interval': 2000, 'min_download_interval': 1200}, 'status_message': {'0.0.1': '', '*': ''}}'
-INFO: 2020-11-26 20:35:48,420: list_files() 'More than 1 files in the folders, stop listing'
-INFO: 2020-11-26 20:35:48,433: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg'
-INFO: 2020-11-26 20:35:55,672: set_wallpaper() 'Calling set_wallpaper with /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg'
-INFO: 2020-11-26 20:35:55,673: do_set_wp() 'Calling do_set_wp with /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg, time: 1606444555.673731'
-INFO: 2020-11-26 20:35:55,692: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg'
-INFO: 2020-11-26 20:35:56,604: set_wallpaper() 'Calling set_wallpaper with /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg'
-INFO: 2020-11-26 20:35:56,693: do_set_wp() 'Calling do_set_wp with /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg, time: 1606444556.6934538'
-INFO: 2020-11-26 20:35:56,770: set_wallpaper() 'Calling set_wallpaper with /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg'
-INFO: 2020-11-26 20:35:57,381: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg'
-INFO: 2020-11-26 20:35:57,705: do_set_wp() 'Calling do_set_wp with /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg, time: 1606444557.7055392'
-INFO: 2020-11-26 20:35:58,922: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg'
-INFO: 2020-11-26 20:36:02,066: on_quit() 'Quitting'
+INFO: 2020-12-10 23:09:13,809: main() 'Using profile folder /home/makc/.config/variety/'
+INFO: 2020-12-10 23:09:13,812: perform_upgrade() 'Last run version was 0.8.4 or earlier, current version is 0.8.5'
+INFO: 2020-12-10 23:09:13,980: write_current_version() 'Writing current version 0.8.5 to .version'
+INFO: 2020-12-10 23:09:13,981: perform_upgrade() 'Updating Variety autostart desktop entry'
+INFO: 2020-12-10 23:09:13,982: process_command() 'Received command: ['--profile', '/home/makc/.config/variety/']'
+INFO: 2020-12-10 23:09:13,984: load_banned() 'Missing or invalid banned URLs list, no URLs will be banned'
+INFO: 2020-12-10 23:09:14,001: start() 'Using data_path /usr/share/variety'
+INFO: 2020-12-10 23:09:14,002: load() 'Jumble loading'
+INFO: 2020-12-10 23:09:14,002: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.9/site-packages/variety/plugins/builtin/__init__.py'
+INFO: 2020-12-10 23:09:14,003: _walk_modules() 'Jumble loading module in WallhavenSource from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/WallhavenSource.py'
+INFO: 2020-12-10 23:09:14,004: load() 'Jumble found plugin class: <class 'WallhavenSource.WallhavenSource'>: {'name': 'WallhavenSource', 'description': 'Configurable source for fetching images from Wallhaven.cc', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,004: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/__init__.py'
+INFO: 2020-12-10 23:09:14,005: _walk_modules() 'Jumble loading module in MediaRSSSource from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/MediaRSSSource.py'
+INFO: 2020-12-10 23:09:14,006: load() 'Jumble found plugin class: <class 'MediaRSSSource.MediaRSSSource'>: {'name': 'MediaRSSSource', 'description': 'Configurable source for fetching images from MediaRSS feeds', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,006: _walk_modules() 'Jumble loading module in BingDownloader from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/BingDownloader.py'
+INFO: 2020-12-10 23:09:14,006: load() 'Jumble found plugin class: <class 'BingDownloader.BingDownloader'>: {'name': 'BingDownloader', 'description': 'Bing Photo of the Day', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,007: _walk_modules() 'Jumble loading module in EarthviewDownloader from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/EarthviewDownloader.py'
+INFO: 2020-12-10 23:09:14,007: load() 'Jumble found plugin class: <class 'EarthviewDownloader.EarthviewDownloader'>: {'name': 'EarthviewDownloader', 'description': 'Google Earth View Wallpapers', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,007: _walk_modules() 'Jumble loading module in UnsplashConfigurableSource from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/UnsplashConfigurableSource.py'
+INFO: 2020-12-10 23:09:14,008: load() 'Jumble found plugin class: <class 'UnsplashConfigurableSource.UnsplashConfigurableSource'>: {'name': 'UnsplashConfigurableSource', 'description': 'Configurable source for fetching photos from Unsplash.com', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,009: _walk_modules() 'Jumble loading module in RedditSource from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/RedditSource.py'
+INFO: 2020-12-10 23:09:14,009: load() 'Jumble found plugin class: <class 'RedditSource.RedditSource'>: {'name': 'RedditSource', 'description': 'Configurable source for fetching images from Reddit', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,010: _walk_modules() 'Jumble loading module in UnsplashDownloader from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/UnsplashDownloader.py'
+INFO: 2020-12-10 23:09:14,010: load() 'Jumble found plugin class: <class 'UnsplashDownloader.UnsplashDownloader'>: {'name': 'UnsplashDownloader', 'description': 'High-resolution photos from Unsplash.com', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,010: _walk_modules() 'Jumble loading module in WallhavenDownloader from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/WallhavenDownloader.py'
+INFO: 2020-12-10 23:09:14,011: _walk_modules() 'Jumble loading module in RedditDownloader from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/RedditDownloader.py'
+INFO: 2020-12-10 23:09:14,011: _walk_modules() 'Jumble loading module in APODDownloader from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/APODDownloader.py'
+INFO: 2020-12-10 23:09:14,012: load() 'Jumble found plugin class: <class 'APODDownloader.APODDownloader'>: {'name': 'APODDownloader', 'description': 'NASA Astro Pic of the Day', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,012: _walk_modules() 'Jumble loading module in MediaRSSDownloader from /usr/lib/python3.9/site-packages/variety/plugins/builtin/downloaders/MediaRSSDownloader.py'
+INFO: 2020-12-10 23:09:14,013: _walk_modules() 'Jumble loading module in FortuneSource from /usr/lib/python3.9/site-packages/variety/plugins/builtin/quotes/FortuneSource.py'
+INFO: 2020-12-10 23:09:14,013: load() 'Jumble found plugin class: <class 'FortuneSource.FortuneSource'>: {'name': 'UNIX fortune program', 'description': 'Displays quotes using the UNIX fortune program. You may want to install additional fortune packs, e.g. fortunes-bofh-excuses.', 'author': 'Dan Jones', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,013: _walk_modules() 'Jumble loading module in UrbanDictionarySource from /usr/lib/python3.9/site-packages/variety/plugins/builtin/quotes/UrbanDictionarySource.py'
+INFO: 2020-12-10 23:09:14,014: load() 'Jumble found plugin class: <class 'UrbanDictionarySource.UrbanDictionarySource'>: {'name': 'Urban Dictionary', 'description': 'Displays definitions from Urban Dictionary', 'author': 'James Miller', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,014: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.9/site-packages/variety/plugins/builtin/quotes/__init__.py'
+INFO: 2020-12-10 23:09:14,014: _walk_modules() 'Jumble loading module in GoodreadsSource from /usr/lib/python3.9/site-packages/variety/plugins/builtin/quotes/GoodreadsSource.py'
+INFO: 2020-12-10 23:09:14,021: load() 'Jumble found plugin class: <class 'GoodreadsSource.GoodreadsSource'>: {'name': 'Goodreads', 'description': 'Fetches quotes from Goodreads.com', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,022: _walk_modules() 'Jumble loading module in LocalFilesSource from /usr/lib/python3.9/site-packages/variety/plugins/builtin/quotes/LocalFilesSource.py'
+INFO: 2020-12-10 23:09:14,022: load() 'Jumble found plugin class: <class 'LocalFilesSource.LocalFilesSource'>: {'name': 'Local text files', 'description': 'Displays quotes, defined in local text files.\nPut your own txt files in: /home/makc/.config/variety/pluginconfig/quotes/.\nThe file format is:\n\nquote -- author\n.\nsecond quote -- another author\n.\netc...\n\nExample: http://rvelthuis.de/zips/quotes.txt', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,022: _walk_modules() 'Jumble loading module in QuotationsPageSource from /usr/lib/python3.9/site-packages/variety/plugins/builtin/quotes/QuotationsPageSource.py'
+INFO: 2020-12-10 23:09:14,023: load() 'Jumble found plugin class: <class 'QuotationsPageSource.QuotationsPageSource'>: {'name': 'TheQuotationsPage.com', 'description': 'Fetches quotes from TheQuotationsPage.com', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2020-12-10 23:09:14,027: log_options() 'Loaded options:'
+INFO: 2020-12-10 23:09:14,027: log_options() 'change_enabled = False'
+INFO: 2020-12-10 23:09:14,027: log_options() 'change_interval = 300'
+INFO: 2020-12-10 23:09:14,027: log_options() 'change_on_start = False'
+INFO: 2020-12-10 23:09:14,027: log_options() 'clipboard_enabled = False'
+INFO: 2020-12-10 23:09:14,027: log_options() 'clipboard_hosts = ['wallhaven.cc', 'wallpapers.net', 'flickr.com', 'imgur.com', 'deviantart.com', 'interfacelift.com', 'vladstudio.com', 'imageshack.us', 'deviantart.net', 'imageshack.com']'
+INFO: 2020-12-10 23:09:14,028: log_options() 'clipboard_use_whitelist = True'
+INFO: 2020-12-10 23:09:14,028: log_options() 'clock_date_font = Ubuntu Condensed, 30'
+INFO: 2020-12-10 23:09:14,028: log_options() 'clock_enabled = False'
+INFO: 2020-12-10 23:09:14,028: log_options() 'clock_filter = -density 100 -font `fc-match -f '%{file[0]}' '%CLOCK_FONT_NAME'` -pointsize %CLOCK_FONT_SIZE -gravity SouthEast -fill '#00000044' -annotate 0x0+[%HOFFSET+58]+[%VOFFSET+108] '%H:%M' -fill white -annotate 0x0+[%HOFFSET+60]+[%VOFFSET+110] '%H:%M' -font `fc-match -f '%{file[0]}' '%DATE_FONT_NAME'` -pointsize %DATE_FONT_SIZE -fill '#00000044' -annotate 0x0+[%HOFFSET+58]+[%VOFFSET+58] '%A, %B %d' -fill white -annotate 0x0+[%HOFFSET+60]+[%VOFFSET+60] '%A, %B %d''
+INFO: 2020-12-10 23:09:14,028: log_options() 'clock_font = Ubuntu Condensed, 70'
+INFO: 2020-12-10 23:09:14,028: log_options() 'configfile = /home/makc/.config/variety/variety.conf'
+INFO: 2020-12-10 23:09:14,028: log_options() 'copyto_enabled = False'
+INFO: 2020-12-10 23:09:14,028: log_options() 'copyto_folder = Default'
+INFO: 2020-12-10 23:09:14,028: log_options() 'desired_color = [160, 160, 160]'
+INFO: 2020-12-10 23:09:14,028: log_options() 'desired_color_enabled = False'
+INFO: 2020-12-10 23:09:14,028: log_options() 'download_folder = /home/makc/.config/variety/Downloaded'
+INFO: 2020-12-10 23:09:14,028: log_options() 'download_preference_ratio = 0.9'
+INFO: 2020-12-10 23:09:14,028: log_options() 'favorites_folder = /home/makc/.config/variety/Favorites'
+INFO: 2020-12-10 23:09:14,028: log_options() 'favorites_operations = [['Downloaded', 'Copy'], ['Fetched', 'Move'], ['Others', 'Copy']]'
+INFO: 2020-12-10 23:09:14,028: log_options() 'fetched_folder = /home/makc/.config/variety/Fetched'
+INFO: 2020-12-10 23:09:14,028: log_options() 'filters = [[False, 'Keep original', ''], [False, 'Grayscale', '-type Grayscale'], [False, 'Heavy blur', '-blur 120x40'], [False, 'Soft blur', '-blur 20x7'], [False, 'Oil painting', '-paint 8'], [False, 'Pointilism', '-spread 10 -noise 3'], [False, 'Pixellate', '-scale 3% -scale 3333%']]'
+INFO: 2020-12-10 23:09:14,028: log_options() 'icon = Light'
+INFO: 2020-12-10 23:09:14,028: log_options() 'lightness_enabled = False'
+INFO: 2020-12-10 23:09:14,028: log_options() 'lightness_mode = 0'
+INFO: 2020-12-10 23:09:14,028: log_options() 'min_rating = 4'
+INFO: 2020-12-10 23:09:14,028: log_options() 'min_rating_enabled = False'
+INFO: 2020-12-10 23:09:14,028: log_options() 'min_size = 80'
+INFO: 2020-12-10 23:09:14,028: log_options() 'min_size_enabled = True'
+INFO: 2020-12-10 23:09:14,028: log_options() 'quota_enabled = True'
+INFO: 2020-12-10 23:09:14,028: log_options() 'quota_size = 1000'
+INFO: 2020-12-10 23:09:14,028: log_options() 'quotes_authors = '
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_bg_color = [80, 80, 80]'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_bg_opacity = 55'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_change_enabled = False'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_change_interval = 300'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_disabled_sources = ['Urban Dictionary']'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_enabled = False'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_favorites_file = /home/makc/.config/variety/favorite_quotes.txt'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_font = Bitstream Charter 30'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_hpos = 100'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_max_length = 250'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_tags = '
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_text_color = [255, 255, 255]'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_text_shadow = False'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_vpos = 40'
+INFO: 2020-12-10 23:09:14,029: log_options() 'quotes_width = 70'
+INFO: 2020-12-10 23:09:14,029: log_options() 'safe_mode = False'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_custom_enabled = False'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_custom_folder = /home/makc'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_downloads_enabled = False'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_fade = 0.4'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_favorites_enabled = True'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_mode = Fullscreen'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_monitor = All'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_pan = 0.05'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_seconds = 6.0'
+INFO: 2020-12-10 23:09:14,029: log_options() 'slideshow_sort_order = Random'
+INFO: 2020-12-10 23:09:14,030: log_options() 'slideshow_sources_enabled = True'
+INFO: 2020-12-10 23:09:14,030: log_options() 'slideshow_zoom = 0.2'
+INFO: 2020-12-10 23:09:14,030: log_options() 'smart_enabled = False'
+INFO: 2020-12-10 23:09:14,030: log_options() 'smart_notice_shown = False'
+INFO: 2020-12-10 23:09:14,030: log_options() 'smart_register_shown = False'
+INFO: 2020-12-10 23:09:14,030: log_options() 'sources = [[True, 'favorites', 'The Favorites folder'], [False, 'fetched', 'The Fetched folder'], [True, 'folder', '/usr/share/backgrounds'], [False, 'flickr', 'user:www.flickr.com/photos/peter-levi/;user_id:93647178@N00;'], [False, 'apod', "NASA's Astronomy Picture of the Day"], [False, 'bing', 'Bing Photo of the Day'], [False, 'earthview', 'Google Earth View Wallpapers'], [False, 'unsplash', 'High-resolution photos from Unsplash.com']]'
+INFO: 2020-12-10 23:09:14,030: log_options() 'stats_enabled = True'
+INFO: 2020-12-10 23:09:14,030: log_options() 'stats_notice_shown = False'
+INFO: 2020-12-10 23:09:14,030: log_options() 'sync_enabled = True'
+INFO: 2020-12-10 23:09:14,030: log_options() 'use_landscape_enabled = True'
+INFO: 2020-12-10 23:09:14,030: reload_config() 'No need to clear prepared queue'
+INFO: 2020-12-10 23:09:14,030: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg'
+INFO: 2020-12-10 23:09:14,037: load_last_change_time() 'Change interval < 6 hours, ignore persisted last_change_time, wait initially the whole interval: 300'
+INFO: 2020-12-10 23:09:14,037: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg'
+INFO: 2020-12-10 23:09:14,038: regular_change_thread() 'regular_change thread running'
+INFO: 2020-12-10 23:09:14,038: regular_change_thread() 'regular_change: waiting till user resumes'
+INFO: 2020-12-10 23:09:14,038: prepare_thread() 'Prepare thread running'
+INFO: 2020-12-10 23:09:14,038: prepare_thread() 'Prepared buffer contains 0 images'
+INFO: 2020-12-10 23:09:14,038: prepare_thread() 'Preparing some images'
+INFO: 2020-12-10 23:09:14,040: update_indicator_icon() 'Creating indicator'
+WARNING: 2020-12-10 23:09:14,051: create_menu() 'Variety Slideshow is not installed. This is an optional extension adding pan-and-zoom slideshows to Variety: see https://github.com/peterlevi/variety-slideshow for details'
+INFO: 2020-12-10 23:09:14,053: create_indicator() 'indicator backend: AppIndicator3'
+INFO: 2020-12-10 23:09:14,071: prepare_thread() 'After search prepared buffer contains 14 images'
+INFO: 2020-12-10 23:09:14,085: set_from_theme_icon() 'Showing indicator icon variety-indicator from GTK theme'
+INFO: 2020-12-10 23:09:14,138: do_set_wp() 'Calling do_set_wp with /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg, time: 1607663354.1381116'
+INFO: 2020-12-10 23:09:14,153: update_indicator() 'Setting file info to: /usr/share/backgrounds/arcolinux/blue-earth-2880x1800.jpg'
+INFO: 2020-12-10 23:09:15,513: reload() 'Reloading preferences dialog'
+INFO: 2020-12-10 23:09:16,071: trigger_download() 'Triggering download thread to check if download needed'
+INFO: 2020-12-10 23:09:34,055: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
+INFO: 2020-12-10 23:09:34,763: server_options_thread() 'Fetched server options: {'flickr': {'min_fill_queue_interval': 1200, 'min_download_interval': 1200}, 'wallbase': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallhaven': {'min_fill_queue_interval': 1800, 'min_download_interval': 1800}, 'wallpapers.net': {'min_fill_queue_interval': 601, 'min_download_interval': 0}, 'unsplash': {'min_fill_queue_interval': 20000000000, 'min_download_interval': 20000000000}, 'unsplash_v2': {'min_fill_queue_interval': 2000, 'min_download_interval': 1200}, 'status_message': {'0.0.1': '', '*': ''}}'

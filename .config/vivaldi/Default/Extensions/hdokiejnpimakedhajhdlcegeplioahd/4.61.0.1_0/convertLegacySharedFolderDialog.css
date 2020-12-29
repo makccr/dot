@@ -1,8 +1,0 @@
-#convertLegacySharedFolderDialog {
-  max-height: 250px;
-  max-width: 620px;
-}
-
-#convertLegacySharedFolder .dialogContent {
-  overflow: visible;
-}
