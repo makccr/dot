@@ -49,7 +49,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("nvim") or "nano"
+editor = os.getenv("nvim") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -531,10 +531,10 @@ beautiful.useless_gap = 5
 --beautiful.border_marked = "#CC9393"
 
 -- Autostart
---awful.spawn.with_shell("picom -CG --experimental-backends")
-awful.spawn.with_shell("picom --experimental-backends")
+awful.spawn.with_shell("picom -CG --experimental-backends")
+--awful.spawn.with_shell("picom")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("ntfd")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers")
+awful.spawn.with_shell("feh --bg-fill --randomize ~/Pictures/wallpapers-ii/wallpapers")
 -- }}}

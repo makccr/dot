@@ -78,7 +78,7 @@ map <F4> :colorscheme PaperColor<CR>
 map <F5> :colorscheme spacegray<CR>
 
 "Color Settings
-colorscheme base16-default-dark
+colorscheme gruvbox
 set background=dark cursorline termguicolors
 
 hi! Normal ctermbg=NONE guibg=NONE 
