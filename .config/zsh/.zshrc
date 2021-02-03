@@ -26,15 +26,11 @@ zstyle ':vcs_info:*' enable git
 ## App launchers
 alias tsm='transmission-remote'
 alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
 alias f='ranger'
 alias tty='tty-clock -C6 -c -t'
-alias s='startx'
 alias pac='sudo pacman'
 alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
-alias m='neomutt'
 alias kill='killall -q'
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
