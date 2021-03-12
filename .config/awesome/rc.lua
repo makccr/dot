@@ -49,7 +49,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("nvim") or "vim"
+editor = os.getenv("nvim") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -61,19 +61,19 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    -- awful.layout.suit.floating,
+    --awful.layout.suit.floating,
     awful.layout.suit.tile,
-   --  awful.layout.suit.tile.left,
-   --  awful.layout.suit.tile.bottom,
-   --  awful.layout.suit.tile.top,
-   --  awful.layout.suit.fair,
-   --  awful.layout.suit.fair.horizontal,
-   --  awful.layout.suit.spiral,
-   --  awful.layout.suit.spiral.dwindle,
-   --  awful.layout.suit.max,
-   --  awful.layout.suit.max.fullscreen,
-   --  awful.layout.suit.magnifier,
-   --  awful.layout.suit.corner.nw,
+    awful.layout.suit.tile.left,
+    awful.layout.suit.tile.bottom,
+    awful.layout.suit.tile.top,
+    awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.spiral,
+    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.max,
+    awful.layout.suit.max.fullscreen,
+    awful.layout.suit.magnifier,
+    awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
@@ -310,6 +310,10 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
+    -- Prompt
+    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
+              {description = "run prompt", group = "launcher"}),
+
     -- Demnu
     awful.key({ modkey },            "space",     function () 
     awful.util.spawn("dmenu_run") end,
@@ -319,7 +323,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "b", function ()
     awful.util.spawn("firefox") end,
             {description = "Launch Firefox", group = "makc"}),
-
 
     awful.key({ modkey }, "x",
               function ()
@@ -343,10 +346,10 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey,   }, "q",      function (c) c:kill()                         end,
-              {description = "close window", group = "makc"}),
+    awful.key({ modkey, }, "q",      function (c) c:kill()                         end,
+              {description = "close", group = "makc"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
-              {description = "toggle floating", group = "makc"}),
+              {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
@@ -517,24 +520,18 @@ client.connect_signal("manage", function (c)
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
---client.connect_signal("mouse::enter", function(c)
---    c:emit_signal("request::activate", "mouse_enter", {raise = false})
---end)
+client.connect_signal("mouse::enter", function(c)
+    c:emit_signal("request::activate", "mouse_enter", {raise = false})
+end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+-- }}}
 
 -- Adding gaps
 beautiful.useless_gap = 5
---beautiful.border_normal = "#3F3F3F"
---beautiful.border_focus  = "#dc3232"
---beautiful.border_marked = "#CC9393"
 
 -- Autostart
---awful.spawn.with_shell("picom -CG --experimental-backends")
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("dropbox")
-awful.spawn.with_shell("ntfd")
-awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("feh --bg-fill --randomize ~/Pictures/wallpapers-ii/wallpapers")
--- }}}
