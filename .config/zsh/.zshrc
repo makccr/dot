@@ -25,6 +25,7 @@ zstyle ':vcs_info:*' enable git
 # Aliases
 ## App launchers
 alias tsm='transmission-remote'
+alias s='startx'
 alias v='nvim'
 alias f='ranger'
 alias tty='tty-clock -C6 -c -t'
