@@ -39,7 +39,7 @@ alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
 alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 ## Changing Settings
-alias w='feh --bg-fill --randomize ~/Pictures/wallpapers-ii/wallpapers/'
+alias w='feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers/'
 ## Journal launching aliases
 alias v1='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-1.md'
 alias v2='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-2.md'
