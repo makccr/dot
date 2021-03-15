@@ -3,7 +3,10 @@ source ~/.config/zsh/.zprofile
 # Basic zsh setting & themes
 PATH=$PATH:$HOME/.scripts
 setopt no_list_ambiguous
-bindkey -v
+
+# Pywal settings
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
 
 # Setting up Defaults
 export EDITOR='nvim'
@@ -33,24 +36,24 @@ alias pac='sudo pacman'
 alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
 alias kill='killall -q'
+
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
 alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
+
 ## Changing Settings
-alias w='feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers/'
+#alias w='feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers/'
+alias w='wal -q -i ~/Media/wallpapers-ii/wallpapers/'
+
 ## Journal launching aliases
 alias v1='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-1.md'
 alias v2='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-2.md'
 alias v3='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-3.md'
 alias v4='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-4.md'
 alias v5='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-5.md'
+
 ## Snippets
 alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"' 
-
-#||\\ //||
-#|| \// || Mackenzie Criswell
-#|| //\ || https://makc.co
-#||   \\|| https://github.com/makccr

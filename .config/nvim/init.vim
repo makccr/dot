@@ -12,10 +12,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-scripts/fountain.vim'
 " Color-schemes
     Plug 'morhetz/gruvbox' "My favorite theme
-    Plug 'kristijanhusak/vim-hybrid-material'
-    Plug 'NLKNguyen/papercolor-theme'
-    Plug 'ajh17/Spacegray.vim'
-    Plug 'chriskempson/base16-vim'
+    Plug 'dylanaraps/wal.vim' "My wallpaper dependant theme
 call plug#end() 
  
 "General Settings
@@ -78,8 +75,10 @@ map <F4> :colorscheme PaperColor<CR>
 map <F5> :colorscheme spacegray<CR>
 
 "Color Settings
-colorscheme gruvbox
-set background=dark cursorline termguicolors
+colorscheme wal
+set background=dark cursorline 
+"set termguicolors
+" Turn this back on if you stop using pywal
 
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
@@ -108,8 +107,3 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave() 
-
-"||\\ //||
-"|| \// || Mackenzie Criswell
-"|| //\ || https://makc.co
-"||   \\|| https://github.com/makccr
