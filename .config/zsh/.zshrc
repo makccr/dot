@@ -6,7 +6,6 @@ setopt no_list_ambiguous
 
 # Pywal settings
 (cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
 
 # Setting up Defaults
 export EDITOR='nvim'
