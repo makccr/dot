@@ -1,8 +1,9 @@
 source ~/.config/zsh/.zprofile
 
-# Basic zsh setting & themes
+# Basic zsh settings
 PATH=$PATH:$HOME/.scripts
 setopt no_list_ambiguous
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # Pywal settings
 (cat ~/.cache/wal/sequences &)
@@ -15,6 +16,7 @@ export MANPAGER='nvim +Man!'
 
 # Prompt Settings
 PROMPT='%F{blue}%1~%f %F{cyan}∳%f '
+
 ## Git Settings
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
@@ -44,8 +46,7 @@ alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
 alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Changing Settings
-#alias w='feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers/'
-alias w='wal -q -i ~/Media/wallpapers-ii/wallpapers/'
+alias w='wal -q -i ~/Media/wallpapers/backgrounds/'
 
 ## Journal launching aliases
 alias v1='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-1.md'

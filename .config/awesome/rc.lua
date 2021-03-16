@@ -315,9 +315,14 @@ globalkeys = gears.table.join(
               {description = "run prompt", group = "launcher"}),
 
     -- Demnu
-    awful.key({ modkey },            "space",     function () 
+    awful.key({ modkey  },            "space",     function () 
     awful.util.spawn("dmenu_run") end,
               {description = "Launch Dmenu", group = "makc"}),
+
+    -- Rofi
+    awful.key({ modkey , "Shift"},            "space",     function () 
+    awful.util.spawn("rofi -show run") end,
+              {description = "Launch Rofi", group = "makc"}),
 
     -- Firefox
     awful.key({ modkey }, "b", function ()
@@ -532,6 +537,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 5
 
 -- Autostart
-awful.spawn.with_shell("picom")
+awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers")
