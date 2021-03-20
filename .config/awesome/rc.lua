@@ -539,4 +539,5 @@ beautiful.useless_gap = 5
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
-awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers")
+awful.spawn.with_shell("flameshot")
+awful.spawn.with_shell("wal -q -i /home/makc/Media/wallpapers/backgrounds/")

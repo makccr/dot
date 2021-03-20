@@ -87,3 +87,5 @@
 .config/variety/
 .config/cef_user_data/
 .config/ristretto/
+.config/flameshot/
+.config/goverlay/
