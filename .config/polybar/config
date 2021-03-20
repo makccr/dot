@@ -23,8 +23,8 @@ line-color = #f00
 padding-left = 3
 padding-right = 3
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 
 font-0 = Montserrat Regular:size=10;0
 font-1 = FontAwesome:size=11;0
@@ -84,7 +84,7 @@ interval = 5
 
 date = %a, %b %d
 time = %l:%M %p
-label = %date%  %time%
+label = %date% %time%
 
 background = ${colors.background-alt} 
 
@@ -136,13 +136,13 @@ label-active-font = 1
 
 menu-0-0 = " Restart"
 menu-0-0-exec = sudo reboot
-menu-0-1 = "     Shutdown"
+menu-0-1 = " Shutdown"
 menu-0-1-exec = sudo poweroff
 
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = "  "
+format-prefix = " "
 format = <label>
 exec = python /home/makc/.config/polybar/spotify_status.py -f '{song}: {artist}'
 
