@@ -1,6 +1,5 @@
 [colors]
-background = #f90f0f0f
-background-alt = #f93f3f3f
+background = #9f000000
 foreground = #d4be98
 foreground-alt = #d4be98
 primary = #ffb52a
@@ -21,13 +20,13 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-padding-left = 5
-padding-right = 5
+padding-left = 3
+padding-right = 3
 
 module-margin-left = 2
-module-margin-right = 3
+module-margin-right = 2
 
-font-0 = San Fransisco Text:size=10;0
+font-0 = Montserrat Regular:size=10;0
 font-1 = FontAwesome:size=11;0
 font-2 = Weather Icons:size=12;0
 

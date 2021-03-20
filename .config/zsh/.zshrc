@@ -36,6 +36,7 @@ alias tty='tty-clock -C6 -c -t'
 alias pac='sudo pacman'
 alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
+alias shot='flameshot gui'
 alias kill='killall -q'
 
 ## Terminal maintenance
