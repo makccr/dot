@@ -30,10 +30,9 @@ font-0 = Montserrat Regular:size=10;0
 font-1 = FontAwesome:size=11;0
 font-2 = Weather Icons:size=12;0
 
-;tray-position = left
-;tray-padding = 5
-;tray-underline-size = 0
-;tray-detached = true
+;tray-position = center
+;tray-padding = 2
+;tray-detached = false
 ;tray-transparent = false
 ;tray-background = ${colors.background}
 ;tray-foreground = ${colors.foreground-alt}
@@ -145,7 +144,6 @@ interval = 1
 format-prefix = " "
 format = <label>
 exec = python /home/makc/.config/polybar/spotify_status.py -f '{song}: {artist}'
-
 label = %output%
 label-active-font = 3
 

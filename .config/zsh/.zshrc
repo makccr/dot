@@ -44,10 +44,11 @@ alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
+alias r='cd ~; wal -q -i ~/Media/wallpapers-ii/wallpapers/; clear; source ~/.config/zsh/.zprofile'
 alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Changing Settings
-alias w='wal -q -i ~/Media/wallpapers/backgrounds/'
+alias w='wal -q -i ~/Media/wallpapers-ii/wallpapers/'
 
 ## Journal launching aliases
 alias v1='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-1.md'

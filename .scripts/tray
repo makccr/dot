@@ -1,0 +1,1 @@
+trayer --edge top --align right --SetDockType true --expand true --width 5% --transparent --true --alpha 256 --height 30
