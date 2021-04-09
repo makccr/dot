@@ -28,7 +28,7 @@ module-margin-right = 1
 
 font-0 = Montserrat Regular:size=10;0
 font-1 = FontAwesome:size=11;2
-font-2 = Weather Icons:size=12;1
+font-2 = Weather Icons:size=10;3
 
 ;tray-position = right
 ;tray-padding = 2
