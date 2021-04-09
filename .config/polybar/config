@@ -8,8 +8,7 @@ alert = #bd2c40
 
 [bar/makc]
 ;monitor = ${env:MONITOR:DP-0}
-;monitor = ${env:MONITOR}
-monitor =
+monitor = ${env:MONITOR}
 width = 100%
 height = 30
 fixed-center = true
@@ -22,7 +21,7 @@ line-size = 0
 line-color = #f00
 
 padding-left = 3
-padding-right = 1
+padding-right = 3
 
 module-margin-left = 1
 module-margin-right = 1
@@ -31,12 +30,12 @@ font-0 = Montserrat Regular:size=10;0
 font-1 = FontAwesome:size=11;2
 font-2 = Weather Icons:size=12;1
 
-tray-position = right
-tray-padding = 2
-tray-detached = false
-tray-transparent = false
-tray-background = ${colors.background}
-tray-foreground = ${colors.foreground-alt}
+;tray-position = right
+;tray-padding = 2
+;tray-detached = true
+;tray-transparent = true
+;tray-background = ${colors.background}
+;tray-foreground = ${colors.foreground-alt}
 
 modules-left = powermenu 
 modules-center = 1 2 3 4 5 6 7 8 9
