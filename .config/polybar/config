@@ -7,8 +7,9 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/makc]
-monitor = ${env:MONITOR:DP-0}
+;monitor = ${env:MONITOR:DP-0}
 ;monitor = ${env:MONITOR}
+monitor =
 width = 100%
 height = 30
 fixed-center = true
