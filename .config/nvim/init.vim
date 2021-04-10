@@ -77,6 +77,7 @@ map <F5> :colorscheme spacegray<CR>
 "Color Settings
 colorscheme wal
 set background=dark cursorline 
+au BufNewFile,BufRead /*.rasi setf css
 "set termguicolors
 " Turn this back on if you stop using pywal
 

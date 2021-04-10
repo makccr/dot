@@ -1,16 +1,16 @@
 configuration {
 /*	modi: "window,run,ssh";*/
-/*	width: 50;*/
-/*	lines: 15;*/
+	width: 30;
+	lines: 5;
 /*	columns: 1;*/
-/*	font: "mono 12";*/
+	font: "Montserrat Regular 10";
 /*	bw: 1;*/
 /*	location: 0;*/
-/*	padding: 5;*/
+	padding: 3;
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-/*	show-icons: false;*/
+	show-icons: true;
 /*	terminal: "rofi-sensible-terminal";*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
@@ -31,7 +31,7 @@ configuration {
 /*	sorting-method: "normal";*/
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
-/*	sidebar-mode: false;*/
+	sidebar-mode: true;
 /*	eh: 1;*/
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
@@ -44,9 +44,9 @@ configuration {
 /*	line-padding: 1;*/
 /*	filter: ;*/
 /*	separator-style: "dash";*/
-/*	hide-scrollbar: false;*/
+	hide-scrollbar: true;
 /*	fullscreen: false;*/
-/*	fake-transparency: false;*/
+	fake-transparency: true;
 /*	dpi: -1;*/
 /*	threads: 0;*/
 /*	scrollbar-width: 8;*/

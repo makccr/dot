@@ -1,13 +1,20 @@
+;[colors]
+;background = #7f000000
+;foreground = #d4be98
+;foreground-alt = #d4be98
+;primary = #ffb52a
+;secondary = #e60053
+;alert = #bd2c40
+
 [colors]
-background = #7f000000
-foreground = #d4be98
-foreground-alt = #d4be98
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
 
 [bar/makc]
-;monitor = ${env:MONITOR:DP-0}
 monitor = ${env:MONITOR}
 width = 100%
 height = 30
@@ -127,7 +134,7 @@ interval = 1000
 label = %output%
 format-prefix = " "
 
-;;;;;;Awesome Window Switcher
+;;;;;;;;Awesome WM Tag Switcher
 [module/1]
 type = custom/script
 exec = echo ""
