@@ -1,11 +1,3 @@
-;[colors]
-;background = #7f000000
-;foreground = #d4be98
-;foreground-alt = #d4be98
-;primary = #ffb52a
-;secondary = #e60053
-;alert = #bd2c40
-
 [colors]
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
