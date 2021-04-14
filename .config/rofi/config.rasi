@@ -3,7 +3,7 @@ configuration {
 	width: 30;
 	lines: 5;
 /*	columns: 1;*/
-	font: "Montserrat Regular 10";
+	font: "Product Sans Regular 10";
 /*	bw: 1;*/
 /*	location: 0;*/
 	padding: 3;
