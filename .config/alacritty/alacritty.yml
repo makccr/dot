@@ -4,8 +4,8 @@ window:
     columns: 140
     lines: 38
   padding:
-    x: 25
-    y: 25
+    x: 35
+    y: 35
   decorations: none
 scrolling:
   history: 10000
@@ -79,9 +79,3 @@ cursor:
 
 key_bindings:
   - { key: N, mods: Control, action: SpawnNewInstance }
-
-#||\\ //||
-#|| \// || Mackenzie Criswell
-#|| //\ || https://makc.co
-#||   \\|| https://github.com/makccr
-
