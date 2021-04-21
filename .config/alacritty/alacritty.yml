@@ -4,8 +4,8 @@ window:
     columns: 140
     lines: 38
   padding:
-    x: 35
-    y: 35
+    x: 25
+    y: 25
   decorations: none
 scrolling:
   history: 10000
@@ -39,7 +39,7 @@ draw_bold_text_with_bright_colors: true
 # Colors (Gruvbox dark)
 colors:
   primary:
-    background: '#1d2021'
+    background: '#0d1011'
     foreground: '#ebdbb2'
   normal:
     black:   '#282828'
