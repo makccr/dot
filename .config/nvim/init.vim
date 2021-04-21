@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/limelight.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'airblade/vim-gitgutter/'
 " Syntax
     Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
@@ -23,11 +24,11 @@ set spell spelllang=en_us
 set backspace=indent,eol,start confirm
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab  
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-set hls is ic
+set hls is ic number
 set laststatus=2 cmdheight=1
 au BufRead,BufNewFile *.fountain set filetype=fountain
 set splitbelow splitright 
-set nobackup nowritebackup
+set nobackup nowritebackup 
 
 "Status-line
 set statusline=
@@ -75,10 +76,10 @@ map <F5> :colorscheme spacegray<CR>
 
 "Color Settings
 colorscheme gruvbox
-set background=dark cursorline 
-au BufNewFile,BufRead /*.rasi setf css
-"set termguicolors
-" Turn this back on if you stop using pywal
+set background=dark cursorline
+hi clear CursorLine
+hi CursorLine gui=underline cterm=underline
+set termguicolors
 
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 

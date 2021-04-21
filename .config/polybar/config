@@ -28,7 +28,6 @@ module-margin-right = 2
 font-0 = Product Sans:size=10;0
 font-1 = FontAwesome:size=11;2
 font-2 = Weather Icons:size=13;2
-font-4 = MaterialIcons:size=14;2
 
 ;tray-position = right
 ;tray-padding = 2
@@ -175,3 +174,5 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+
+; vim:set ft=dosini:
