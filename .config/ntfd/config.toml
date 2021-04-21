@@ -42,7 +42,7 @@ enabled = disable
 # api_key = "file:~/your_folder/some-token.txt"   # Read from a file
 # api_key = "env:GITHUB_TOKEN"                    # Read from an environment variable
 # api_key = "PLAINTEXT_VALUE"                     # Read the value directly
-api_key = "file:~/Dropbox/keys/gitHub.txt"
+#api_key = "file:~/Dropbox/keys/gitHub.txt"
 # How long GitHub notifications should stay up (in seconds)
 notification_timeout = 5
 # Whether or not the organization/owner avatar should be shown in the notification
