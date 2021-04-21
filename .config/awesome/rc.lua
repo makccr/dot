@@ -221,9 +221,7 @@ end)
 
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
+    awful.button({ }, 3, function () mymainmenu:toggle() end)
 ))
 -- }}}
 
@@ -478,6 +476,9 @@ awful.rules.rules = {
           "DTA",  -- Firefox addon DownThemAll.
           "copyq",  -- Includes session name in class.
           "pinentry",
+          "pcmanfm",
+          "typora",
+          "gucharmap",
         },
         class = {
           "Arandr",
@@ -533,8 +534,9 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- Adding gaps
+-- Appearance stuff
 beautiful.useless_gap = 10
+beautiful.notification_icon_size = 80
 
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")

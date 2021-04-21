@@ -36,9 +36,9 @@ font-2 = Weather Icons:size=13;2
 ;tray-background = ${colors.background}
 ;tray-foreground = ${colors.foreground-alt}
 
-modules-left = powermenu 
+modules-left = powermenu prev play next
 modules-center = 1 2 3 4 5 6 7 8 9
-modules-right = shot update weather date battery
+modules-right = shot wallpaper update weather date battery
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -95,7 +95,7 @@ type = custom/menu
 expand-right = true
 format-spacing = 4
 
-label-open = 
+label-open = ""
 label-close = 
 label-separator =  
 label-separator-foreground = ${colors.foreground-alt}
@@ -122,8 +122,28 @@ click-left = "yay -Sy"
 
 [module/shot]
 type = custom/script
-exec = echo ""
+exec = echo ""
 click-left = "flameshot gui"
+
+[module/wallpaper]
+type = custom/script
+exec = echo ""
+click-left = "feh --bg-fill --randomize ~/Media/wallpapers/maller/"
+click-right = "feh --bg-fill --randomize ~/Media/wallpapers/2021/"
+click-middle = "feh --bg-fill --randomize ~/Media/wallpapers/2020/"
+
+[module/prev]
+type = custom/script
+exec = echo ""
+click-left = spotifycli --prev
+[module/play]
+type = custom/script
+exec = echo ""
+click-left = spotifycli --playpause
+[module/next]
+type = custom/script
+exec = echo ""
+click-left = spotifycli --next
 
 ;;;;;;;;Awesome WM Tag Switcher
 [module/1]
@@ -169,10 +189,4 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = false
-
-[global/wm]
-margin-top = 5
-margin-bottom = 5
-
-; vim:set ft=dosini:
+;pseudo-transparency = false [global/wm] margin-top = 5 margin-bottom = 5 vim:set ft=dosini:
