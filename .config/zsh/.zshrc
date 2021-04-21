@@ -3,7 +3,6 @@ source ~/.config/zsh/.zprofile
 # Basic zsh settings
 PATH=$PATH:$HOME/.scripts
 setopt no_list_ambiguous
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # Setting up Defaults
 export EDITOR='nvim'
@@ -12,7 +11,7 @@ export BROWSER='firefox'
 export MANPAGER='nvim +Man!'
 
 # Prompt Settings
-PROMPT='%F{blue}%1~%f %F{cyan}∳%f '
+PROMPT='%F{blue}%1~%f %F{cyan}☯%f '
 
 ## Git Settings
 autoload -Uz vcs_info
