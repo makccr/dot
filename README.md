@@ -17,4 +17,4 @@ I mainly use these apps: Vim & the Shell for standard writing; normally in the [
 ---
 
 ### My Setup
-![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/desktop.png)
+![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/desktop.jpg)
