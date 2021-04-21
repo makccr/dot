@@ -5,9 +5,6 @@ PATH=$PATH:$HOME/.scripts
 setopt no_list_ambiguous
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-# Pywal settings
-(cat ~/.cache/wal/sequences &)
-
 # Setting up Defaults
 export EDITOR='nvim'
 export TERMINAL='alacritty'
