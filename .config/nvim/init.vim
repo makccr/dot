@@ -12,7 +12,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-scripts/fountain.vim'
 " Color-schemes
     Plug 'morhetz/gruvbox' "My favorite theme
-    Plug 'dylanaraps/wal.vim' "My wallpaper dependant theme
 call plug#end() 
  
 "General Settings
@@ -75,7 +74,7 @@ map <F4> :colorscheme PaperColor<CR>
 map <F5> :colorscheme spacegray<CR>
 
 "Color Settings
-colorscheme wal
+colorscheme gruvbox
 set background=dark cursorline 
 au BufNewFile,BufRead /*.rasi setf css
 "set termguicolors
