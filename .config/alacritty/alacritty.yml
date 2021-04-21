@@ -4,13 +4,13 @@ window:
     columns: 140
     lines: 38
   padding:
-    x: 25
-    y: 25
+    x: 35
+    y: 35
   decorations: none
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: .7
+background_opacity: .6
 window.dynamic_title: true
 
 # Font Customization
