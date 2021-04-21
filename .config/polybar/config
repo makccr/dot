@@ -123,7 +123,8 @@ click-left = "yay -Sy"
 [module/shot]
 type = custom/script
 exec = echo ""
-click-left = "flameshot gui"
+click-left = "flameshot screen -p ~/Downloads/"
+click-right = "flameshot gui"
 
 [module/wallpaper]
 type = custom/script
