@@ -25,9 +25,10 @@ padding-right = 5
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = Product Sans:size=10;0
+font-0 = Product Sans:size=10;1
 font-1 = FontAwesome:size=11;2
 font-2 = Weather Icons:size=13;2
+font-3 = Sauce Code Pro NF:size=18;3:
 
 ;tray-position = right
 ;tray-padding = 2
@@ -95,15 +96,14 @@ type = custom/menu
 expand-right = true
 format-spacing = 4
 
-label-open = ""
+label-open = ""
 label-close = 
 label-separator =  
 label-separator-foreground = ${colors.foreground-alt}
-label-active-font = 1
 
-menu-0-0 = " Restart"
+menu-0-0 = ""
 menu-0-0-exec = sudo reboot
-menu-0-1 = " Shutdown"
+menu-0-1 = ""
 menu-0-1-exec = sudo poweroff
 
 [module/weather]
@@ -122,7 +122,7 @@ click-left = "yay -Sy"
 
 [module/shot]
 type = custom/script
-exec = echo ""
+exec = echo "    "
 click-left = "flameshot screen -p ~/Downloads/"
 click-right = "flameshot gui"
 
@@ -135,22 +135,22 @@ click-middle = "feh --bg-fill --randomize ~/Media/wallpapers/2020/"
 
 [module/prev]
 type = custom/script
-exec = echo ""
+exec = echo ""
 click-left = spotifycli --prev
 [module/play]
 type = custom/script
-exec = echo ""
+exec = echo ""
 click-left = spotifycli --playpause
 click-right = spotify &
 [module/next]
 type = custom/script
-exec = echo ""
+exec = echo ""
 click-left = spotifycli --next
 
 ;;;;;;;;Awesome WM Tag Switcher
 [module/1]
 type = custom/script
-exec = echo ""
+exec = echo "     "
 click-left = "xdotool key --clearmodifiers Super_L+1"
 [module/2]
 type = custom/script
@@ -182,7 +182,7 @@ exec = echo ""
 click-left = "xdotool key --clearmodifiers Super_L+8"
 [module/9]
 type = custom/script
-exec = echo ""
+exec = echo "     "
 click-left = "xdotool key --clearmodifiers Super_L+9"
 
 [settings]
