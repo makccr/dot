@@ -1,0 +1,4 @@
+#!/bin/sh
+
+feh --bg-fill --randomize /home/makc/Media/wallpapers/maller/ ;
+yay -Sy

@@ -327,6 +327,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("firefox") end,
             {description = "Launch Firefox", group = "makc"}),
 
+    -- Feh
+    awful.key({ modkey }, "h", function ()
+    awful.util.spawn("/home/makc/.scripts/wall") end,
+            {description = "Change Wallpaper", group = "makc"}),
+
 --    awful.key({ modkey }, "x",
 --              function ()
 --                  awful.prompt.run {
