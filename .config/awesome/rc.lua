@@ -62,13 +62,13 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     --awful.layout.suit.floating,
---    awful.layout.suit.tile,
+      awful.layout.suit.tile,
 --    awful.layout.suit.tile.left,
 --    awful.layout.suit.tile.bottom,
 --    awful.layout.suit.tile.top,
 --    awful.layout.suit.fair,
 --    awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
+--    awful.layout.suit.spiral,
 --    awful.layout.suit.spiral.dwindle,
 --    awful.layout.suit.max,
 --    awful.layout.suit.max.fullscreen,
@@ -327,10 +327,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("firefox") end,
             {description = "Launch Firefox", group = "makc"}),
 
+
     -- Feh
-    awful.key({ modkey }, "h", function ()
+    awful.key({ modkey }, "c", function ()
     awful.util.spawn("/home/makc/.scripts/wall") end,
-            {description = "Change Wallpaper", group = "makc"}),
+            {description = "Change Wallpaer", group = "makc"}),
 
 --    awful.key({ modkey }, "x",
 --              function ()
@@ -548,8 +549,8 @@ beautiful.notification_icon_size = 80
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("ntfd")
-awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("xbindkeys")
+awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("/home/makc/.screenlayout/main.sh")
 awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/maller")
 awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")

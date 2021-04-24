@@ -34,6 +34,7 @@ alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
 alias shot='flameshot gui'
 alias kill='killall -q'
+alias w='feh --bg-fill --randomize ~/Media/wallpapers/maller/'
 
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
