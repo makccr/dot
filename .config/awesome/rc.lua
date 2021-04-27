@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "default/gruvbox.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -532,18 +532,12 @@ client.connect_signal("manage", function (c)
     end
 end)
 
--- Enable sloppy focus, so that focus follows mouse.
---client.connect_signal("mouse::enter", function(c)
---    c:emit_signal("request::activate", "mouse_enter", {raise = false})
---end)
-
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
--- }}}
-
 -- Appearance stuff
 beautiful.useless_gap = 10
+beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
+beautiful.notification_bg = '(0,0,0)'
+beautiful.notification_fg = '#d4be98'
 
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")

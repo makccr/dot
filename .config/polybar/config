@@ -38,7 +38,7 @@ font-2 = Sauce Code Pro NF:size=18;3
 
 modules-left = powermenu prev play next
 modules-center = 1 2 3 4 5 6 7 8 9
-modules-right = shot wallpaper update date battery
+modules-right = shot wallpaper update audio date battery
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -46,6 +46,18 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+
+[module/audio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = true
+format-volume = <ramp-volume> <label-volume>
+label-muted = ""
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+click-right = "pactl set-sink-volume @DEFAULT_SINK@ -1000"
+click-middle = "pavucontrol"
+interval = 5
 
 [module/date]
 type = internal/date
@@ -58,7 +70,7 @@ label = %date% %time%
 background = ${colors.background-alt} 
 
 [module/battery]
-type = internal/battery
+type = internal/battery 
 battery = BAT0
 adapter = ADP1
 full-at = 98
