@@ -1,4 +1,5 @@
 source ~/.config/zsh/.zprofile
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 function reload_gtk_theme() {
   theme=$(gsettings get org.gnome.desktop.interface gtk-theme)

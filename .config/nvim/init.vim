@@ -6,7 +6,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/limelight.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'airblade/vim-gitgutter/'
 " Syntax
     Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
@@ -72,7 +71,6 @@ nnoremap <leader>l <C-W>l
 colorscheme gruvbox
 set background=dark cursorline
 hi clear CursorLine
-hi CursorLine gui=underline cterm=underline
 set termguicolors
 
 hi! Normal ctermbg=NONE guibg=NONE 
