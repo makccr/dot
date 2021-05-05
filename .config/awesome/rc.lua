@@ -314,7 +314,7 @@ globalkeys = gears.table.join(
 
     -- Demnu
     awful.key({ modkey  },            "space",     function () 
-    awful.util.spawn("dmenu_run") end,
+    awful.util.spawn("/home/makc/.scripts/dmenu") end,
               {description = "Launch Dmenu", group = "makc"}),
 
     -- Rofi

@@ -16,13 +16,13 @@ window.dynamic_title: true
 # Font Customization
 font:
   normal:
-    family: Fira Code
+    family: Sauce Code Pro NF
     style: Regular
   bold:
-    family: Fira Code
+    family: Sauce Code Pro NF
     style: Bold
   italic:
-    family: Fira Code
+    family: Sauce Code Pro NF
     style: Italic
   size: 10
   offset:
@@ -39,7 +39,7 @@ draw_bold_text_with_bright_colors: true
 # Colors (Gruvbox dark)
 colors:
   primary:
-    background: '#0d1011'
+    background: '#000000'
     foreground: '#ebdbb2'
   normal:
     black:   '#282828'

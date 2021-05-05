@@ -27,25 +27,14 @@ module-margin-right = 2
 
 font-0 = Product Sans:size=10;1
 font-1 = FontAwesome:size=11;2
-font-2 = Sauce Code Pro NF:size=18;3
-
-;tray-position = right
-;tray-padding = 2
-;tray-detached = true
-;tray-transparent = true
-;tray-background = ${colors.background}
-;tray-foreground = ${colors.foreground-alt}
+font-2 = Sauce Code Pro NF:size=18;4
 
 modules-left = powermenu prev play next
-modules-center = 1 2 3 4 5 6 7 8 9
+modules-center = 1 2 3 4 5 6 7 8 9 xworkspaces
 modules-right = shot wallpaper update audio date battery
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
 
 [module/audio]
 type = internal/pulseaudio
@@ -70,7 +59,7 @@ label = %date% %time%
 background = ${colors.background-alt} 
 
 [module/battery]
-type = internal/battery 
+type = internal/battery
 battery = BAT0
 adapter = ADP1
 full-at = 98
@@ -129,20 +118,7 @@ exec = yay -Qu | wc -l
 interval = 1000
 label = %output%
 format-prefix = " "
-
-[module/prev]
-type = custom/script
-exec = echo ""
-click-left = spotifycli --prev
-[module/play]
-type = custom/script
-exec = echo ""
-click-left = spotifycli --playpause
-click-right = spotify;
-[module/next]
-type = custom/script
-exec = echo ""
-click-left = spotifycli --next
+click-left = "yay -Sy"
 
 [module/shot]
 type = custom/script
@@ -153,9 +129,23 @@ click-right = "flameshot gui"
 [module/wallpaper]
 type = custom/script
 exec = echo ""
-click-left = "feh --bg-fill -randomizer ~/Media/wallpapers/maller"
-click-right = "feh --bg-fill -randomizer ~/Media/wallpapers/2021"
-click-middle = "feh --bg-fill -randomizer ~/Media/wallpapers/2020"
+click-left = "feh --bg-fill --randomize ~/Media/wallpapers/maller/"
+click-right = "feh --bg-fill --randomize ~/Media/wallpapers/2021/"
+click-middle = "feh --bg-fill --randomize ~/Media/wallpapers/2020/"
+
+[module/prev]
+type = custom/script
+exec = echo ""
+click-left = spotifycli --prev
+[module/play]
+type = custom/script
+exec = echo ""
+click-left = spotifycli --playpause
+click-right = spotify &
+[module/next]
+type = custom/script
+exec = echo ""
+click-left = spotifycli --next
 
 ;;;;;;;;Awesome WM Tag Switcher
 [module/1]
@@ -192,7 +182,7 @@ exec = echo ""
 click-left = "xdotool key --clearmodifiers Super_L+8"
 [module/9]
 type = custom/script
-exec = echo "    "
+exec = echo "     "
 click-left = "xdotool key --clearmodifiers Super_L+9"
 
 [settings]

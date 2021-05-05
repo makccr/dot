@@ -68,12 +68,6 @@ nnoremap <leader>j <C-W>j
 nnoremap <leader>k <C-W>k
 nnoremap <leader>l <C-W>l
 
-map <F1> :colorscheme gruvbox<CR>
-map <F2> :colorscheme base16-default-dark<CR>
-map <F3> :colorscheme hybrid_reverse<CR>
-map <F4> :colorscheme PaperColor<CR>
-map <F5> :colorscheme spacegray<CR>
-
 "Color Settings
 colorscheme gruvbox
 set background=dark cursorline
