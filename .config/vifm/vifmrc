@@ -9,6 +9,7 @@ set undolevels=100
 set vimhelp
 set norunexec
 colorscheme Default
+set tuioptions=u
 set timefmt=%m/%d\ %H:%M
 set wildmenu
 set wildstyle=popup
@@ -22,6 +23,18 @@ set slowfs=curlftpfs
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 mark b ~/bin/
 mark h ~/
+
+let t:is_transparent = 0                                                                        
+function! Toggle_transparent_background()                                                       
+  if t:is_transparent == 0                                                                      
+    hi Normal guibg=#111111 ctermbg=black                                                       
+    let t:is_transparent = 1                                                                    
+  else                                                                                          
+    hi Normal guibg=NONE ctermbg=NONE                                                           
+    let t:is_transparent = 0                                                                    
+  endif                                                                                         
+endfunction                                                                                     
+nnoremap <C-x><C-t> :call Toggle_transparent_background()<CR>
 
 "Basic commands
 command! df df -h %m 2> /dev/null
@@ -134,6 +147,36 @@ fileviewer *.docx docx2txt.pl %f -
 "Vifm info settings
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
     \phistory,fhistory,dirstack,registers,bookmarks,bmarks
+
+fileviewer *.pdf
+    \ vifmimg pdf %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer *.epub
+    \ vifmimg epub %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer <video/*>
+    \ vifmimg video %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer <image/*>
+    \ vifmimg draw %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer <audio/*>
+    \ vifmimg audio %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer <font/*>
+    \ vifmimg font %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
 
 "Key-mappings
 nnoremap s :shell<cr>
