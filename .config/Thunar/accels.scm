@@ -67,6 +67,7 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/zoom-in-alt1" "<Primary>plus")
 ; (gtk_accel_path "<Actions>/ThunarWindow/switch-previous-tab" "<Primary>Page_Up")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-type" "")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/c46ddd5a0c8332db4b0fd1a00e87f68e" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-statusbar" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/close-all-windows" "<Primary><Shift>w")

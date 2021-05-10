@@ -97,3 +97,8 @@
 .config/menus/
 .config/pavucontrol.ini
 .config/google-chrome/
+.config/Atom/
+.config/kdenlive-layoutsrc
+.config/kdenlive.kmessagebox
+.config/kdenliverc
+.config/transmission

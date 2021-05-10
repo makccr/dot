@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo mount -t ntfs-3g /dev/sda2 /mnt/falconFiles
+sudo mount /dev/sdc1 /mnt/swapper

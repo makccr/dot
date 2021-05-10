@@ -317,16 +317,15 @@ globalkeys = gears.table.join(
     awful.util.spawn("/home/makc/.scripts/dmenu") end,
               {description = "Launch Dmenu", group = "makc"}),
 
-    -- Rofi
-    awful.key({ modkey , "Shift"},            "space",     function () 
-    awful.util.spawn("rofi -show run") end,
-              {description = "Launch Rofi", group = "makc"}),
+    -- PCManFM
+    awful.key({ modkey , },            "p",     function () 
+    awful.util.spawn("pcmanfm") end,
+              {description = "Launch PCManFM", group = "makc"}),
 
     -- Firefox
     awful.key({ modkey }, "b", function ()
     awful.util.spawn("firefox") end,
             {description = "Launch Firefox", group = "makc"}),
-
 
     -- Feh
     awful.key({ modkey }, "c", function ()
@@ -344,7 +343,7 @@ globalkeys = gears.table.join(
 --              end,
 --              {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
+    awful.key({ modkey , "Shift"}, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
 )
 
@@ -548,3 +547,4 @@ awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("/home/makc/.screenlayout/main.sh")
 awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/maller")
 awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")
+awful.spawn.with_shell("/home/makc/.scripts/mount")
