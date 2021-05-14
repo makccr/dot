@@ -31,7 +31,7 @@ font-2 = Sauce Code Pro NF:size=18;4
 
 modules-left = powermenu prev play next
 modules-center = 1 2 3 4 5 6 7 8 9 xworkspaces
-modules-right = shot wallpaper update audio date battery
+modules-right = shot wallpaper gpick update audio date battery
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -146,6 +146,11 @@ click-right = spotify &
 type = custom/script
 exec = echo ""
 click-left = spotifycli --next
+
+[module/gpick]
+type = custom/script
+exec = echo ""
+click-left = "gpick"
 
 ;;;;;;;;Awesome WM Tag Switcher
 [module/1]
