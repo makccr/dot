@@ -1,5 +1,6 @@
 source ~/.config/zsh/.zprofile
 export QT_QPA_PLATFORMTHEME=qt5ct
+export PATH=~/.local/bin:$PATH
 
 function reload_gtk_theme() {
   theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
@@ -42,7 +43,13 @@ alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
 alias shot='flameshot gui'
 alias kill='killall -q'
-alias w='wpg -s ~/Media/wallpapers/maller ; wait 1; timeout 0.5s xsettingsd -c ~/.config/xsettingsd/xsettingsd.conf'
+
+alias ls='ptls'
+alias pwd='ptpwd'
+alias mkdir='ptmkdir'
+alias touch='pttouch'
+alias cp='ptcp'
+alias rm='ptrm'
 
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'

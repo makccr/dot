@@ -542,6 +542,7 @@ beautiful.notification_fg = '#d4be98'
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("ntfd")
+awful.spawn.with_shell("redshift")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("/home/makc/.screenlayout/main.sh")
