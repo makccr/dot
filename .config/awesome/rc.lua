@@ -481,10 +481,6 @@ awful.rules.rules = {
           "DTA",  -- Firefox addon DownThemAll.
           "copyq",  -- Includes session name in class.
           "pinentry",
-          "pcmanfm",
-          "nitrogen",
-          "typora",
-          "gucharmap",
         },
         class = {
           "Arandr",
@@ -541,11 +537,9 @@ beautiful.notification_fg = '#d4be98'
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
-awful.spawn.with_shell("ntfd")
-awful.spawn.with_shell("redshift")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("/home/makc/.screenlayout/main.sh")
-awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/maller")
+awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/2021")
 awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")
