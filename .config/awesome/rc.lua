@@ -461,6 +461,7 @@ root.keys(globalkeys)
 
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
+    -- Spawn floating clients centered
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
@@ -539,7 +540,8 @@ awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
-awful.spawn.with_shell("/home/makc/.screenlayout/main.sh")
+awful.spawn.with_shell("transmission-daemon")
+awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
 awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/2021")
 awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")

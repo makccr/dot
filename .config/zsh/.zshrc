@@ -1,26 +1,22 @@
-source ~/.config/zsh/.zprofile
-export QT_QPA_PLATFORMTHEME=qt5ct
-export PATH=~/.local/bin:$PATH
+# Basic stff
+source ~/.config/zsh/.zprofile #.zshenv stuff
+export PATH=~/.local/bin:$PATH #PTsh path
+export TERM="xterm-256color"
+export HISTFILE=~/.config/zsh/.zsh_history
 
-function reload_gtk_theme() {
-  theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
-  gsettings set org.gnome.desktop.interface gtk-theme ''
-  sleep 1
-  gsettings set org.gnome.desktop.interface gtk-theme $theme
-}
-
-# Basic zsh settings
-PATH=$PATH:$HOME/.scripts
-setopt no_list_ambiguous
-
-# Setting up Defaults
 export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='firefox'
 export MANPAGER='nvim +Man!'
 
+# Basic zsh settings
+PATH=$PATH:$HOME/.scripts #making my scripts run without typing the whole path
+bindkey -v # vi-mode
+autoload -Uz compinit && compinit #need the next two lines for case insensitive tab completion
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
 # Prompt Settings
-PROMPT='%F{blue}%1~%f %F{cyan}%f '
+PROMPT='%F{blue}%1~%f %F{cyan}%f '
 
 ## Git Settings
 autoload -Uz vcs_info

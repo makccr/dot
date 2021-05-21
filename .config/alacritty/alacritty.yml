@@ -6,7 +6,7 @@ window:
   padding:
     x: 35
     y: 35
-  decorations: none
+  decorations: full #Still won't show in a window manger, but will in a desktop environment
 scrolling:
   history: 10000
   multiplier: 3
@@ -38,6 +38,9 @@ draw_bold_text_with_bright_colors: true
 
 # Colors (Gruvbox dark)
 colors:
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
   primary:
     background: '#000000'
     foreground: '#ebdbb2'
@@ -74,7 +77,9 @@ colors:
     white:   '0xffffff'
 
 cursor:
-  style: Block
+  style: beam
+  blinking: off
+  blink-interval: 750
   unfocused_hollow: true
 
 key_bindings:
