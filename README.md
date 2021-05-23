@@ -1,4 +1,6 @@
-![Header SVG](https://makccr.github.io/images/github-header.svg)
+<a href="https://makc.co">
+    <img src="https://makccr.github.io/images/github-header.svg" alt="MAKC lgoo" title="MAKC" align="right" height="60" />
+</a>
 
 # Dotfiles
 These are my dot files. I've primarily been a [MacOS](https://apple.com/macos/) user for most of the time I've been collecting dotfiles, but I've recently switched to Linux. I primarily use [Arch](https://www.archlinux.org), but on occasion have been known to use [Arco](https://arcolinux.com/), [Manjaro](https://manjaro.org), or some other Arch based distro; so that's where I take my que. I also run Debian or Ubuntu on a few server type systems, so I also try to make sure my dotfiles work there as well (let me know if you have issues).
