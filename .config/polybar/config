@@ -7,7 +7,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/makc]
-monitor = ${env:MONITOR}
+monitor = ${env:MONITOR:}
 width = 100%
 height = 30
 fixed-center = true
@@ -25,13 +25,12 @@ padding-right = 5
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = Product Sans:size=10;1
-font-1 = FontAwesome:size=11;2
-font-2 = Sauce Code Pro NF:size=18;4
+font-0 = Product Sans:size=10;2
+font-1 = Sauce Code Pro NF:size=18;4
 
 modules-left = powermenu prev play next
-modules-center = 1 2 3 4 5 6 7 8 9 xworkspaces
-modules-right = shot wallpaper gpick update audio date battery
+modules-center = 1 2 3 4 6 7 8 9
+modules-right = shot wallpaper gpick yt update audio date battery
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -40,13 +39,14 @@ cursor-scroll = ns-resize
 type = internal/pulseaudio
 sink = alsa_output.pci-0000_12_00.3.analog-stereo
 use-ui-max = true
-format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume>  <label-volume>
 label-muted = ""
 ramp-volume-0 = ""
 ramp-volume-1 = ""
 click-right = "pactl set-sink-volume @DEFAULT_SINK@ -1000"
 click-middle = "pavucontrol"
 interval = 5
+label-active-font = 1
 
 [module/date]
 type = internal/date
@@ -54,7 +54,7 @@ interval = 5
 
 date = %a, %b %d
 time = %l:%M %p
-label = %date% %time%
+label =      %date% %time%
 
 background = ${colors.background-alt} 
 
@@ -117,18 +117,33 @@ type = custom/script
 exec = yay -Qu | wc -l
 interval = 1000
 label = %output%
-format-prefix = " "
+label-active-font = 1
+format-prefix = " "
 click-left = "yay -Sy"
+
+[module/yt]
+type = custom/script 
+interval = 1800
+format-prefix = "  "
+format = <label>
+exec = /home/makc/.scripts/sub.py
+
+[module/xwindow]
+type = internal/xwindow
+format = <label>
+label = %title%
+label-maxlen = 50
+label-empty = Empty
 
 [module/shot]
 type = custom/script
-exec = echo "    "
+exec = echo "    "
 click-left = "flameshot screen -p ~/Downloads/"
 click-right = "flameshot gui"
 
 [module/wallpaper]
 type = custom/script
-exec = echo ""
+exec = echo ""
 click-left = "feh --bg-fill --randomize ~/Media/wallpapers/maller/"
 click-right = "feh --bg-fill --randomize ~/Media/wallpapers/2021/"
 click-middle = "feh --bg-fill --randomize ~/Media/wallpapers/2020/"
@@ -149,7 +164,7 @@ click-left = spotifycli --next
 
 [module/gpick]
 type = custom/script
-exec = echo ""
+exec = echo ""
 click-left = "gpick"
 
 ;;;;;;;;Awesome WM Tag Switcher
@@ -189,6 +204,31 @@ click-left = "xdotool key --clearmodifiers Super_L+8"
 type = custom/script
 exec = echo "     "
 click-left = "xdotool key --clearmodifiers Super_L+9"
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = false
+format-padding = 1
+icon-default = ""
+format = "     <label-state>     "
+
+label-active = ""
+label-active-foreground = ${colors.foreground}
+label-active-padding = 1
+
+label-occupied = ""
+label-occupied-foreground = ${colors.foreground}
+label-occupied-padding = 1
+
+label-urgent = ""
+label-urgent-foreground = ${colors.urgent}
+label-urgent-padding = 1
+
+label-empty = ""
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 1
 
 [settings]
 screenchange-reload = true
