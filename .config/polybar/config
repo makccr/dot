@@ -29,7 +29,7 @@ font-0 = Product Sans:size=10;2
 font-1 = Sauce Code Pro NF:size=18;4
 
 modules-left = powermenu prev play next
-modules-center = 1 2 3 4 6 7 8 9
+modules-center = 1 2 3 4 5 6 7 8 9  
 modules-right = shot wallpaper gpick yt update audio date battery
 
 cursor-click = pointer
@@ -115,18 +115,11 @@ label-font = 3
 [module/update]
 type = custom/script
 exec = yay -Qu | wc -l
-interval = 1000
+interval = 300
 label = %output%
 label-active-font = 1
 format-prefix = " "
 click-left = "yay -Sy"
-
-[module/yt]
-type = custom/script 
-interval = 1800
-format-prefix = "  "
-format = <label>
-exec = /home/makc/.scripts/sub.py
 
 [module/xwindow]
 type = internal/xwindow
@@ -229,6 +222,13 @@ label-urgent-padding = 1
 label-empty = ""
 label-empty-foreground = ${colors.foreground}
 label-empty-padding = 1
+
+[module/yt]
+type = custom/script
+interval = 1800
+format-prefix = "  "
+format = <label>
+exec = /home/makc/.scripts/sub.py
 
 [settings]
 screenchange-reload = true

@@ -327,6 +327,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("firefox") end,
             {description = "Launch Firefox", group = "makc"}),
 
+    -- Screensaver
+    awful.key({ modkey }, "n", function ()
+    awful.util.spawn("xscreensaver-command -lock") end,
+            {description = "Start Screensaver and lock screen", group = "makc"}),
+
     -- Feh
     awful.key({ modkey }, "c", function ()
     awful.util.spawn("/home/makc/.scripts/wall") end,
@@ -364,7 +369,7 @@ clientkeys = gears.table.join(
               {description = "move to screen", group = "client"}),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
-    awful.key({ modkey,           }, "n",
+    awful.key({ modkey, "Control", "Shift"          }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be
             -- minimized, since minimized clients can't have the focus.
