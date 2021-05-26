@@ -61,6 +61,7 @@
 ; (gtk_accel_path "<Actions>/Actions/Prev Subfolder 3" "<Shift>Page_Up")
 ; (gtk_accel_path "<Actions>/Actions/Next" "Down")
 ; (gtk_accel_path "<Actions>/Actions/Save As" "<Primary><Shift>s")
+; (gtk_accel_path "<Actions>/RecentFiles/3" "<Alt>4")
 ; (gtk_accel_path "<Actions>/Actions/Save" "<Primary>s")
 ; (gtk_accel_path "<Actions>/Actions/Crop" "")
 ; (gtk_accel_path "<Actions>/Actions/Prev Subfolder 2" "<Shift>Up")

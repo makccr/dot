@@ -1,8 +1,8 @@
-Extension "XFIG Input" failed to load because a dependency was not met.
+Extension "Export to PDF via Scribus" failed to load because a dependency was not met.
 Dependency:
 	type: executable
 	location: path
-	string: fig2dev
+	string: scribus
 
 Extension "LaTeX (pdflatex)" failed to load because a dependency was not met.
 Dependency:
@@ -10,9 +10,9 @@ Dependency:
 	location: path
 	string: pdflatex
 
-Extension "Export to PDF via Scribus" failed to load because a dependency was not met.
+Extension "XFIG Input" failed to load because a dependency was not met.
 Dependency:
 	type: executable
 	location: path
-	string: scribus
+	string: fig2dev
 
