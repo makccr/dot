@@ -27,7 +27,7 @@ set hls is ic
 set laststatus=2 cmdheight=1
 au BufRead,BufNewFile *.fountain set filetype=fountain
 set splitbelow splitright 
-set nobackup nowritebackup 
+set nobackup nowritebackup nocursorline
 
 "Status-line
 set statusline=
@@ -83,17 +83,15 @@ let g:limelight_conceal_guifg = '#777777'
 
 "Goyo settings
 function! s:goyo_enter()
-    set noshowmode
-    set noshowcmd
-    set nocursorline
+    set noshowmode noshowcmd
     CocDisable
     Limelight
 endfunction
 
 function! s:goyo_leave()
-    set showmode
-    set showcmd
-    set cursorline
+    set showmode showcmd nocursorline
+    doautocmd Syntax
+    hi! Normal ctermbg=NONE guibg=NONE
     CocEnable
     Limelight!
 endfunction

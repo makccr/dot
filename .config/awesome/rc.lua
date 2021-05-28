@@ -3,6 +3,7 @@
 pcall(require, "luarocks.loader")
 
 -- Standard awesome library
+local revelation=require("revelation")
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
@@ -46,6 +47,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/gruvbox.lua")
+revelation.init()
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -235,7 +237,7 @@ globalkeys = gears.table.join(
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
-
+    awful.key({ modkey,           }, "e",      revelation),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
@@ -309,8 +311,8 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    --awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
+    --          {description = "run prompt", group = "launcher"}),
 
     -- Demnu
     awful.key({ modkey  },            "space",     function () 
@@ -326,6 +328,11 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "b", function ()
     awful.util.spawn("firefox") end,
             {description = "Launch Firefox", group = "makc"}),
+
+    -- Lock Screen
+    awful.key({ modkey }, "r", function ()
+    awful.util.spawn("slock") end,
+            {description = "Lock Screens with slock", group = "makc"}),
 
     -- Screensaver
     awful.key({ modkey }, "n", function ()
@@ -546,7 +553,7 @@ awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
---awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
+awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
 awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/2021")
 awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")
