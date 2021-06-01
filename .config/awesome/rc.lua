@@ -496,12 +496,10 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
-          "Arandr",
           "Blueman-manager",
           "Gpick",
           "Kruler",
           "MessageWin",  -- kalarm.
-          "Sxiv",
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wpa_gui",
           "veromix",
@@ -554,6 +552,6 @@ awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
 awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
-awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/2021")
+awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/maller")
 awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")

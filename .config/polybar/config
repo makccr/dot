@@ -114,12 +114,12 @@ label-font = 3
 
 [module/update]
 type = custom/script
-exec = yay -Qu | wc -l
+exec = yay -Qtd | wc -l
 interval = 300
 label = %output%
 label-active-font = 1
 format-prefix = " "
-click-left = "yay -Sy"
+click-left = "yay -Qtd"
 
 [module/xwindow]
 type = internal/xwindow

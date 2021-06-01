@@ -67,6 +67,7 @@
 ; (gtk_accel_path "<Actions>/Actions/Prev Subfolder 2" "<Shift>Up")
 ; (gtk_accel_path "<Actions>/Actions/Plus" "plus")
 ; (gtk_accel_path "<Actions>/Actions/MiscKeysMenuHidden" "")
+; (gtk_accel_path "<Actions>/RecentFiles/4" "<Alt>5")
 ; (gtk_accel_path "<Actions>/Actions/Flip Horizontally" "<Primary>h")
 ; (gtk_accel_path "<Actions>/Actions/Equal" "equal")
 ; (gtk_accel_path "<Actions>/Actions/Rotate Left" "<Primary>Left")
