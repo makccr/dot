@@ -1,3 +1,0 @@
-#!/bin/bash
-
-dmenu_run -i -nb '#000000' -sf '#000000' -sb '#98971a' -nf '#d4be98' -m '0' -fn 'Product Sans-10'

@@ -39,6 +39,8 @@ alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
 alias shot='flameshot gui'
 alias kill='killall -q'
+alias suck='rm -f config.h ; sudo make install'
+alias wal='feh --bg-fill -z -r'
 
 alias ls='ptls'
 alias pwd='ptpwd'

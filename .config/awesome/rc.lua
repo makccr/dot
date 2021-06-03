@@ -316,7 +316,7 @@ globalkeys = gears.table.join(
 
     -- Demnu
     awful.key({ modkey  },            "space",     function () 
-    awful.util.spawn("/home/makc/.scripts/dmenu") end,
+    awful.util.spawn("dmenu_run") end,
               {description = "Launch Dmenu", group = "makc"}),
 
     -- PCManFM
@@ -333,11 +333,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "r", function ()
     awful.util.spawn("slock") end,
             {description = "Lock Screens with slock", group = "makc"}),
-
-    -- Screensaver
-    awful.key({ modkey }, "n", function ()
-    awful.util.spawn("xscreensaver-command -lock") end,
-            {description = "Start Screensaver and lock screen", group = "makc"}),
 
     -- Feh
     awful.key({ modkey }, "c", function ()
@@ -548,10 +543,11 @@ beautiful.notification_fg = '#d4be98'
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
+awful.spawn.with_shell("xautolock -time 30 -locker slock")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
 awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
-awful.spawn.with_shell("feh --bg-fill --randomize ~/Media/wallpapers/maller")
+awful.spawn.with_shell("feh --bg-fill -r -z ~/Media/wallpapers/wallpapers")
 awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")
