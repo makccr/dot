@@ -16,7 +16,7 @@ autoload -Uz compinit && compinit #need the next two lines for case insensitive 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # Prompt Settings
-PROMPT='%F{blue}%1~%f %F{cyan}%f '
+PROMPT='%F{blue}%1~%f %F{cyan} %f '
 
 ## Git Settings
 autoload -Uz vcs_info
@@ -40,7 +40,8 @@ alias weather='clear && curl wttr.in'
 alias shot='flameshot gui'
 alias kill='killall -q'
 alias suck='rm -f config.h ; sudo make install'
-alias wal='feh --bg-fill -z -r'
+alias wal='feh --bg-fill -z'
+alias script='node awc.js'
 
 alias ls='ptls'
 alias pwd='ptpwd'

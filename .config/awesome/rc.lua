@@ -316,7 +316,7 @@ globalkeys = gears.table.join(
 
     -- Demnu
     awful.key({ modkey  },            "space",     function () 
-    awful.util.spawn("dmenu_run") end,
+    awful.util.spawn("dmenu_run -m 0") end,
               {description = "Launch Dmenu", group = "makc"}),
 
     -- PCManFM
@@ -549,5 +549,5 @@ awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
 awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
 awful.spawn.with_shell("feh --bg-fill -r -z ~/Media/wallpapers/wallpapers")
-awful.spawn.with_shell("/home/makc/.config/polybar/launch.sh")
+awful.spawn.with_shell("/home/makc/.config/polybar/awesome.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")

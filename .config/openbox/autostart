@@ -3,58 +3,17 @@
 # You may place a similar script in $HOME/.config/openbox/autostart
 # to run user-specific things.
 #
-# You can set picom to use either xrender or glx
-# Change if issues
-picom -b --config ~/.config/picom.conf &
 
-# start ArcoLinux Welcome  App
-#dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
 
-# Set background image
-nitrogen --restore
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
 
-tint2 &
-#$HOME/.config/polybar/launch.sh &
-
-#(am-conky-session --autostart) &
-
-#bluetooth#
-#(blueberry-tray) &
-
-# install xcape - press super to get menu
-xcape -e 'Super_L=Super_L|space'
-
-#on laptops without seperate numeric keyboard put hashtag in front
-numlockx &
-
-## GNOME PolicyKit authentication
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
-## Desktop notification
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
-
-## Volume control for systray
-(volumeicon) &
-
-
-## Turn off/on System Beep
-xset b off
-
-## Enable power management
-xfce4-power-manager &
-
-##Clipboard Manager
-(xfce4-clipman) &
-
-## XFCE4 Settings
-xfsettingsd &
-
-(nm-applet) &
-
-(plank) &
-
-#discord &
-
-#insync start &
-
-#dropbox &
+/home/makc/.config/polybar/openbox.sh

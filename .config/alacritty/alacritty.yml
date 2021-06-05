@@ -16,13 +16,13 @@ window.dynamic_title: true
 # Font Customization
 font:
   normal:
-    family: Sauce Code Pro NF
+    family: FiraCode Nerd Font
     style: Regular
   bold:
-    family: Sauce Code Pro NF
+    family: FiraCode Nerd Font
     style: Bold
   italic:
-    family: Sauce Code Pro NF
+    family: FiraCode Nerd Font
     style: Italic
   size: 10
   offset:
