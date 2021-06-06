@@ -319,6 +319,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("dmenu_run -m 0") end,
               {description = "Launch Dmenu", group = "makc"}),
 
+    -- Emoji
+    awful.key({ modkey  , "Shift"  },            "space",     function () 
+    awful.util.spawn("/home/makc/.scripts/emoji") end,
+              {description = "Pick and Emoji, Dmenu Script", group = "makc"}),
+
     -- PCManFM
     awful.key({ modkey , },            "p",     function () 
     awful.util.spawn("pcmanfm") end,
@@ -331,8 +336,8 @@ globalkeys = gears.table.join(
 
     -- Lock Screen
     awful.key({ modkey }, "r", function ()
-    awful.util.spawn("slock") end,
-            {description = "Lock Screens with slock", group = "makc"}),
+    awful.util.spawn("betterlockscreen -l") end,
+            {description = "Lock Screen", group = "makc"}),
 
     -- Feh
     awful.key({ modkey }, "c", function ()
@@ -543,7 +548,6 @@ beautiful.notification_fg = '#d4be98'
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
-awful.spawn.with_shell("xautolock -time 30 -locker slock")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
