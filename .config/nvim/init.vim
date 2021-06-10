@@ -46,11 +46,11 @@ let mapleader=" "
 nnoremap <leader>n :Explore<CR>
 nnoremap <leader><Space> :CtrlP<CR>
 nnoremap <leader><ENTER> :Goyo<CR>
-nnoremap <leader>, :vsplit ~/.config/nvim/init.vim<CR>
-nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
-nnoremap <C-g> :set spelllang=de_de<CR>
-nnoremap <C-l> :set background=light<CR>
 nnoremap <C-s> :source ~/.config/nvim/init.vim<CR>
+nnoremap <C-l> :set nu rnu<CR>
+nnoremap <leader><C-l> :set nonu nornu<CR>
+nnoremap <leader>z :set nofoldenable<CR>
+nnoremap <leader><Space>z :set foldmethod=indent<CR>
 
 nnoremap <Up> :resize +2<CR> 
 nnoremap <Down> :resize -2<CR>
@@ -91,9 +91,9 @@ endfunction
 function! s:goyo_leave()
     set showmode showcmd nocursorline
     doautocmd Syntax
-    hi! Normal ctermbg=NONE guibg=NONE
     CocEnable
     Limelight!
+    hi! Normal ctermbg=NONE guibg=NONE
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()

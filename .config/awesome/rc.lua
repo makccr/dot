@@ -320,9 +320,9 @@ globalkeys = gears.table.join(
               {description = "Launch Dmenu", group = "makc"}),
 
     -- Emoji
-    awful.key({ modkey  , "Shift"  },            "space",     function () 
+    awful.key({ modkey , "Shift"  },            "space",     function () 
     awful.util.spawn("/home/makc/.scripts/emoji") end,
-              {description = "Pick and Emoji, Dmenu Script", group = "makc"}),
+              {description = "Copy and Paste some Emoji!!!", group = "makc"}),
 
     -- PCManFM
     awful.key({ modkey , },            "p",     function () 

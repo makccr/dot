@@ -9,20 +9,18 @@ fixed-center = true
 border-size= 0
 background = ${colors.background}
 foreground = ${colors.foreground}
-line-size = 0
-line-color = #f00
 padding-left = 5
 padding-right = 5
 module-margin-left = 2
 module-margin-right = 2
 font-0 = Product Sans:size=10;2
-font-1 = FiraCode Nerd Font:size=12;1.5
+font-1 = FiraCode Nerd Font:size=12;2
 cursor-click = pointer
 cursor-scroll = ns-resize
 ;;;;;; Module Positioning
 modules-left = powermenu prev play next
 modules-center = 1 2 3 4 5 6 7 8 9  
-modules-right = shot gpick yt audio date battery
+modules-right = shot color yt audio date battery
 
 [settings]
 screenchange-reload = true

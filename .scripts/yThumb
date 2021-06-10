@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+read id
+varA='https://img.youtube.com/vi/'
+varB='/maxresdefault.jpg'
+
+echo $varA$id$varB | xclip -select clipboard
