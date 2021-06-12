@@ -36,17 +36,17 @@
 
 
 #Spot Next
-"spotifycli --next"
+"playerctl next"
     m:0x0 + c:171
     XF86AudioNext 
 
 #Spot Previoius
-"spotifycli --prev"
+"playerctl previous"
     m:0x0 + c:173
     XF86AudioPrev 
 
 #Spot Play/Pause
-"spotifycli --playpause"
+"playerctl play-pause"
     m:0x0 + c:172
     XF86AudioPlay 
 
