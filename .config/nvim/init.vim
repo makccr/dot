@@ -1,100 +1,70 @@
-"Plug-ins
 call plug#begin('~/.config/nvim/plugged')
-" Tools
-    Plug 'junegunn/goyo.vim'
-    Plug 'vifm/vifm.vim'
-    Plug 'junegunn/limelight.vim'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'ctrlpvim/ctrlp.vim'
-" Syntax
-    Plug 'tpope/vim-markdown'
-    Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
-    Plug 'vim-scripts/fountain.vim'
-" Color-schemes
-    Plug 'morhetz/gruvbox' "My favorite theme
-call plug#end() 
- 
-"General Settings
-set encoding=UTF-8
-filetype plugin indent on  "Enabling Plugin & Indent
-syntax on  "Turning Syntax on
-set autoread wildmode=longest,list,full
-set spell spelllang=en_us
-set backspace=indent,eol,start confirm
-set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab  
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-set hls is ic
-set laststatus=2 cmdheight=1
-au BufRead,BufNewFile *.fountain set filetype=fountain
-set splitbelow splitright 
-set nobackup nowritebackup nocursorline
+Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
+Plug 'ctrlpvim/ctrlp.vim' | Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-scripts/fountain.vim' | Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
+Plug 'morhetz/gruvbox'
+call plug#end()
 
-"Status-line
+"General Settings
+set encoding=UTF-8 nobackup nowritebackup nocursorline splitbelow splitright wildmode=longest,list,full
+set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab spell spelllang=en_us
+au BufRead,BufNewFile *.fountain set filetype=fountain
+
+"Status Line
 set statusline=
-set statusline+=%#IncSearch#
+set statusline+=%#NonText#
+set statusline+=%=
+set statusline+=\ %f
+set statusline+=\ 
+set statusline+=%#CursorLineNr#
 set statusline+=\ %y
 set statusline+=\ %r
-set statusline+=%#CursorLineNr#
-set statusline+=\ %F
-set statusline+=%= "Right side settings
-set statusline+=%#Search#
+set statusline+=%#DiffText#
 set statusline+=\ %l/%L
 set statusline+=\ [%c]
 
 "Key-bindings
 let mapleader=" "
-nnoremap <leader>n :Explore<CR>
-nnoremap <leader><Space> :CtrlP<CR>
+nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader><ENTER> :Goyo<CR>
-nnoremap <C-s> :source ~/.config/nvim/init.vim<CR>
-nnoremap <C-l> :set nu rnu<CR>
-nnoremap <leader><C-l> :set nonu nornu<CR>
-nnoremap <leader>z :set nofoldenable<CR>
-nnoremap <leader><Space>z :set foldmethod=indent<CR>
-
-nnoremap <Up> :resize +2<CR> 
-nnoremap <Down> :resize -2<CR>
-nnoremap <Left> :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
-
+nnoremap <leader><Space> :CtrlP<CR>
+nnoremap <leader>n :Explore<CR>
+nnoremap <leader>z :set invrnu invnu<CR>
+nnoremap <leader><C-l> :set nofoldenable<CR>
+nnoremap <C-l> :set foldmethod=indent<CR>
+nnoremap <C-k> :set foldmethod=syntax<CR>
+nnoremap Q <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <Left> <nop> 
+nnoremap <Right> <nop>
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
-nnoremap Q <nop>
-
-nnoremap <leader>h <C-W>h
-nnoremap <leader>j <C-W>j
-nnoremap <leader>k <C-W>k
-nnoremap <leader>l <C-W>l
-
 "Color Settings
 colorscheme gruvbox
-set background=dark cursorline
-hi clear CursorLine
+set background=dark
 set termguicolors
-
-hi! Normal ctermbg=NONE guibg=NONE 
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
-
-let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
-let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
-"Goyo settings
+"Goyo Settings
 function! s:goyo_enter()
-    set noshowmode noshowcmd
-    CocDisable
-    Limelight
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  Limelight
 endfunction
 
 function! s:goyo_leave()
-    set showmode showcmd nocursorline
-    doautocmd Syntax
-    CocEnable
-    Limelight!
-    hi! Normal ctermbg=NONE guibg=NONE
+  set showmode
+  set showcmd
+  set scrolloff=5
+  Limelight!
+  hi! Normal ctermbg=NONE guibg=NONE 
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave() 
+autocmd! User GoyoLeave nested call <SID>goyo_leave()

@@ -16,7 +16,7 @@ autoload -Uz compinit && compinit #need the next two lines for case insensitive 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # Prompt Settings
-PROMPT='%F{blue}%1~%f %F{cyan} %f '
+PROMPT='%F{blue}%1~%f %F{cyan} %f '
 
 ## Git Settings
 autoload -Uz vcs_info
