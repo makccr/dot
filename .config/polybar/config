@@ -1,5 +1,5 @@
 include-file = ~/.config/polybar/modules.ini
-include-file = ~/.config/polybar/colors.ini
+include-file = ~/.config/polybar/colors-dark.ini
 
 [bar/awesome]
 monitor = ${env:MONITOR:}

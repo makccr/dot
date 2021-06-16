@@ -19,7 +19,7 @@ set statusline+=\
 set statusline+=%#CursorLineNr#
 set statusline+=\ %y
 set statusline+=\ %r
-set statusline+=%#DiffText#
+set statusline+=%#IncSearch#
 set statusline+=\ %l/%L
 set statusline+=\ [%c]
 
