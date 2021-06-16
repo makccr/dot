@@ -16,13 +16,13 @@ window.dynamic_title: true
 # Font Customization
 font:
   normal:
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font Mono
     style: Regular
   bold:
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font Mono
     style: Bold
   italic:
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font Mono
     style: Italic
   size: 9.5
   offset:
