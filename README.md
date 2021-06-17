@@ -19,4 +19,26 @@ I mainly use these apps: Vim & the Shell for standard writing; normally in the [
 ## My Setup
 Currently, my main system is Arch Linux running on a Ryzen 5 2600X (6-core) CPU & a GTX 1050Ti. I'm using the [Awesome Window Manager](https://github.com/awesomeWM/awesome) as... well, the window manager; it's run, confoundedly, in tandem with [Polybar](https://github.com/polybar/polybar) to replace the standard wibar (I know it's dumb, but I don't want to hear it). I use [Jonaburg's Picom Fork](https://github.com/jonaburg/picom) for transparency and whatnot, [Alacritty](https://github.com/alacritty/alacritty) as my main terminal ([kitty](https://github.com/kovidgoyal/kitty) or [termite](https://github.com/thestinger/termite) as a backup), and [Neovim](https://github.com/neovim/neovim) as my text editor. You can view all of my dotfiles here, or you can check out my [YouTube Channel](https://www.youtube.com/channel/UCWh6YtclgTAzReTASc4uSKw) for a more in-depth look at many of the configurations featured.
 
+```
+                   -`                    makc@falcon
+                  .o+`                   -----------
+                 `ooo/                   OS: Arch Linux
+                `+oooo:                  Kernel: Linux 5.12.10-arch1-1
+               `+oooooo:                 Uptime: 22 hours, 16 mins
+               -+oooooo+:                Packages: 1021 (pacman)
+             `/:-:++oooo+:               Shell: zsh 5.8
+            `/++++/+++++++:              Resolution: 1920x1080, 1920x1080, 1920x1080
+           `/++++++++++++++:             WM: awesome
+          `/+++ooooooooooooo/`           Theme: hepburn [GTK3]
+         ./ooosssso++osssssso+`          Icons: candy-icons [GTK3]
+        .oossssso-````/ossssss+`         Terminal: alacritty
+       -osssssso.      :ssssssso.        Terminal Font: Hack Nerd Font Mono
+      :osssssss/        osssso+++.       CPU: AMD Ryzen 5 2600X (6) @ 3.6GHz
+     /ossssssss/        +ssssooo/-       GPU: NVIDIA GeForce GTX 1050 Ti
+   `/ossssso+/:-        -:/+osssso+-     Memory: 3.07GiB / 31.28GiB (9%)
+  `+sso+:-`                 `.-/+oso:
+ `++:.                           `-/+/
+ .`                                 `/
+```
+
 ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/desktop.jpg)
