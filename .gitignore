@@ -73,7 +73,6 @@
 .config/kwinrulesrc
 .config/kxkbrc
 .config/libaccounts-glib/
-.config/mimeapps.list
 .config/plasma-localerc
 .config/plasma-org.kde.plasma.desktop-appletsrc
 .config/plasmashellrc
