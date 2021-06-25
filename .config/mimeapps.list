@@ -1,5 +1,6 @@
 [Added Associations]
 image/jpeg=mirage.desktop;
+image/webp=gimp.desktop;
 
 [Default Applications]
 image/jpeg=mirage.desktop
