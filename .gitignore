@@ -1,4 +1,5 @@
 .DS_Store
+.config/ghb/
 .config/mirage/
 .config/libfm/libfm.conf
 .bin/assets/corona
