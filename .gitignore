@@ -139,3 +139,6 @@
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/zoomus.conf
+.config/kwalletrc
+.config/protonvpn/
+.config/systemd/

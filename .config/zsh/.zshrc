@@ -46,6 +46,7 @@ zstyle ':vcs_info:*' enable git
 # Aliases
 ## App launchers
 alias tsm='transmission-remote'
+alias pvpn='protonvpn-cli'
 alias s='startx'
 alias v='nvim'
 alias f='ranger'
