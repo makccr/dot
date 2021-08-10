@@ -1,6 +1,5 @@
 # Basic stff
 source ~/.config/zsh/.zprofile #.zshenv stuff
-export PATH=~/.local/bin:$PATH #PTsh path
 export TERM="xterm-256color"
 export HISTFILE=~/.config/zsh/.zsh_history
 
