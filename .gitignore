@@ -48,7 +48,6 @@
 .config/trashrc
 .config/oomox/
 .config/blender/
-.config/calibre/
 .config/enchant/
 .config/gedit/
 .config/torbrowser/
@@ -166,3 +165,5 @@
 .config/systemsettingsrc
 .config/webengineurlinterceptoradblockrc
 .config/Mailspring
+.config/kprivacyrc
+.config/sweeperrc

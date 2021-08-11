@@ -1,0 +1,83 @@
+{
+  "main_window_geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAeUAAAAPAAACzUAAAQjAAAHlAAAADwAAAs1AAAEIwAAAAAAAAAAB4AAAAeUAAAAPAAACzUAAAQj"
+  },
+  "main_window_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAAAAAAAAPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawAAAAAA/////wAAAIgA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAlQD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB4AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAN8A////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMYA////AAADogAAA+gAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+  },
+  "old_prefs_migrated": true,
+  "session_data": {
+    "base_font_size": 19,
+    "controls_footer": {
+      "left": "empty",
+      "middle": "time-chapter",
+      "right": "progress"
+    },
+    "controls_help_shown_count": 2,
+    "current_color_scheme": "*Gruvbox",
+    "footer": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "progress"
+    },
+    "header": {
+      "left": "empty",
+      "middle": "title",
+      "right": "empty"
+    },
+    "left-margin": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "empty"
+    },
+    "right-margin": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "empty"
+    },
+    "standalone_font_settings": {
+      "mono_family": "Hack Nerd Font Mono",
+      "sans_family": "Product Sans",
+      "serif_family": "Adobe Garamond Pro"
+    },
+    "standalone_misc_settings": {
+      "remember_last_read": true,
+      "remember_window_geometry": false,
+      "save_annotations_in_ebook": true,
+      "singleinstance": false
+    },
+    "standalone_recently_opened": [
+      {
+        "authors": [
+          "O'Neill, Tom; Piepenbring, Dan (CON)",
+          "Dan Piepenbring"
+        ],
+        "key": "/home/makc/Dropbox/Calibre/Tom O'Neill/Chaos_ Charles Manson, the CIA, and the Secret History of the Sixties (544)/Chaos_ Charles Manson, the CIA, and the Se - Tom O'Neill.epub",
+        "pathtoebook": "/home/makc/Dropbox/Calibre/Tom O'Neill/Chaos_ Charles Manson, the CIA, and the Secret History of the Sixties (544)/Chaos_ Charles Manson, the CIA, and the Se - Tom O'Neill.epub",
+        "timestamp": "2021-08-11T14:12:06.538Z",
+        "title": "Chaos : Charles Manson, the CIA, and the Secret History of the Sixties (9780316529211)"
+      },
+      {
+        "authors": [
+          "O'Neill, Tom; Piepenbring, Dan (CON)",
+          "Dan Piepenbring"
+        ],
+        "key": "/home/makc/Dropbox/Calibre/O'Neill, Tom; Piepenbring, Dan (CON)/Chaos _ Charles Manson, the CIA, and the Secret History of the Sixties (9780316529211) (544)/Chaos _ Charles Manson, the CIA, and the S - O'Neill, Tom; Piepenbring, Dan (CON).epub",
+        "pathtoebook": "/home/makc/Dropbox/Calibre/O'Neill, Tom; Piepenbring, Dan (CON)/Chaos _ Charles Manson, the CIA, and the Secret History of the Sixties (9780316529211) (544)/Chaos _ Charles Manson, the CIA, and the S - O'Neill, Tom; Piepenbring, Dan (CON).epub",
+        "timestamp": "2021-08-11T13:30:36.639Z",
+        "title": "Chaos : Charles Manson, the CIA, and the Secret History of the Sixties (9780316529211)"
+      }
+    ],
+    "user_color_schemes": {
+      "*Gruvbox": {
+        "background": "#050505",
+        "foreground": "#fbf3e7",
+        "link": "#ebdbb2",
+        "name": "Gruvbox"
+      }
+    },
+    "user_stylesheet": ""
+  }
+}

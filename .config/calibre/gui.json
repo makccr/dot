@@ -1,0 +1,190 @@
+{
+  "basic_metadata_widget_splitter_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAADAAAA8QAAAWIAAAEZAf////8BAAAAAQA="
+  },
+  "book_details_splitter_horizontal_state": [
+    true,
+    200
+  ],
+  "book_details_splitter_vertical_state": [
+    true,
+    120
+  ],
+  "book_list_pin_splitter_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAABAAAAAEYA/////wEAAAABAA=="
+  },
+  "choose-icon-theme-dialog-geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAt8AAAAKAAADv8AAAQUAAALfAAAACgAAA7/AAAEFAAAAAAAAAAAB4AAAAt8AAAAKAAADv8AAAQU"
+  },
+  "cover_browser_splitter_horizontal_state": [
+    false,
+    550
+  ],
+  "cover_browser_splitter_vertical_state": [
+    true,
+    589
+  ],
+  "cover_grid_color": [
+    30,
+    30,
+    30
+  ],
+  "cover_grid_texture": null,
+  "custom_colors_for_color_dialog": [
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ]
+  ],
+  "default_author_link": null,
+  "font": [
+    "Product Sans",
+    10,
+    50,
+    false
+  ],
+  "font_stretch": 0,
+  "grid view visible": false,
+  "library_usage_stats": {
+    "/home/makc/Dropbox/Calibre": 28
+  },
+  "metadata-download-identify-widget-splitter-state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAACAAAAAQAA/////wEAAAABAA=="
+  },
+  "metadata_single_gui_geom": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAArNAAABVAAADhwAAAN/AAAKzQAAAVQAAA4cAAADfwAAAAAAAAAAB4AAAArNAAABVAAADhwAAAN/"
+  },
+  "metasingle_window_geometry3": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAeAAAAAKAAADrkAAAQtAAAHgAAAACgAAA65AAAELQAAAAAAAAAAB4AAAAeAAAAAKAAADrkAAAQt"
+  },
+  "preferences dialog geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAlbAAAAjAAADPwAAANbAAAJWwAAAIwAAAz8AAADWwAAAAAAAAAAB4AAAAlbAAAAjAAADPwAAANb"
+  },
+  "previous_sort_order_BooksView": {
+    "authors": true,
+    "series": true,
+    "tags": true,
+    "title": true
+  },
+  "quick_start_guide_added": true,
+  "quickview visible": false,
+  "quickview_dialog_books_table_widths": [
+    186,
+    186,
+    186
+  ],
+  "quickview_dialog_geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAm2AAABXQAADLUAAAKyAAAJtgAAAV0AAAy1AAACsgAAAAAAAAAAB4AAAAm2AAABXQAADLUAAAKy"
+  },
+  "recently_used_languages": [
+    "English"
+  ],
+  "search bar visible": true,
+  "show_emblems": false,
+  "tag browser search box visible": false,
+  "tag_browser_splitter_horizontal_state": [
+    true,
+    200
+  ],
+  "toolbar_icon_size": "small"
+}
