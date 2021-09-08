@@ -41,5 +41,4 @@ Currently, my main system is Arch Linux running on a Ryzen 5 2600X (6-core) CPU 
  .`                                 `/
 ```
 
-![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/polybar.png)
 ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/desktop.jpg)
