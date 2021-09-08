@@ -1,13 +1,32 @@
 {
   "add books dialog dir": "/home/makc/Downloads",
+  "catalogs_to_be_synced": {
+    "__class__": "set",
+    "__value__": []
+  },
+  "change cover dialog": "/home/makc/Downloads",
   "database location dialog": "/home/makc/Dropbox/Calibre",
   "notified-version-updates": {
     "__class__": "set",
     "__value__": [
+      "5.26",
+      "5.25",
       "5.24"
     ]
   },
   "sort_history": [
+    [
+      "ondevice",
+      true
+    ],
+    [
+      "ondevice",
+      false
+    ],
+    [
+      "ondevice",
+      true
+    ],
     [
       "tags",
       true

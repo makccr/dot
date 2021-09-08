@@ -1,6 +1,9 @@
 [Added Associations]
 image/jpeg=mirage.desktop;
 image/webp=gimp.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-3H6X70.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
 
 [Default Applications]
 image/jpeg=mirage.desktop
@@ -17,8 +20,9 @@ audio/mpegapplication/octet-stream=mpv.desktop
 audio/x-wav=mpv.desktop
 video/quicktime=mpv.desktop
 text/html=google-chrome.desktop
-x-scheme-handler/http=google-chrome.desktop
-x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-3H6X70.desktop

@@ -46,7 +46,10 @@
   ],
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
-  "main_search_history": [],
+  "main_search_history": [
+    "game",
+    "at the wolf"
+  ],
   "main_window_geometry": {
     "__class__": "bytearray",
     "__value__": "AdnQywADAAAAAAeUAAAAPAAADusAAAQjAAAHlAAAADwAAA7rAAAEIwAAAAAAAAAAB4AAAAeUAAAAPAAADusAAAQj"

@@ -46,7 +46,6 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/gruvbox.lua")
 revelation.init()
 
 -- This is used later as the default terminal and editor to run.
@@ -339,11 +338,6 @@ globalkeys = gears.table.join(
     awful.util.spawn("firefox") end,
             {description = "Launch Firefox", group = "makc"}),
 
-    -- Lock Screen
-    awful.key({ modkey }, "r", function ()
-    awful.util.spawn("betterlockscreen -l") end,
-            {description = "Lock Screen", group = "makc"}),
-
     -- Feh
     awful.key({ modkey }, "c", function ()
     awful.util.spawn("/home/makc/.scripts/wall") end,
@@ -556,7 +550,7 @@ awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
-awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
+--awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
 awful.spawn.with_shell("feh --bg-fill -r -z ~/Media/wallpapers/wallpapers")
 awful.spawn.with_shell("/home/makc/.config/polybar/awesome.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")
