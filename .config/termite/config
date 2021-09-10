@@ -6,7 +6,7 @@ bold_is_bright = true
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = FiraCode Nerd Font 10
+font = Hack Nerd Font 10
 #fullscreen = true
 icon_name = termite
 #mouse_autohide = false
@@ -46,33 +46,33 @@ cursor_shape = ibeam
 #cursor = #dcdccc
 #cursor_foreground = #dcdccc
 
-foreground = #ebdbb2
-foreground_bold = #fbf1c7
+foreground = #00AA00
+foreground_bold = #00AA00
 background = #000000
 
 # 20% background transparency (requires a compositor)
-background = rgba(0, 0, 0, 0.6)
+background = #000000
 
 # If unset, will reverse foreground and background
 #highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
-color0 = #282828
-color1 = #cc241d
-color2 = #98971a
-color3 = #d79921
-color4 = #458588
-color5 = #b16286
-color6 = #689d6a
-color7 = #a89984
-color8 = #928374
-color9 = #fb4934
-color10 = #b8bb26
+color0 = #000000
+color1 = #AA0000
+color2 = #00AA00
+color3 = #FFD800
+color4 = #0000AA
+color5 = #FF00DA
+color6 = #00D3FF
+color7 = #AAAAAA
+color8 = #AAAAAA
+color9 = #AA0000
+color10 = #00AA00
 color11 = #fabd2f
-color12 = #83a598
-color13 = #d3869b
-color14 = #8ec07c
-color15 = #ebdbb2
+color12 = #0000AA
+color13 = #8300FF
+color14 = #00AA00
+color15 = #AAAAAA
 
 [hints]
 #font = Monospace 12
