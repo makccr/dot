@@ -328,11 +328,6 @@ globalkeys = gears.table.join(
     awful.util.spawn("/home/makc/.scripts/emoji") end,
               {description = "Copy and Paste some Emoji!!!", group = "makc"}),
 
-    -- PCManFM
-    awful.key({ modkey , },            "p",     function () 
-    awful.util.spawn("pcmanfm") end,
-              {description = "Launch PCManFM", group = "makc"}),
-
     -- Firefox
     awful.key({ modkey }, "b", function ()
     awful.util.spawn("firefox") end,

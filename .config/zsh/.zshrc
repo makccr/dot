@@ -58,6 +58,7 @@ alias kill='killall -q'
 alias suck='rm -f config.h ; sudo make install'
 alias wal='feh --bg-fill -z'
 alias script='node awc.js'
+alias lock='xscreensaver-command -lock'
 
 alias ls='ptls'
 alias pwd='ptpwd'
