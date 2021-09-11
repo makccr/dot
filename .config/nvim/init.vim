@@ -28,18 +28,18 @@ let mapleader=" "
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader><ENTER> :Goyo<CR>
 nnoremap <leader><Space> :CtrlP<CR>
-nnoremap <leader>n :Explore<CR>
+nnoremap <leader>n :Lex!<CR>
 nnoremap <leader>z :set invrnu invnu<CR>
 nnoremap <leader><C-l> :set nofoldenable<CR>
 nnoremap <C-l> :set foldmethod=indent<CR>
 nnoremap <C-k> :set foldmethod=syntax<CR>
 nnoremap Q <nop>
-nnoremap <Up> <nop>
-nnoremap <Down> <nop>
-nnoremap <Left> <nop> 
-nnoremap <Right> <nop>
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
+nnoremap <Up>    :resize -2<CR>
+nnoremap <Down>  :resize +2<CR>
+nnoremap <Left>  :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
 
 "Color Settings
 colorscheme gruvbox
