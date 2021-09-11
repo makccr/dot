@@ -46,32 +46,49 @@ cursor_shape = ibeam
 #cursor = #dcdccc
 #cursor_foreground = #dcdccc
 
-foreground = #00AA00
-foreground_bold = #00AA00
+foreground = #FFFFFF
+foreground_bold = #FFFFFF
 background = #000000
 
 # 20% background transparency (requires a compositor)
-background = #000000
+background = rgba(0,0,0,.7)
 
 # If unset, will reverse foreground and background
 #highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
+#color0 = #000000
+#color1 = #AA0000
+#color2 = #00AA00
+#color3 = #FFD800
+#color4 = #0000AA
+#color5 = #FF00DA
+#color6 = #00D3FF
+#color7 = #AAAAAA
+#color8 = #AAAAAA
+#color9 = #AA0000
+#color10 = #00AA00
+#color11 = #fabd2f
+#color12 = #0000AA
+#color13 = #8300FF
+#color14 = #00AA00
+#color15 = #AAAAAA
+
 color0 = #000000
-color1 = #AA0000
-color2 = #00AA00
-color3 = #FFD800
-color4 = #0000AA
-color5 = #FF00DA
-color6 = #00D3FF
-color7 = #AAAAAA
-color8 = #AAAAAA
-color9 = #AA0000
-color10 = #00AA00
-color11 = #fabd2f
-color12 = #0000AA
-color13 = #8300FF
-color14 = #00AA00
+color1 = #FFFFFF
+color2 = #DDDDDD
+color3 = #BBBBBB
+color4 = #999999
+color5 = #777777
+color6 = #666666
+color7 = #666666
+color8 = #777777
+color9 = #999999
+color10 = #BBBBBB
+color11 = #DDDDDD
+color12 = #FFFFFF
+color13 = #EEEEEE
+color14 = #555555
 color15 = #AAAAAA
 
 [hints]
