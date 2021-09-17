@@ -1,5 +1,5 @@
 <a href="https://makc.co">
-    <img src="https://makccr.github.io/images/github-header.svg" alt="MAKC lgoo" title="MAKC" align="right" height="60" />
+    <img src="https://makccr.github.io/images/github-header.svg" alt="MAKC lgoo" title="MAKC" align="right" height="50" />
 </a>
 
 # Dotfiles
