@@ -42,3 +42,6 @@ Currently, my main system is Arch Linux running on a Ryzen 5 2600X (6-core) CPU 
 ```
 
 ![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/desktop.jpg)
+
+### Suckless
+I do also store my builds of the [suckless apps](https://suckless.org/) that I use, they are just moved into their own [separate repository](https://github.com/makccr/suckless).
