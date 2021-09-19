@@ -58,13 +58,6 @@ alias wal='feh --bg-fill -z'
 alias script='node awc.js'
 alias lock='xscreensaver-command -lock'
 
-alias ls='ptls'
-alias pwd='ptpwd'
-alias mkdir='ptmkdir'
-alias touch='pttouch'
-alias cp='ptcp'
-alias rm='ptrm'
-
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'

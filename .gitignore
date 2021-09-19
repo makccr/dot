@@ -77,8 +77,6 @@
 .config/plasma-org.kde.plasma.desktop-appletsrc
 .config/plasmashellrc
 .config/redshift/
-.config/user-dirs.dirs
-.config/user-dirs.locale
 .config/xsettingsd/
 .config/gtk-3.0/settings.ini
 .config/plex.tv/
