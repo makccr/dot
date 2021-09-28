@@ -21,7 +21,7 @@ cursor-scroll = ns-resize
 ;;;;;; Module Positioning
 modules-left = powermenu prev play next
 modules-center = 1 2 3 4 5 6 7 8 9
-modules-right = wallpaper shot color yt disk audio date battery
+modules-right = wallpaper shot color disk audio date battery
 
 [bar/big]
 monitor = ${env:MONITOR:DVI-D-0}
