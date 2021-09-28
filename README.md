@@ -19,7 +19,7 @@ I mainly use these apps: Vim & the Shell for standard writing; normally in the [
 ## My Setup
 Currently, my main system is Arch Linux running on a Ryzen 5 2600X (6-core) CPU & a GTX 1050Ti. I primarily use the [Awesome Window Manager](https://github.com/awesomeWM/awesome) as... well, the window manager; it's run, confoundedly, in tandem with [Polybar](https://github.com/polybar/polybar) to replace the standard wibar (I know it's dumb, but I don't want to hear it). I'm also a big fan of [DWM](https://dwm.suckless.org/) and [BSPWM](https://github.com/baskerville/bspwm). I use [Jonaburg's Picom Fork](https://github.com/jonaburg/picom) for transparency and whatnot, [Alacritty](https://github.com/alacritty/alacritty) as my main terminal ([kitty](https://github.com/kovidgoyal/kitty) or [st](https://st.suckless.org/) as a backup), and [Neovim](https://github.com/neovim/neovim) as my text editor. You can view all of my dotfiles here, or you can check out my [YouTube Channel](https://www.youtube.com/channel/UCWh6YtclgTAzReTASc4uSKw) for a more in-depth look at many of the configurations featured.
 
-```
+```sh
                    -`                    makc@falcon
                   .o+`                   -----------
                  `ooo/                   OS: Arch Linux
