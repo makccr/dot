@@ -23,25 +23,25 @@ Currently, my main system is Arch Linux running on a Ryzen 5 2600X (6-core) CPU 
                    -`                    makc@falcon
                   .o+`                   -----------
                  `ooo/                   OS: Arch Linux
-                `+oooo:                  Kernel: Linux 5.12.10-arch1-1
-               `+oooooo:                 Uptime: 22 hours, 16 mins
-               -+oooooo+:                Packages: 1021 (pacman)
+                `+oooo:                  Kernel: Linux 5.14.8-arch1-1
+               `+oooooo:                 Uptime: 14 hours, 6 mins
+               -+oooooo+:                Packages: 808 (pacman)
              `/:-:++oooo+:               Shell: zsh 5.8
             `/++++/+++++++:              Resolution: 1920x1080, 1920x1080, 1920x1080
            `/++++++++++++++:             WM: awesome
-          `/+++ooooooooooooo/`           Theme: hepburn [GTK3]
-         ./ooosssso++osssssso+`          Icons: candy-icons [GTK3]
+          `/+++ooooooooooooo/`           Theme: Plata-Noir [GTK3]
+         ./ooosssso++osssssso+`          Icons: hepburn [GTK3]
         .oossssso-````/ossssss+`         Terminal: alacritty
        -osssssso.      :ssssssso.        Terminal Font: Hack Nerd Font Mono
       :osssssss/        osssso+++.       CPU: AMD Ryzen 5 2600X (6) @ 3.6GHz
      /ossssssss/        +ssssooo/-       GPU: NVIDIA GeForce GTX 1050 Ti
-   `/ossssso+/:-        -:/+osssso+-     Memory: 3.07GiB / 31.28GiB (9%)
-  `+sso+:-`                 `.-/+oso:
+   `/ossssso+/:-        -:/+osssso+-     GPU: NVIDIA GeForce GT 710
+  `+sso+:-`                 `.-/+oso:    Memory: 3.52GiB / 31.28GiB (11%)
  `++:.                           `-/+/
  .`                                 `/
 ```
 
-![Screenshot](https://raw.githubusercontent.com/makccr/dot/master/images/desktop.jpg)
+![Screenshot](images/desktop.jpg)
 
 ### Suckless
 I do also store my builds of the [suckless apps](https://suckless.org/) that I use, they are just moved into their own [separate repository](https://github.com/makccr/suckless).
