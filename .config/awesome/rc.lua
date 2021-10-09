@@ -338,6 +338,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("/home/makc/.scripts/wall") end,
             {description = "Change Wallpaer", group = "makc"}),
 
+    -- Lock Screen
+    awful.key({ "Control" , "Shift" }, "Delete", function ()
+    awful.util.spawn("i3lock -c 000000") end,
+            {description = "Lock Screen (i3 Lock)", group = "makc"}),
+
 --    awful.key({ modkey }, "x",
 --              function ()
 --                  awful.prompt.run {
@@ -545,8 +550,7 @@ awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
---awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
+awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
 awful.spawn.with_shell("feh --bg-fill -r -z ~/Image/wallpapers/wallpapers")
 awful.spawn.with_shell("/home/makc/.config/polybar/awesome.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")
-awful.spawn.with_shell("redshift -l 29:-95")
