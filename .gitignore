@@ -184,3 +184,10 @@
 .config/Code - OSS/
 .config/Iriun/
 .config/htop/htoprc
+.config/emojione-picker/
+.config/gnome-boxes/
+.config/gnome-control-center/
+.config/libvirt/
+.config/monitors.xml
+.config/monitors.xml~
+.config/user-share/
