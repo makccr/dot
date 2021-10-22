@@ -42,7 +42,7 @@ colors:
     cursor: CellForeground
 # Hepburn
   primary:
-    background: '0x080808'
+    background: '0x000000'
     foreground: '0xfbf1c7'
   normal:
     black:   '0x282828'
