@@ -1,5 +1,5 @@
 [Added Associations]
-image/jpeg=mirage.desktop;
+image/jpeg=gimp.desktop;mirage.desktop;
 image/webp=gimp.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-3H6X70.desktop;userapp-Telegram Desktop-ETLMA1.desktop;
 x-scheme-handler/http=firefox.desktop;
