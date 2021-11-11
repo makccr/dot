@@ -1,4 +1,6 @@
 .DS_Store
+.config/BraveSoftware/
+.config/nuxhash/
 .config/ghb/
 .config/mirage/
 .config/libfm/libfm.conf

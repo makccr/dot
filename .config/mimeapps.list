@@ -4,6 +4,7 @@ image/webp=gimp.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-3H6X70.desktop;userapp-Telegram Desktop-ETLMA1.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
+application/octet-stream=brave-browser.desktop;
 
 [Default Applications]
 image/jpeg=mirage.desktop
@@ -19,10 +20,10 @@ audio/mp3=mpv.desktop
 audio/mpegapplication/octet-stream=mpv.desktop
 audio/x-wav=mpv.desktop
 video/quicktime=mpv.desktop
-text/html=firefox.desktop
-x-scheme-handler/http=firefox.desktop
-x-scheme-handler/https=firefox.desktop
-x-scheme-handler/about=firefox.desktop
-x-scheme-handler/unknown=firefox.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-ETLMA1.desktop
