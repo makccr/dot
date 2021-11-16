@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-yay -Sy
-feh --bg-fill --randomize ~/Media/wallpapers-ii/wallpapers/
-
-#||\\ //||
-#|| \// || Mackenzie Criswell
-#|| //\ || https://makc.co
-#||   \\|| https://github.com/makccr

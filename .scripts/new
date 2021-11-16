@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+mkdir "$1"
+cd "$1"
+
+mkdir aRoll thumb project
+
+cd aRoll
+mkdir image motion audio
+cd ..
+
+cp -rf aRoll bRoll
+
+cp /mnt/falconFiles/branding/template.prproj project
+cd project
+mv template.prproj "$1.prproj"
+cd ..
+
+cp /mnt/falconFiles/branding/comment.txt .
+
+#copy premier template
