@@ -17,5 +17,3 @@ mv template.prproj "$1.prproj"
 cd ..
 
 cp /mnt/falconFiles/branding/comment.txt .
-
-#copy premier template

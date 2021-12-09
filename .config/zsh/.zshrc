@@ -60,6 +60,9 @@ alias script='node awc.js'
 alias lock='xscreensaver-command -lock'
 alias handbrake='ghb'
 
+alias ls='lsd'
+alias drive='ranger /run/media/makc/'
+
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'

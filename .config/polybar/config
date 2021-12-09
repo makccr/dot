@@ -24,7 +24,7 @@ modules-center = 1 2 3 4 5 6 7 8 9
 modules-right = wallpaper shot color disk audio date battery powermenu
 
 [bar/big]
-monitor = ${env:MONITOR:DP-0}
+monitor = ${env:MONITOR:DVI-D-0}
 width = 100%
 height = 80
 fixed-center = true
@@ -66,6 +66,29 @@ cursor-scroll = ns-resize
 modules-left = powermenu prev play next
 modules-center = 
 modules-right = wallpaper shot color yt audio date battery
+
+[bar/bspwm]
+wm-restack = bspwm
+monitor = ${env:MONITOR:}
+width = 100%
+height = 40
+fixed-center = true
+border-size= 0
+background = ${colors.background}
+foreground = ${colors.foreground}
+padding-left = 7
+padding-right = 7
+module-margin-left = 2
+module-margin-right = 2
+font-0 = Montserrat:weight=SemiBold:size=10;2
+font-1 = Hack Nerd Font:size=12;2
+font-2 = Montserrat:weight=Medium:size=10;2
+cursor-click = pointer
+cursor-scroll = ns-resize
+;;;;;; Module Positioning
+modules-left = term hostname
+modules-center = bspwm
+modules-right = wallpaper shot color disk audio date battery powermenu
 
 [settings]
 screenchange-reload = true

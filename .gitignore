@@ -1,5 +1,6 @@
 .DS_Store
 .config/teamviewer/
+.config/bpytop/error.log
 .config/BraveSoftware/
 .config/nuxhash/
 .config/ghb/

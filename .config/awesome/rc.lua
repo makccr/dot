@@ -547,6 +547,7 @@ beautiful.notification_fg = '#d4be98'
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
+awful.spawn.with_shell("udiskie")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")

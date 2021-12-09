@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ln -sf ~/Docs/dot/.config ~/.config
+ln -sf ~/Docs/dot/.scripts ~/.scripts
+ln -sf ~/Docs/dot/.gitconfig ~/.gitconfig
+ln -sf ~/Docs/dot/.xbindkeysrc ~/.xbindkeysrc
+ln -sf ~/Docs/dot/.zshenv ~/.zshenv
