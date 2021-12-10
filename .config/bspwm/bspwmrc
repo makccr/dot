@@ -1,11 +1,9 @@
 #! /bin/sh
 
-sh $HOME/.config/polybar/bspwm.sh
-
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor DVI-D-0 -d 1 2 3 4 5 6 7 8 9
-bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9
+bspc monitor DVI-D-0 -d 1 2 3 4 5
+bspc monitor DP-0 -d 6 7 8 9 10
 
 bspc config border_width         0
 bspc config window_gap          10
@@ -21,8 +19,10 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 ## Autostart
-picom &
+sh $HOME/.config/polybar/bspwm.sh &
+picom --experimental-backends
 dunst &
+udiskie &
 dropbox &
 flameshot &
 xbindkeys &
