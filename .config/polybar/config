@@ -1,5 +1,5 @@
 include-file = ~/.config/polybar/modules.ini
-include-file = ~/.config/polybar/colors-dark.ini
+include-file = ~/.config/polybar/colors.ini
 
 [bar/awesome]
 monitor = ${env:MONITOR:}
@@ -7,8 +7,8 @@ width = 100%
 height = 40
 fixed-center = true
 border-size= 0
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.bg}
+foreground = ${colors.fg}
 padding-left = 7
 padding-right = 5
 module-margin-left = 2
