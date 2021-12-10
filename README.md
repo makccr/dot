@@ -20,13 +20,26 @@ I mainly use these apps: Vim & the Shell for standard writing; normally in the [
 Currently, my main system is Arch Linux running on a Ryzen 5 2600X (6-core) CPU & a GTX 1050Ti. I primarily use the [Awesome Window Manager](https://github.com/awesomeWM/awesome) as... well, the window manager; it's run, confoundedly, in tandem with [Polybar](https://github.com/polybar/polybar) to replace the standard wibar (I know it's dumb, but I don't want to hear it). I'm also a big fan of [DWM](https://dwm.suckless.org/) and [BSPWM](https://github.com/baskerville/bspwm). I use [Jonaburg's Picom Fork](https://github.com/jonaburg/picom) for transparency and whatnot, [Alacritty](https://github.com/alacritty/alacritty) as my main terminal ([kitty](https://github.com/kovidgoyal/kitty) or [st](https://st.suckless.org/) as a backup), and [Neovim](https://github.com/neovim/neovim) as my text editor. You can view all of my dotfiles here, or you can check out my [YouTube Channel](https://www.youtube.com/channel/UCWh6YtclgTAzReTASc4uSKw) for a more in-depth look at many of the configurations featured.
 
 ```sh
-      /\         makc@falcon
-     /  \        os     Arch Linux
-    /\   \       host   x86_64
-   /      \      kernel 5.14.8-arch1-1
-  /   ,,   \     uptime 14h 18m
- /   |  |  -\    pkgs   809
-/_-''    ''-_\   memory 3.52GiB / 31.28GiB
+                   -`                    makc@vega-3
+                  .o+`                   -----------
+                 `ooo/                   OS: Arch Linux
+                `+oooo:                  Kernel: Linux 5.15.6-arch2-1
+               `+oooooo:                 Uptime: 1 day, 17 hours, 25 mins
+               -+oooooo+:                Packages: 1350 (pacman), 9 (snap)
+             `/:-:++oooo+:               Shell: zsh 5.8
+            `/++++/+++++++:              Resolution: 1920x1080, 1920x1080
+           `/++++++++++++++:             WM: bspwm
+          `/+++ooooooooooooo/`           Theme: Plata-Noir [GTK3]
+         ./ooosssso++osssssso+`          Icons: hepburn [GTK3]
+        .oossssso-````/ossssss+`         Terminal: alacritty
+       -osssssso.      :ssssssso.        Terminal Font: Hack Nerd Font Mono
+      :osssssss/        osssso+++.       CPU: AMD Ryzen 5 2600X (6) @ 3.6GHz
+     /ossssssss/        +ssssooo/-       GPU: NVIDIA GeForce GTX 1050 Ti
+   `/ossssso+/:-        -:/+osssso+-     GPU: NVIDIA GeForce GT 710
+  `+sso+:-`                 `.-/+oso:    Memory: 4.20GiB / 31.28GiB (13%)
+ `++:.                           `-/+/
+ .`                                 `/
+
 ```
 
 ![Screenshot](images/desktop.jpg)
