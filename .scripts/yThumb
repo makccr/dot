@@ -1,7 +1,22 @@
 #!/usr/bin/env bash
 
-read id
-varA='https://img.youtube.com/vi/'
+echo "
+Paste YouTube Video ID Below
+Run with '-d' flag, to save thumbnail to ~/Downloads
+"
+
+read id #Request Video ID to create link
+
+varA='https://img.youtube.com/vi/' #Splitting link into two variables to build the link
 varB='/maxresdefault.jpg'
 
-echo $varA$id$varB | xclip -select clipboard
+if echo $* | grep -e "-d" -q # Checking for -d flag
+then
+    echo "Link added to clipboard."
+    echo "Saving thumbnail to ~/Downloads..."
+    wget --quiet -P ~/Downloads $varA$id$varB # Saving thumb to ~/Downloads
+else
+    echo "Link added to clipboard."
+fi
+
+echo $varA$id$varB | xclip -select clipboard # Building link, and placing in clipboard
