@@ -44,6 +44,7 @@ nnoremap <Right> :vertical resize -2<CR>
 
 "Color Settings
 colorscheme gruvbox
+
 set background=dark
 set termguicolors
 let g:limelight_conceal_ctermfg = 240
