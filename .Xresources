@@ -1,0 +1,36 @@
+*.font: xft:Hack Nerd Font:style=Regular:size=30
+
+! Colors
+*.foreground: #fbf1c7
+*.background: #000000
+*.cursorColor: #ff3232
+
+*.color0: #665c54
+*.color8: #928374
+*.color1: #ea6962
+*.color9: #ea6962
+*.color2: #a9b665
+*.color10: #a9b665
+*.color3: #e78a4e
+*.color11: #d8a657
+*.color4: #7daea3
+*.color12: #7daea3
+*.color5: #d3869b
+*.color13: #d3869b
+*.color6: #89b482
+*.color14: #89b482
+*.color7: #d4be98
+*.color15: #d4be98
+
+! Urxvt Settings
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt*depth: 32
+URxvt.background: [70]#000000
+URxvt*internalBorder: 50
+urxvt.iso14755: false
+urxvt.keysym.Shift-Control-V: eval:paste_clipboard
+urxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
