@@ -1,5 +1,7 @@
 .DS_Store
 .config/teamviewer/
+.config/gnome-initial-setup-done
+.config/ranger/plugins/__pycache__/__init__.cpython-38.opt-1.pyc
 .config/bpytop/error.log
 .config/BraveSoftware/
 .config/nuxhash/
