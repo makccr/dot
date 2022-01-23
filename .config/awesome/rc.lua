@@ -333,6 +333,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("firefox") end,
             {description = "Launch a Firefox", group = "makc"}),
 
+    -- Firefox
+    awful.key( { }, "Print", function ()
+    awful.util.spawn("flameshot screen -p /home/makc/Downloads") end,
+            {description = "Take Screenshot", group = "makc"}),
+
     -- Feh
     awful.key({ modkey }, "c", function ()
     awful.util.spawn("/home/makc/.scripts/wall") end,
@@ -551,7 +556,6 @@ awful.spawn.with_shell("udiskie")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
-awful.spawn.with_shell("/home/makc/.scripts/falcon-monitors.sh")
-awful.spawn.with_shell("feh --bg-fill -r -z ~/Image/wallpapers/wallpapers")
+awful.spawn.with_shell("feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers")
 awful.spawn.with_shell("/home/makc/.config/polybar/awesome.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")
