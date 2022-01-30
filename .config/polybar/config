@@ -21,7 +21,7 @@ cursor-scroll = ns-resize
 ;;;;;; Module Positioning
 modules-left = term hostname
 modules-center = workspaces
-modules-right = wallpaper shot color disk audio date battery powermenu
+modules-right = wallpaper shot color yt disk audio date battery powermenu
 
 [bar/big]
 monitor = ${env:MONITOR:DVI-D-0}
