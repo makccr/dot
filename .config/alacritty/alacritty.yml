@@ -24,7 +24,7 @@ font:
   italic:
     family: Hack Nerd Font Mono
     style: Italic
-  size: 9.5
+  size: 10
   offset:
     x: 0
     y: 0

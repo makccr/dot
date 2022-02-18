@@ -1,4 +1,4 @@
-*.font: xft:Hack Nerd Font:style=Regular:size=30
+*.font: xft:Hack Nerd Font:style=Regular:size=12
 
 ! Colors
 *.foreground: #fbf1c7
