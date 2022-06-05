@@ -74,6 +74,7 @@ alias f='ranger'
 alias t='btop'
 alias tty='tty-clock -C1 -c'
 alias pac='doas pacman'
+alias pac -S ='paru ; doas pacman -S' # Making sure I update before an installation
 alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
 alias shot='flameshot gui'
@@ -102,4 +103,3 @@ alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writ
 ## Snippets
 alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"' 
 alias dday='date +"%Y.%m.%d - " | xclip -select clipboard ; date +"%Y.%m.%d"'
-
