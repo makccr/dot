@@ -72,7 +72,7 @@ alias s='startx'
 alias v='nvim'
 alias f='ranger'
 alias t='btop'
-alias tty='tty-clock -C1 -c -t'
+alias tty='tty-clock -C1 -c'
 alias pac='doas pacman'
 alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
@@ -85,19 +85,19 @@ alias lock='xscreensaver-command -lock'
 alias handbrake='ghb'
 
 alias ls='lsd'
+alias cat='bat'
 alias drive='ranger /run/media/makc/'
 
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
-alias todo='cat ~/Dropbox/writing/notes/To-do.md'
+alias todo='bat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
-alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
+alias reset='cd ~; clear; source ~/.config/zsh/.zshrc'
 alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Journal launching aliases
 alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
 alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-6.md'
-alias jj='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; vim volume-6.md'
 
 ## Snippets
 alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"' 
