@@ -74,7 +74,6 @@ alias f='ranger'
 alias t='btop'
 alias tty='tty-clock -C1 -c'
 alias pac='doas pacman'
-alias pac -S ='paru ; doas pacman -S' # Making sure I update before an installation
 alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
 alias shot='flameshot gui'
