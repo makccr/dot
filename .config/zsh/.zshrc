@@ -84,6 +84,8 @@ alias script='node awc.js'
 alias lock='xscreensaver-command -lock'
 alias handbrake='ghb'
 
+alias win='cd /mnt/c/Users/macke'
+
 alias ls='lsd'
 alias cat='bat'
 alias drive='ranger /run/media/makc/'

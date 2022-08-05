@@ -3,6 +3,10 @@ Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'vim-scripts/fountain.vim' | Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
+Plug 'ashfinal/vim-colors-paper'
+Plug 'dunstontc/vim-vscode-theme'
+Plug 'tomasr/molokai'
+Plug 'jacoborus/tender.vim'
 call plug#end()
 
 "General Settings
@@ -43,14 +47,20 @@ nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
 "Color Settings
-colorscheme gruvbox
-
+"colorscheme tender
+colorscheme dark_plus
+"colorscheme gruvbox
+"colorscheme molokai
+"colorscheme paper
+set t_Co=256
 set background=dark
 set termguicolors
 let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = '#777777'
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+
+let g:coc_disable_startup_warning = 1
 
 "Goyo Settings
 function! s:goyo_enter()
