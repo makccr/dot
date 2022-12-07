@@ -99,7 +99,7 @@ alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Journal launching aliases
 alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
-alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-6.md'
+alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-7.md'
 
 ## Snippets
 alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"' 

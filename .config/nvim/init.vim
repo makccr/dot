@@ -47,11 +47,7 @@ nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
 "Color Settings
-"colorscheme tender
-colorscheme dark_plus
-"colorscheme gruvbox
-"colorscheme molokai
-"colorscheme paper
+colorscheme gruvbox
 set t_Co=256
 set background=dark
 set termguicolors
