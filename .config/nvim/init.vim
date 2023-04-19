@@ -57,6 +57,7 @@ hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 let g:coc_disable_startup_warning = 1
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 "Goyo Settings
 function! s:goyo_enter()

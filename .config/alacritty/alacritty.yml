@@ -1,6 +1,6 @@
 # Window Customization
 window:
-  opacity: .7
+  opacity: 0.7
   dimensions:
     columns: 140
     lines: 38
@@ -41,7 +41,7 @@ colors:
     cursor: CellForeground
 # Hepburn
   primary:
-    background: '0x000000'
+    background: '0x080808'
     foreground: '0xfbf1c7'
   normal:
     black:   '0x282828'

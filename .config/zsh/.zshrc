@@ -5,7 +5,7 @@ export HISTFILE=~/.config/zsh/.zsh_history
 
 export EDITOR='nvim'
 export TERMINAL='alacritty'
-export BROWSER='firefox'
+export BROWSER='google-chrome-stable'
 export MANPAGER='nvim +Man!'
 
 ##Theme.sh Config
