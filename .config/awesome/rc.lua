@@ -551,6 +551,7 @@ beautiful.notification_bg = '(0,0,0)'
 beautiful.notification_fg = '#d4be98'
 
 -- Autostart
+awful.spawn.with_shell("/home/makc/.screenlayout/arandr.sh")
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("udiskie")

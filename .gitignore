@@ -1,4 +1,9 @@
 .DS_Store
+.config/.gsd-keyboard.settings-ported
+.config/GNOME-xdg-terminals.list
+.config/dleyna-renderer-service.conf
+.config/dleyna-server-service.conf
+.config/xdg-terminals.list
 .config/teamviewer/
 .config/gnome-initial-setup-done
 .config/ranger/plugins/__pycache__/__init__.cpython-38.opt-1.pyc

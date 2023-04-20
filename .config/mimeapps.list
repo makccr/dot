@@ -7,6 +7,7 @@ x-scheme-handler/https=firefox.desktop;
 application/octet-stream=brave-browser.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-02JMC1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-02JMC1.desktop;
+text/calendar=org.gnome.Evolution.desktop;
 
 [Default Applications]
 image/jpeg=mirage.desktop
@@ -32,3 +33,4 @@ x-scheme-handler/tg=userapp-Telegram Desktop-ETLMA1.desktop
 x-scheme-handler/mailto=google-chrome.desktop
 message/rfc822=userapp-Thunderbird-02JMC1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-02JMC1.desktop
+text/calendar=org.gnome.Evolution.desktop
