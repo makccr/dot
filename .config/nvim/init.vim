@@ -26,7 +26,8 @@ set statusline+=\ %y
 set statusline+=\ %r
 set statusline+=%#IncSearch#
 set statusline+=\ %l/%L
-set statusline+=\ [%c]
+"set statusline+=\ [%c] 
+set statusline+=\ [%{wordcount().words}]
 
 "Key-bindings
 let mapleader=" "
