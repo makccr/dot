@@ -331,7 +331,7 @@ globalkeys = gears.table.join(
 
     -- Firefox
     awful.key({ modkey }, "b", function ()
-    awful.util.spawn("firefox") end,
+    awful.util.spawn("google-chrome-stable") end,
             {description = "Launch a Firefox", group = "makc"}),
 
     -- Firefox
@@ -551,13 +551,14 @@ beautiful.notification_bg = '(0,0,0)'
 beautiful.notification_fg = '#d4be98'
 
 -- Autostart
+awful.spawn.with_shell("/home/makc/.screenlayout/arandr.sh")
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("udiskie")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
-awful.spawn.with_shell("feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers")
+awful.spawn.with_shell("feh --bg-fill -r -z ~/Media/wallpapers/wallpapers")
 awful.spawn.with_shell("/home/makc/.config/polybar/awesome.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")
 awful.spawn.with_shell("redshift -l 30.710220:-94.932999")

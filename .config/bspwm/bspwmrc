@@ -2,8 +2,8 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor DVI-D-0 -d 1 2 3 4 5
-bspc monitor DP-0 -d 6 7 8 9 10
+bspc monitor HDMI-0 -d 1 2 3 4 5
+bspc monitor DVI-D-0 -d 6 7 8 9 10
 
 bspc config border_width         0
 bspc config window_gap          10
@@ -27,4 +27,4 @@ dropbox &
 flameshot &
 xbindkeys &
 transmission-daemon &
-feh --bg-fill -r -z ~/Image/wallpapers/wallpapers &
+feh --bg-fill -r -z ~/Media/wallpapers/wallpapers &

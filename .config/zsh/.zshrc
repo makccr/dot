@@ -5,7 +5,7 @@ export HISTFILE=~/.config/zsh/.zsh_history
 
 export EDITOR='nvim'
 export TERMINAL='alacritty'
-export BROWSER='firefox'
+export BROWSER='google-chrome-stable'
 export MANPAGER='nvim +Man!'
 
 ##Theme.sh Config
@@ -73,7 +73,7 @@ alias v='nvim'
 alias f='ranger'
 alias t='btop'
 alias tty='tty-clock -C1 -c'
-alias pac='doas pacman'
+alias pac='sudo pacman'
 alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
 alias shot='flameshot gui'
@@ -83,6 +83,7 @@ alias wal='feh --bg-fill -z'
 alias script='node awc.js'
 alias lock='xscreensaver-command -lock'
 alias handbrake='ghb'
+alias visudo='EDITOR=nvim visudo'
 
 alias win='cd /mnt/c/Users/macke'
 
