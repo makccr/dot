@@ -235,3 +235,10 @@
 .config/specialmailcollectionsrc
 .config/transmission-remote-gtk/
 .config/xdg-desktop-portal-kderc
+.config/background
+.config/falkon/
+.config/gnome-layout-switcher.conf
+.config/manjaro-hello.json
+.config/ranger/plugins
+.config/touchegg/
+
