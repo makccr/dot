@@ -1,0 +1,13 @@
+/bin/bash -c 'echo -n "###### soliloquy 
+###### house keeping
+###### essay 
+###### diary
+###### journal
+###### common place
+###### success 
+###### failure
+###### dream
+###### tech
+###### current events
+###### meditation
+" | xclip && xdotool click 2'
