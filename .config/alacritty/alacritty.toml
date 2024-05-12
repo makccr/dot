@@ -103,7 +103,7 @@ multiplier = 3
 
 [window]
 decorations = "full"
-opacity = 1
+opacity = 0.8
 
 [window.dimensions]
 columns = 140
