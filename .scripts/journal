@@ -1,13 +1,15 @@
-/bin/bash -c 'echo -n "###### soliloquy 
-###### house keeping
-###### essay 
-###### diary
-###### journal
-###### common place
-###### success 
-###### failure
-###### dream
-###### tech
-###### current events
-###### meditation
-" | xclip && xdotool click 2'
+#!/usr/bin/env bash
+
+(date +"%R - %a, %B %d, %Y"; 
+echo "###### journal";
+echo "###### soliloquy";
+echo "###### health";
+echo "###### common place";
+echo "###### maintenance";
+echo "###### essay";
+echo "###### diary";
+echo "###### failure";
+echo "###### success ";
+echo "###### dream";
+echo "###### tech"
+) | xclip -select clipboard

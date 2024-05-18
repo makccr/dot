@@ -329,9 +329,14 @@ globalkeys = gears.table.join(
     awful.util.spawn("/home/makc/.scripts/emoji") end,
               {description = "Copy and Paste some Emoji!!!", group = "makc"}),
 
+    -- Journaling Script
+    awful.key({ modkey , "Shift"  },            "j",     function () 
+    awful.util.spawn("/home/makc/.scripts/journal") end,
+              {description = "Insert date and time", group = "makc"}),
+
     -- Firefox
     awful.key({ modkey }, "b", function ()
-    awful.util.spawn("google-chrome-stable") end,
+    awful.util.spawn("firefox") end,
             {description = "Launch a Firefox", group = "makc"}),
 
     -- Firefox
