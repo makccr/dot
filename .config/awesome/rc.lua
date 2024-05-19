@@ -418,6 +418,14 @@ clientkeys = gears.table.join(
 -- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
+
+        -- Brightness
+
+    awful.key({ }, "XF86MonBrightnessDown", function ()
+        awful.util.spawn("xbacklight -dec 15") end),
+    awful.key({ }, "XF86MonBrightnessUp", function ()
+        awful.util.spawn("xbacklight -inc 15") end),
+
         -- View tag only.
         awful.key({ modkey }, "#" .. i + 9,
                   function ()
@@ -567,3 +575,4 @@ awful.spawn.with_shell("feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers")
 awful.spawn.with_shell("/home/makc/.config/polybar/awesome.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")
 awful.spawn.with_shell("redshift -l 30.710220:-94.932999")
+awful.spawn.with_shell("xautolock -time 7 -locker /home/makc/.scripts/lock &")
