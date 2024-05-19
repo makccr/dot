@@ -49,7 +49,7 @@ end
 revelation.init()
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "kitty"
 editor = os.getenv("nvim") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -330,7 +330,7 @@ globalkeys = gears.table.join(
               {description = "Copy and Paste some Emoji!!!", group = "makc"}),
 
     -- Journaling Script
-    awful.key({ modkey , "Shift"  },            "j",     function () 
+    awful.key({ modkey , "Shift"  },            "x",     function () 
     awful.util.spawn("/home/makc/.scripts/journal") end,
               {description = "Insert date and time", group = "makc"}),
 
@@ -549,21 +549,21 @@ client.connect_signal("manage", function (c)
 end)
 
 -- Appearance stuff
-beautiful.useless_gap = 10
+beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
 beautiful.notification_bg = '(0,0,0)'
 beautiful.notification_fg = '#d4be98'
 
 -- Autostart
-awful.spawn.with_shell("/home/makc/.screenlayout/arandr.sh")
-awful.spawn.with_shell("picom --experimental-backends")
+--awful.spawn.with_shell("/home/makc/.screenlayout/arandr.sh")
+awful.spawn.with_shell("picom")
 awful.spawn.with_shell("dropbox")
 awful.spawn.with_shell("udiskie")
 awful.spawn.with_shell("xbindkeys")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("transmission-daemon")
-awful.spawn.with_shell("feh --bg-fill -r -z ~/Media/wallpapers/wallpapers")
+awful.spawn.with_shell("feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers")
 awful.spawn.with_shell("/home/makc/.config/polybar/awesome.sh")
 awful.spawn.with_shell("/home/makc/.scripts/mount")
 awful.spawn.with_shell("redshift -l 30.710220:-94.932999")

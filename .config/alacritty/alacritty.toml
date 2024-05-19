@@ -67,7 +67,7 @@ shape = "Beam"
 unfocused_hollow = true
 
 [font]
-size = 10
+size = 8.5
 
 [font.bold]
 family = "Hack Nerd Font Mono"
@@ -103,11 +103,11 @@ multiplier = 3
 
 [window]
 decorations = "full"
-opacity = 0.8
+opacity = 0.6
 
 [window.dimensions]
 columns = 140
-lines = 38
+lines = 36
 
 [window.padding]
 x = 35
