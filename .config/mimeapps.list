@@ -8,6 +8,7 @@ application/octet-stream=brave-browser.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-02JMC1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-02JMC1.desktop;
 text/calendar=org.gnome.Evolution.desktop;
+image/png=feh.desktop;
 
 [Default Applications]
 image/jpeg=mirage.desktop
