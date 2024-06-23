@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-(date +"%R - %a, %B %d, %Y"; 
+date +"%R - %a, %B %d, %Y"; 
 echo "###### journal";
 echo "###### soliloquy";
 echo "###### health";
@@ -12,4 +12,3 @@ echo "###### failure";
 echo "###### success ";
 echo "###### dream";
 echo "###### tech"
-) | xclip -select clipboard
