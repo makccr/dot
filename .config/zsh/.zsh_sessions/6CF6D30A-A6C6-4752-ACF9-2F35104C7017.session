@@ -1,1 +1,0 @@
-echo Restored session: "$(/bin/date -r 1719098115)"

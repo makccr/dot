@@ -245,3 +245,6 @@
 .config/Mullvad VPN/
 .config/totem/
 .config/gthumb/
+.config/fontforge/
+.config/zsh/.zcompcache/
+.config/zsh/.zsh_sessions/

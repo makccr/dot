@@ -99,6 +99,7 @@ alias reset='cd ~; clear; source ~/.config/zsh/.zshrc'
 alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Journal launching aliases
+alias journal='cd /Users/makc/Library/Mobile\ Documents/com\~apple\~CloudDocs/writing'
 alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
 alias j='(date +"%R - %a, %B %d, %Y"; 
 echo ###### journal
