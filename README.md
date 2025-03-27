@@ -3,7 +3,7 @@
 </a>
 
 # Dotfiles
-These are my dot files. I primarily use [Arch](https://www.archlinux.org), but on occasion have been known to use [Arco](https://arcolinux.com/), [Manjaro](https://manjaro.org), or some other Arch based distro; but [Solus](https://getsol.us) is dope too, it just doesn't require much configuration. I also run Debian or Ubuntu on a few server type systems, so I also try to make sure my dotfiles work there as well, and very occasionally I'll use a MacBook, where these dotfiles mostly work.
+These are my dot files. I primarily use [Arch](https://www.archlinux.org), but on occasion have been known to use [Arco](https://arcolinux.com/), [Manjaro](https://manjaro.org), or some other Arch based flavor. I also run Debian or Ubuntu on a few server type systems, so I also try to make sure my dotfiles work there as well, and very occasionally I'll use a MacBook, where these dotfiles work for the most part, but I don't bend over backwards to make sure they do. 
 
 **The main things here are:**
 1. My [Neovim](https://neovim.io/) configuration. 
@@ -23,7 +23,7 @@ Currently, my main system is Arch Linux running on a Ryzen 5 2600X (6-core) CPU 
                   .o+`                   -----------
                  `ooo/                   OS: Arch Linux
                 `+oooo:                  Kernel: Linux 5.16.1-arch1-1
-               `+oooooo:                 Uptime: 3 days, 1 hour, 30 mins
+               `+oooooo:                 Uptime: 300 days, 1 hour, 30 mins
                -+oooooo+:                Packages: 844 (pacman)
              `/:-:++oooo+:               Shell: zsh 5.8
             `/++++/+++++++:              Resolution: 1920x1080, 1920x1080
