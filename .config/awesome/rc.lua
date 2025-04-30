@@ -49,7 +49,7 @@ end
 revelation.init()
 
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty"
+terminal = "alacritty"
 editor = os.getenv("nvim") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 

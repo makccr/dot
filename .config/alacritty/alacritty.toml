@@ -1,5 +1,3 @@
-"window.dynamic_title" = true
-
 [colors]
 draw_bold_text_with_bright_colors = true
 
@@ -58,13 +56,10 @@ foreground = "0xfbf1c7"
 [colors.selection]
 background = "0xdc3232"
 text = "0xffffff"
-white = "0xffffff"
 
 [cursor.style]
-blink-interval = 750
 blinking = "off"
 shape = "Beam"
-unfocused_hollow = true
 
 [font]
 size = 8.5
@@ -72,9 +67,6 @@ size = 8.5
 [font.bold]
 family = "Hack Nerd Font Mono"
 style = "Bold"
-
-[font.debug]
-persistent_logging = false
 
 [font.glyph_offset]
 x = 0
