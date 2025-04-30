@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+'date +"%R - %a, %B %d, %Y" | xclip -select clipboard'
