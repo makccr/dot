@@ -93,10 +93,10 @@ alias drive='ranger /run/media/makc/'
 
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
-alias todo='bat ~/Dropbox/writing/notes/To-do.md'
-alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
-alias reset='cd ~; clear; source ~/.config/zsh/.zshrc'
-alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
+alias todo='clear; bat -p ~/Dropbox/writing/notes/todo.md && fortune ~/.scripts/quotes/quotes'
+alias todoe='nvim ~/Dropbox/writing/notes/todo.md'
+alias reset='clear; source ~/.config/zsh/.zshrc'
+alias fetch='clear && pfetch && fortune ~/.scripts/quotes/quotes'
 
 ## Journal launching aliases
 alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard'
