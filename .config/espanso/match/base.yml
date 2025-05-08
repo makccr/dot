@@ -26,7 +26,15 @@ matches:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%R - %a, %B %d, %Y"
+
+  - trigger: ":day"
+    replace: "{{day}}"
+    vars:
+      - name: day
+        type: date
+        params:
+          format: "%Y.%m.%d - "
 
   # Print the output of a shell command
   - trigger: ":shell"
