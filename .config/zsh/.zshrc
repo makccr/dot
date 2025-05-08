@@ -8,32 +8,9 @@ export TERMINAL='alacritty'
 export BROWSER='google-chrome-stable'
 export MANPAGER='nvim +Man!'
 
-##Theme.sh Config
-#if command -v theme.sh > /dev/null; then
-#	[ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
-#
-#	# Optional
-#
-#	# Bind C-o to the last theme.
-#	last_theme() {
-#		theme.sh "$(theme.sh -l|tail -n2|head -n1)"
-#	}
-#
-#	zle -N last_theme
-#	bindkey '^O' last_theme
-#
-#	alias th='theme.sh -i'
-#
-#	# Interactively load a light theme
-#	alias thl='theme.sh --light -i'
-#
-#	# Interactively load a dark theme
-#	alias thd='theme.sh --dark -i'
-#fi
-
-
 # Basic zsh settings
 PATH=$PATH:$HOME/.scripts #making my scripts run without typing the whole path
+
 bindkey -v # vi-mode
 autoload -Uz compinit && compinit #need the next two lines for case insensitive tab completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
