@@ -93,7 +93,7 @@ alias drive='ranger /run/media/makc/'
 
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
-alias todo='clear; bat -p ~/Dropbox/writing/notes/todo.md && fortune ~/.scripts/quotes/quotes'
+alias todo="clear; echo -e '\033[1mTo-do\033[0m'; echo '--------------'; bat -p Dropbox/writing/notes/todo.md"
 alias todoe='nvim ~/Dropbox/writing/notes/todo.md'
 alias reset='clear; source ~/.config/zsh/.zshrc'
 alias fetch='clear && pfetch && fortune ~/.scripts/quotes/quotes'
