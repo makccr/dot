@@ -248,3 +248,4 @@
 .config/fontforge/
 .config/zsh/.zcompcache/
 .config/zsh/.zsh_sessions/
+.config/evince/
