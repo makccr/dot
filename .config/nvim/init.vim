@@ -47,6 +47,10 @@ nnoremap <Down>  :resize +2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
+"Hemingway Mode
+inoremap <BS> <Nop>
+inoremap <Del> <Nop>
+
 "Color Settings
 colorscheme gruvbox
 set t_Co=256
