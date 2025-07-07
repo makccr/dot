@@ -6,7 +6,7 @@ function Press-Spacebar {
 }
 
 while ($true) {
-    $delay = Get-Random -Minimum 5 -Maximum 300  # Random delay between 5 and 300 seconds
+    $delay = Get-Random -Minimum 65 -Maximum 300  # Random delay between 5 and 300 seconds
     Start-Sleep -Seconds $delay
 
     Press-Spacebar
