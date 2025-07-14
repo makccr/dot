@@ -2,10 +2,11 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 
-::!date:: ;Prints the time and date, for journal entries, letters, etc 
-FormatTime, time, A_now, H:mm - ddd, MMM d, yyyy
-        sendInput, {#} %time% `n{#}{#}{#}{#}{#}{#} soliloquy`n{#}{#}{#}{#}{#}{#} house keeping`n{#}{#}{#}{#}{#}{#} essay`n{#}{#}{#}{#}{#}{#} diary`n{#}{#}{#}{#}{#}{#} journal`n{#}{#}{#}{#}{#}{#} common place`n{#}{#}{#}{#}{#}{#} success`n{#}{#}{#}{#}{#}{#} failure`n{#}{#}{#}{#}{#}{#} dream`n{#}{#}{#}{#}{#}{#} tech`n{#}{#}{#}{#}{#}{#} current events
+::!date::
+FormatTime, time, A_now, H:mm - d of MMMM yyyy
+        sendInput, {#} %time%
     return
+
 ::!day:: ;Prints the current date with a dash, used for organizing my archives
     FormatTime, time, A_now, yyyy.MM.dd-
         sendInput, %time%
