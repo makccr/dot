@@ -252,3 +252,6 @@
 .config/knfsshare
 .config/solaar/
 .config/manjaro/
+.config/btop/btop.conf
+.config/btop/btop.log
+
