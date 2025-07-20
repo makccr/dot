@@ -3,9 +3,29 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 
 ::!date::
-FormatTime, time, A_now, H:mm - d of MMMM yyyy
-        sendInput, {#} %time%
-    return
+; Get current components
+FormatTime, hourMin,, H:mm
+FormatTime, day,, d
+FormatTime, monthYear,, MMMM yyyy
+
+; Convert day to number
+dayNum := day + 0
+
+; Determine suffix
+if (dayNum = 11 or dayNum = 12 or dayNum = 13)
+    suffix := "th"
+else if (Mod(dayNum, 10) = 1)
+    suffix := "st"
+else if (Mod(dayNum, 10) = 2)
+    suffix := "nd"
+else if (Mod(dayNum, 10) = 3)
+    suffix := "rd"
+else
+    suffix := "th"
+
+; Construct final output
+sendInput, {#} %hourMin% - %dayNum%%suffix% of %monthYear%
+return
 
 ::!day:: ;Prints the current date with a dash, used for organizing my archives
     FormatTime, time, A_now, yyyy.MM.dd-
