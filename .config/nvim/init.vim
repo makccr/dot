@@ -3,6 +3,7 @@ Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'vim-scripts/fountain.vim' | Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
+Plug 'makccr/hepburn'
 Plug 'ashfinal/vim-colors-paper'
 Plug 'dunstontc/vim-vscode-theme'
 Plug 'tomasr/molokai'
@@ -52,7 +53,7 @@ nnoremap <Right> :vertical resize -2<CR>
 "inoremap <Del> <Nop>
 
 "Color Settings
-colorscheme gruvbox
+colorscheme hepburn
 set t_Co=256
 set background=dark
 set termguicolors
