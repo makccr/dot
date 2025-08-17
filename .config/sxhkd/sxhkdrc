@@ -8,7 +8,7 @@ super + Return
 
 # change wallpaper
 super + c
-	feh --bg-fill -r -z ~/Media/wallpapers/wallpapers/
+	feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/
 
 # launch firefox
 super + b
@@ -89,8 +89,8 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+super + {1-9,0}
+	bspc desktop -f {1-9,10}
 
 #
 # preselect

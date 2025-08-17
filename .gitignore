@@ -254,4 +254,4 @@
 .config/manjaro/
 .config/btop/btop.conf
 .config/btop/btop.log
-
+.config/go/
