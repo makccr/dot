@@ -25,7 +25,7 @@ endfunction
 
 function! GetSessionWordCount()
     let l:delta = wordcount().words - g:session_start_wordcount
-    return "[Words: " . l:delta . "]"
+    return "" . l:delta . ""
 endfunction
 
 "Status Line
