@@ -30,18 +30,21 @@ endfunction
 
 "Status Line
 set statusline=
-set statusline+=%#NonText#
+set statusline+=%#StatusLine#
 set statusline+=%=
 set statusline+=\ %f
 set statusline+=\ 
 set statusline+=%#CursorLineNr#
 set statusline+=\ %y
 set statusline+=\ %r
-set statusline+=%#IncSearch#
+set statusline+=%#DiffAdd#
 set statusline+=\ %l/%L
 "set statusline+=\ [%c] 
-set statusline+=\ [%{wordcount().words}]
-set statusline+=\ [Session:%{GetSessionWordCount()}]
+set statusline+=\ [%{wordcount().words}] 
+set statusline+=\ " "
+set statusline+=%#DiffChange#
+set statusline+=\ Sess:%{GetSessionWordCount()}
+set statusline+=\ " "
 
 "Key-bindings
 let mapleader=" "
