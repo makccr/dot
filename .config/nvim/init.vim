@@ -16,6 +16,18 @@ set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab spell 
 set fillchars+=eob:\ 
 au BufRead,BufNewFile *.fountain set filetype=fountain
 
+"Per session word count
+let g:session_start_wordcount = 0
+
+function! StartWordCountSession()
+    let g:session_start_wordcount = wordcount().words
+endfunction
+
+function! GetSessionWordCount()
+    let l:delta = wordcount().words - g:session_start_wordcount
+    return "[Words: " . l:delta . "]"
+endfunction
+
 "Status Line
 set statusline=
 set statusline+=%#NonText#
@@ -29,6 +41,7 @@ set statusline+=%#IncSearch#
 set statusline+=\ %l/%L
 "set statusline+=\ [%c] 
 set statusline+=\ [%{wordcount().words}]
+set statusline+=\ [Session:%{GetSessionWordCount()}]
 
 "Key-bindings
 let mapleader=" "
@@ -83,5 +96,6 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+autocmd BufReadPost * call StartWordCountSession()
 
 set mouse=c
