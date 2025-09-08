@@ -257,3 +257,4 @@
 .config/go/
 .config/FreeTube/
 .config/alacritty/alacritty.toml.bak
+.config/espansoGUI/
