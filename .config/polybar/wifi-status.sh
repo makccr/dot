@@ -5,7 +5,7 @@ ssid=$(nmcli -t -f ACTIVE,SSID dev wifi | grep '^yes' | cut -d':' -f2)
 
 # If not connected, show disconnected icon
 if [ -z "$ssid" ]; then
-    echo "睊   Disconnected"
+    echo "   NONE"
 else
     echo "   $ssid"
 fi
