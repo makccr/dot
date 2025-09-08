@@ -50,7 +50,7 @@ white = "0xa89984"
 yellow = "0xd79921"
 
 [colors.primary]
-background = "0x080808"
+background = "0x000000"
 foreground = "0xfbf1c7"
 
 [colors.selection]
@@ -95,12 +95,12 @@ multiplier = 3
 
 [window]
 decorations = "none"
-opacity = 0.8
+opacity = 0.6
 
 [window.dimensions]
 columns = 140
 lines = 36
 
 [window.padding]
-x = 20
+x = 25
 y = 20

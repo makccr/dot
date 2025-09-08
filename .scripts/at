@@ -1,24 +1,51 @@
 #!/usr/bin/env bash
-#
 
-## If alacritty.yml does not exist, raise an alert
-[[ ! -f ~/.config/alacritty/alacritty.yml ]] && \
-    notify-send "alacritty.yml does not exist" && exit 0
+CONFIG="$HOME/.config/alacritty/alacritty.toml"
 
-## Fetch background_opacity from alacritty.yml
-opacity=$(awk '$1 == "opacity:" {print $2; exit}' \
-    ~/.config/alacritty/alacritty.yml)
+# Check if config exists
+if [[ ! -f "$CONFIG" ]]; then
+    notify-send "Alacritty config not found at $CONFIG"
+    exit 1
+fi
 
-## Assign toggle opacity value
-case $opacity in
-  1)
-    toggle_opacity=0.7
-    ;;
-  *)
+# Backup config
+cp "$CONFIG" "$CONFIG.bak"
+
+# Fetch current opacity under [window] section
+opacity=$(awk '
+    /^\[window\]/ {in_window=1; next}
+    /^\[/ {in_window=0}
+    in_window && /^opacity *=/ {
+        gsub(/ /,"",$0)
+        split($0,a,"=")
+        print a[2]
+        exit
+    }
+' "$CONFIG")
+
+# Validate opacity
+if [[ -z "$opacity" ]]; then
+    notify-send "opacity not set under [window] in config"
+    exit 1
+fi
+
+# Toggle opacity
+if (( $(echo "$opacity < 1" | bc -l) )); then
     toggle_opacity=1
-    ;;
-esac
+else
+    toggle_opacity=0.6
+fi
 
-## Replace opacity value in alacritty.yml
-sed -i -- "s/opacity: $opacity/opacity: $toggle_opacity/" \
-    ~/.config/alacritty/alacritty.yml
+# Replace opacity in [window] section
+awk -v new_opacity="$toggle_opacity" '
+    BEGIN{in_window=0}
+    /^\[window\]/ {in_window=1; print; next}
+    /^\[/ {in_window=0}
+    in_window && /^opacity *=/ {
+        sub(/=.*/, "= " new_opacity)
+    }
+    {print}
+' "$CONFIG" > "$CONFIG.tmp" && mv "$CONFIG.tmp" "$CONFIG"
+
+notify-send "Alacritty opacity set to $toggle_opacity"
+
