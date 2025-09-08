@@ -255,3 +255,5 @@
 .config/btop/btop.conf
 .config/btop/btop.log
 .config/go/
+.config/FreeTube/
+.config/alacritty/alacritty.toml.bak
