@@ -78,19 +78,19 @@ fixed-center = true
 border-size= 0
 background = ${colors.bg}
 foreground = ${colors.fg}
-padding-left = 4
-padding-right = 4
-module-margin-left = 3
-module-margin-right = 0
-font-0 = Montserrat:weight=SemiBold:size=10;2
+padding-left = 3
+padding-right = 3
+module-margin-left = 1
+module-margin-right = 1
+font-0 = Hack Nerd Font:weight=SemiBold:size=10;2
 font-1 = Hack Nerd Font:size=10;2
-font-2 = Montserrat:weight=Medium:size=10;2
+font-2 = Hack Nerd Font:weight=Medium:size=10;2
 cursor-click = pointer
 cursor-scroll = ns-resize
 ;;;;;; Module Positioning
 modules-left = term hostname
 modules-center = bspwm
-modules-right = wallpaper shot color disk audio date wifi battery powermenu
+modules-right = wallpaper date wifi audio battery powermenu
 
 [settings]
 screenchange-reload = true
