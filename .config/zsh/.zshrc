@@ -21,12 +21,7 @@ PROMPTS=(
     "∮"
     "∯"
     "≎"
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
+    ""
 )
 RANDOM=$$$(date +%s)
 ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
