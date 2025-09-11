@@ -89,7 +89,6 @@
 .config/plasmashellrc
 .config/redshift/
 .config/xsettingsd/
-.config/gtk-3.0/settings.ini
 .config/plex.tv/
 .config/mutt/
 .config/vivaldi/
@@ -151,7 +150,6 @@
 .config/protonvpn/
 .config/systemd/
 .config/cutefishos/
-.config/gtk-4.0/
 .config/gtkrc
 .config/gtkrc-2.0
 .config/gwenviewrc
