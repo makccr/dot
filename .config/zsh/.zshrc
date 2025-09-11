@@ -73,7 +73,7 @@ alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo="clear; echo -e '\033[1mTo-do\033[0m'; echo '--------------'; bat -p Dropbox/writing/notes/todo.md"
 alias todoe='nvim ~/Dropbox/writing/notes/todo.md'
 alias reset='clear; source ~/.config/zsh/.zshrc'
-alias fetch='clear && pfetch && fortune ~/.scripts/quotes/quotes'
+alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Journal launching aliases
 alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard'
