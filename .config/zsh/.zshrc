@@ -18,8 +18,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 # Prompt Settings
 declare -a PROMPTS
 PROMPTS=(
-    "∮"
-    "∯"
     "≎"
     ""
 )
