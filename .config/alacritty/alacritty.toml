@@ -62,7 +62,7 @@ blinking = "off"
 shape = "Beam"
 
 [font]
-size = 7.5
+size = 7
 
 [font.bold]
 family = "Hack Nerd Font Mono"
