@@ -90,7 +90,7 @@ cursor-scroll = ns-resize
 ;;;;;; Module Positioning
 modules-left = term hostname
 modules-center = bspwm
-modules-right = wallpaper shot date wifi audio battery powermenu
+modules-right = wallpaper shot date wifi audio brightness battery powermenu
 
 [settings]
 screenchange-reload = true

@@ -257,3 +257,11 @@
 .config/alacritty/alacritty.toml.bak
 .config/espansoGUI/
 .config/htop/
+.config/gtk-4.0/colors.css
+.config/gtk-4.0/gtk.css
+.config/kded6rc
+.config/kwinoutputconfig.json
+.config/plasma-nm
+.config/plasmanotifyrc
+.config/tabletprofilesrc
+.config/wacomtablet-kderc
