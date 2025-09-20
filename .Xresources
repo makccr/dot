@@ -34,3 +34,4 @@ urxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
+Xcursor.theme: Capitaine

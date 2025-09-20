@@ -5,7 +5,7 @@ export HISTFILE=~/.config/zsh/.zsh_history
 
 export EDITOR='nvim'
 export TERMINAL='alacritty'
-export BROWSER='google-chrome-stable'
+export BROWSER='firefox'
 export MANPAGER='nvim +Man!'
 
 # Basic zsh settings
@@ -37,40 +37,16 @@ zstyle ':vcs_info:*' enable git
 # Aliases
 ## App launchers
 alias tsm='transmission-remote'
-alias pvpn='protonvpn-cli'
-alias s='startx'
 alias v='nvim'
 alias f='ranger'
 alias t='btop'
-alias tty='tty-clock -C1 -c'
-alias pac='sudo pacman'
-alias commit='git add -A; git commit -m'
 alias weather='clear && curl wttr.in'
-alias shot='flameshot gui'
 alias kill='killall -q'
-alias suck='rm -f config.h ; sudo make install'
 alias wal='feh --bg-fill -z'
-alias script='node awc.js'
-alias lock='xscreensaver-command -lock'
-alias handbrake='ghb'
-alias visudo='EDITOR=nvim visudo'
-
-alias win='cd /mnt/c/Users/macke'
-
 alias ls='lsd'
 alias cat='bat'
-alias drive='ranger /run/media/makc/'
 
 ## Terminal maintenance
-alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo="clear; echo -e '\033[1mTo-do\033[0m'; echo '--------------'; bat -p Dropbox/writing/notes/todo.md"
 alias todoe='nvim ~/Dropbox/writing/notes/todo.md'
 alias reset='clear; source ~/.config/zsh/.zshrc'
-alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
-
-## Journal launching aliases
-alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard'
-
-## Snippets
-alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"' 
-alias dday='date +"%Y.%m.%d - " | xclip -select clipboard ; date +"%Y.%m.%d"'
