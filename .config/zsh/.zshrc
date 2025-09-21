@@ -45,6 +45,7 @@ alias kill='killall -q'
 alias wal='feh --bg-fill -z'
 alias ls='lsd'
 alias cat='bat'
+alias fetch='clear; neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Terminal maintenance
 alias todo="clear; echo -e '\033[1mTo-do\033[0m'; echo '--------------'; bat -p Dropbox/writing/notes/todo.md"

@@ -16,6 +16,8 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a Firefox focus=on
+bspc rule -a Firefox pointer=on
 
 ## Autostart
 sh $HOME/.config/polybar/bspwm.sh &
