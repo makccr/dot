@@ -266,3 +266,5 @@
 .config/tabletprofilesrc
 .config/wacomtablet-kderc
 .config/pup-gui
+.config/hexchat
+.config/weechat

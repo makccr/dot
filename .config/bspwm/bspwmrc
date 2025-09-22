@@ -30,3 +30,4 @@ xbindkeys &
 transmission-daemon &
 feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers &
 xrandr --output eDP-1 --mode 1920x1080 &
+redshift -l 29.536997852:-95.018166594 &
