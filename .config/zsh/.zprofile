@@ -1,1 +1,1 @@
-fortune ~/.scripts/quotes/quotes
+bat --plain Dropbox/writing/notes/todo.md && fortune .scripts/quotes/quotes

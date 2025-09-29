@@ -34,7 +34,7 @@ matches:
       - name: day
         type: date
         params:
-          format: "%Y.%m.%d - "
+          format: "%Y-%m-%d-"
 
   # Print the output of a shell command
   - trigger: ":shell"
