@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# Get the SSID of the active Wi-Fi connection
-ssid=$(nmcli -t -f ACTIVE,SSID dev wifi | grep '^yes' | cut -d':' -f2)
-
-# If not connected, show disconnected icon
-if [ -z "$ssid" ]; then
-    echo "  NONE"
+# Check if any Wi-Fi connection is active
+if nmcli -t -f ACTIVE dev wifi | grep -q '^yes'; then
+    # Connected → show "check" icon
+    echo ""  # you can replace this with your preferred "connected" icon
 else
-    echo "  $ssid"
+    # Not connected → show "X" icon
+    echo "󱚼"  # or whatever "disconnected" icon you want
 fi
