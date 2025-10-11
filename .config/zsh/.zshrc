@@ -7,6 +7,7 @@ export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='firefox'
 export MANPAGER='nvim +Man!'
+export GTK_THEME=Breeze-Dark
 
 # Basic zsh settings
 PATH=$PATH:$HOME/.scripts #making my scripts run without typing the whole path
