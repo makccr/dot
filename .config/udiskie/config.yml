@@ -1,0 +1,5 @@
+mount_options:
+  - uid=1000
+  - gid=1000
+  - umask=022
+mountpoint_format: /mnt/{label}
