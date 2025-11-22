@@ -20,6 +20,7 @@ These are my dot files. I primarily use [Arch](https://www.archlinux.org), or on
 Typically I use a `git clone` to pull down my dot files into the `~/Documents` folder, or some other convenient location and then use symbolic links to have things end up in the right place: 
 <details>
 <summary>Step by step guide</summary>
+    
 1. Change directory into a convenient location
 ```
 cd ~/Documents
@@ -46,4 +47,5 @@ ln -sf ~/Documents/dot/.tmux.conf .
 ln -sf ~/Documents/dot/.Xresources .
 ln -sf ~/Documents/dot/.xbindkeysrc .
 ```
+
 </details>
