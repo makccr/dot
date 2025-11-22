@@ -47,5 +47,9 @@ ln -sf ~/Documents/dot/.tmux.conf .
 ln -sf ~/Documents/dot/.Xresources .
 ln -sf ~/Documents/dot/.xbindkeysrc .
 ```
+**Note**: I've also built a little script to automate this process that I store in the `.scripts` folder. It makes the symbolic process take about 0.36 seconds: 
+```
+./~/Documents/.scripts/setup.sh
+```
 
 </details>
