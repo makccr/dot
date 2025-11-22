@@ -15,3 +15,35 @@ These are my dot files. I primarily use [Arch](https://www.archlinux.org), or on
 5. My [Polybar](https://polybar.github.io/) configuration.
 
 ![Screenshot](images/desktop.jpg)
+
+### Usage 
+Typically I use a `git clone` to pull down my dot files into the `~/Documents` folder, or some other convenient location and then use symbolic links to have things end up in the right place: 
+<details>
+<summary>Step by step guide</summary>
+1. Change directory into a convenient location
+```
+cd ~/Documents
+```
+2. Git clone the repo
+```
+git clone https://github.com/makccr/dot
+```
+or 
+```
+git clone --depth 1 https://github.com/makccr/dot
+```
+3. Move back into home directory
+```
+cd 
+```
+4. Set up symbolic links 
+```
+ln -sf ~/Documents/dot/.config .
+ln -sf ~/Documents/dot/.scripts .
+ln -sf ~/Documents/dot/.gitconfig .
+ln -sf ~/Documents/dot/.zshenv .
+ln -sf ~/Documents/dot/.tmux.conf .
+ln -sf ~/Documents/dot/.Xresources .
+ln -sf ~/Documents/dot/.xbindkeysrc .
+```
+</details>
