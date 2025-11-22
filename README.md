@@ -22,23 +22,23 @@ Typically I use a `git clone` to pull down my dot files into the `~/Documents` f
 <summary>Step by step guide</summary>
     
 1. Change directory into a convenient location
-```
+```bash
 cd ~/Documents
 ```
 2. Git clone the repo
-```
+```bash
 git clone https://github.com/makccr/dot
 ```
 or 
-```
+```bash
 git clone --depth 1 https://github.com/makccr/dot
 ```
 3. Move back into home directory
-```
+```bash
 cd 
 ```
 4. Set up symbolic links 
-```
+```bash
 ln -sf ~/Documents/dot/.config .
 ln -sf ~/Documents/dot/.scripts .
 ln -sf ~/Documents/dot/.gitconfig .
@@ -48,7 +48,7 @@ ln -sf ~/Documents/dot/.Xresources .
 ln -sf ~/Documents/dot/.xbindkeysrc .
 ```
 **Note**: I've also built a little script to automate this process that I store in the `.scripts` folder. It makes the symbolic link process take about 0.36 seconds: 
-```
+```bash
 ./~/Documents/.scripts/setup.sh
 ```
 
