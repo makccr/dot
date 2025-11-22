@@ -269,3 +269,7 @@
 .config/hexchat
 .config/weechat
 .config/chromium
+.config/geary/
+.config/tiling-assistant/
+.config/ubuntu-xdg-terminals.list
+.config/update-notifier/
