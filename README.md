@@ -18,18 +18,13 @@ These are my dot files. I primarily use [Arch](https://www.archlinux.org), or on
 
 ### Usage 
 Typically I use a `git clone` to pull down my dot files into the `~/Documents` folder, or some other convenient location and then use symbolic links to have things end up in the right place: 
-<details>
-<summary>Step by step guide</summary>
-    
+
+#### Step by step guide
 1. Change directory into a convenient location
 ```bash
 cd ~/Documents
 ```
-2. Git clone the repo
-```bash
-git clone https://github.com/makccr/dot
-```
-or 
+2. Clone the repo
 ```bash
 git clone --depth 1 https://github.com/makccr/dot
 ```
@@ -51,5 +46,3 @@ ln -sf ~/Documents/dot/.xbindkeysrc .
 ```bash
 ./~/Documents/.scripts/setup.sh
 ```
-
-</details>
