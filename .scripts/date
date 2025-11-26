@@ -9,4 +9,4 @@ DaySuffix() {
   esac
 }
 
-date "+%R - %-d`DaySuffix` of %B %Y"
+date "+# %R - %-d`DaySuffix` of %B %Y"
