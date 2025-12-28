@@ -314,12 +314,12 @@ globalkeys = gears.table.join(
     --awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
     --          {description = "run prompt", group = "launcher"}),
 
-    -- Demnu
+    -- Dmenu
     awful.key({ modkey  },            "space",     function () 
     awful.util.spawn("dmenu_run -m 0") end,
               {description = "Launch Dmenu", group = "makc"}),
 
-    -- Demnu
+    -- Dmenu
     awful.key({  "Control"  },            "space",     function () 
     awful.util.spawn("/home/makc/.scripts/search") end,
               {description = "Perform a quick web search, dmenu script", group = "makc"}),
