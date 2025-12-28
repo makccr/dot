@@ -42,7 +42,7 @@ ln -sf ~/Documents/dot/.tmux.conf .
 ln -sf ~/Documents/dot/.Xresources .
 ln -sf ~/Documents/dot/.xbindkeysrc .
 ```
-**Note**: I've also built a little script to automate this process that I store in the `.scripts` folder. It makes the symbolic link process take about 0.36 seconds: 
+**Note**: I've also built a script to automate this process. `setup.sh` can be founnd in the `.scripts` folder & makes the symbolic link process take about 0.36 seconds: 
 ```bash
 ./~/Documents/.scripts/setup.sh
 ```
