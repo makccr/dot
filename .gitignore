@@ -1,4 +1,5 @@
 .DS_Store
+.config/org.gnome.Ptyxis/
 .config/.gsd-keyboard.settings-ported
 .config/GNOME-xdg-terminals.list
 .config/dleyna-renderer-service.conf

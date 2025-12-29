@@ -44,7 +44,7 @@ cursor-scroll = ns-resize
 ;;;;;; Module Positioning
 modules-left = bspwm
 modules-center =  date
-modules-right = shot wifi brightness audio battery
+modules-right = shot wallpaper wifi brightness audio battery
 
 [settings]
 screenchange-reload = true

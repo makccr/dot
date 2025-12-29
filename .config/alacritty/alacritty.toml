@@ -62,7 +62,7 @@ blinking = "off"
 shape = "Beam"
 
 [font]
-size = 7.5
+size = 10.5
 
 [font.bold]
 family = "Hack Nerd Font Mono"
@@ -94,8 +94,8 @@ history = 10000
 multiplier = 3
 
 [window]
-decorations = "Full"
-opacity = 0.7
+decorations = "None"
+opacity = 0.6
 
 [window.dimensions]
 columns = 150

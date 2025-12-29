@@ -28,7 +28,7 @@ dropbox &
 flameshot &
 xbindkeys &
 transmission-daemon &
-feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/usa.jpg &
+feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/poseidon &
 xrandr --output eDP-1 --mode 1920x1080 &
 redshift -l 29.536997852:-95.018166594 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
