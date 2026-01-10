@@ -1,5 +1,6 @@
 .DS_Store
 .config/org.gnome.Ptyxis/
+.config/simple-scan/
 .config/.gsd-keyboard.settings-ported
 .config/GNOME-xdg-terminals.list
 .config/dleyna-renderer-service.conf

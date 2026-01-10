@@ -8,7 +8,7 @@ super + Return
 
 # change wallpaper
 super + c
-	feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/poseidon/
+	feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/art/
 
 # launch firefox
 super + b
