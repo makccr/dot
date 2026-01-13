@@ -12,7 +12,8 @@ call plug#end()
 
 "General Settings
 set encoding=UTF-8 nobackup nowritebackup nocursorline splitbelow splitright wildmode=longest,list,full
-set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab spell spelllang=en_us
+set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab spell spelllang=en_us,la
+
 set fillchars+=eob:\ 
 au BufRead,BufNewFile *.fountain set filetype=fountain
 
