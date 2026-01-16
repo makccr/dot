@@ -70,7 +70,7 @@ nnoremap <Right> :vertical resize -2<CR>
 "inoremap <Del> <Nop>
 
 "Color Settings
-colorscheme hepburn
+colorscheme gruvbox
 set t_Co=256
 set background=dark
 set termguicolors
