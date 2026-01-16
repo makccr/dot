@@ -1,4 +1,5 @@
 .DS_Store
+.config/okularrc
 .config/org.gnome.Ptyxis/
 .config/simple-scan/
 .config/.gsd-keyboard.settings-ported
