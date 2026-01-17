@@ -11,6 +11,7 @@ export GTK_THEME=Breeze-Dark
 
 # Basic zsh settings
 PATH=$PATH:$HOME/.scripts #making my scripts run without typing the whole path
+PATH=$PATH:/home/makc/.cargo/bin
 
 bindkey -v # vi-mode
 autoload -Uz compinit && compinit #need the next two lines for case insensitive tab completion
