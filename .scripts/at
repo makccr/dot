@@ -33,7 +33,7 @@ fi
 if (( $(echo "$opacity < 1" | bc -l) )); then
     toggle_opacity=1
 else
-    toggle_opacity=0.6
+    toggle_opacity=0.8
 fi
 
 # Replace opacity in [window] section
