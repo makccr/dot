@@ -8,7 +8,7 @@ xset s off
 bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 10
 
 bspc config border_width         1
-bspc config window_gap           10
+bspc config window_gap           20
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -32,6 +32,5 @@ flameshot &
 xbindkeys &
 transmission-daemon &
 feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/art &
-xrandr --output eDP-1 --mode 1920x1080 &
 redshift -l 29.536997852:-95.018166594 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
