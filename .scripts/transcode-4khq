@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Transcode 
+
+# DNXHQ
+#ffmpeg -i "$1" -c:v dnxhr -profile:v dnxhr_lb -c:a pcm_s16le "transcoded-$(basename "$1")"
+
+# Pro Res
+#ffmpeg -i "$1" -c:v prores_ks -profile:v 3 -c:a pcm_s16le "transcoded-$(basename "$1")" # Lossless
+#ffmpeg -i "$1" -c:v prores_ks -profile:v 1 -c:a pcm_s16le "transcoded-$(basename "$1")" # Low
+#ffmpeg -i "$1" -c:v prores_ks -profile:v 0 -c:a pcm_s16le "transcoded-$(basename "$1")" # Proxy
+
+# Cineform 
+#ffmpeg -i "$1" -c:v cfhd -quality medium -c:a pcm_s16le "transcoded-$(basename "$1")"
+
+
+
+# Delivery
+
+# Pro Res to H264 
+#ffmpeg -i "$1" -c:v libx264 -b:v 40M -maxrate 10M -bufsize 12M -c:a aac -b:a 320k "yt-read-$(basename "$1")"
+
+# MOV to MP4
+#ffmpeg -i "$1" -c:v mpeg4 -b:v 40000k -c:a aac -b:a 320k "yt-read-$(basename "$1")"
+
+# To VP9
+#ffmpeg -i "$1" -c:v libvpx-vp9 -crf 35 -b:v 0 -c:a libopus -b:a 512k "upld-rdy-$(basename "$1" .mov).webm"
+
+
+
+
+# Use Pro Res Proxy to Convert H264 screencap for editing in Resolve
+# Use VP9 transcode for Resolve ProRes export to YouTube delivery

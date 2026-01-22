@@ -1,19 +1,15 @@
 #!/usr/bin/env bash
 
-mkdir "$1"
-cd "$1"
+mkdir "$(date +%Y-%m-%d)-$1"
+cd $_
 
-mkdir aRoll thumb project
+mkdir aRoll project
 
 cd aRoll
 mkdir image motion audio
 cd ..
 
-cp -rf aRoll bRoll
+cp -rf aRoll bRoll 
+cp -rf aRoll thumb 
 
-cp /mnt/falconFiles/branding/template.prproj project
-cd project
-mv template.prproj "$1.prproj"
 cd ..
-
-cp /mnt/falconFiles/branding/comment.txt .
