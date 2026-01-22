@@ -9,4 +9,3 @@ xrandr --output DP-2 --scale 0.5x0.5
 
 # Step 3: Restore native scale
 xrandr --output DP-2 --scale 1x1
-
