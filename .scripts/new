@@ -12,4 +12,6 @@ cd ..
 cp -rf aRoll bRoll 
 cp -rf aRoll thumb 
 
+cp ~/Videos/branding/template.drp project/$1.drp
+
 cd ..
