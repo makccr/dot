@@ -10,6 +10,10 @@ super + Return
 super + c
 	feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/art/
 
+# Blank screen
+alt + l
+    $HOME/.scripts/lock
+
 # launch firefox
 super + b
 	firefox
