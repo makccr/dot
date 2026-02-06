@@ -30,6 +30,6 @@ dropbox &
 flameshot &
 xbindkeys &
 transmission-daemon &
-feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/art &
+feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/abstract &
 redshift -l 29.536997852:-95.018166594 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

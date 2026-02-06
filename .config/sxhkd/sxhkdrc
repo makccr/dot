@@ -8,7 +8,7 @@ super + Return
 
 # change wallpaper
 super + c
-	feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/art/
+	feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/abstract/
 
 # Blank screen
 alt + l

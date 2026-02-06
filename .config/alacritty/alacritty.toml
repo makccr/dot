@@ -94,7 +94,7 @@ history = 10000
 multiplier = 3
 
 [window]
-decorations = "None"
+decorations = "Full"
 opacity = 0.7
 
 [window.dimensions]

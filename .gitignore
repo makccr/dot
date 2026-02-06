@@ -277,3 +277,16 @@
 .config/tiling-assistant/
 .config/ubuntu-xdg-terminals.list
 .config/update-notifier/
+.config/cachyos-hello.json
+.config/cachyos/
+.config/gtk-4.0/window_decorations.css
+.config/kdeconnect_/
+.config/kded5rc_
+.config/kdedefaults_/
+.config/konsolerc_
+.config/libinput-gestures.conf
+.config/librewolf/
+.config/mozilla/
+.config/plasma-org.kde.plasma.desktop-appletsrc_
+.config/plasma-org.kde.plasma.desktop-appletsrc_0
+.config/powermanagementprofilesrc_
