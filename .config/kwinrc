@@ -8,11 +8,6 @@ Id_6=3ef0acab-8055-4e38-a12f-7136562ae354
 Id_7=1ae17757-a683-4ec2-9125-cdd71d17bcee
 Id_8=d6c1797c-0be6-4408-b34e-dc79830001f5
 Id_9=351069d0-50ad-41af-9dd8-d92a23ef61aa
-Name_3=Desktop 4
-Name_4=Desktop 3
-Name_7=New Desktop
-Name_8=New Desktop
-Name_9=New Desktop
 Number=9
 Rows=1
 
@@ -31,7 +26,6 @@ NightTemperature=3500
 
 [Plugins]
 blurEnabled=false
-colorblindnesscorrectionEnabled=true
 mousemarkEnabled=true
 zoomEnabled=false
 

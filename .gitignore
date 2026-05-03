@@ -1,4 +1,11 @@
 .DS_Store
+.config/kdeglobals
+.config/kwinrc
+.config/kdeglobals
+.config/kwinrc
+.config/news-flash/
+.config/kded_device_automounterrc
+.config/netlify/
 .config/kdedefaults/
 .config/kded5rc
 .config/okularrc
