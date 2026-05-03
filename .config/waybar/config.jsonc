@@ -26,7 +26,8 @@
     },
 
     "clock": {
-        "format": "{:%a %d  <b>%H:%M</b>}",
+        "format": "{:L%A %d  <b>%H:%M</b>}",
+        "locale": "el_GR.utf8",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
                     "mode"          : "month",
