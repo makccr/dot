@@ -12,8 +12,8 @@ application/xhtml+xml=firefox.desktop;
 image/avif=org.kde.gwenview.desktop;
 image/bmp=org.kde.gwenview.desktop;
 image/heif=org.kde.gwenview.desktop;
-image/jpeg=org.kde.gwenview.desktop;org.xfce.ristretto.desktop;gimp.desktop;mirage.desktop;
-image/png=org.kde.gwenview.desktop;gimp.desktop;feh.desktop;
+image/jpeg=gimp.desktop;org.kde.gwenview.desktop;org.xfce.ristretto.desktop;mirage.desktop;
+image/png=gimp.desktop;org.kde.gwenview.desktop;feh.desktop;
 image/webp=org.kde.gwenview.desktop;gimp.desktop;
 image/x-icns=org.kde.gwenview.desktop;
 inode/directory=thunar.desktop;
@@ -28,6 +28,8 @@ x-scheme-handler/mid=userapp-Thunderbird-O0KVK3.desktop;userapp-Thunderbird-8CG2
 x-scheme-handler/tg=userapp-Telegram Desktop-3H6X70.desktop;userapp-Telegram Desktop-ETLMA1.desktop;
 x-scheme-handler/webcal=userapp-Thunderbird-OHOXK3.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-OHOXK3.desktop;
+image/vnd.microsoft.icon=okularApplication_kimgio.desktop;
+image/svg+xml=firefox.desktop;org.gnome.Loupe.desktop;org.xfce.ristretto.desktop;
 
 [Default Applications]
 application/pdf=okularApplication_pdf.desktop;
