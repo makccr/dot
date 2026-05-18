@@ -313,3 +313,5 @@ config/kwinrc
 .config/vifm/vifm-help.txt
 .config/vifm/vifminfo.json
 .config/vifm/vifmrc
+.config/assets
+.config/nwg-look/
