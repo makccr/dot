@@ -18,7 +18,7 @@
 # Delivery
 
 # Pro Res to H264 
-ffmpeg -i "$1" -c:v libx264 -b:v 40M -maxrate 10M -bufsize 12M -c:a aac -b:a 320k "yt-read-$(basename "$1")"
+#ffmpeg -i "$1" -c:v libx264 -b:v 40M -maxrate 10M -bufsize 12M -c:a aac -b:a 320k "yt-read-$(basename "$1")"
 
 # MOV to MP4
 #ffmpeg -i "$1" -c:v mpeg4 -b:v 40000k -c:a aac -b:a 320k "yt-read-$(basename "$1")"
