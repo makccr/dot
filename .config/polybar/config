@@ -37,14 +37,14 @@ padding-right = 4
 module-margin-left = 1
 module-margin-right = 1
 font-0 = Hack Nerd Font:weight=SemiBold:size=20;2
-font-1 = Hack Nerd Font:size=20;2
+font-1 = Montserrat:weight=Bold:size=20;2
 font-2 = Hack Nerd Font:weight=Medium:size=20;2
 cursor-click = pointer
 cursor-scroll = ns-resize
 ;;;;;; Module Positioning
-modules-left = bspwm
-modules-center =  date
-modules-right = shot wallpaper wifi brightness audio battery
+modules-left = 
+modules-center = bspwm
+modules-right = wallpaper wifi brightness audio battery date
 
 [settings]
 screenchange-reload = true
