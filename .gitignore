@@ -1,4 +1,6 @@
 .DS_Store
+.config/Android Open Source Project/
+.config/Google/
 .config/kdeglobals
 .config/kwinrc
 .config/kdeglobals
