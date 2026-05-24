@@ -8,7 +8,7 @@ super + Return
 
 # change wallpaper
 super + c
-	feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/art/
+	feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/poseidon/
 
 # Blank screen
 alt + l
@@ -55,7 +55,7 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
+super + {t,shift + t,shift + c,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags

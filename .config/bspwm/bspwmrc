@@ -26,10 +26,8 @@ sh $HOME/.config/polybar/bspwm.sh &
 picom &
 dunst &
 udiskie &
-dropbox &
-flameshot &
 xbindkeys &
 transmission-daemon &
 feh --bg-fill -r -z ~/Pictures/wallpapers/wallpapers/poseidon &
-redshift -l 29.536997852:-95.018166594 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+xrandr --output DP-2 --mode 3840x2160 --scale 1x0.8889 &
