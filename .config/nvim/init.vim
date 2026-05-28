@@ -50,7 +50,7 @@ set statusline+=\ " "
 "Key-bindings
 let mapleader=" "
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
-nnoremap <leader><ENTER> :Goyo<CR>
+nnoremap <leader><ENTER> :Goyo 75%x90%<CR>
 nnoremap <leader><Space> :CtrlP<CR>
 nnoremap <leader>n :Lex!<CR>
 nnoremap <leader>z :set invrnu invnu<CR>
