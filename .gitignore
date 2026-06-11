@@ -1,4 +1,8 @@
 .DS_Store
+.config/.mono/
+.config/KeePass/
+.config/flutter/
+.config/keepassxc/
 .config/Android Open Source Project/
 .config/Google/
 .config/kdeglobals
