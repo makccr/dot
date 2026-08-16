@@ -223,11 +223,12 @@ hl.config({
 
 hl.config({
     input = {
-        kb_layout  = "us",
+        kb_layout  = "us,gr",
         kb_variant = "",
         kb_model   = "",
-        kb_options = "",
+        kb_options = "grp:alt_shift_toggle",
         kb_rules   = "",
+        resolve_binds_by_sym =1 ,
 
         follow_mouse = 1,
 
@@ -289,6 +290,11 @@ hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 -- Wallpaper Changin' Scripy-thang
 hl.bind  (mainMod .. " + C", hl.dsp.exec_cmd("~/.scripts/wallpaper/posideon.sh"))
+
+-- Keyboard Language Swapping
+-- Greek
+-- hl.bind  (mainMod .. " + F2", input = ( kb_layout=gr ))
+-- English
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
