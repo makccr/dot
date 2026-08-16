@@ -30,6 +30,9 @@ x-scheme-handler/webcal=userapp-Thunderbird-OHOXK3.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-OHOXK3.desktop;
 image/vnd.microsoft.icon=okularApplication_kimgio.desktop;
 image/svg+xml=firefox.desktop;org.gnome.Loupe.desktop;org.xfce.ristretto.desktop;
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-NLA8R3.desktop;
+audio/mpeg=vlc.desktop;
+audio/vnd.wave=vlc.desktop;
 
 [Default Applications]
 application/pdf=okularApplication_pdf.desktop;
@@ -73,3 +76,4 @@ x-scheme-handler/tg=userapp-Telegram Desktop-ETLMA1.desktop
 x-scheme-handler/unknown=vivaldi-stable.desktop
 x-scheme-handler/webcal=userapp-Thunderbird-OHOXK3.desktop
 x-scheme-handler/webcals=userapp-Thunderbird-OHOXK3.desktop
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-NLA8R3.desktop
