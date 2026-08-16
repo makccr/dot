@@ -27,7 +27,7 @@ cd ~/Documents
 ```
 2. Clone the repo
 ```bash
-git clone --depth 1 https://github.com/makccr/dot
+git clone --depth 1 https://codeberg.org/makccr/dot
 ```
 3. Move back into home directory
 ```bash
