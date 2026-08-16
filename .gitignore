@@ -1,4 +1,6 @@
 .DS_Store
+.config/fragments/stats.json
+.config/gtk-4.0/settings.ini
 .config/kdenliverc
 .config/kalarmresources
 .config/.mono/
