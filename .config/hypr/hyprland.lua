@@ -287,6 +287,8 @@ hl.bind(mainMod .. " + SHIFT + SPACE", hl.dsp.exec_cmd("rofimoji"))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 -- hyprshot
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
+-- Wallpaper Changin' Scripy-thang
+hl.bind  (mainMod .. " + C", hl.dsp.exec_cmd("~/.scripts/wallpaper/posideon.sh"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
