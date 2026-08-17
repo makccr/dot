@@ -291,11 +291,6 @@ hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 -- Wallpaper Changin' Scripy-thang
 hl.bind  (mainMod .. " + C", hl.dsp.exec_cmd("~/.scripts/wallpaper/posideon.sh"))
 
--- Keyboard Language Swapping
--- Greek
--- hl.bind  (mainMod .. " + F2", input = ( kb_layout=gr ))
--- English
-
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
