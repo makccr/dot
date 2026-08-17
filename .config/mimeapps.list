@@ -33,6 +33,7 @@ image/svg+xml=firefox.desktop;org.gnome.Loupe.desktop;org.xfce.ristretto.desktop
 x-scheme-handler/net.thunderbird=userapp-Thunderbird-NLA8R3.desktop;
 audio/mpeg=vlc.desktop;
 audio/vnd.wave=vlc.desktop;
+text/x-lua=org.gnome.TextEditor.desktop;
 
 [Default Applications]
 application/pdf=okularApplication_pdf.desktop;
