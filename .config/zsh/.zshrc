@@ -91,6 +91,6 @@ alias cat='bat'
 alias fetch='clear; neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Terminal maintenance
-alias todo="clear; echo -e '\033[1mTo-do\033[0m'; echo '--------------'; bat -p Dropbox/writing/notes/todo.md"
-alias todoe='nvim ~/Dropbox/writing/notes/todo.md'
+alias todo="clear; echo -e '\033[1mTo-do\033[0m'; echo '--------------'; bat -p Documents/writing/notes/todo.md"
+alias todoe='nvim ~/Documents/writing/notes/todo.md'
 alias reset='clear; source ~/.config/zsh/.zshrc'
