@@ -4,10 +4,7 @@ Plug 'ctrlpvim/ctrlp.vim' | Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-scripts/fountain.vim' | Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
 Plug 'makccr/hepburn'
-Plug 'ashfinal/vim-colors-paper'
-Plug 'dunstontc/vim-vscode-theme'
-Plug 'tomasr/molokai'
-Plug 'jacoborus/tender.vim'
+Plug 'hzchirs/vim-material'
 call plug#end()
 
 "General Settings
@@ -70,9 +67,11 @@ nnoremap <Right> :vertical resize -2<CR>
 "inoremap <Del> <Nop>
 
 "Color Settings
-colorscheme gruvbox
-set t_Co=256
 set background=dark
+colorscheme vim-material
+let g:material_style='oceanic'
+
+set t_Co=256
 set termguicolors
 let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = '#777777'
