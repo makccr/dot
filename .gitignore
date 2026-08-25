@@ -1,4 +1,6 @@
 .DS_Store
+.config/astro/
+.config/cliamp
 .config/fragments/
 .config/gtk-4.0/settings.ini
 .config/kdenliverc
