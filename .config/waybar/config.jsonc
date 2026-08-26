@@ -8,6 +8,7 @@
     ],
 
     "modules-right": [
+        "tray",
         "custom/picker", 
         "custom/wallpaper",
         "idle_inhibitor",
@@ -50,6 +51,10 @@
                     "on-scroll-up": "shift_up",
                     "on-scroll-down": "shift_down"
                     }
+    },
+
+    "tray": {
+        "icon-size": 30
     },
 
     "pulseaudio": {
@@ -121,7 +126,7 @@
 
     "custom/picker": {
         "on-click": "hyprpicker -a",
-        "format": "   "
+        "format": "    "
     }
 
 }
