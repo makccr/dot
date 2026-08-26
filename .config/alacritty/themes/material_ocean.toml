@@ -1,0 +1,26 @@
+# Default colors
+[colors.primary]
+background = "0x0f111a"
+foreground = "0xD8DEE9"
+
+# Normal colors
+[colors.normal]
+black = '0x4C566A'
+red = '0xBF616A'
+green = '0xA3BE8C'
+yellow = '0xEBCB8B'
+blue = '0x81A1C1'
+magenta = '0xB48EAD'
+cyan = '0x88C0D0'
+white = '0xE5E9F0'
+
+# Bright colors
+[colors.bright]
+black = '0x404c66'
+red = '0xce5a65'
+green = '0xabcd90'
+yellow = '0xfedd8e'
+blue = '0x81a8cf'
+magenta = '0xbf91b8'
+cyan = '0x8bcfe4'
+white = '0xfdfffe'

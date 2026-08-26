@@ -1,23 +1,14 @@
 [colors]
-draw_bold_text_with_bright_colors = true
+draw_bold_text_with_bright_colors = false
+
+[general]
+import = [
+    "~/.config/alacritty/themes/material_ocean.toml"
+]
 
 [colors.cursor]
 cursor = "CellForeground"
 text = "CellBackground"
-
-[colors.normal]
-black = '0x4C566A'
-red = '0xBF616A'
-green = '0xA3BE8C'
-yellow = '0xEBCB8B'
-blue = '0x81A1C1'
-magenta = '0xB48EAD'
-cyan = '0x88C0D0'
-white = '0xE5E9F0'
-
-[colors.primary]
-background = "0x0f111a"
-foreground = "0xD8DEE9"
 
 [colors.selection]
 background = "0xdc3232"
@@ -61,7 +52,7 @@ multiplier = 3
 
 [window]
 decorations = "Full"
-opacity = 0.9
+opacity = 0.95
 
 [window.dimensions]
 columns = 150
