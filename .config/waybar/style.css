@@ -8,26 +8,26 @@
 }
 
 window#waybar {
-    background: rgba(0,0,0,.8); 
-    color: #fbf1c7;
+    background: rgba(0,0,0,.9); 
+    color: #e5e9f0;
 }
 
 tooltip {
-  background: #282828;
-  border: 1px solid #fe8019;
+  background: #4c566a;
+  border: 1px solid #81a1c1;
 }
 tooltip label {
-  color: #ebdbb2;
+    color: #e5e9f0;
 }
 
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: #ebdbb2;
+    color: #e5e9f0;
 }
 
 #workspaces button.active {
-    color: #ebdbb2; 
+    color: #e5e9f0;
 }
 
 #cpu, #temperature, #battery, #pulseaudio, #backlight, #idle_inhibitor {
@@ -40,12 +40,12 @@ tooltip label {
 }
 
 #battery.charging {
-    color: #ebdbb2; 
+    color: #e5e9f0;
     font-style: italic; 
 }
 
 #battery.warning:not(.charging) {
-    color: #fb4934;
+    color: #bf6168;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);

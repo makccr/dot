@@ -28,8 +28,8 @@
     },
 
     "clock": {
-        "format": "{:L%A %d  <b>%H:%M</b>}",
-        "locale": "el_GR.utf8",
+        "format": "{:L%a %d  <b>%H:%M</b>}",
+        "locale": "en_US.utf8",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
                     "mode"          : "month",
@@ -37,11 +37,11 @@
                     "weeks-pos"     : "right",
                     "on-scroll"     : 1,
                     "format": {
-                              "months":     "<span color='#83c07c'><b>{}</b></span>",
-                              "days":       "<span color='#fbf1c7'><b>{}</b></span>",
-                              "weeks":      "<span color='#b8bb26'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#fe8019'><b><u>{}</u></b></span>"
+                              "months":     "<span color='#a3be8c'><b>{}</b></span>",
+                              "days":       "<span color='#e5e9f0'><b>{}</b></span>",
+                              "weeks":      "<span color='#81a1c1'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ebcb8b'><b>{}</b></span>",
+                              "today":      "<span color='#b48ead'><b><u>{}</u></b></span>"
                               }
                     },
         "actions":  {
