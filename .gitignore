@@ -1,4 +1,6 @@
 .DS_Store
+.config/thunderbird/
+.config/fish/
 .config/astro/
 .config/cliamp
 .config/fragments/
