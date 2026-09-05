@@ -78,3 +78,4 @@ x-scheme-handler/unknown=vivaldi-stable.desktop
 x-scheme-handler/webcal=userapp-Thunderbird-OHOXK3.desktop
 x-scheme-handler/webcals=userapp-Thunderbird-OHOXK3.desktop
 x-scheme-handler/net.thunderbird=userapp-Thunderbird-NLA8R3.desktop
+x-scheme-handler/abc=plexamp.desktop

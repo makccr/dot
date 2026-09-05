@@ -1,4 +1,5 @@
 .DS_Store
+.config/Plexamp/
 .config/thunderbird/
 .config/fish/
 .config/astro/
