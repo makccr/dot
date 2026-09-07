@@ -1,0 +1,12 @@
+[mgr]
+show_hidden = true
+sort_by = "natural"
+sort_dir_first = true
+linemode = "size"
+scrolloff = 5
+mouse_events = ["click", "scroll", "touch", "move"]
+
+[preview]
+max_width = 1000
+max_height = 1000
+wrap = "yes"
