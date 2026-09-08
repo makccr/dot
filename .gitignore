@@ -1,4 +1,6 @@
 .DS_Store
+.config/Audacity/
+.config/audacity4/
 .config/Plexamp/
 .config/thunderbird/
 .config/fish/
