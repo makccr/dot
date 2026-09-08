@@ -1,6 +1,6 @@
 [Added Associations]
 application/octet-stream=firefox.desktop;
-application/pdf=okularApplication_pdf.desktop;
+application/pdf=zathura.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;
@@ -36,7 +36,7 @@ audio/vnd.wave=vlc.desktop;
 text/x-lua=org.gnome.TextEditor.desktop;
 
 [Default Applications]
-application/pdf=okularApplication_pdf.desktop;
+application/pdf=mupdf.desktop
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
 application/x-extension-ics=userapp-Thunderbird-OHOXK3.desktop
@@ -52,11 +52,11 @@ image/avif=org.kde.gwenview.desktop;
 image/bmp=org.kde.gwenview.desktop;
 image/gif=mirage.desktop
 image/heif=org.kde.gwenview.desktop;
-image/jpeg=org.kde.gwenview.desktop;
-image/png=org.kde.gwenview.desktop;
+image/jpeg=imv.desktop;
+image/png=imv.desktop;
 image/svg+xml=org.inkscape.Inkscape.desktop
-image/vnd.microsoft.icon=mirage.desktop
-image/webp=org.kde.gwenview.desktop;
+image/vnd.microsoft.icon=imv.desktop
+image/webp=imv.desktop;
 image/x-icns=org.kde.gwenview.desktop;
 inode/directory=thunar.desktop;
 message/rfc822=userapp-Thunderbird-O0KVK3.desktop
