@@ -1,4 +1,5 @@
 .DS_Store
+.config/shelly/
 .config/Audacity/
 .config/audacity4/
 .config/Plexamp/
