@@ -11,7 +11,7 @@ export GTK_THEME=Breeze-Dark
 
 # Start or attach to tmux automatically with loading tty but not terminal inside of WM (writerdeck stuffs)
 if [ -z "$TMUX" ] && [ "$(loginctl show-session "$XDG_SESSION_ID" -p Type --value)" = "tty" ]; then
-    exec tmux new-session
+    exec tmux new -A -s main
 fi
 
 # Basic zsh settings
