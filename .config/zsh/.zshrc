@@ -4,10 +4,15 @@ export TERM="xterm-256color"
 export HISTFILE=~/.config/zsh/.zsh_history
 
 export EDITOR='nvim'
-export TERMINAL='alacritty'
+export TERMINAL='foot'
 export BROWSER='firefox'
 export MANPAGER='nvim +Man!'
 export GTK_THEME=Breeze-Dark
+
+# Start or attach to tmux automatically with loading tty but not terminal inside of WM (writerdeck stuffs)
+if [ -z "$TMUX" ] && [ "$(loginctl show-session "$XDG_SESSION_ID" -p Type --value)" = "tty" ]; then
+    exec tmux new-session
+fi
 
 # Basic zsh settings
 PATH=$PATH:$HOME/.scripts #making my scripts run without typing the whole path
