@@ -10,7 +10,7 @@
     "modules-right": [
         "tray",
         "custom/picker", 
-        "custom/wallpaper",
+        "custom/screenshot",
         "idle_inhibitor",
         "pulseaudio",
         "backlight",
@@ -117,10 +117,8 @@
     "format": "{temperatureC}° "
     },
 
-    "custom/wallpaper": {
-        "on-click": "$HOME/.scripts/wallpaper/posideon.sh",
-        "on-click-middle": "$HOME/.scripts/wallpaper/art.sh",
-        "on-click-right": "$HOME/.scripts/wallpaper/oled.sh",
+    "custom/screenshot": {
+        "on-click": "hyprshot -m output",
         "format": "   "
     },
 
