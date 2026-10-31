@@ -47,6 +47,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("udiskie")
   hl.exec_cmd("transmission-daemon")
   hl.exec_cmd("nm-applet")
+  hl.exec_cmd("blueman-applet")
   hl.exec_cmd("hypridle")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("awww-daemon")
@@ -290,7 +291,7 @@ hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 -- hyprshot
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 -- Wallpaper Changin' Scripy-thang
-hl.bind  (mainMod .. " + C", hl.dsp.exec_cmd("~/.scripts/wallpaper/win-mac.sh"))
+hl.bind  (mainMod .. " + C", hl.dsp.exec_cmd("~/.scripts/wallpaper/landscape.sh"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
