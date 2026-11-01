@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background: rgba(0,0,0,.9); 
+    background: rgba(0,0,0,.7); 
     color: #e5e9f0;
 }
 
@@ -27,15 +27,19 @@ tooltip label {
 }
 
 #workspaces button.active {
-    color: #e5e9f0;
+    color: #329ca9;
 }
 
-#cpu, #temperature, #battery, #pulseaudio, #backlight, #idle_inhibitor {
-    padding: 0 .2rem;
-    margin-right: 1.3rem; 
+#workspaces {
+    margin-left: 2rem; 
+} 
+
+#cpu, #temperature, #pulseaudio, #backlight, #idle_inhibitor, #tray {
+    padding: 0.3rem;
+    margin-right: 1rem; 
 }
 
-#clock {
+#battery {
     margin-right: 2rem;
 }
 

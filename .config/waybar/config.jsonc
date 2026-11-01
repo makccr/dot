@@ -1,11 +1,13 @@
 {
     "layer": "top",
+
     "modules-left": [
+        "hyprland/workspaces"
     ],
 
     "modules-center": [
-        "hyprland/workspaces"
-    ],
+        "clock"
+    ], 
 
     "modules-right": [
         "tray",
@@ -14,8 +16,7 @@
         "idle_inhibitor",
         "pulseaudio",
         "backlight",
-        "battery",
-        "clock"
+        "battery"
     ],
 
     "sway/window": {
@@ -84,7 +85,8 @@
         "format-icons": {
         "urgent": "",
         "active": "",
-        "default": ""
+        "default": "", 
+        "class": "workspaces" 
         },
     "sort-by-number": true
     },
