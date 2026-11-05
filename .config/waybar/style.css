@@ -4,7 +4,7 @@
     font-family: Hack Nerd Font, Helvetica, Arial, sans-serif;
     font-size: .9rem;
     min-height: 0;
-    padding: .2rem .1rem;
+    padding: .1rem;
 }
 
 window#waybar {
@@ -21,7 +21,7 @@ tooltip label {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding-right: .5rem;
     background: transparent;
     color: #e5e9f0;
 }
